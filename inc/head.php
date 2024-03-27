@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="css/footer.css">
     <script src="js/menu.js"></script>
     <link rel="shortcut icon" type="image/png" href="favicon.ico">
-    <title><?= $str_titleWebSite[0].$str_titleWebSite[1].$str_titleWebSite[2].'.com'?></title>
+    <!-- <title><?= $str_titleWebSite[0].$str_titleWebSite[1].$str_titleWebSite[2].'.com'?></title> -->
+    <title>Bathyscaphe.be</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>

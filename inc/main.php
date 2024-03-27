@@ -1,7 +1,5 @@
 <main>
-<?php
-echo "singlepage :".$singlePage.'<br>';
-//Si le site est multipage
+<?php //Si le site est multipage
  if(!$singlePage): ?>
     <?php
 //CONTROLEUR CENTRAL
@@ -13,7 +11,6 @@ echo "singlepage :".$singlePage.'<br>';
 
     if (isset($_GET["page"])) {
     $page = $_GET["page"];
-    echo 'page en  get : s'.$page;
     $titre=$page;
         if (in_array($page,$pagesArray) ) {
         require_once '../inc/pages/' . $page . '.php';

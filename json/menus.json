@@ -16,14 +16,6 @@
 			   "nl": "evenementen"
 			}
 		 },
-		 {
-			"page": "about",
-			"titre": {
-			   "fr": "À propos",
-			   "en": "About",
-			   "nl": "Over ons"
-			}
-		 },
 		{
 			"page": "contact",
 			"titre": {

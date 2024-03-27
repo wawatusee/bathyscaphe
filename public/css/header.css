@@ -1,3 +1,11 @@
 header{
     background-color:var(--batho-noir) ;
 }
+h1{
+    display: flex;
+}
+h1>img{
+    align-items: center;
+    max-width: 50vi;
+    margin: auto;
+}
