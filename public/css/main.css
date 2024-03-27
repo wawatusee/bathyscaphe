@@ -1,7 +1,12 @@
 main{
-  margin-left: 60px;
-  list-style-type: circle;
+
 }
-main ul li{
+main{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin-left: 5vw;
+}
+ul li{
   list-style-type: circle;
 }

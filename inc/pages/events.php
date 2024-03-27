@@ -3,7 +3,7 @@
     <article>
         <h3>Date et lieu</h3>
         <section class="date-event">
-            
+
         </section>
         <section class="location-event">
             

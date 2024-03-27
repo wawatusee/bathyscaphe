@@ -14,7 +14,7 @@
     $titre=$page;
         if (in_array($page,$pagesArray) ) {
         require_once '../inc/pages/' . $page . '.php';
-        echo "cettePage fait partie du menu";
+ 
         } else {
             echo "cettePage ne fait pas partie du menu";
         //si la page reçue en paramètre d'url ne fait pas partie des pages officielles du site
