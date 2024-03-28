@@ -1,4 +1,4 @@
-<section>
+<section class="core">
     <h2>Studio</h2>
     <article>
         <h3>Infrasctructure</h3>
