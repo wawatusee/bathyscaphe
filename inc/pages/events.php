@@ -1,7 +1,8 @@
 <section class="core">
+    <h2>Event</h2>
 <section id="activity">
         '<article class="fullActivity">
-            <h2 data-field="title">NAVIGATION #1 - ASETONE // ESTEBAN STAN // 3DB<button id="btnPartager" title="copy link and share"><img src="/public/img/deco/icons/share.png"></button></h2>
+            <h3 data-field="title">NAVIGATION #1 - ASETONE // ESTEBAN STAN // 3DB<button id="btnPartager" title="copy link and share"><img src="/public/img/deco/icons/share.png"></button></h3>
             <span class="cardId" data-field="id">01</span>
             <div class="activity-types" data-field="types"><span class="card-type">Repas</span><span class="card-type">concert</span></div>
             <article class="activity-description">
@@ -27,7 +28,7 @@
                         Tickets on presale : 18€ (link on this event page) and 20€ at the door
                     </p><br>
                 </div>
-                <div class="activity-illustration"><img src="/public/img//content/01-baladeconte-passage.jpg" data-field="illustration"></div>
+                <div class="activity-illustration"><img src="/public/img//content/bathyscaphe-in-the-air.jpg" data-field="illustration"></div>
             </article>
             <article>
                 <h3>Infos pratiques</h3>

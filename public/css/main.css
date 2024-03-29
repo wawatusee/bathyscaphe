@@ -3,6 +3,7 @@ main{
   flex-direction: column;
   width: 90vw;
   margin-left: 5vw;
+  min-height: 70vh;
 }
 ul li{
   list-style-type: circle;
@@ -12,7 +13,7 @@ width: fit-content;
 }
 /*Activity*/
 .activity-types>.card-type,#btnPartager{
-  background-color: hsla(10, 78%, 56%, 0.704);
+  background-color: var(--batho-jaune);
   color: white;
   padding: var(--content-padding);
 }
@@ -25,7 +26,7 @@ width: fit-content;
   border: none;
 }
 #btnPartager:hover{
-  background-color: hsla(10, 78%, 56%, 1);
+  background-color: var(--batho-vert);
 }
 .activity-types{
     padding-bottom: var(--content-padding);
