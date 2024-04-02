@@ -13,11 +13,11 @@ class ViewMenu{
     {
         $this->lang=$lang;
     }
-    public function getViewMainMenu(array $menuArray, $singlePage=true){
+    public function getViewMainMenu(array $menuArray, $singlePage){
         foreach($menuArray as $item){
             if($singlePage){
                 $this->viewMenu.="<a class='itemMenu' href=#".$item->page.">".$item->titre->{$this->lang}."</a>";
-            }else $this->viewMenu.="<a class='itemMenu' href="."?page=".$item->page.">".$item->titre->{$this->lang}."</a>";
+            }else $this->viewMenu.="<a class='itemMenu' href="."?page=".$item->page."&lang=".$this->lang.">".$item->titre->{$this->lang}."</a>";
             
         }
         $viewMenu=$this->viewMenu;

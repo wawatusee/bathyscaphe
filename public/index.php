@@ -5,14 +5,13 @@ require_once "../config/config.php";?>
 <html lang=<?=$lang?> prefix="og:http://ogp.me/ns#">
     <?php require_once "../inc/head.php"?>
     <body>
-        <?php 
-
+        <?php
         //var_dump($configDatas);
         if(!$singlePage);
-       else   echo "singlePage = vrai";
+        else   echo "singlePage = vrai";
         require_once "../inc/header.php"?>
         <?php require_once "../inc/main.php"?>
         <?php require_once "../inc/footer.php"?>
-        <?php// var_dump(PAGE_ARRAY);?>
+        <?php //var_dump(PAGE_ARRAY);?>
     </body> 
 </html>
