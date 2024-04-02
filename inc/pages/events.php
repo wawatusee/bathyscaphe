@@ -6,7 +6,7 @@
             <span class="cardId" data-field="id">01</span>
             <div class="activity-types" data-field="types"><span class="card-type">Repas</span><span class="card-type">concert</span></div>
             <article class="activity-description">
-                <div class="activity-texte">
+            <div class="activity-texte">
                     <p data-field="description">All aboard, for this first Navigation edition. Music, paintings and open kitchen, for an adventure all around our senses.<br>
                         ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>
                         -Doors at 18:00<br>
@@ -26,8 +26,29 @@
                         Until late<br>
                         ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>
                         Tickets on presale : 18€ (link on this event page) and 20€ at the door
-                    </p><br>
+                    </p><button id="toggleButton">Lire plus</button><br>
                 </div>
+                <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const toggleButton = document.getElementById("toggleButton");
+                    const activityTexte = document.querySelector(".activity-texte");
+                    const paragraph = activityTexte.querySelector("[data-field='description']");
+
+                    toggleButton.addEventListener("click", function() {
+                        if (paragraph.style.maxHeight) {
+                            paragraph.style.maxHeight = null;
+                            paragraph.style.height="1em";
+                            paragraph.style.overflow="hidden";
+                            toggleButton.textContent = "Lire plus";
+                            console.log("maxheight");
+                        } else {
+                            paragraph.style.maxHeight = paragraph.scrollHeight + "px";
+                            toggleButton.textContent = "Lire moins";
+                            console.log("none maxheight");
+                        }
+                    });
+                });
+                </script>
                 <div class="activity-illustration"><img src="/public/img//content/bathyscaphe-in-the-air.jpg" data-field="illustration"></div>
             </article>
             <article>
@@ -47,7 +68,6 @@
                 </div>
                 <hr>
                 <span class="infoslocation" data-field="location">Rue Dieudonné Lefèvre 215<br>Bruxelles<br>Belgique</span>
-                <hr>
             </article>
             <div id="map2" class="infos-map-activity leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/12/2096/1373.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(4px, -55px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/12/2097/1373.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(260px, -55px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/12/2096/1374.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(4px, 201px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/12/2097/1374.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(260px, 201px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/12/2095/1373.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-252px, -55px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/12/2098/1373.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(516px, -55px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/12/2095/1374.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-252px, 201px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/12/2098/1374.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(516px, 201px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(359px, 108px, 0px);"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"><img src="https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(359px, 108px, 0px); z-index: 108;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"><div class="leaflet-popup  leaflet-zoom-animated" style="opacity: 1; transform: translate3d(360px, 74px, 0px); bottom: -7px; left: -136px;"><div class="leaflet-popup-content-wrapper"><div class="leaflet-popup-content" style="width: 232px;">Bathyscaphe. Rue Dieudonné Lefèvre, 215. 1020 Bruxelles</div></div><div class="leaflet-popup-tip-container"><div class="leaflet-popup-tip"></div></div><a class="leaflet-popup-close-button" href="#close">×</a></div></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(536955px, 351731px, 0px) scale(2048);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a></div></div></div></div>
             <script>const activityLat=50.87018976225184;const activityLon=4.34392623886893;const activityTitle="Bathyscaphe, ";</script>
@@ -55,12 +75,12 @@
         </section>
             </section>
     </article>
+    <br>
     <hr>
 </section>
         <article>
             <h3>Billets</h3>
             <section>
-            Booking : <br>
             <a href="https://www.billetweb.fr/shop.php?event=navigation-1" onclick="var w=window.open('https://www.billetweb.fr/shop.php?event=navigation-1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;"><img style="width:200px;" src="https://www.billetweb.fr/images/buttons/billetterie_bleu.png"></a>            </section>
         </article>
     </section>
