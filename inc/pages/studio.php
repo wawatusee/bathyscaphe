@@ -48,14 +48,18 @@ $studioInfrastructureContentML=[
 ];
 $studioPricingContentML=[
     "fr"=>"<h3>Tarifs</h3>
-    <p> Location lieu entier pour tournages: films, clips, interviews, etc... (250 euros la journee, 1500 euros la semaine)<br>
-    Location studio de musique, ingenieur du son compris, toutes charges comprises, cuisine disponible, chambre a coucher sur place pour deux personnes disponible (350 euros a la journee, ou forfait embarque 2500 la semaine).<br> Vinyl possible à la clef et plateau d'artiste disponible pour premier concert concert de sortie de residence, environ 50 personnes.<br>
-    Acces facile de l'internationale. Paris, Londres, Amsterdam, Berlin pas loin. Aeroport Zaventem 20 minutes en taxi, et Gare du midi 15 minutes en metro ligne 6.<br>
-    (Prix pour indé ou major different pour le studio)</p>",
+    <ul>
+        <li>Entire location rental for shoots: films, clips, interviews, etc... (250 euros per day, 1500 euros per week)</li>
+        <li>Music studio rental, including sound engineer, all charges included, kitchen available, bedroom on site for two people available (350 euros per day, or package deal 2500 per week).<br>
+        Vinyl possible as a bonus and artist stage available for first concert of residence, about 50 people.</li>
+        <li>Location lieu entier pour tournages: films, clips, interviews, etc... (250 euros la journee, 1500 euros la semaine)</li>
+    </ul>
+    <p>Location studio de musique, ingenieur du son compris, toutes charges comprises, cuisine disponible, chambre a coucher sur place pour deux personnes disponible (350 euros a la journee, ou forfait embarque 2500 la semaine).<br> Vinyl possible à la clef et plateau d'artiste disponible pour premier concert concert de sortie de residence, environ 50 personnes.<br>
+    Acces facile de l'internationale. Paris, Londres, Amsterdam, Berlin pas loin. Aeroport Zaventem 20 minutes en taxi, et Gare du midi 15 minutes en metro ligne 6.
+    </p>",
     "en"=>"<h3>Pricing</h3>
-    <p> Entire location rental for shoots: films, clips, interviews, etc... (250 euros per day, 1500 euros per week)<br>
-    Music studio rental, including sound engineer, all charges included, kitchen available, bedroom on site for two people available (350 euros per day, or package deal 2500 per week).<br>
-     Vinyl possible as a bonus and artist stage available for first concert of residence, about 50 people.<br>
+    <p> <br>
+    <br>
     Easy access from international locations. Paris, London, Amsterdam, Berlin not far away. Zaventem Airport 20 minutes by taxi, and Gare du Midi 15 minutes by metro line 6.<br>
     (Price for indie or major artists different for the studio)</p>",
     "nl"=>"<h3>Prijzen</h3>

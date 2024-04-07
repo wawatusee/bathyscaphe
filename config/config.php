@@ -13,11 +13,11 @@ $langs = $configDatas->get_langs();
 // Vérifier si la variable 'lang' est définie dans l'URL
 if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $langs)) {
     $lang = $_GET['lang'];
-    echo "La variable langue est comprise dans le tableau";
+    //echo "La variable langue est comprise dans le tableau";
 } else {
     // Si la variable 'lang' n'est pas définie ou n'est pas valide, définir une langue par défaut (par exemple, le français)
     $lang = 'en';
-    echo "La variable langue n'est pas comprise dans le tableau";
+    //echo "La variable langue n'est pas comprise dans le tableau";
 }
 //Fin de gestion de langue
 /************************/
