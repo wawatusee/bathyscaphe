@@ -47,27 +47,27 @@ $studioInfrastructureContentML=[
     </ul>"
 ];
 $studioPricingContentML=[
-    "fr"=>"<h3>Tarifs</h3>
+    "en"=>"<h3>Pricing</h3>
     <ul>
         <li>Entire location rental for shoots: films, clips, interviews, etc... (250 euros per day, 1500 euros per week)</li>
-        <li>Music studio rental, including sound engineer, all charges included, kitchen available, bedroom on site for two people available (350 euros per day, or package deal 2500 per week).<br>
-        Vinyl possible as a bonus and artist stage available for first concert of residence, about 50 people.</li>
+        <li>Music studio rental, including sound engineer, all charges included, kitchen available, bedroom on site for two people available (350 euros per day, or package deal 2500 per week).</li>
+        <li> Vinyl possible as a bonus and artist stage available for first concert of residence, about 50 people.</li>
+    </ul><br>
+    <p>Easy access from international locations. Paris, London, Amsterdam, Berlin not far away. Zaventem Airport 20 minutes by taxi, and Gare du Midi 15 minutes by metro line 6.</p>",
+    "fr"=>"<h3>Tarifs</h3>
+    <ul>
         <li>Location lieu entier pour tournages: films, clips, interviews, etc... (250 euros la journee, 1500 euros la semaine)</li>
-    </ul>
-    <p>Location studio de musique, ingenieur du son compris, toutes charges comprises, cuisine disponible, chambre a coucher sur place pour deux personnes disponible (350 euros a la journee, ou forfait embarque 2500 la semaine).<br> Vinyl possible à la clef et plateau d'artiste disponible pour premier concert concert de sortie de residence, environ 50 personnes.<br>
-    Acces facile de l'internationale. Paris, Londres, Amsterdam, Berlin pas loin. Aeroport Zaventem 20 minutes en taxi, et Gare du midi 15 minutes en metro ligne 6.
-    </p>",
-    "en"=>"<h3>Pricing</h3>
-    <p> <br>
-    <br>
-    Easy access from international locations. Paris, London, Amsterdam, Berlin not far away. Zaventem Airport 20 minutes by taxi, and Gare du Midi 15 minutes by metro line 6.<br>
-    (Price for indie or major artists different for the studio)</p>",
+        <li>Location studio de musique, ingenieur du son compris, toutes charges comprises, cuisine disponible, chambre a coucher sur place pour deux personnes disponible (350 euros a la journee, ou forfait embarque 2500 la semaine).</li>
+        <li>Vinyl possible à la clef et plateau d'artiste disponible pour premier concert concert de sortie de residence, environ 50 personnes.</li>
+    </ul><br>
+    <p>Acces facile de l'internationale. Paris, Londres, Amsterdam, Berlin pas loin. Aeroport Zaventem 20 minutes en taxi, et Gare du midi 15 minutes en metro ligne 6.</p>",
     "nl"=>"<h3>Prijzen</h3>
-    <p> Volledige locatieverhuur voor opnames: films, clips, interviews, enz... (250 euro per dag, 1500 euro per week)<br>
-    Verhuur van muziekstudio, inclusief geluidstechnicus, alle kosten inbegrepen, keuken beschikbaar, slaapkamer ter plaatse voor twee personen beschikbaar (350 euro per dag, of pakketdeal 2500 per week).<br>
-     Vinyl mogelijk als extra en podium beschikbaar voor het eerste concert van de residentie, ongeveer 50 personen.<br>
-    Gemakkelijke toegang vanuit internationale locaties. Parijs, Londen, Amsterdam, Berlijn niet ver weg. Zaventem Airport 20 minuten met de taxi, en Gare du Midi 15 minuten met metrolijn 6.<br>
-    (Prijs voor indie- of grote artiesten verschilt voor de studio)</p>"
+    <ul>
+        <li>Volledige locatieverhuur voor opnames: films, clips, interviews, enz... (250 euro per dag, 1500 euro per week)</li>
+        <li>Verhuur van muziekstudio, inclusief geluidstechnicus, alle kosten inbegrepen, keuken beschikbaar, slaapkamer ter plaatse voor twee personen beschikbaar (350 euro per dag, of pakketdeal 2500 per week).</li>
+        <li>Vinyl mogelijk als extra en podium beschikbaar voor het eerste concert van de residentie, ongeveer 50 personen.</li>
+    </ul><br>
+    <p>Gemakkelijke toegang vanuit internationale locaties. Parijs, Londen, Amsterdam, Berlijn niet ver weg. Zaventem Airport 20 minuten met de taxi, en Gare du Midi 15 minuten met metrolijn 6.</p>"
 ]
 ?>
 <section class="core">
