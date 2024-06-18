@@ -35,6 +35,9 @@ width: fit-content;
 .fullActivity{
   text-align: left;
 }
+.cardId{
+  margin-bottom: 20px;
+}
 .fullActivity>h2{
   text-align: left;
   font-size: 3em;
