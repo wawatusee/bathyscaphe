@@ -1,6 +1,7 @@
 <?php
 //DATAS studio
 //Infrastructure
+
 $studioInfrastructureContentML=[
     "fr"=>"
     <h3>Infrasctructure</h3>
@@ -72,10 +73,10 @@ $studioPricingContentML=[
 ?>
 <section class="core">
     <h2>Studio</h2>
-    <article>
+    <article class="productenumeration">
         <?=$studioInfrastructureContentML[$lang]?>
     </article>
-    <article>
+    <article class="productenumeration">
         <?=$studioPricingContentML[$lang]?>
     </article>
 </section>

@@ -25,6 +25,7 @@ if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $langs)) {
 /************************/
 //Répertoire global des images 
 $repImg="img/content/";
+$repImgDeco="img/deco/";
 /************************/
 //Titre du site
 $a_titleWebSite=$configDatas->get_title();

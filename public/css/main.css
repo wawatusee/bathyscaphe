@@ -5,12 +5,31 @@ main{
   margin-left: 5vw;
   min-height: 70vh;
 }
-ul li{
-  list-style-type: circle;
+.productenumeration{
+  ul{
+    list-style-type: circle;
+  }
 }
 .core{
 width: fit-content;
 }
+/*Liste d'événements*/
+.list_events{
+  margin: 1em;;
+  list-style: none ! important;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.card_event{
+  padding: 0.5em;
+  background-color: var(--batho-jaune);
+  border-radius: 5%;
+  color:white;
+}
+/*Fin liste d'événements*/
 /*Activity*/
 .activity-types>.card-type,#btnPartager{
   background-color: var(--batho-jaune);
