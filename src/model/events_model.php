@@ -31,20 +31,33 @@ class EventsModel {
     }
 
     private function parseFilename($filename) {
+        $fullfilename=$filename;
         // Enlève l'extension .json
         $filename = basename($filename, ".json");
         
-        // Sépare les différentes parties
+        // Sépare les différentes parties par underscore
         $parts = explode('_', $filename);
-    
+        
+        // La première partie est le numéro
+        $numero = $parts[0];
+        
+        // La deuxième partie est la date
+        $date = $parts[1];
+        
+        // Les autres parties sont les noms d'artistes, les tirets restent intactes
+        $artists = array_slice($parts, 2);
+        // Remplace les tirets par des espaces dans les noms d'artistes
+        $artists = array_map(function($artist) {
+            return str_replace('-', ' ', $artist);
+        }, $artists);
         // Crée un tableau associatif avec les informations
         return [
-            'numero' => $parts[0], // n3, n4, etc.
-            'date' => $parts[1],   // 2024-06-28, 2024-07-12, etc.
-            'artists' => explode('-', implode('-', array_slice($parts, 2))) // Transforme en tableau en séparant par des tirets
+            'numero' => $numero, 
+            'date' => $date, 
+            'artists' => $artists,
+            'filename'=>$fullfilename
         ];
     }
-    
 
     public function getFichiers() {
         return $this->fichiers;

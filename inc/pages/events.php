@@ -4,26 +4,27 @@ require_once("../src/model/events_model.php");
 require_once("../src/view/events_view.php");
 require_once("../src/model/lexique_model.php");
 //Le dossir events est parsé pour en extraire les événements enregistré
-$events_datas=new EventsModel("../json/events/");
-$list_events=$events_datas->getFichiers();
+$eventsDatas=new EventsModel("../json/events/");
+$list_events=$eventsDatas->getFichiers();
 //var_dump($list_events);
 //Création et présentation de l'html généré à partir de la liste des événements
 $repImgEvents=$repImg."events/";
 $events_view = new EventsView($list_events, $repImgEvents);
-$events_html = $events_view->getEventsViewHtml();
+$events_html = $events_view->getEventsViewHtml($lang);
 echo $events_html;
-
-//Listons le répertoire de json events
-$repertoire = "../json/events/";
-$listEvents = listerContenuRepertoire($repertoire);
-//Générons des liens à partir de cette liste
-$listeEventsView=genererListeEvenements($listEvents);
-
 $event20241204ContentML=[
     "en"=>"texte anglais",
     "fr"=>"texte français",
     "nl"=>"texte néerlandais"
 ]
+?>
+<?php
+//var_dump($events_datas);
+ if (isset($_GET["event"])){
+   $eventnumero=$_GET["event"];
+   //$eventJson=$eventsDatas->getJsonFullName($eventnumero);
+    echo "event :".$_GET["event"];
+}
 ?>
 <section class="core">
     <h2>Event</h2>
@@ -67,25 +68,20 @@ $event20241204ContentML=[
                         <span class="infoslocation" data-field="location">Rue Dieudonné Lefèvre 215<br>Bruxelles<br>Belgique</span>
                     </article>
                     <div id="map2" class="infos-map-activity"></div>
-                <script>
-                </script>
                 <script src="./js/share.js"></script>
                 <script src="./js/mapbathy.js"></script>
                 </section>
             </article>
-        <br>
-        <hr>
-        </section>
-        <article>
-            <h3>Billets</h3>
-            <section>
-            <a href="https://www.billetweb.fr/shop.php?event=navigation-1" onclick="var w=window.open('https://www.billetweb.fr/shop.php?event=navigation-1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;"><img style="width:200px;" src="https://www.billetweb.fr/images/buttons/billetterie_bleu.png"></a>
+            <br>
+            <hr>
             </section>
+            <article>
+                <h3>Billets</h3>
+                <section>
+                <a href="https://www.billetweb.fr/shop.php?event=navigation-1" onclick="var w=window.open('https://www.billetweb.fr/shop.php?event=navigation-1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;"><img style="width:200px;" src="https://www.billetweb.fr/images/buttons/billetterie_bleu.png"></a>
+                </section>
+            </article>
         </article>
     </section>
 
-</section>
-<section>
-    <h2>Events</h2>
-    <?= $listeEventsView?>
 </section>

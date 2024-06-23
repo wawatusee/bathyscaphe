@@ -1,14 +1,16 @@
 <?php class EventsView {
     private $listEvents;
     private $repImg;
+    private $lang;
 
     public function __construct($listEvents, $repImg) {
         $this->listEvents = $listEvents;
         $this->repImg = $repImg;
     }
 
-    public function getEventsViewHtml() {
+    public function getEventsViewHtml($lang) {
         $html = '<ul class="list_events">';
+        $lang=$lang;
 
         foreach ($this->listEvents as $event) {
             $numero = $event['numero'];
@@ -23,17 +25,18 @@
 
             $html .= <<<HTML
 <li>
-    <a href="">
+    
     <div class="card_event">
-        <div class="date">$date</div>
-        <div class="image">
-            <img src="$imagePath" alt="Event Image">
-        </div>
-        <div class="footer">
-            $artistList
-        </div>
+        <a href="?page=events&event=$numero&lang=$lang">
+            <div class="date">$date</div>
+            <div class="image">
+                <img src="$imagePath" alt="Event Image">
+            </div>
+            <div class="footer">
+                $artistList
+            </div>
+        </a>
     </div>
-    </a>
 </li>
 HTML;
         }
