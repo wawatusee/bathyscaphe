@@ -6,8 +6,8 @@
         "horaire":{
             "fr":"Porte ouverte à partir de 19h event à 20h",
             "en":"Doors 19h event 20h",
-            "nl":"Doer 19h evenementie 20h",
-        }
+            "nl":"Doer 19h evenementie 20h"
+            }
         },
         "title":"Navigation #N-Artist name-other artistname-etc",
         "illustration":"n3.jpg",

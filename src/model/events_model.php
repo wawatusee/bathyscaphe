@@ -58,9 +58,18 @@ class EventsModel {
             'filename'=>$fullfilename
         ];
     }
+    
 
     public function getFichiers() {
         return $this->fichiers;
+    }
+    public function getJsonFullName($numero) {
+        foreach ($this->fichiers as $fichier) {
+            if ($fichier['numero'] === $numero) {
+                return $fichier['filename'];
+            }
+        }
+        return null; // Retourne null si aucun fichier correspondant n'est trouvé
     }
 }
 ?>

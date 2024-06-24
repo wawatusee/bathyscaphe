@@ -4,7 +4,8 @@ require_once("../src/model/events_model.php");
 require_once("../src/view/events_view.php");
 require_once("../src/model/lexique_model.php");
 //Le dossir events est parsé pour en extraire les événements enregistré
-$eventsDatas=new EventsModel("../json/events/");
+$repjsonevents="../json/events/";
+$eventsDatas=new EventsModel($repjsonevents);
 $list_events=$eventsDatas->getFichiers();
 //var_dump($list_events);
 //Création et présentation de l'html généré à partir de la liste des événements
@@ -21,9 +22,15 @@ $event20241204ContentML=[
 <?php
 //var_dump($events_datas);
  if (isset($_GET["event"])){
+    require_once('../src/model/objet_model.php' );
    $eventnumero=$_GET["event"];
-   //$eventJson=$eventsDatas->getJsonFullName($eventnumero);
+   $eventJson=$eventsDatas->getJsonFullName($eventnumero);
     echo "event :".$_GET["event"];
+    echo "nom de fichier : ".$repjsonevents.$eventJson;
+    $jsonfile=$repjsonevents.$eventJson;
+    $eventDatas=(new ObjetModel($jsonfile))->get_objet();
+    var_dump($eventDatas);
+
 }
 ?>
 <section class="core">
