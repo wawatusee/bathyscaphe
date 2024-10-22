@@ -75,6 +75,7 @@ class ConfigModel{
     }
     public function get_title(){
         $titleWebsite=$this->titleWebsite;
+        echo $str_titleWebSite;
         return $titleWebsite;
     }
     public function get_str_title(){
@@ -82,8 +83,8 @@ class ConfigModel{
         $str_titleWebSite='';
         foreach ($a_titleWebsite as $titleWord)
         {
-            echo $titleWord;
-            //$str_titleWebSite+=$titleWord;
+            //echo $titleWord;
+            $str_titleWebSite.=$titleWord;
         }
         return $str_titleWebSite;
     }
