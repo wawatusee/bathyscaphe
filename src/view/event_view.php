@@ -4,7 +4,9 @@
         $this->eventDatas=$eventModel->event;
     } 
     public function getEventView($lang){
+    
         $eventDatas=$this->eventDatas;
+        $id=$eventDatas->id;
         $date=$eventDatas->time->date;
         $horaire=$eventDatas->time->horaire->$lang;
         $title=$eventDatas->title;

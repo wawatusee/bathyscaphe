@@ -20,22 +20,16 @@ $event20241204ContentML=[
 ]
 ?>
 <?php
-//var_dump($events_datas);
  if (isset($_GET["event"])){
     require_once('../src/model/objet_model.php' );
    $eventnumero=$_GET["event"];
-   //Chargement du json de l'event en paramètre
+   //Chargement du json de l'event demandé
    $eventJson=$eventsDatas->getJsonFullName($eventnumero);
-   // echo "event :".$_GET["event"];
-   // echo "nom de fichier : ".$repjsonevents.$eventJson;
     $jsonfile=$repjsonevents.$eventJson;
     $eventDatas=(new ObjetModel($jsonfile))->get_objet();
-    //var_dump($eventDatas);
 }
 ?>
 <?php
-echo 'METHODES DE LA CLASSE EVENTSVIEW :<br>';
-//var_dump(get_class_methods($events_view));
 //Vue de l'événement sélectionné
 require_once("../src/view/event_view.php");
 $eventView=new EventView($eventDatas);
