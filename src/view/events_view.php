@@ -44,4 +44,19 @@ HTML;
         $html .= '</ul>';
         return $html;
     }
-}
+
+        public function get_event_view_by_id($event, $lang) {
+            // Hydratation des variables
+
+    
+            // Construction de la vue
+            $html = <<<HTML
+            <span>LE TITRE : $title</span>;
+            
+    HTML;
+    
+            return $html;
+        }
+    }
+    
+

@@ -1,19 +1,16 @@
 <footer>
-    <section id="sitemap">
-        <h2>Links</h2>
             <div class="footerNav">
                 <nav class="navfooterbloc">
-                    <h3>Contacts</h3>
-                    <a href="info@annebsollis.com">info@bathyscaphe.be</a>
-                    <a href="tel:+32485966694">+32(0)485 96 66 94</a>
-                    <address>rue Dieudonné Lefèvre, 215<br> 1020 Brussels - Belgium</address>
-                </nav>
-                <nav class="navfooterbloc">
-                    <h3>Menu</h3>
+                    <h2>Menu</h2>
                     <?php echo $menuMain_view?>
                 </nav>
+                <nav class="navfooterbloc">
+                    <h2>Contacts</h2>
+                    <a class="maillink" href="info@annebsollis.com">info@bathyscaphe.be</a>
+                    <a class="phonelink" href="tel:+32485966694">+32(0)485 96 66 94</a>
+                    <address class="situationlink">rue Dieudonné Lefèvre, 215<br> 1020 Brussels - Belgium</address>
+                </nav>
             </div>
-    </section>
     <nav id="menuRS" class="nav-rs">
         <?php 
                     foreach($menuRS as $item){
@@ -21,5 +18,4 @@
                     }
         ?>
     </nav>
-
 </footer>

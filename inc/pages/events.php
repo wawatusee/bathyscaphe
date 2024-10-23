@@ -3,14 +3,14 @@
 require_once("../src/model/events_model.php");
 require_once("../src/view/events_view.php");
 require_once("../src/model/lexique_model.php");
-//Le dossir events est parsé pour en extraire les événements enregistré
+//Le dossier events est parsé pour en extraire les événements enregistré
 $repjsonevents="../json/events/";
 $eventsDatas=new EventsModel($repjsonevents);
 $list_events=$eventsDatas->getFichiers();
 //var_dump($list_events);
 //Création et présentation de l'html généré à partir de la liste des événements
 $repImgEvents=$repImg."events/";
-$events_view = new EventsView($list_events, $repImgEvents);
+$events_view = new EventsView($list_events, $repImgEvents,$lang);
 $events_html = $events_view->getEventsViewHtml($lang);
 echo $events_html;
 $event20241204ContentML=[
@@ -24,16 +24,25 @@ $event20241204ContentML=[
  if (isset($_GET["event"])){
     require_once('../src/model/objet_model.php' );
    $eventnumero=$_GET["event"];
+   //Chargement du json de l'event en paramètre
    $eventJson=$eventsDatas->getJsonFullName($eventnumero);
-    echo "event :".$_GET["event"];
-    echo "nom de fichier : ".$repjsonevents.$eventJson;
+   // echo "event :".$_GET["event"];
+   // echo "nom de fichier : ".$repjsonevents.$eventJson;
     $jsonfile=$repjsonevents.$eventJson;
     $eventDatas=(new ObjetModel($jsonfile))->get_objet();
-    var_dump($eventDatas);
-
+    //var_dump($eventDatas);
 }
 ?>
-<section class="core">
+<?php
+echo 'METHODES DE LA CLASSE EVENTSVIEW :<br>';
+//var_dump(get_class_methods($events_view));
+//Vue de l'événement sélectionné
+require_once("../src/view/event_view.php");
+$eventView=new EventView($eventDatas);
+$eventViewHtml=$eventView->getEventView($lang);
+echo $eventViewHtml;
+?>
+<!--<section class="core">
     <h2>Event</h2>
     <section id="activity">
         '<article class="fullActivity">
@@ -91,4 +100,4 @@ $event20241204ContentML=[
         </article>
     </section>
 
-</section>
+</section>-->
