@@ -10,7 +10,7 @@
         $horaire=$eventDatas->time->horaire->$lang;
         $title=$eventDatas->title;
         $illustration=$eventDatas->illustration;
-        $description=$eventDatas->description->event->$lang;
+        $description=$eventDatas->description_event->$lang;
         $artist=[];
         $necessitedbook=$eventDatas->infospratiques->necessitedbook;
         $price=$eventDatas->infospratiques->price;
@@ -72,6 +72,7 @@
                 </section>
             </article>
         </article>
+    </section>
     </section>
                 
 
