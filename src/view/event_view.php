@@ -25,7 +25,7 @@
                     <span class="infosdates" data-field="dates">$date</span>
                     <span class="infosHoraires" data-field="horaire">$horaire</span>
                 </div>
-                <h3 data-field="title">$title<h3>
+                <h3 data-field="title">$title</h3>
                 <div class="activity-illustration"><img src="/public/img/content/events/$illustration" data-field="illustration"></div>
                 <div class="activity-types" data-field="types">
                 <span class="card-type">exposition</span>

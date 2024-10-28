@@ -7,6 +7,7 @@ $configDatas=new ConfigModel("../json/config.json");
 $singlePage=$configDatas->get_single_page_behaviour();
 //Fin de comportement single ou multipage,
 /*****************************************/
+
 //Gestion de langue
 // Tableau des langues disponibles
 $langs = $configDatas->get_langs();
@@ -43,5 +44,9 @@ $pagesDuMenus=array();
  }
 define('PAGE_ARRAY',$pagesDuMenus);
 //Fin des menus du sites
+// Détermination de la page à charger
+$pageParam = $_GET['page'] ?? null; // Récupère le paramètre de la page dans l'URL
+$pagePath = $configDatas->loadPage($pageParam, PAGE_ARRAY); // Utilise la méthode loadPage pour obtenir le chemin de la page à inclure
+
 //Fin des paramètres de base du site
 //Fin de onfig du site, partie publique

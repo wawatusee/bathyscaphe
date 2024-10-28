@@ -36,6 +36,12 @@ class ConfigModel{
     /**
      * @var string repImgDeco repository of design images
      */
+    /**
+     * Charge le chemin de la page à afficher en fonction du paramètre de la page.
+     * @param string|null $pageParam
+     * @param array $pagesArray
+     * @return string
+     */
     private $repImgDeco;
     public function __construct(string $srcJson){
         $this->srcJson=$srcJson;
@@ -102,5 +108,16 @@ class ConfigModel{
         $repImg=$this->imgRepDeco;
         return $repImgDeco;
     }
+    public function loadPage($pageParam, $pagesArray) {
+        $defaultPage = $pagesArray[0];
+        $page = $pageParam ?: $defaultPage;
+    
+        if (in_array($page, $pagesArray)) {
+            return '../inc/pages/' . $page . '.php';
+        } else {
+            return '../inc/pages/' . $defaultPage . '.php';
+        }
+    }
+    
     
 }

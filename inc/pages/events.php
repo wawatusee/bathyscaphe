@@ -55,8 +55,7 @@ echo $eventViewHtml;
             </div>
             <article class="activity-description">
             <div class="activity-texte">
-                    <p data-field="description">
-                        
+                    <p data-field="description"> 
                     </p>
                 </div>
             </article>
