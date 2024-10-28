@@ -1,6 +1,6 @@
 <?php
 require_once "../src/model/config_model.php";
-$configDatas=new configModel("../json/config.json");
+$configDatas=new ConfigModel("../json/config.json");
 //Config du site, partie publique
 //Comportement single ou multipage,
 // chaque section intégrée sera soit absorbée par la simple page ou deviendra une page à part entière
@@ -30,6 +30,7 @@ $repImgDeco="img/deco/";
 //Titre du site
 $a_titleWebSite=$configDatas->get_title();
 $str_titleWebSite=$configDatas->get_str_title();
+//echo $str_titleWebSite;
 /************************/
 //Menus du site, alimente la navigation principale impliquant le controleur frontal et d'autres navigations, exemple : "links","réseaux sociaux" parfois intégrées au footer  
 require_once("../src/model/config_model.php");

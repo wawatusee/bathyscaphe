@@ -75,7 +75,7 @@ class ConfigModel{
     }
     public function get_title(){
         $titleWebsite=$this->titleWebsite;
-        echo $str_titleWebSite;
+        //echo $str_titleWebSite;
         return $titleWebsite;
     }
     public function get_str_title(){
@@ -96,9 +96,11 @@ class ConfigModel{
     }
     public function get_images_repository(){
         $repImg=$this->imgRep;
+        return $repImg;
     }
     public function get_design_images_repository(){
         $repImg=$this->imgRepDeco;
+        return $repImgDeco;
     }
     
 }

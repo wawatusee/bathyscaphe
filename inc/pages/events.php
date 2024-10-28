@@ -7,12 +7,12 @@ require_once("../src/model/lexique_model.php");
 $repjsonevents="../json/events/";
 $eventsDatas=new EventsModel($repjsonevents);
 $list_events=$eventsDatas->getFichiers();
-//var_dump($list_events);
 //Création et présentation de l'html généré à partir de la liste des événements
 $repImgEvents=$repImg."events/";
 $events_view = new EventsView($list_events, $repImgEvents,$lang);
 $events_html = $events_view->getEventsViewHtml($lang);
-echo $events_html;
+echo '<aside class="past-sidebar">
+<h3>Événements Passés</h3>'.$events_html.'</aside> ';
 $event20241204ContentML=[
     "en"=>"texte anglais",
     "fr"=>"texte français",
@@ -36,6 +36,7 @@ $eventView=new EventView($eventDatas);
 $eventViewHtml=$eventView->getEventView($lang);
 echo $eventViewHtml;
 ?>
+<script src="../js/events.js"></script>
 <!--<section class="core">
     <h2>Event</h2>
     <section id="activity">
@@ -55,7 +56,7 @@ echo $eventViewHtml;
             <article class="activity-description">
             <div class="activity-texte">
                     <p data-field="description">
-                        <?=$event20241204ContentML[$lang]?>
+                        
                     </p>
                 </div>
             </article>

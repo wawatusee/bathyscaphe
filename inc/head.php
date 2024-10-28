@@ -5,7 +5,7 @@
     <meta name="keywords" content="">
     <meta property="og:title" content="Le Bathyscaphe.be">
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://www.bathyscaphe.be/public/index.php?page=events">
+    <meta property="og:url" content="http://www.bathyscaphe.be/public/index.php?page=<?= htmlspecialchars($_GET['page'] ?? 'home') ?>">
     <meta property="og:image" content="http://www.bathyscaphe.be/public/img/deco/logotype-blanc.png">
     <meta property="og:image:width" content="1090">
     <meta property="og:image:height" content="177">
@@ -15,10 +15,28 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
+    <?php 
+        if (isset($_GET['page'])) {
+            $page = htmlspecialchars($_GET['page']);
+            $cssFile = "css/pages/$page.css";
+            if (file_exists($cssFile)) {
+                echo '<link rel="stylesheet" href="' . $cssFile . '">';
+            }
+        }
+    ?>
     <script src="js/menu.js"></script>
     <link rel="shortcut icon" type="image/png" href="favicon.ico">
-    <!-- <title><?= $str_titleWebSite[0].$str_titleWebSite[1].$str_titleWebSite[2].'.com'?></title> -->
     <title>Bathyscaphe.be</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Inclusion conditionnelle de la feuille de style spécifique à chaque page -->
+    <?php 
+        if (isset($_GET['page'])) {
+            $page = htmlspecialchars($_GET['page']);
+            $cssFile = "css/pages/$page.css";
+            if (file_exists($cssFile)) {
+                echo '<link rel="stylesheet" href="' . $cssFile . '">';
+            }
+        }
+    ?>
 </head>
