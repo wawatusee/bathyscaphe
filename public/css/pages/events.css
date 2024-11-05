@@ -109,7 +109,7 @@ main {
   }
   .card_event{
     padding: 0.5em;
-    background-color: var(--batho-jaune);
+    background-color: var(--batho-bleuclair);
     border-radius: 5%;
     
   }
