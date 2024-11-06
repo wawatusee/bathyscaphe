@@ -1,0 +1,18 @@
+{
+    "artist": {
+        "id": "a1",
+        "name": "Asetone",
+        "illustration": "a1-asetone.jpg",
+        "art": {
+            "en": "Music",
+            "fr": "musique",
+            "nl": "musiek"
+        },
+        "liens": [
+            {
+                "name": "Official",
+                "link": "http://www.asetone.fr/"
+            }
+        ]
+    }
+}
