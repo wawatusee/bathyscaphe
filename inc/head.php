@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
+<!--Inclusion de feuille de syle dynamique-->
     <?php 
         if (isset($_GET['page'])) {
             $page = htmlspecialchars($_GET['page']);

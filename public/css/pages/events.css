@@ -109,9 +109,13 @@ main {
   }
   .card_event{
     padding: 0.5em;
-    background-color: var(--batho-bleuclair);
+    background-color: var(--neutral-grey);
     border-radius: 5%;
-    
+  }
+  .card_event:hover{
+
+    background-color: var(--batho-bleu);
+
   }
   a.card_event{text-decoration: none;}
   /*Fin liste d'événements*/
