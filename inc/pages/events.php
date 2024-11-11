@@ -11,8 +11,7 @@ $list_events = $eventsDatas->getFichiers();
 $repImgEvents = $repImg . "events/";
 $events_view = new EventsView($list_events, $repImgEvents, $lang);
 $events_html = $events_view->getEventsViewHtml($lang);
-echo '<aside class="past-sidebar">
-<h3>Événements Passés</h3>' . $events_html . '</aside> ';
+
 $event20241204ContentML = [
     "en" => "texte anglais",
     "fr" => "texte français",
@@ -22,7 +21,6 @@ $event20241204ContentML = [
 <?php
 require_once('../src/model/objet_model.php');
 if (isset($_GET["event"])) {
-
     $eventnumero = $_GET["event"];
 } else {
     $eventnumero = $eventsDatas->get_default_event_numero();
@@ -37,10 +35,18 @@ $eventDatas = (new ObjetModel($jsonfile))->get_objet();
 require_once("../src/view/event_view.php");
 $eventView = new EventView($eventDatas);
 $eventViewHtml = $eventView->getEventView($lang);
-
-echo $eventViewHtml;
+//HERE ASIDE FOR PASTS EVENTS
+echo '<aside class="past-sidebar">
+        <h3>Événements Passés</h3>' .
+         $events_html .
+        '</aside> ';
+        //HERE CORE FOR FULL EVENT
+echo '<section class="core">
+        <h2>Event</h2>'.$eventViewHtml.
+    '</section>';
 ?>
 <script src="../js/events.js"></script>
+
 <!--<section class="core">
     <h2>Event</h2>
     <section id="activity">

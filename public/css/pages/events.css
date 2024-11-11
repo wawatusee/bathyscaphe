@@ -19,7 +19,7 @@ main {
   /* Zone principale pour les événements cliqués */
   .core {
     grid-column: 2; /* Colonne centrale */
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
   }
