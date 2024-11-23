@@ -1,5 +1,6 @@
 <?php
 //Classes nécessaires à la présentation des événements
+require_once("../src/utils/file_manager.php");
 require_once("../src/model/events_model.php");
 require_once("../src/view/events_view.php");
 require_once("../src/model/lexique_model.php");
@@ -23,7 +24,7 @@ require_once('../src/model/objet_model.php');
 if (isset($_GET["event"])) {
     $eventnumero = $_GET["event"];
 } else {
-    $eventnumero = $eventsDatas->get_default_event_numero();
+    $eventnumero = $eventsDatas->getDefaultEventNumero();
 }
 //Chargement du json de l'event demandé
 $eventJson = $eventsDatas->getJsonFullName($eventnumero);
@@ -41,11 +42,10 @@ echo '<aside class="past-sidebar">
          $events_html .
         '</aside> ';
         //HERE CORE FOR FULL EVENT
-echo '<section class="core">
-        <h2>Event</h2>'.$eventViewHtml.
+echo '<section class="core">'.$eventViewHtml.
     '</section>';
 ?>
-<script src="../js/events.js"></script>
+<script src="js/events.js"></script>
 
 <!--<section class="core">
     <h2>Event</h2>
