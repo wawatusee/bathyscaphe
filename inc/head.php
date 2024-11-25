@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
-<!--Inclusion de feuille de syle dynamique-->
+    <!-- Inclusion conditionnelle de la feuille de style spécifique à chaque page -->
     <?php 
         if (isset($_GET['page'])) {
             $page = htmlspecialchars($_GET['page']);
@@ -30,14 +30,4 @@
     <title>Bathyscaphe.be</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <!-- Inclusion conditionnelle de la feuille de style spécifique à chaque page -->
-    <?php 
-        if (isset($_GET['page'])) {
-            $page = htmlspecialchars($_GET['page']);
-            $cssFile = "css/pages/$page.css";
-            if (file_exists($cssFile)) {
-                echo '<link rel="stylesheet" href="' . $cssFile . '">';
-            }
-        }
-    ?>
 </head>
