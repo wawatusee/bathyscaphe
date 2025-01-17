@@ -27,7 +27,7 @@ main {
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
-
+ 
 /* Liste des événements */
 .list_events {
   list-style: none;

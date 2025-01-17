@@ -21,10 +21,10 @@ if (file_exists($artistFile)) {
 // Charger la configuration de formulaire (artist-config.json)
 $formConfig = json_decode(file_get_contents("../json/artist-config.json"), true);
 ?>
-<?php/*
+<?php
 echo "<pre>";
 print_r($artistsData);  // Vérifie la structure de l'objet PHP avant de le transmettre à JavaScript
-echo "</pre>";*/
+echo "</pre>";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
