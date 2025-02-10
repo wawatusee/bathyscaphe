@@ -1,0 +1,18 @@
+{
+    "artist": {
+        "artist": [],
+        "id": "a13",
+        "name": "Asetone3",
+        "art": {
+            "en": "Music3",
+            "fr": "musique3",
+            "nl": "musiek3"
+        },
+        "liens": [
+            {
+                "name": "Officialude3",
+                "link": "http:\/\/www.asetone.fr\/"
+            }
+        ]
+    }
+}

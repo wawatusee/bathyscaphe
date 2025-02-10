@@ -1,38 +1,38 @@
-function generateForm(data, config, parent = document.getElementById("artist-form")) {
+function generateForm(data, config, parent = document.getElementById("artist-form"), path = "") {
     parent.innerHTML = ""; // Réinitialiser le formulaire avant de le reconstruire
 
     for (const key in data) {
         const fieldConfig = config ? config[key] : {}; // S'assurer que config existe pour éviter une erreur
         const value = data[key];
+        const fullPath = path ? `${path}.${key}` : key; // Chemin hiérarchique du champ
 
         if (typeof value === "object" && !Array.isArray(value)) {
             // Gestion des objets (ex: 'art' avec des sous-champs 'en', 'fr', 'nl')
             const fieldset = document.createElement("fieldset");
             fieldset.innerHTML = `<legend>${key}</legend>`;
-
-            generateForm(value, fieldConfig, fieldset);
+            generateForm(value, fieldConfig, fieldset, fullPath);
             parent.appendChild(fieldset);
         } else if (Array.isArray(value)) {
             // Gestion des tableaux (ex: 'liens')
             value.forEach((item, index) => {
                 const fieldset = document.createElement("fieldset");
                 fieldset.innerHTML = `<legend>${key} ${index + 1}</legend>`;
+                const arrayPath = `${fullPath}[${index}]`;
 
                 if (typeof item === "object") {
-                    generateForm(item, fieldConfig.structure, fieldset); // Traiter chaque objet dans le tableau
+                    generateForm(item, fieldConfig.structure, fieldset, arrayPath); // Traiter chaque objet dans le tableau
                 } else {
                     // Si le tableau contient des valeurs simples
-                    const input = createTextInput(`${key}[${index}]`, item);
+                    const input = createTextInput(arrayPath, item);
                     fieldset.appendChild(input);
                 }
-
                 parent.appendChild(fieldset);
             });
         } else {
             // Gestion des champs simples
             const label = document.createElement("label");
             label.innerText = key.charAt(0).toUpperCase() + key.slice(1);
-
+            
             let input;
             switch (key) {
                 case "illustration":
@@ -43,7 +43,7 @@ function generateForm(data, config, parent = document.getElementById("artist-for
                     parent.appendChild(fileNameLabel);
                     continue; // Passer à la prochaine itération
                 default:
-                    input = createTextInput(key, value);
+                    input = createTextInput(fullPath, value);
                     break;
             }
 
@@ -53,13 +53,43 @@ function generateForm(data, config, parent = document.getElementById("artist-for
     }
 }
 
-// Fonction pour créer un champ de texte
-function createTextInput(name, value = "") {
+// Fonction pour créer un champ de texte avec data-path
+function createTextInput(path, value = "") {
     const input = document.createElement("input");
     input.type = "text";
-    input.name = name;
+    input.name = path;
+    input.setAttribute("data-path", path); // Stocker le chemin hiérarchique
     input.value = value;
     return input;
+}
+
+function setJsonValue(obj, path, value) {
+    const keys = path.split("."); // Séparer par points
+    let current = obj;
+
+    for (let i = 0; i < keys.length - 1; i++) {
+        let key = keys[i];
+
+        if (key.includes("[")) {
+            let [arrayKey, index] = key.match(/(.*?)\[(\d+)\]/).slice(1);
+            index = parseInt(index);
+
+            if (!current[arrayKey]) {
+                current[arrayKey] = [];
+            }
+            if (!current[arrayKey][index]) {
+                current[arrayKey][index] = {};
+            }
+            current = current[arrayKey][index];
+        } else {
+            if (!current[key]) {
+                current[key] = {};
+            }
+            current = current[key];
+        }
+    }
+
+    current[keys[keys.length - 1]] = value;
 }
 
 // 3️⃣ Attendre que le DOM soit chargé avant d'attacher les événements
@@ -121,49 +151,22 @@ function saveArtistData() {
     console.log("Sauvegarde des données...");
 
     const form = document.getElementById("artist-form");
-    const formData = new FormData(form);
-    
-    let jsonData = {
-        artist: {
-            id: "",
-            name: "",
-            illustration: "",
-            art: {},
-            liens: []
-        }
-    };
+    const inputs = form.querySelectorAll("input[data-path]");
 
-    formData.forEach((value, key) => {
-        if (key.startsWith("art[")) {
-            // Ex: art[en] => art.en
-            let lang = key.match(/\[(.*?)\]/)[1]; // Récupère "en", "fr", "nl"
-            jsonData.artist.art[lang] = value;
-        } else if (key.startsWith("liens[")) {
-            // Ex: liens[0][name] => récupérer "0" et "name"
-            let match = key.match(/\[(\d+)\]\[(.*?)\]/);
-            if (match) {
-                let index = parseInt(match[1]); // Numéro de l'élément dans le tableau
-                let field = match[2]; // "name" ou "link"
-                
-                if (!jsonData.artist.liens[index]) {
-                    jsonData.artist.liens[index] = {};
-                }
-                jsonData.artist.liens[index][field] = value;
-            }
-        } else {
-            // Autres champs simples
-            jsonData.artist[key] = value;
-        }
+    let jsonData = {}; // Suppression de `{ artist: {} }`
+
+    inputs.forEach(input => {
+        const path = input.getAttribute("data-path");
+        const value = input.value;
+
+        setJsonValue(jsonData, path, value);
     });
 
     console.log("Données formatées :", jsonData);
 
-    // Envoyer les données via fetch à artist-controller.php
     fetch("artist-controller.php", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(jsonData)
     })
     .then(response => response.json())
@@ -176,4 +179,6 @@ function saveArtistData() {
         alert("Erreur lors de la sauvegarde.");
     });
 }
+
+
 

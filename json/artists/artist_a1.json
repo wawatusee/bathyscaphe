@@ -1,10 +1,17 @@
 {
     "artist": {
         "id": "a1",
-        "name": "Official",
-        "en": "Music",
-        "fr": "musiques",
-        "nl": "musieken",
-        "link": "http:\/\/www.asetone.fr\/"
+        "name": "Asetone",
+        "art": {
+            "en": "Musics",
+            "fr": "musique",
+            "nl": "musiek"
+        },
+        "liens": [
+            {
+                "name": "Official",
+                "link": "http:\/\/www.asetone.fr\/"
+            }
+        ]
     }
 }
