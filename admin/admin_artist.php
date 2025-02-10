@@ -40,6 +40,8 @@ echo "</pre>";
     <h1>Gestion des Artistes</h1>
     <div id="form-container">
         <form id="artist-form" method="POST" enctype="multipart/form-data"></form>
+        <button type="button" id="save-button">Save</button> <!-- Doit être hors du formulaire -->
+
     </div>
 
     <script src="js/artist-admin.js"></script>

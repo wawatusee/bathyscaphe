@@ -61,3 +61,119 @@ function createTextInput(name, value = "") {
     input.value = value;
     return input;
 }
+
+// 3️⃣ Attendre que le DOM soit chargé avant d'attacher les événements
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("artist-form");
+    const saveButton = document.getElementById("save-button");
+    let isModified = false;
+
+    if (form) {
+        form.addEventListener("input", function () {
+            isModified = true;
+            console.log("Des modifications ont été détectées !");
+            if (saveButton) {
+                saveButton.textContent = "Save (Modifications en cours)";
+                saveButton.style.backgroundColor = "orange";
+            }
+        });
+
+        window.addEventListener("beforeunload", function (event) {
+            if (isModified) {
+                event.preventDefault();
+                event.returnValue = "Vous avez des modifications non sauvegardées. Êtes-vous sûr de vouloir quitter ?";
+            }
+        });
+
+        if (saveButton) {
+            saveButton.addEventListener("click", saveArtistData);
+        } else {
+            console.error("Le bouton Save n'a pas été trouvé !");
+        }
+    }
+});
+
+// 4️⃣ Fonction pour récupérer les données du formulaire en JSON
+function getFormDataAsJson(form) {
+    let jsonData = {};
+
+    new FormData(form).forEach((value, key) => {
+        if (key.includes("[")) {
+            const parts = key.match(/([^\[]+)\[([^\]]+)\]/);
+            if (parts) {
+                const parentKey = parts[1];
+                const childKey = parts[2];
+
+                if (!jsonData[parentKey]) {
+                    jsonData[parentKey] = {};
+                }
+                jsonData[parentKey][childKey] = value;
+            }
+        } else {
+            jsonData[key] = value;
+        }
+    });
+
+    return jsonData;
+}
+
+function saveArtistData() {
+    console.log("Sauvegarde des données...");
+
+    const form = document.getElementById("artist-form");
+    const formData = new FormData(form);
+    
+    let jsonData = {
+        artist: {
+            id: "",
+            name: "",
+            illustration: "",
+            art: {},
+            liens: []
+        }
+    };
+
+    formData.forEach((value, key) => {
+        if (key.startsWith("art[")) {
+            // Ex: art[en] => art.en
+            let lang = key.match(/\[(.*?)\]/)[1]; // Récupère "en", "fr", "nl"
+            jsonData.artist.art[lang] = value;
+        } else if (key.startsWith("liens[")) {
+            // Ex: liens[0][name] => récupérer "0" et "name"
+            let match = key.match(/\[(\d+)\]\[(.*?)\]/);
+            if (match) {
+                let index = parseInt(match[1]); // Numéro de l'élément dans le tableau
+                let field = match[2]; // "name" ou "link"
+                
+                if (!jsonData.artist.liens[index]) {
+                    jsonData.artist.liens[index] = {};
+                }
+                jsonData.artist.liens[index][field] = value;
+            }
+        } else {
+            // Autres champs simples
+            jsonData.artist[key] = value;
+        }
+    });
+
+    console.log("Données formatées :", jsonData);
+
+    // Envoyer les données via fetch à artist-controller.php
+    fetch("artist-controller.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(jsonData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Réponse du serveur :", data);
+        alert("Données sauvegardées avec succès !");
+    })
+    .catch(error => {
+        console.error("Erreur lors de l'enregistrement :", error);
+        alert("Erreur lors de la sauvegarde.");
+    });
+}
+
