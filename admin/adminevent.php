@@ -1,5 +1,6 @@
 <?php
 //Classes nécessaires à la présentation des événements
+require_once("../src/utils/file_manager.php");
 require_once("../src/model/events_model.php");
 require_once("../src/view/events_view.php");
 require_once("../src/model/lexique_model.php");
