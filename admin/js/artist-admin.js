@@ -17,19 +17,19 @@ function generateForm(data, config, parent = document.getElementById("artist-for
             const fieldset = document.createElement("fieldset");
             fieldset.innerHTML = `<legend>${key}</legend>`;
             parent.appendChild(fieldset);
-        
+
             value.forEach((item, index) => {
                 const arrayPath = `${fullPath}[${index}]`;
                 const itemFieldset = document.createElement("fieldset");
                 itemFieldset.innerHTML = `<legend> ${key} ${index + 1}</legend>`;
-        
+
                 if (typeof item === "object") {
                     generateForm(item, fieldConfig.structure, itemFieldset, arrayPath);
                 } else {
                     const input = createTextInput(arrayPath, item);
                     itemFieldset.appendChild(input);
                 }
-        
+
                 // Bouton de suppression pour chaque élément du tableau
                 const removeButton = document.createElement("button");
                 removeButton.innerText = "Supprimer";
@@ -37,11 +37,11 @@ function generateForm(data, config, parent = document.getElementById("artist-for
                 removeButton.onclick = () => {
                     fieldset.removeChild(itemFieldset);
                 };
-        
+
                 itemFieldset.appendChild(removeButton);
                 fieldset.appendChild(itemFieldset);
             });
-        
+
             // Ajouter un bouton pour insérer un nouvel élément dans le tableau
             const addButton = document.createElement("button");
             addButton.innerText = `Ajouter ${key}`;
@@ -50,14 +50,14 @@ function generateForm(data, config, parent = document.getElementById("artist-for
                 const newIndex = fieldset.children.length - 1; // Compter les éléments existants
                 const newFieldset = document.createElement("fieldset");
                 newFieldset.innerHTML = `<legend>${key} ${newIndex + 1}</legend>`;
-        
+
                 if (key === "liens") {
                     const nameInput = createTextInput(`${fullPath}[${newIndex}].name`, "");
                     const linkInput = createTextInput(`${fullPath}[${newIndex}].link`, "");
                     newFieldset.appendChild(nameInput);
                     newFieldset.appendChild(linkInput);
                 }
-        
+
                 // Bouton de suppression pour le nouvel élément
                 const removeButton = document.createElement("button");
                 removeButton.innerText = "Supprimer";
@@ -65,17 +65,17 @@ function generateForm(data, config, parent = document.getElementById("artist-for
                 removeButton.onclick = () => {
                     fieldset.removeChild(newFieldset);
                 };
-        
+
                 newFieldset.appendChild(removeButton);
                 fieldset.appendChild(newFieldset);
             };
-        
+
             parent.appendChild(addButton);
-        }else {
+        } else {
             // Gestion des champs simples
             const label = document.createElement("label");
             label.innerText = key.charAt(0).toUpperCase() + key.slice(1);
-            
+
             let input;
             switch (key) {
                 case "illustration":
@@ -135,10 +135,12 @@ function setJsonValue(obj, path, value) {
     current[keys[keys.length - 1]] = value;
 }
 
-// 3️⃣ Attendre que le DOM soit chargé avant d'attacher les événements
+let saveButton; // Déclarer saveButton comme variable globale
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("artist-form");
-    const saveButton = document.getElementById("save-button");
+    saveButton = document.getElementById("save-button"); // Initialiser saveButton ici
+
     let isModified = false;
 
     if (form) {
@@ -196,12 +198,11 @@ function saveArtistData() {
     const form = document.getElementById("artist-form");
     const inputs = form.querySelectorAll("input[data-path]");
 
-    let jsonData = {}; // Suppression de `{ artist: {} }`
+    let jsonData = {};
 
     inputs.forEach(input => {
         const path = input.getAttribute("data-path");
         const value = input.value;
-
         setJsonValue(jsonData, path, value);
     });
 
@@ -215,43 +216,11 @@ function saveArtistData() {
     .then(response => response.json())
     .then(data => {
         console.log("Réponse du serveur :", data);
-        alert("Données sauvegardées avec succès !");
-    })
-    .catch(error => {
-        console.error("Erreur lors de l'enregistrement :", error);
-        alert("Erreur lors de la sauvegarde.");
-    });
-}
-/*function saveArtistData() {
-    console.log("Sauvegarde des données...");
 
-    const form = document.getElementById("artist-form");
-    const inputs = form.querySelectorAll("input[data-path]");
-
-    // Ajouter le nom du fichier aux données JSON
-    let jsonData = { file: db_json.artist.file, artist: {} };
-
-    inputs.forEach(input => {
-        const path = input.getAttribute("data-path");
-        const value = input.value;
-
-        setJsonValue(jsonData.artist, path, value);
-    });
-
-    console.log("Données formatées :", jsonData);
-
-    fetch("artist-controller.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(jsonData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log("Réponse du serveur :", data);
         if (data.success) {
             alert("Données sauvegardées avec succès !");
             isModified = false;
-            saveButton.textContent = "Save";
+            saveButton.textContent = "Save"; // Utiliser saveButton ici
             saveButton.style.backgroundColor = "";
         } else {
             alert("Erreur lors de la sauvegarde : " + data.message);
@@ -261,4 +230,4 @@ function saveArtistData() {
         console.error("Erreur lors de l'enregistrement :", error);
         alert("Erreur lors de la sauvegarde.");
     });
-}*/
+}
