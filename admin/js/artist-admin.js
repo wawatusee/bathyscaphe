@@ -190,7 +190,7 @@ function getFormDataAsJson(form) {
     return jsonData;
 }
 
-/*function saveArtistData() {
+function saveArtistData() {
     console.log("Sauvegarde des données...");
 
     const form = document.getElementById("artist-form");
@@ -221,14 +221,14 @@ function getFormDataAsJson(form) {
         console.error("Erreur lors de l'enregistrement :", error);
         alert("Erreur lors de la sauvegarde.");
     });
-}*/
-function saveArtistData() {
+}
+/*function saveArtistData() {
     console.log("Sauvegarde des données...");
 
     const form = document.getElementById("artist-form");
     const inputs = form.querySelectorAll("input[data-path]");
 
-    // Initialiser jsonData avec le nom du fichier
+    // Ajouter le nom du fichier aux données JSON
     let jsonData = { file: db_json.artist.file, artist: {} };
 
     inputs.forEach(input => {
@@ -261,4 +261,4 @@ function saveArtistData() {
         console.error("Erreur lors de l'enregistrement :", error);
         alert("Erreur lors de la sauvegarde.");
     });
-}
+}*/

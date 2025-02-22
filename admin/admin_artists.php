@@ -14,17 +14,19 @@ $artists = [];
 $maxId = 0;
 
 foreach ($files as $file) {
-    $filename = basename($file, ".json");
-    if (preg_match('/^a(\d+)_(.+)$/', $filename, $matches)) {
-        $id = (int)$matches[1];
-        $name = str_replace("_", " ", $matches[2]);
+    $filename = basename($file); // Récupère le nom du fichier (ex: "a001.json")
+    
+    // Vérifier si le fichier correspond au format "a001.json"
+    if (preg_match('/^a(\d{3})\.json$/', $filename, $matches)) {
+        $id = (int)$matches[1]; // Récupère l'ID (ex: 1 pour "a001.json")
 
+        // Ajouter l'artiste au tableau
         $artists[] = [
             "id" => $id,
-            "name" => $name,
-            "file" => basename($file)
+            "file" => $filename
         ];
 
+        // Mettre à jour le dernier ID utilisé
         if ($id > $maxId) {
             $maxId = $id;
         }
@@ -36,7 +38,7 @@ $newId = "a" . str_pad($maxId + 1, 3, "0", STR_PAD_LEFT);
 
 // Création d'un nouvel artiste si bouton cliqué
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $newArtistFile = $directory . $newId . "_nouvel-artiste.json";
+    $newArtistFile = $directory . $newId . ".json"; // Format : a001.json
     $newArtistData = [
         "artist" => [
             "id" => $newId,

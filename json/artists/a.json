@@ -1,0 +1,18 @@
+{
+    "artist": {
+        "artist": {
+            "id": "a003",
+            "name": "Nouvel Artiste",
+            "art": {
+                "en": "",
+                "fr": "",
+                "nl": ""
+            },
+            "description": {
+                "en": "",
+                "fr": "",
+                "nl": ""
+            }
+        }
+    }
+}
