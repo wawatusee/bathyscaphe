@@ -1,0 +1,51 @@
+{
+    "artist": {
+        "id": {
+            "type": "text",
+            "label": "ID de l'artiste",
+            "required": true
+        },
+        "name": {
+            "type": "text",
+            "label": "Nom de l'artiste",
+            "required": true
+        },
+        "illustration": {
+            "type": "file",
+            "label": "Illustration",
+            "required": true
+        },
+        "art": {
+            "type": "object",
+            "label": "Genre musical",
+            "structure": {
+                "en": {
+                    "type": "text",
+                    "label": "Art in English"
+                },
+                "fr": {
+                    "type": "text",
+                    "label": "Art en Français"
+                },
+                "nl": {
+                    "type": "text",
+                    "label": "Art in Dutch"
+                }
+            }
+        },
+        "liens": {
+            "type": "array",
+            "label": "Liens",
+            "structure": {
+                "name": {
+                    "type": "text",
+                    "label": "Nom du lien"
+                },
+                "link": {
+                    "type": "text",
+                    "label": "URL"
+                }
+            }
+        }
+    }
+}

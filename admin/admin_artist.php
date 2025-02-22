@@ -1,4 +1,7 @@
 <?php
+include 'session_management.php';
+?>
+<?php
 // Vérifie si un fichier est spécifié dans l'URL
 $file = filter_input(INPUT_GET, 'file', FILTER_SANITIZE_STRING);
 if (!$file) {
@@ -30,7 +33,8 @@ $formConfig = json_decode(file_get_contents("../json/artist-config.json"), true)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Artiste</title>
-    <link rel="stylesheet" href="css/artist-admin.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/admin-artist.css">
 </head>
 
 <body>
