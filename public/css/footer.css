@@ -16,21 +16,19 @@ margin-bottom: 5px ;
 
 }
 
-#sitemap h3{
-color: white;
-font-family: "myTitleFont";
-}
 
 .footerNav{
-/*background-color:var(--first-color);*/
 display: flex;
 flex-direction: row;
 justify-content: space-around;
+flex-wrap: wrap;
 margin-top: 15px;
 padding-top: 15px;
 }
 .navfooterbloc{
 margin-bottom: var(--standartspace);
+line-height: 1.8em
+
 }
 .navfooterbloc a{
 display: block;
@@ -42,9 +40,42 @@ color: var(--main-clear-color);
 text-decoration: underline;
 color: var(--main-dark-color);
 }
-.navfooterbloc h3{
-  background-color: var(--batho-noir);
+/*Particular communications link*/
+.maillink::before{
+  content:url('/public/img/deco/icons8-mail-24.png');
+  position: relative;
+  top: 10px;
+  left: -10px;
 }
+.phonelink::before{
+  content:url('/public/img/deco/phone-filled-white.png');
+  position: relative;
+  top: 10px;
+  left: -10px;
+  bottom: 0;
+}
+.situationlink::content{
+  content:url('/public/img/deco/icons8-map-32.png');
+  position: relative;
+  top: 10px;
+  left: -10px;
+}
+.situationlink::before{
+  content:url('/public/img/deco/icons8-map-32.png');
+  position: relative;
+  top: 10px;
+  left: -10px;
+}
+/*Block  rsMenu*/
+.nav-rs{
+    display: flex;
+    justify-content:center;
+    background-color: var(--main-dark-color);
+  }
+.navfooterbloc h3{
+  background-color:var(--batho-noir);
+}
+
 /*Block  rsMenu*/
 .nav-rs{
     display: flex;
@@ -76,24 +107,6 @@ color: var(--main-dark-color);
   background-position-x:-150px;
   }
   /*End RSmenu*/
-  /*Sponsors*/
- .sponsors{
-  color: var(--first-color);
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: 15px;
- }
-  .sponsor img{
-    max-height: 350px;
-    max-width: 300px;
-    margin: auto auto auto auto;
-  }
-  .sponsors>img{
-    max-width: 96vw;
-   }
-    /*End Sponsors*/
-  /**********************/
+ 
       /* end footerNav*/
   /**********************/

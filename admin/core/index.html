@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Images</title>
+</head>
+<body>
+    <!-- Input pour sélectionner plusieurs fichiers -->
+    <input type="file" id="fileInput" multiple />
+    <!-- Bouton pour déclencher l'upload -->
+    <button onclick="uploadImages()">Upload</button>
+
+    <script>
+        function uploadImages() {
+            const fileInput = document.getElementById('fileInput');
+            if (fileInput.files.length === 0) {
+                alert("Please select image files");
+                return;
+            }
+
+            const files = fileInput.files;
+            const formData = new FormData();
+
+            // Ajouter chaque fichier au FormData
+            for (let i = 0; i < files.length; i++) {
+                formData.append('images[]', files[i]);
+            }
+            // Ajouter d'autres paramètres nécessaires
+            formData.append('uploadDir', 'uploads');
+            formData.append('width', 400);  // exemple de largeur
+            formData.append('height', 600);  // exemple de hauteur
+            formData.append('imageFormat', 'jpg');
+
+            // Envoyer la requête à upload.php
+            fetch('upload.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    alert("Images uploaded successfully");
+                } else {
+                    alert("Failed to upload images: " + data.error);
+                }
+            })
+            .catch(error => {
+                alert("Error uploading images: " + error);
+            });
+        }
+    </script>
+</body>
+</html>

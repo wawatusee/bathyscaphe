@@ -1,45 +1,54 @@
   /*MENUS*/
-/**********************/
-/*Liste déroulante Langues*/
-/* Style pour la liste déroulante */
+  /**********************/
+  /*Liste déroulante Langues*/
+  /* Style pour la liste déroulante */
 
-select#lang {
-  padding: 4px;
-  border: none;
-  font-size: 1em;
-  background-color:var(--batho-bleu); /* Fond blanc */
-  color: var(--batho-noir); /* Couleur du texte */
-margin-bottom: 2px;
-margin-left: 2px;
-}
-
-/* Style pour les options de la liste déroulante */
-select#lang option {
-  background-color: #fff; /* Fond blanc */
-  color: #333; /* Couleur du texte */
-}
-
-/* Style pour le bouton de soumission (peut être personnalisé selon vos besoins) */
-input[type="submit"] {
-  padding: 10px 20px;
-  background-color: #007BFF; /* Couleur de fond bleue */
-  color: #fff; /* Couleur du texte blanc */
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-/*Fin liste déroulante langues*/
-  /*mainMenu*/
-/**********************/
-.responsiveMenu {
-    overflow: hidden;
-    background-color:#999;
+  select#lang {
+    padding: 4px;
+    border: none;
+    font-size: 1em;
+    background-color: var(--batho-bleu);
+    /* Fond blanc */
+    color: var(--batho-noir);
+    /* Couleur du texte */
+    margin-bottom: 2px;
+    margin-left: 2px;
   }
-  .responsiveMenu{
-    font-family: "myTitleFont",Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+
+  /* Style pour les options de la liste déroulante */
+  select#lang option {
+    background-color: #fff;
+    /* Fond blanc */
+    color: #333;
+    /* Couleur du texte */
+  }
+
+  /* Style pour le bouton de soumission (peut être personnalisé selon vos besoins) */
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    /* Couleur de fond bleue */
+    color: #fff;
+    /* Couleur du texte blanc */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /*Fin liste déroulante langues*/
+  /*mainMenu*/
+  /**********************/
+  .responsiveMenu {
+    overflow: hidden;
+    background-color: #999;
+  }
+
+  .responsiveMenu {
+    font-family: "myTitleFont", Verdana, Geneva, Tahoma, sans-serif, sans-serif;
     margin-right: 0px;
   }
+
   .responsiveMenu a {
     float: left;
     display: inline;
@@ -49,40 +58,48 @@ input[type="submit"] {
     text-decoration: none;
     font-size: 17px;
   }
+
   .itemMenu {
- margin-right: 35px;
+    margin-right: 35px;
   }
-  
+
   .itemMenu:hover {
-    background-color:var(--main-clear-color);
+    background-color: var(--main-clear-color);
     color: var(--batho-bleu);
 
   }
-  
+
   .responsiveMenu a.active {
     background-color: var(--blue-color);
     color: white;
   }
-  
+
   .responsiveMenu .icon {
     display: none;
   }
-  
+
   @media screen and (max-width: 600px) {
-    .responsiveMenu a {display: none;}
+    .responsiveMenu a {
+      display: none;
+    }
+
     .responsiveMenu a.icon {
       float: left;
       display: block;
     }
   }
-  
+
   @media screen and (max-width: 600px) {
-    .responsiveMenu.responsive {position: relative;}
+    .responsiveMenu.responsive {
+      position: relative;
+    }
+
     .responsiveMenu.responsive .icon {
       position: absolute;
       right: 0;
-      top:-10px;
+      top: -10px;
     }
+
     .responsiveMenu.responsive a {
       float: left;
       display: block;
@@ -92,9 +109,10 @@ input[type="submit"] {
 
 
   /*Texte information*/
-  .information{
+  .information {
     padding: var(--content-padding);
     background-color: var(--main-clear-color);
   }
-    /*End mainMENUS*/
-/**********************/
+
+  /*End mainMENUS*/
+  /**********************/

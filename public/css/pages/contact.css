@@ -1,0 +1,66 @@
+.contacts-container{
+    display: flex;
+    min-height: 50vh;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .contacts{
+    color: var(--main-dark-color);
+    list-style-type: none; /* Supprime les puces */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Active Flexbox sur le conteneur <ul> */
+    flex-direction:column;
+  }
+  .contacts li{
+    padding: 10px;
+  }
+  .contacts a{
+  color: var(--main-dark-color);
+  text-decoration: none;
+  font-size: 1.6em;
+  }
+  .contacts a:hover {
+    color: var(--secondary-blue-color);
+    text-decoration-line: underline;
+  }
+
+  main{
+    padding: 15px;
+  }
+  /*Liens dans la page contacts*/
+  .navfooterbloc a:hover{
+    text-decoration: underline;
+    color: var(--secondary-blue-color);
+    }
+    /*Particular communications link*/
+    .contacts-maillink::before{
+      content:url('/public/img/deco/icons8-mail-30.png');
+      position: relative;
+      top: 10px;
+      left: -10px;
+    }
+    .contacts-phonelink::before{
+      content:url('/public/img/deco/icons8-phone-30.png');
+      position: relative;
+      top: 10px;
+      left: -10px;
+      bottom: 0;
+    }
+    .contacts-whatsapplink::before{
+      content:url('/public/img/deco/icons8-whatsapp-30.png');
+      position: relative;
+      top: 10px;
+      left: -10px;
+    }
+    .contacts-adress{
+        font-size: 1.6em;
+    }
+    .contacts-adress::before{
+        content:url('/public/img/deco/icons8-location-30.png');
+    }

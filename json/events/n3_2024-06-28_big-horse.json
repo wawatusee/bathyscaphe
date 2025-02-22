@@ -1,0 +1,53 @@
+{
+    "event":{
+        "id":3,
+        "time":{
+        "date":"2024-06-28",
+        "horaire":{
+            "fr":"Porte ouverte à partir de 19h concert à 20h",
+            "en":"Doors 19h concert 20h",
+            "nl":"Doer 19h concert 20h"
+        }
+        },
+        "title":"Navigation #3-Big horse",
+        "illustration":"n3.jpg",
+        "description_event":{
+            "en":"Wild and primitive Rockn'roll One-man-band from Brussels, Belgium",
+            "fr":"Rocker sauvage et primal de Bruxelles en Belgique",
+            "nl":"Wilde en oeroude rocker uit Brussel in België"
+        },
+        "artists":[
+            {
+            "name":"Big horse",
+            "art":{
+                "en":"Music",
+                "fr":"musique",
+                "nl":"musiek"
+            },
+            "illustration":"big-horse.jpeg",
+            "liens":
+            [
+                "https://linktr.ee/bighorsemusic",
+                "https://www.facebook.com/TheBigHorseMusic/"
+            ]
+
+        }
+        ],
+        "infospratiques":{
+            "organisation":"bathyscaphe.be",
+            "necessitedbook":false,
+            "price":"8 Euros",
+            "situation":{
+                "street":"Rue Dieudonné Lefèvre",
+                "number":"215",
+                "postcode":"1020",
+                 "city":"Bruxelles",
+                 "country":"Belgique"
+            }
+        
+        },
+        "ticket":{
+            "link":"https://www.billetweb.fr/shop.php?event=navigation-3"
+        }
+    }
+}

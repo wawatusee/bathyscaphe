@@ -1,0 +1,19 @@
+{
+    "refs_contact": {
+        "title": {
+            "en": "Contact",
+            "fr": "Contact",
+            "nl": "Contact"
+        },
+        "advise": {
+            "en": "To get in touch with the bathyscaphe.",
+            "fr": "Pour prendre contact avec le Bathyscaphe.",
+            "nl": "Om contact op te nemen met de bathyscaaf."
+        },
+        "address": {
+            "en": "rue Dieudonné Lefèvre, 215<br> 1020 Brussels - Belgium",
+            "fr": "rue Dieudonné Lefèvre, 215<br> 1020 Brussels - Belgique",
+            "nl": "rue Dieudonné Lefèvre, 215<br> 1020 Brussel - België"
+        }
+    }
+}

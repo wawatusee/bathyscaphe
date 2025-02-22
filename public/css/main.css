@@ -1,7 +1,11 @@
-main{
-  margin-left: 60px;
-  list-style-type: circle;
+amain {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin-left: 5vw;
+  min-height: 70vh;
 }
-main ul li{
-  list-style-type: circle;
+
+.core {
+  width: fit-content;
 }

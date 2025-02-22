@@ -1,0 +1,37 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.commands-admin{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background-color: var(--first-color);
+    justify-content: space-around;
+    gap:1em;
+}
+.event-options{
+    display: flex;
+    flex-direction: column;
+}
+.activity-creation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.consigne {
+    background-color:hsla(10, 78%, 56%, 0.704);
+    color: white;
+    border: 1px solid hsla(10, 78%, 56%, 0.704);
+    padding: 10px;
+    width: 100%;
+    font-size: 1.5em;
+    box-sizing: border-box; /* Pour s'assurer que le padding est inclus dans la largeur totale */
+}
+.consigne-titre{
+    color: hsla(10, 78%, 56%, 0.704);
+    font-size:2.5em;
+}

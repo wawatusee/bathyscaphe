@@ -1,0 +1,272 @@
+/*Grid for past and futur*/
+/* Configuration de base */
+/* Configuration de base */
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  /* 3 colonnes : gauche, core, droite */
+  gap: 20px;
+}
+
+/* Configuration des sidebars */
+.past-sidebar {
+  grid-column: 1;
+  /* Colonne de gauche */
+}
+
+.future-sidebar {
+  grid-column: 3;
+  /* Colonne de droite */
+}
+
+/* Zone principale pour les événements cliqués */
+.core {
+  grid-column: 2;
+  /* Colonne centrale */
+  padding: 0 20px 20px 20px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+ 
+/* Liste des événements */
+.list_events {
+  list-style: none;
+  padding: 0;
+}
+
+.card_event {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.card_event:hover {
+  transform: scale(1.02);
+}
+
+/* Effets de hover pour les liens */
+.card_event a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.date,
+.artist {
+  font-size: 0.9rem;
+}
+
+/* Affichage responsive */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    /* Une seule colonne en mobile */
+  }
+
+  /* Cacher les sidebars et afficher les boutons */
+  .past-sidebar,
+  .future-sidebar {
+    display: none;
+  }
+
+  .past-sidebar .btn-toggle,
+  .future-sidebar .btn-toggle {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background: #f4f4f4;
+    cursor: pointer;
+  }
+
+  /* Boutons pour ouvrir les sidebars */
+  .past-sidebar.show,
+  .future-sidebar.show {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    /* Largeur ajustable */
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+
+  .past-sidebar,
+  .future-sidebar {
+    display: none;
+    /* Masque les asides */
+  }
+
+  /* Afficher les boutons pour les appareils mobiles */
+  .time-button {
+    display: inline-flex;
+    margin: 10px;
+  }
+
+  /* Styles spécifiques à l'aside visible */
+  .past-sidebar.show,
+  .future-sidebar.show {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+}
+
+/*Fin Grid for past and futur*/
+
+.productenumeration {
+  ul {
+    list-style-type: circle;
+  }
+}
+
+/*Liste d'événements*/
+.list_events {
+  margin: 1em;
+  ;
+  list-style: none ! important;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card_event {
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  ;
+}
+
+.card_event {
+  padding: 0.5em;
+  background-color: var(--neutral-grey);
+  border-radius: 5%;
+}
+
+.card_event:hover {
+
+  background-color: var(--batho-bleu);
+
+}
+
+a.card_event {
+  text-decoration: none;
+}
+
+/*Fin liste d'événements*/
+/*Activity*/
+.activity-types>.card-type,
+#btnPartager {
+  background-color: var(--batho-jaune);
+  color: white;
+  padding: var(--content-padding);
+}
+
+#btnPartager>img {
+  height: 2em;
+}
+
+#btnPartager {
+  display: inline;
+  margin-left: var(--standartspace);
+  border: none;
+}
+
+#btnPartager:hover {
+  background-color: var(--batho-vert);
+}
+
+.activity-types {
+  padding-bottom: var(--content-padding);
+}
+
+.fullActivity {
+  text-align: left;
+}
+
+.cardId {
+  margin-bottom: 20px;
+}
+
+.fullActivity>h2 {
+  text-align: left;
+  font-size: 3em;
+}
+
+.activity-description {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--standartspace);
+}
+
+.activity-texte {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--standartspace);
+}
+
+.activity-texte>p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 1.1em;
+}
+
+.activity-language {
+  font-weight: bold;
+}
+
+.activity-language::before {
+  content: "|";
+}
+
+.activity-language::after {
+  content: "|";
+}
+
+.activity-illustration>img {
+  margin-top: var(--standartspace);
+  margin-bottom: var(--standartspace);
+  max-width: 96vw;
+  max-height: 340px;
+}
+
+.infospratik {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--standartspace);
+}
+
+.infos-elements {
+  display: flex;
+  flex-direction: column;
+  gap: var(--standartspace);
+  /* background-color: var(--first-color); */
+  padding: 20px;
+  min-width: 40%;
+  flex-grow: 1;
+}
+
+
+.infos-map-activity {
+  color: black;
+  border: solid 0.2px;
+  min-width: 40%;
+  flex-grow: 1;
+  min-height: 350px;
+}
+
+/*Fin activity*/

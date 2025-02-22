@@ -1,0 +1,66 @@
+{
+    "event":{
+        "id":2,
+        "time":{
+        "date":"2024-06-08",
+        "horaire":{
+            "fr":"Porte ouverte à partir de 19h event à 20h",
+            "en":"Doors 19h event 20h",
+            "nl":"Doer 19h evenementie 20h"
+            }
+        },
+        "title":"Navigation #N-Artist name-other artistname-etc",
+        "illustration":"n2.jpg",
+        "description_event":{
+            "en":"All aboard, for Navigation #2, special DJ night edition:<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>-Doors at 20:00<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>-Echte Ra collective, with DJ Piscine and Thangi<br>Brussels based DJ collective.<br>We like to provide a selection of highly danceable music that creates a friendly and positive atmosphere on the dancefloor.<br>Mostly house.",
+            "fr":"Bienvenue à bord pour la Navigation n°2, édition spéciale DJ night :≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>- Ouverture des portes à 20:00<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>- Collectif DJ Echte Ra, avec DJ Piscine et Thangi<br>Collectif de DJs basé à Bruxelles.<br>Nous aimons proposer une sélection de musique très dansante qui crée une atmosphère conviviale et positive sur la piste de danse.<br>Principalement de la house.",
+            "nl":"Welkom aan boord voor Navigation #2, speciale DJ night editie : <br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>- Deuren open om 20:00 uur<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>- Echte Ra collectief, met DJ Piscine en Thangi<br>DJ-collectief gevestigd in Brussel.<br>We bieden een selectie van zeer dansbare muziek die een vriendelijke en positieve sfeer creëert op de dansvloer.<br>Voornamelijk house."
+        },
+        "artists":[
+            {
+            "name":"Melissa Velasco",
+            "art":{
+                "en":"Music",
+                "fr":"musique",
+                "nl":"musiek"
+            },
+            "illustration":"melissa-velasco.jpeg",
+            "liens":
+            [
+                "https://on.soundcloud.com/3uGbLpLqDhwuCTqt8",
+                "https://www.instagram.com/melisa_velasco__/"
+            ]
+            },
+            {
+                "name":"Echte Ra Collective",
+                "art":{
+                    "en":"Music",
+                    "fr":"musique",
+                    "nl":"musiek"
+                },
+                "illustration":"echte-ra-collective.jpeg",
+                "liens":
+                [
+                    "https://on.soundcloud.com/ww5Pji7JBPGZ83Kn9",
+                    "https://www.instagram.com/echte.ra/"
+                ]
+                }
+        ],
+        "infospratiques":{
+            "organisation":"bathyscaphe.be",
+            "necessitedbook":false,
+            "price":"8 Euros",
+            "situation":{
+                "street":"Rue Dieudonné Lefèvre",
+                "number":"215",
+                "postcode":"1020",
+                 "city":"Bruxelles",
+                 "country":"Belgique"
+            }
+        
+        },
+        "ticket":{
+            "link":"https://www.billetweb.fr/shop.php?event=navigation-2"
+        }
+    }
+}

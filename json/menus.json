@@ -12,16 +12,8 @@
 			"page": "events",
 			"titre": {
 			   "fr": "Evénements",
-			   "en": "events",
-			   "nl": "evenementen"
-			}
-		 },
-		 {
-			"page": "about",
-			"titre": {
-			   "fr": "À propos",
-			   "en": "About",
-			   "nl": "Over ons"
+			   "en": "Events",
+			   "nl": "Evenementen"
 			}
 		 },
 		{

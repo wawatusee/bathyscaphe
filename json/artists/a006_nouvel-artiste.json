@@ -1,0 +1,18 @@
+{
+    "artist": {
+        "id": "a006",
+        "name": "Nouvel Artiste",
+        "illustration": "",
+        "art": {
+            "en": "",
+            "fr": "",
+            "nl": ""
+        },
+        "description": {
+            "en": "",
+            "fr": "",
+            "nl": ""
+        },
+        "liens": []
+    }
+}

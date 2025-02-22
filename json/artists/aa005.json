@@ -1,0 +1,22 @@
+{
+    "artist": {
+        "id": "a005",
+        "name": "audrey",
+        "art": {
+            "en": "",
+            "fr": "",
+            "nl": ""
+        },
+        "description": {
+            "en": "",
+            "fr": "",
+            "nl": ""
+        },
+        "liens": [
+            {
+                "name": "codrops",
+                "link": "http:\/\/codrops.com"
+            }
+        ]
+    }
+}
