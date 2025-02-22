@@ -1,26 +1,40 @@
 <?php
-header("Content-Type: application/json");
-// Vérifie si des données ont été envoyées en POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Récupère les données JSON depuis le corps de la requête
-    $json_data = file_get_contents("php://input");
-    $artistData = json_decode($json_data, true);
+    // Récupérer les données JSON
+    $jsonData = file_get_contents('php://input');
+    $artistData = json_decode($jsonData, true);
 
-    if ($artistData === null) {
-        echo json_encode(["success" => false, "message" => "Données invalides"]);
+    // Vérifie si le fichier est spécifié
+    if (!isset($artistData['file'])) {
+        echo json_encode(['success' => false, 'message' => 'Aucun fichier spécifié !']);
         exit;
     }
 
-    // Définir le chemin du fichier JSON (ajuster selon l'ID de l'artiste)
-    $artistId = $artistData['id'];
-    $filePath = "../json/artists/artist_{$artistId}.json";
+    $file = $artistData['file'];
+    $artistFile = "../json/artists/" . basename($file);
 
-    // Enregistrer les données dans le fichier JSON
-    if (file_put_contents($filePath, json_encode(["artist" => $artistData], JSON_PRETTY_PRINT))) {
-        echo json_encode(["success" => true, "message" => "Données enregistrées"]);
+    // Vérifie l'existence du fichier
+    if (!file_exists($artistFile) || !is_writable($artistFile)) {
+        echo json_encode(['success' => false, 'message' => 'Fichier introuvable ou non modifiable !']);
+        exit;
+    }
+
+    // Extraire l'ID et le nom de l'artiste
+    $artistId = $artistData['artist']['id'];
+    $artistName = strtolower(str_replace(' ', '-', $artistData['artist']['name']));
+
+    // Construire le nouveau nom de fichier
+    $newFileName = "../json/artists/{$artistId}_{$artistName}.json";
+
+    // Convertir les données en JSON et les sauvegarder dans le nouveau fichier
+    $jsonContent = json_encode($artistData, JSON_PRETTY_PRINT);
+    if (file_put_contents($newFileName, $jsonContent) !== false) {
+        // Supprimer l'ancien fichier si le nouveau a été créé avec succès
+        unlink($artistFile);
+        echo json_encode(['success' => true, 'message' => 'Données sauvegardées avec succès !']);
     } else {
-        echo json_encode(["success" => false, "message" => "Erreur lors de l'enregistrement"]);
+        echo json_encode(['success' => false, 'message' => 'Erreur lors de la sauvegarde des données !']);
     }
 } else {
-    echo json_encode(["success" => false, "message" => "Méthode non autorisée"]);
+    echo json_encode(['success' => false, 'message' => 'Méthode non autorisée !']);
 }

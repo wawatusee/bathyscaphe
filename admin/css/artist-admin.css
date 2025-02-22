@@ -42,3 +42,7 @@ fieldset {
 legend {
     font-weight: bold;
 }
+.nav-admin-artist{
+    display: flex;
+    flex-direction: column;
+}

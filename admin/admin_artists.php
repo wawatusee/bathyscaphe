@@ -1,37 +1,62 @@
 <?php
-$directory = "../json/artists/"; // Dossier contenant les fichiers JSON
+$directory = "../json/artists/";
 
 // Vérifier si le dossier existe
 if (!is_dir($directory)) {
     die("Erreur : Le répertoire des artistes n'existe pas !");
 }
 
-// Récupérer tous les fichiers JSON
-$files = glob($directory . "*.json");
-
-// Vérifier si des fichiers sont trouvés
-if (!$files) {
-    die("Aucun artiste trouvé.");
-}
-
-// Préparer la liste des artistes en extrayant les infos des noms de fichiers
+// Récupérer tous les fichiers JSON (sauf config.json)
+$files = glob($directory . "a*.json");
 $artists = [];
 
+// Déterminer le dernier ID utilisé
+$maxId = 0;
+
 foreach ($files as $file) {
-    if (basename($file) === "config.json") {
-        continue; // Ignorer le fichier de configuration
-    }
-    $filename = basename($file, ".json"); // Supprimer l'extension .json
-    if (preg_match('/^([a-z0-9]+)_(.+)$/i', $filename, $matches)) {
+    $filename = basename($file, ".json");
+    if (preg_match('/^a(\d+)_(.+)$/', $filename, $matches)) {
+        $id = (int)$matches[1];
+        $name = str_replace("_", " ", $matches[2]);
+
         $artists[] = [
-            "id" => $matches[1],  // ID extrait
-            "name" => str_replace("_", " ", $matches[2]), // Nom avec espaces à la place des _
+            "id" => $id,
+            "name" => $name,
             "file" => basename($file)
         ];
+
+        if ($id > $maxId) {
+            $maxId = $id;
+        }
     }
 }
 
+// Générer le prochain ID disponible avec padding
+$newId = "a" . str_pad($maxId + 1, 3, "0", STR_PAD_LEFT);
+
+// Création d'un nouvel artiste si bouton cliqué
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $newArtistFile = $directory . $newId . "_nouvel-artiste.json";
+    $newArtistData = [
+        "artist" => [
+            "id" => $newId,
+            "name" => "Nouvel Artiste",
+            "illustration" => "",
+            "art" => ["en" => "", "fr" => "", "nl" => ""],
+            "description" => ["en" => "", "fr" => "", "nl" => ""],
+            "liens" => []
+        ]
+    ];
+
+    // Sauvegarde du fichier JSON
+    file_put_contents($newArtistFile, json_encode($newArtistData, JSON_PRETTY_PRINT));
+
+    // Redirection vers la page de modification avec le bon fichier
+    header("Location: admin_artist.php?file=" . urlencode(basename($newArtistFile)));
+    exit;
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -42,11 +67,16 @@ foreach ($files as $file) {
         table { width: 100%; border-collapse: collapse; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #f4f4f4; }
+        .btn { padding: 8px 16px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        .btn:hover { background-color: #45a049; }
     </style>
 </head>
 <body>
-    <?php require_once "admin_artists_header.php";?>
     <h1>Liste des artistes</h1>
+
+    <form method="POST">
+        <button type="submit" class="btn">+ Ajouter un artiste</button>
+    </form>
 
     <table>
         <thead>
@@ -60,16 +90,15 @@ foreach ($files as $file) {
         <tbody>
             <?php foreach ($artists as $artist) : ?>
                 <tr>
-                    <td><?= htmlspecialchars($artist["id"]) ?></td>
+                    <td><?= htmlspecialchars("a" . str_pad($artist["id"], 3, "0", STR_PAD_LEFT)) ?></td>
                     <td><?= htmlspecialchars($artist["name"]) ?></td>
                     <td><?= htmlspecialchars($artist["file"]) ?></td>
                     <td>
-                        <a href="admin_artist.php?id=<?= urlencode($artist["id"]) ?>">Modifier</a>
+                        <a href="admin_artist.php?file=<?= urlencode($artist["file"]); ?>">Modifier</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-
 </body>
 </html>
