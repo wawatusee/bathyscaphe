@@ -48,41 +48,28 @@ $formConfig = json_decode(file_get_contents("../json/artist-config.json"), true)
         <div id="artist-form"></div> <!-- Conteneur pour le formulaire --> <button type="button"
             id="save-button">Save</button>
     </div>
-    <!-- Exposer formConfig et artistData en JavaScript -->
-    <script>
-        const formConfig = <?php echo json_encode($formConfig); ?>;
-        const artistData = <?php echo json_encode($artistData); ?>; // Charger les données de l'artiste
-        console.log("formConfig :", formConfig); // Afficher formConfig dans la console
-        console.log("formConfig.artist :", formConfig.artist); // Afficher formConfig.artist dans la console
-        console.log("artistData :", artistData); // Afficher artistData dans la console
-    </script>
-    <script src="js/artist-admin.js"></script>
+<!-- Déclaration des variables globales -->
+<script>
+    const formConfig = <?php echo json_encode($formConfig); ?>;
+    const artistData = <?php echo json_encode($artistData); ?>;
+    console.log("formConfig :", formConfig);
+    console.log("artistData :", artistData);
+</script>
 
+<!-- Chargement du script externe -->
+<script src="js/artist-admin.js"></script>
 
-    <script id="db_json">
-        const db_json = <?php echo json_encode($artistData); ?>;
-        console.log("Contenu de db_json:", db_json);
-    </script>
+<!-- Code qui dépend des scripts précédents -->
+<script>
+    window.onload = function () {
+        if (artistData && artistData.artist) {
+            generateForm(artistData.artist, formConfig.artist);
+        } else {
+            console.error("Erreur : Données de l'artiste introuvables !");
+        }
+    };
+</script>
 
-    <script>
-        window.onload = function () {
-            if (db_json && db_json.artist) {
-                generateForm(db_json.artist, null);
-            } else {
-                console.error("Erreur : Données de l'artiste introuvables !");
-            }
-        };
-        document.addEventListener("DOMContentLoaded", function () {
-            const formContainer = document.getElementById("artist-form");
-
-            if (formContainer && formConfig && artistData) {
-                generateForm(artistData, formConfig.artist, formContainer); // Générer le formulaire
-                console.log("Config trouvée");
-            } else {
-                console.error("Conteneur du formulaire, configuration ou données non trouvés !");
-            }
-        });
-    </script>
 </body>
 
 </html>
