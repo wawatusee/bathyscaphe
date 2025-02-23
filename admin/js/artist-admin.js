@@ -283,7 +283,7 @@ function getNestedConfig(config, path) {
     for (const key of keys) {
         if (currentConfig[key]) {
             currentConfig = currentConfig[key];
-        } else if (currentConfig.structure && currentConfig.structure[key]) {
+        } else if (currentConfig && currentConfig.structure && currentConfig.structure[key]) {
             currentConfig = currentConfig.structure[key];
         } else {
             return null; // Pas de correspondance

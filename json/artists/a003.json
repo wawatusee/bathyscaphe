@@ -3,14 +3,14 @@
         "id": "a003",
         "name": "kierane",
         "art": {
-            "en": "",
-            "fr": "",
-            "nl": ""
+            "en": "dev",
+            "fr": "dev",
+            "nl": "dev"
         },
         "description": {
-            "en": "",
-            "fr": "",
-            "nl": ""
+            "en": "bogos",
+            "fr": "handsome",
+            "nl": "moe"
         }
     }
 }
