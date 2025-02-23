@@ -95,16 +95,6 @@
         }
     }
 }*/
-document.addEventListener("DOMContentLoaded", function () {
-    const formContainer = document.getElementById("artist-form");
-
-    if (formContainer && formConfig && artistData) {
-        generateForm(artistData, formConfig.artist, formContainer); // Générer le formulaire
-    } else {
-        console.error("Conteneur du formulaire, configuration ou données non trouvés !");
-    }
-});
-
 function generateForm(data, config, parent = document.getElementById("artist-form"), path = "") {
     parent.innerHTML = "";
 
@@ -301,3 +291,13 @@ function saveArtistData() {
             alert("Erreur lors de la sauvegarde.");
         });
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const formContainer = document.getElementById("artist-form");
+
+    if (formContainer && formConfig && artistData) {
+        generateForm(artistData, formConfig.artist, formContainer); // Générer le formulaire
+        console.log("Config trouvée");
+    } else {
+        console.error("Conteneur du formulaire, configuration ou données non trouvés !");
+    }
+});
