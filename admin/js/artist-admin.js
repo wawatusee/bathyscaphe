@@ -1,4 +1,4 @@
-function generateForm(data, config, parent = document.getElementById("artist-form"), path = "") {
+/*function generateForm(data, config, parent = document.getElementById("artist-form"), path = "") {
     parent.innerHTML = ""; // Réinitialiser le formulaire avant de le reconstruire
 
     for (const key in data) {
@@ -94,14 +94,84 @@ function generateForm(data, config, parent = document.getElementById("artist-for
             parent.appendChild(label);
         }
     }
+}*/
+document.addEventListener("DOMContentLoaded", function () {
+    const formContainer = document.getElementById("artist-form");
+
+    if (formContainer && formConfig && artistData) {
+        generateForm(artistData, formConfig.artist, formContainer); // Générer le formulaire
+    } else {
+        console.error("Conteneur du formulaire, configuration ou données non trouvés !");
+    }
+});
+
+function generateForm(data, config, parent = document.getElementById("artist-form"), path = "") {
+    parent.innerHTML = "";
+
+    console.log("config :", config); // Debug
+
+    for (const key in data) {
+        const fieldConfig = config ? config[key] : {}; // Récupérer la configuration du champ
+        console.log("fieldConfig pour", key, ":", fieldConfig); // Debug
+
+        const value = data[key];
+        const fullPath = path ? `${path}.${key}` : key;
+
+        if (typeof value === "object" && !Array.isArray(value)) {
+            // Gestion des objets imbriqués
+            const fieldset = document.createElement("fieldset");
+            fieldset.innerHTML = `<legend>${fieldConfig.label || key}</legend>`;
+            generateForm(value, fieldConfig.structure, fieldset, fullPath);
+            parent.appendChild(fieldset);
+        } else if (Array.isArray(value)) {
+            // Gestion des tableaux
+            const fieldset = document.createElement("fieldset");
+            fieldset.innerHTML = `<legend>${fieldConfig.label || key}</legend>`;
+            value.forEach((item, index) => {
+                const arrayPath = `${fullPath}[${index}]`;
+                generateForm(item, fieldConfig.structure, fieldset, arrayPath);
+            });
+            parent.appendChild(fieldset);
+        } else {
+            // Gestion des champs simples
+            const label = document.createElement("label");
+            label.innerText = fieldConfig.label || key.charAt(0).toUpperCase() + key.slice(1);
+
+            let input;
+            switch (fieldConfig.type) {
+                case "text":
+                    input = createTextInput(fullPath, value);
+                    break;
+                case "date":
+                    input = createDateInput(fullPath, value);
+                    break;
+                case "file":
+                    input = createFileInput(fullPath, value, fieldConfig.accept);
+                    break;
+                default:
+                    input = createTextInput(fullPath, value);
+            }
+
+            if (fieldConfig.required) {
+                input.required = true;
+            }
+
+            if (fieldConfig.readonly) {
+                input.readOnly = true; // Utiliser readOnly (avec un O majuscule)
+            }
+
+            label.appendChild(input);
+            parent.appendChild(label);
+        }
+    }
 }
 
-// Fonction pour créer un champ de texte avec data-path
 function createTextInput(path, value = "") {
     const input = document.createElement("input");
     input.type = "text";
+    input.id = path; // Ajouter un attribut id
     input.name = path;
-    input.setAttribute("data-path", path); // Stocker le chemin hiérarchique
+    input.setAttribute("data-path", path);
     input.value = value;
     return input;
 }
@@ -213,21 +283,21 @@ function saveArtistData() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(jsonData)
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log("Réponse du serveur :", data);
+        .then(response => response.json())
+        .then(data => {
+            console.log("Réponse du serveur :", data);
 
-        if (data.success) {
-            alert("Données sauvegardées avec succès !");
-            isModified = false;
-            saveButton.textContent = "Save"; // Utiliser saveButton ici
-            saveButton.style.backgroundColor = "";
-        } else {
-            alert("Erreur lors de la sauvegarde : " + data.message);
-        }
-    })
-    .catch(error => {
-        console.error("Erreur lors de l'enregistrement :", error);
-        alert("Erreur lors de la sauvegarde.");
-    });
+            if (data.success) {
+                alert("Données sauvegardées avec succès !");
+                isModified = false;
+                saveButton.textContent = "Save"; // Utiliser saveButton ici
+                saveButton.style.backgroundColor = "";
+            } else {
+                alert("Erreur lors de la sauvegarde : " + data.message);
+            }
+        })
+        .catch(error => {
+            console.error("Erreur lors de l'enregistrement :", error);
+            alert("Erreur lors de la sauvegarde.");
+        });
 }

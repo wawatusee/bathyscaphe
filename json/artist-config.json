@@ -4,6 +4,7 @@
             "type": "text",
             "label": "ID de l'artiste",
             "required": true,
+            "readonly": true, 
             "description": "L'identifiant unique de l'artiste.",
             "order": 1
         },
@@ -19,7 +20,10 @@
             "type": "file",
             "label": "Illustration",
             "required": true,
-            "accept": ["image/jpeg", "image/png"],
+            "accept": [
+                "image/jpeg",
+                "image/png"
+            ],
             "description": "Une image représentant l'artiste.",
             "errorMessage": "Une illustration est obligatoire.",
             "order": 3

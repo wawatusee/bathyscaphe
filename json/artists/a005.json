@@ -1,7 +1,7 @@
 {
     "artist": {
         "id": "a005",
-        "name": "fanfan",
+        "name": "Christine",
         "art": {
             "en": "drawing",
             "fr": "dessin",
@@ -10,7 +10,7 @@
         "description": {
             "en": "The artist is or dreams",
             "fr": "L'artiste garde ses r\u00eaves ou le fait croire.",
-            "nl": "Dromen"
+            "nl": "Dromen is real"
         }
     }
 }

@@ -1,20 +1,20 @@
 {
     "artist": {
-        "id": "a002",
-        "name": "audrey",
+        "id": "a001",
+        "name": "Asetones",
         "art": {
-            "en": "musik",
-            "fr": "",
-            "nl": ""
+            "en": "Musik",
+            "fr": "Musique",
+            "nl": "Musiek"
         },
         "description": {
-            "en": "What an artist",
+            "en": "",
             "fr": "",
             "nl": ""
         },
         "liens": [
             {
-                "name": "Asetone official",
+                "name": "Asetone Website",
                 "link": "http:\/\/www.asetone.fr\/"
             }
         ]

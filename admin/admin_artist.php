@@ -24,6 +24,7 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 
 // Charger la configuration du formulaire
 $formConfig = json_decode(file_get_contents("../json/artist-config.json"), true);
+var_dump($formConfig );
 ?>
 
 <!DOCTYPE html>
@@ -45,10 +46,16 @@ $formConfig = json_decode(file_get_contents("../json/artist-config.json"), true)
         </a>
     </header>
     <div id="form-container">
-        <form id="artist-form" method="POST" enctype="multipart/form-data"></form>
-        <button type="button" id="save-button">Save</button>
+    <div id="artist-form"></div> <!-- Conteneur pour le formulaire -->        <button type="button" id="save-button">Save</button>
     </div>
-
+    <!-- Exposer formConfig et artistData en JavaScript -->
+    <script>
+        const formConfig = <?php echo json_encode($formConfig); ?>;
+        const artistData = <?php echo json_encode($artistData); ?>; // Charger les données de l'artiste
+        console.log("formConfig :", formConfig); // Afficher formConfig dans la console
+        console.log("formConfig.artist :", formConfig.artist); // Afficher formConfig.artist dans la console
+        console.log("artistData :", artistData); // Afficher artistData dans la console
+    </script>
     <script src="js/artist-admin.js"></script>
 
     <script id="db_json">
