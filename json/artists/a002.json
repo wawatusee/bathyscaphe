@@ -1,22 +1,20 @@
 {
     "artist": {
         "id": "a002",
-        "name": "audrey",
+        "name": "Sebastian",
         "art": {
-            "en": "musik",
-            "fr": "",
-            "nl": ""
+            "en": "Music",
+            "fr": "Musique",
+            "nl": "Musiek"
         },
         "description": {
-            "en": "What an artist",
-            "fr": "",
-            "nl": ""
+            "en": "What a nice guy",
+            "fr": "Quel chouette gars",
+            "nl": "Dat is een men"
         },
-        "liens": [
-            {
-                "name": "Asetone official",
-                "link": "http:\/\/www.asetone.fr\/"
-            }
-        ]
+        "liens": {
+            "name": "Bathyscaphe",
+            "link": "http:\/\/bathyscaphe.be"
+        }
     }
 }

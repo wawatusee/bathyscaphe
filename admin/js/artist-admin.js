@@ -1,64 +1,3 @@
-
-/*function generateForm(data, config, parent = document.getElementById("artist-form"), path = "") {
-    parent.innerHTML = "";
-
-    console.log("config :", config); // Debug
-
-    for (const key in data) {
-        const fieldConfig = (config && config[key]) || {}; // Récupérer la configuration du champ ou un objet vide
-        console.log("fieldConfig pour", key, ":", fieldConfig); // Debug
-        if (!fieldConfig) {
-            console.warn(`Aucune configuration trouvée pour la clé : ${key}`);
-        }
-        
-        const value = data[key];
-        const fullPath = path ? `${path}.${key}` : key;
-
-        if (typeof value === "object" && !Array.isArray(value)) {
-            // Gestion des objets imbriqués
-            const fieldset = document.createElement("fieldset");
-            fieldset.innerHTML = `<legend>${fieldConfig.label || key}</legend>`;
-            generateForm(value, fieldConfig.structure, fieldset, fullPath);
-            parent.appendChild(fieldset);
-        } else if (Array.isArray(value)) {
-            // Gestion des tableaux
-            const fieldset = document.createElement("fieldset");
-            fieldset.innerHTML = `<legend>${fieldConfig.label || key}</legend>`;
-            value.forEach((item, index) => {
-                const arrayPath = `${fullPath}[${index}]`;
-                generateForm(item, fieldConfig.structure, fieldset, arrayPath);
-            });
-            parent.appendChild(fieldset);
-        } else {
-            // Gestion des champs simples
-            const label = document.createElement("label");
-            label.innerText = fieldConfig.label || key.charAt(0).toUpperCase() + key.slice(1);
-
-            let input;
-            switch (fieldConfig.type) {
-                case "text":
-                    input = createTextInput(fullPath, value);
-                    break;
-                case "date":
-                    input = createDateInput(fullPath, value);
-                    break;
-                default:
-                    input = createTextInput(fullPath, value);
-            }
-
-            if (fieldConfig.required) {
-                input.required = true;
-            }
-
-            if (fieldConfig.readonly) {
-                input.readOnly = true; // Utiliser readOnly (avec un O majuscule)
-            }
-
-            label.appendChild(input);
-            parent.appendChild(label);
-        }
-    }
-}*/
 function generateForm(data, config, parent = document.getElementById("artist-form"), path = "") {
     parent.innerHTML = "";
 
@@ -273,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 //DEBUG
-function getNestedConfig(config, path) {
+/*function getNestedConfig(config, path) {
     if (!config || !path) return null;
 
     const keys = path.replace(/$$(\d+)$$/g, '.$1').split('.'); // Gère les tableaux et objets
@@ -291,6 +230,24 @@ function getNestedConfig(config, path) {
     }
 
     return currentConfig;
+}*/
+function getNestedConfig(config, path) {
+    if (!config || !path) return null;
+
+    const keys = path.replace(/\[(\d+)\]/g, '.$1').split('.'); // Correction de la RegEx
+
+    let currentConfig = config;
+    for (const key of keys) {
+        if (currentConfig[key]) {
+            currentConfig = currentConfig[key];
+        } else if (currentConfig.structure && currentConfig.structure[key]) {
+            currentConfig = currentConfig.structure[key];
+        } else {
+            return null;
+        }
+    }
+    return currentConfig;
 }
+
 
 
