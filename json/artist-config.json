@@ -3,7 +3,6 @@
         "id": {
             "type": "text",
             "label": "ID de l'artiste",
-            "required": true,
             "readonly": true,
             "description": "L'identifiant unique de l'artiste.",
             "order": 1
