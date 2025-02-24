@@ -1,4 +1,7 @@
 <?php
+include 'session_management.php';
+?>
+<?php
 $directory = "../json/artists/";
 
 // Vérifier si le dossier existe
@@ -20,10 +23,15 @@ foreach ($files as $file) {
     if (preg_match('/^a(\d{3})\.json$/', $filename, $matches)) {
         $id = (int)$matches[1]; // Récupère l'ID (ex: 1 pour "a001.json")
 
-        // Ajouter l'artiste au tableau
+        // Charger les données JSON pour récupérer le nom
+        $jsonContent = file_get_contents($file);
+        $artistData = json_decode($jsonContent, true);
+        $artistName = $artistData['artist']['name'] ?? 'Nom inconnu';
+
         $artists[] = [
             "id" => $id,
-            "file" => $filename
+            "file" => $filename,
+            "name" => $artistName
         ];
 
         // Mettre à jour le dernier ID utilisé
@@ -43,10 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         "artist" => [
             "id" => $newId,
             "name" => "Nouvel Artiste",
-            "illustration" => "",
             "art" => ["en" => "", "fr" => "", "nl" => ""],
             "description" => ["en" => "", "fr" => "", "nl" => ""],
-            "liens" => []
+            "liens" => ["name"=> "","link"=> ""]
         ]
     ];
 

@@ -45,26 +45,31 @@ $formConfig = json_decode(file_get_contents("../json/artist-config.json"), true)
         </a>
     </header>
     <div id="form-container">
-        <form id="artist-form" method="POST" enctype="multipart/form-data"></form>
-        <button type="button" id="save-button">Save</button>
+        <div id="artist-form"></div> <!-- Conteneur pour le formulaire --> <button type="button"
+            id="save-button">Save</button>
     </div>
+<!-- Déclaration des variables globales -->
+<script>
+    const formConfig = <?php echo json_encode($formConfig); ?>;
+    const artistData = <?php echo json_encode($artistData); ?>;
+    console.log("formConfig :", formConfig);
+    console.log("artistData :", artistData);
+</script>
 
-    <script src="js/artist-admin.js"></script>
+<!-- Chargement du script externe -->
+<script src="js/artist-admin.js"></script>
 
-    <script id="db_json">
-        const db_json = <?php echo json_encode($artistData); ?>;
-        console.log("Contenu de db_json:", db_json);
-    </script>
+<!-- Code qui dépend des scripts précédents -->
+<script>
+    window.onload = function () {
+        if (artistData && artistData.artist) {
+            generateForm(artistData.artist, formConfig.artist);
+        } else {
+            console.error("Erreur : Données de l'artiste introuvables !");
+        }
+    };
+</script>
 
-    <script>
-        window.onload = function () {
-            if (db_json && db_json.artist) {
-                generateForm(db_json.artist, null);
-            } else {
-                console.error("Erreur : Données de l'artiste introuvables !");
-            }
-        };
-    </script>
 </body>
 
 </html>

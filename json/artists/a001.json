@@ -1,0 +1,22 @@
+{
+    "artist": {
+        "id": "a001",
+        "name": "Asetone",
+        "art": {
+            "en": "Musik",
+            "fr": "Musique",
+            "nl": "Musieken"
+        },
+        "description": {
+            "en": "Asetone is a really good experience",
+            "fr": "Mais que c'est bien Asetone, vraiment du bon son",
+            "nl": "Asetone is goed hansome"
+        },
+        "liens": [
+            {
+                "name": "Asetone official Website",
+                "link": "http:\/\/www.asetone.fr\/"
+            }
+        ]
+    }
+}

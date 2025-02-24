@@ -3,7 +3,7 @@
         "id": {
             "type": "text",
             "label": "ID de l'artiste",
-            "required": true,
+            "readonly": true,
             "description": "L'identifiant unique de l'artiste.",
             "order": 1
         },
@@ -14,15 +14,6 @@
             "description": "Le nom complet de l'artiste.",
             "errorMessage": "Le nom de l'artiste est obligatoire.",
             "order": 2
-        },
-        "illustration": {
-            "type": "file",
-            "label": "Illustration",
-            "required": true,
-            "accept": ["image/jpeg", "image/png"],
-            "description": "Une image représentant l'artiste.",
-            "errorMessage": "Une illustration est obligatoire.",
-            "order": 3
         },
         "art": {
             "type": "object",
@@ -42,6 +33,28 @@
                     "type": "text",
                     "label": "Art in Dutch",
                     "description": "Le genre musical en néerlandais."
+                }
+            },
+            "order": 3
+        },
+        "description": {
+            "type": "object",
+            "label": "Description",
+            "structure": {
+                "en": {
+                    "type": "text",
+                    "label": "Description in English",
+                    "description": "La description en anglais."
+                },
+                "fr": {
+                    "type": "text",
+                    "label": "Description en Français",
+                    "description": "La description en français."
+                },
+                "nl": {
+                    "type": "text",
+                    "label": "Description in Dutch",
+                    "description": "La description en néerlandais."
                 }
             },
             "order": 4

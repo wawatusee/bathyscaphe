@@ -1,93 +1,59 @@
 function generateForm(data, config, parent = document.getElementById("artist-form"), path = "") {
-    parent.innerHTML = ""; // Réinitialiser le formulaire avant de le reconstruire
+    parent.innerHTML = "";
+
+    console.log("config :", config); // Debug
 
     for (const key in data) {
-        const fieldConfig = config ? config[key] : {}; // S'assurer que config existe pour éviter une erreur
         const value = data[key];
-        const fullPath = path ? `${path}.${key}` : key; // Chemin hiérarchique du champ
+        const fullPath = path ? `${path}.${key}` : key;
+
+        // Récupérer la configuration imbriquée
+        const fieldConfig = getNestedConfig(config, fullPath) || {}; 
+        console.log("fieldConfig pour", fullPath, ":", fieldConfig); // Debug
+
+        if (!fieldConfig || Object.keys(fieldConfig).length === 0) {
+            console.warn(`Aucune configuration trouvée pour la clé : ${fullPath}`);
+        }
 
         if (typeof value === "object" && !Array.isArray(value)) {
-            // Gestion des objets (ex: 'art' avec des sous-champs 'en', 'fr', 'nl')
+            // Gestion des objets imbriqués
             const fieldset = document.createElement("fieldset");
-            fieldset.innerHTML = `<legend>${key}</legend>`;
-            generateForm(value, fieldConfig, fieldset, fullPath);
+            fieldset.innerHTML = `<legend>${fieldConfig.label || key}</legend>`;
+            generateForm(value, config, fieldset, fullPath); // Utilisation de la config racine
             parent.appendChild(fieldset);
         } else if (Array.isArray(value)) {
             // Gestion des tableaux
             const fieldset = document.createElement("fieldset");
-            fieldset.innerHTML = `<legend>${key}</legend>`;
-            parent.appendChild(fieldset);
-
+            fieldset.innerHTML = `<legend>${fieldConfig.label || key}</legend>`;
             value.forEach((item, index) => {
                 const arrayPath = `${fullPath}[${index}]`;
-                const itemFieldset = document.createElement("fieldset");
-                itemFieldset.innerHTML = `<legend> ${key} ${index + 1}</legend>`;
-
-                if (typeof item === "object") {
-                    generateForm(item, fieldConfig.structure, itemFieldset, arrayPath);
-                } else {
-                    const input = createTextInput(arrayPath, item);
-                    itemFieldset.appendChild(input);
-                }
-
-                // Bouton de suppression pour chaque élément du tableau
-                const removeButton = document.createElement("button");
-                removeButton.innerText = "Supprimer";
-                removeButton.type = "button";
-                removeButton.onclick = () => {
-                    fieldset.removeChild(itemFieldset);
-                };
-
-                itemFieldset.appendChild(removeButton);
-                fieldset.appendChild(itemFieldset);
+                // Utilisez la structure spécifique pour les éléments du tableau
+                generateForm(item, fieldConfig.structure, fieldset, arrayPath);
             });
-
-            // Ajouter un bouton pour insérer un nouvel élément dans le tableau
-            const addButton = document.createElement("button");
-            addButton.innerText = `Ajouter ${key}`;
-            addButton.type = "button";
-            addButton.onclick = () => {
-                const newIndex = fieldset.children.length - 1; // Compter les éléments existants
-                const newFieldset = document.createElement("fieldset");
-                newFieldset.innerHTML = `<legend>${key} ${newIndex + 1}</legend>`;
-
-                if (key === "liens") {
-                    const nameInput = createTextInput(`${fullPath}[${newIndex}].name`, "");
-                    const linkInput = createTextInput(`${fullPath}[${newIndex}].link`, "");
-                    newFieldset.appendChild(nameInput);
-                    newFieldset.appendChild(linkInput);
-                }
-
-                // Bouton de suppression pour le nouvel élément
-                const removeButton = document.createElement("button");
-                removeButton.innerText = "Supprimer";
-                removeButton.type = "button";
-                removeButton.onclick = () => {
-                    fieldset.removeChild(newFieldset);
-                };
-
-                newFieldset.appendChild(removeButton);
-                fieldset.appendChild(newFieldset);
-            };
-
-            parent.appendChild(addButton);
+            parent.appendChild(fieldset);
         } else {
             // Gestion des champs simples
             const label = document.createElement("label");
-            label.innerText = key.charAt(0).toUpperCase() + key.slice(1);
+            label.innerText = fieldConfig.label || key.charAt(0).toUpperCase() + key.slice(1);
 
             let input;
-            switch (key) {
-                case "illustration":
-                    // Afficher le nom du fichier généré pour l'illustration
-                    const illustrationName = `${data.id}-${data.name}`.toLowerCase().replace(/\s+/g, '-') + ".jpg";
-                    const fileNameLabel = document.createElement("label");
-                    fileNameLabel.innerHTML = `<strong>Illustration:</strong> ${illustrationName}`;
-                    parent.appendChild(fileNameLabel);
-                    continue; // Passer à la prochaine itération
-                default:
+            switch (fieldConfig.type) {
+                case "text":
                     input = createTextInput(fullPath, value);
                     break;
+                case "date":
+                    input = createDateInput(fullPath, value);
+                    break;
+                default:
+                    input = createTextInput(fullPath, value);
+            }
+
+            if (fieldConfig.required) {
+                input.required = true;
+            }
+            
+            if (fieldConfig.readonly) { // Utilisez 'readonly' en minuscules
+                input.readOnly = true;
             }
 
             label.appendChild(input);
@@ -96,13 +62,17 @@ function generateForm(data, config, parent = document.getElementById("artist-for
     }
 }
 
-// Fonction pour créer un champ de texte avec data-path
-function createTextInput(path, value = "") {
+
+function createTextInput(path, value = "", readOnly = false) {
     const input = document.createElement("input");
     input.type = "text";
+    input.id = path;
     input.name = path;
-    input.setAttribute("data-path", path); // Stocker le chemin hiérarchique
+    input.setAttribute("data-path", path);
     input.value = value;
+    if (readOnly) {
+        input.readOnly = true;
+    }
     return input;
 }
 
@@ -213,21 +183,71 @@ function saveArtistData() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(jsonData)
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log("Réponse du serveur :", data);
+        .then(response => response.json())
+        .then(data => {
+            console.log("Réponse du serveur :", data);
 
-        if (data.success) {
-            alert("Données sauvegardées avec succès !");
-            isModified = false;
-            saveButton.textContent = "Save"; // Utiliser saveButton ici
-            saveButton.style.backgroundColor = "";
-        } else {
-            alert("Erreur lors de la sauvegarde : " + data.message);
-        }
-    })
-    .catch(error => {
-        console.error("Erreur lors de l'enregistrement :", error);
-        alert("Erreur lors de la sauvegarde.");
-    });
+            if (data.success) {
+                alert("Données sauvegardées avec succès !");
+                isModified = false;
+                saveButton.textContent = "Save"; // Utiliser saveButton ici
+                saveButton.style.backgroundColor = "";
+            } else {
+                alert("Erreur lors de la sauvegarde : " + data.message);
+            }
+        })
+        .catch(error => {
+            console.error("Erreur lors de l'enregistrement :", error);
+            alert("Erreur lors de la sauvegarde.");
+        });
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const formContainer = document.getElementById("artist-form");
+
+   if (formContainer && typeof formConfig === 'object' && typeof artistData === 'object') {
+        generateForm(artistData, formConfig, formContainer);
+        console.log("Config trouvée");
+    } else {
+        console.error("Conteneur du formulaire, configuration ou données non trouvés !");
+    }
+});
+//DEBUG
+/*function getNestedConfig(config, path) {
+    if (!config || !path) return null;
+
+    const keys = path.replace(/$$(\d+)$$/g, '.$1').split('.'); // Gère les tableaux et objets
+
+    let currentConfig = config;
+
+    for (const key of keys) {
+        if (currentConfig[key]) {
+            currentConfig = currentConfig[key];
+        } else if (currentConfig && currentConfig.structure && currentConfig.structure[key]) {
+            currentConfig = currentConfig.structure[key];
+        } else {
+            return null; // Pas de correspondance
+        }
+    }
+
+    return currentConfig;
+}*/
+function getNestedConfig(config, path) {
+    if (!config || !path) return null;
+
+    const keys = path.replace(/\[(\d+)\]/g, '.$1').split('.'); // Correction de la RegEx
+
+    let currentConfig = config;
+    for (const key of keys) {
+        if (currentConfig[key]) {
+            currentConfig = currentConfig[key];
+        } else if (currentConfig.structure && currentConfig.structure[key]) {
+            currentConfig = currentConfig.structure[key];
+        } else {
+            return null;
+        }
+    }
+    return currentConfig;
+}
+
+
+
