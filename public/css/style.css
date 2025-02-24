@@ -45,11 +45,9 @@ section{
 body{
     font-family: 'myFirstFont';
 }
-h1,h2,h3{
-    padding-top: 1em;
+h1{
+    padding-top: 0.7em;
 }
-
-
 h2{
     color: var(--batho-bleu);
     font-family: "myTitleFont";
