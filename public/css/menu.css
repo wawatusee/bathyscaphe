@@ -41,32 +41,31 @@
   /**********************/
   .responsiveMenu {
     overflow: hidden;
-    background-color: #999;
-  }
+     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
   .responsiveMenu {
     font-family: "myTitleFont", Verdana, Geneva, Tahoma, sans-serif, sans-serif;
-    margin-right: 0px;
   }
 
   .responsiveMenu a {
-    float: left;
-    display: inline;
     color: var(--batho-noir);
     text-align: center;
-    padding: 14px 16px;
+    padding: 8px 12px; /* Padding réduit */
     text-decoration: none;
-    font-size: 17px;
-  }
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide */
+}
 
   .itemMenu {
     margin-right: 35px;
   }
 
   .itemMenu:hover {
-    background-color: var(--main-clear-color);
-    color: var(--batho-bleu);
-
+    background-color: var(--main-dark-color);
+    color: var(--main-clear-color);
   }
 
   .responsiveMenu a.active {
@@ -86,6 +85,7 @@
     .responsiveMenu a.icon {
       float: left;
       display: block;
+      background-color: red;
     }
   }
 
@@ -97,7 +97,7 @@
     .responsiveMenu.responsive .icon {
       position: absolute;
       right: 0;
-      top: -10px;
+      top: -5;
     }
 
     .responsiveMenu.responsive a {
