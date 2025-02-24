@@ -1,7 +1,7 @@
 {
     "artist": {
-        "id": "a002",
-        "name": "Esteban Stan",
+        "id": "a003",
+        "name": "3DB",
         "art": {
             "en": "Music",
             "fr": "Musique",
@@ -14,8 +14,8 @@
         },
         "liens": [
             {
-                "name": "soundcloud",
-                "link": "https:\/\/soundcloud.com/estebanstan\/"
+                "name": "Soundcloud",
+                "link": "https:\/\/soundcloud.com\/estebanstan\/"
             }
         ]
     }
