@@ -58,11 +58,11 @@
 
 .itemMenu:hover {
   background-color: var(--batho-noir);
-  color: var(--main-clear-color);
+  color: var(--batho-bleu);
 }
 
 .responsiveMenu a.active {
-  background-color: var(--blue-color);
+  background-color: var(--batho-bleu);
   color: white;
 }
 

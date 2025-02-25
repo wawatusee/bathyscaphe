@@ -1,3 +1,7 @@
 .core {
   width: fit-content;
 }
+
+main {
+  margin: 2em;
+}

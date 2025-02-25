@@ -2,53 +2,59 @@
 * {
     margin: 0;
     padding: 0;
-    }
-section{
+}
+
+section {
     max-width: 94vw;
     margin: auto;
-    
 }
+
 /*Communs disposition values*/
-:root{
---standartspace:0.9em;
---content-padding:5px;
+:root {
+    --standartspace: 0.9em;
+    --content-padding: 5px;
 }
+
 /*Communs Colors images*/
-:root{
-    --main-dark-color:#333;
-    --main-clear-color:#f5F5F5;
-    --neutral-grey:#808080;
+:root {
+    --main-dark-color: #333;
+    --main-clear-color: #f5F5F5;
+    --neutral-grey: #808080;
     /*Autres blancs possibles
      #FAFAFA ou #EAEAEA*/
-    --first-color:#e65639;
-    --batho-bleu : #336699;
-    --batho-bleuclair:#6699cc;
-    --batho-noir : #000000;
-    --batho-gris:#999;
-    --batho-vertgris : #8ccaad;
-    --batho-vert : #99cc66;
-    --batho-jaune:#cccc33;
-    --rs-bckgrnd-img:url("../img/deco/logo-rs_30px.png");
+    --first-color: #e65639;
+    --batho-bleu: #336699;
+    --batho-bleuclair: #6699cc;
+    --batho-noir: #000000;
+    --batho-gris: #999;
+    --batho-vertgris: #8ccaad;
+    --batho-vert: #99cc66;
+    --batho-jaune: #cccc33;
+    --rs-bckgrnd-img: url("../img/deco/logo-rs_30px.png");
 }
+
 /*Fonts*/
-@font-face{
-    font-family:'myFirstFont';
-    src:
-    url("./fonts/Roboto-Thin.ttf"),
+@font-face {
+    font-family: 'myFirstFont';
+    src: url("./fonts/Roboto-Thin.ttf"),
 }
+
 /*Use this font with this line => font-family: myFirstFont;*/
-@font-face{
-    font-family:"myTitleFont";
-    src:url("./fonts/Roboto-Thin.ttf"),
+@font-face {
+    font-family: "myTitleFont";
+    src: url("./fonts/Roboto-Thin.ttf"),
 }
+
 /*Use this font with this line => font-family: myTitleFont;*/
-body{
+body {
     font-family: 'myFirstFont';
 }
-h1{
+
+h1 {
     padding-top: 0.7em;
 }
-h2{
+
+h2 {
     color: var(--main-dark-color);
     font-family: "myTitleFont";
     text-align: center;
@@ -57,11 +63,10 @@ h2{
 }
 
 
-h3{
+h3 {
     font-size: 1.2em;
-    font-family: "myTitleFont",Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    font-family: "myTitleFont", Verdana, Geneva, Tahoma, sans-serif, sans-serif;
     font-weight: 100;
-    /*background-color: var(--batho-vertgris);*/
     max-width: fit-content;
     padding: 6px;
     margin: 1em;

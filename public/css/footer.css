@@ -1,4 +1,7 @@
 /*Footer*/
+footer .itemMenu a:hover{
+  color:var(--batho-bleu);
+}
 footer {
   color: var(--main-clear-color);
   background-color: var(--batho-noir);
@@ -42,7 +45,6 @@ footer>h2 {
 
 .navfooterbloc a:hover {
   color: var(--batho-bleu);
-  background-color: none;
 }
 
 /*Particular communications link*/
@@ -118,3 +120,10 @@ footer>h2 {
 
 /* end footerNav*/
 /**********************/
+/*Fin footer Logo*/
+.footer-logo {
+	width: 120px;
+	display: block;
+	margin: auto;
+	padding: 45px;
+}
