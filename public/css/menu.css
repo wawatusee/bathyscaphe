@@ -57,7 +57,7 @@
 }
 
 .itemMenu:hover {
-  background-color: var(--main-dark-color);
+  background-color: var(--batho-noir);
   color: var(--main-clear-color);
 }
 
