@@ -13,7 +13,6 @@
                     <?php echo $menuMain_view?>
                 </nav>
             </div>
-            <img class="footer-logo" src="<?=$repImgDeco?>logo.png" alt="">
 
     <nav id="menuRS" class="nav-rs">
         <?php 
@@ -22,4 +21,6 @@
                     }
         ?>
     </nav>
+    <img class="footer-logo" src="<?=$repImgDeco?>logo.svg" alt="">
+
 </footer>
