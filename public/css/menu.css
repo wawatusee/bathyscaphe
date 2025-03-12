@@ -2,14 +2,17 @@
   /**********************/
   /*Liste déroulante Langues*/
   /* Style pour la liste déroulante */
-
+.menulangues{
+  display:flex;
+  justify-content: end;
+  margin-right: 0.5em;
+}
   select#lang {
-    padding: 4px;
+    padding: 1.5px;
     border: none;
-    font-size: 1em;
-    background-color: var(--batho-bleu);
-    /* Fond blanc */
-    color: var(--batho-noir);
+    font-size: 0.8em;
+
+    color: var(--main-dark-color);
     /* Couleur du texte */
     margin-bottom: 2px;
     margin-left: 2px;
@@ -17,95 +20,83 @@
 
   /* Style pour les options de la liste déroulante */
   select#lang option {
-    background-color: #fff;
-    /* Fond blanc */
-    color: #333;
+    border: none;
+    color: var(--main-dark-color);
     /* Couleur du texte */
   }
 
   /* Style pour le bouton de soumission (peut être personnalisé selon vos besoins) */
   input[type="submit"] {
     padding: 10px 20px;
-    background-color: #007BFF;
-    /* Couleur de fond bleue */
-    color: #fff;
+    /*color: #fff;
     /* Couleur du texte blanc */
     border: none;
-    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
   }
 
   /*Fin liste déroulante langues*/
-  /*mainMenu*/
-  /**********************/
+ /* MENUS */
+/**********************/
+/* Navigation principale */
+.responsiveMenu {
+  display: flex;
+  justify-content: space-evenly; /* Aligner les éléments à gauche et à droite */
+  align-items: center; /* Centrer verticalement */
+  width: 100%; /* Prendre toute la largeur */
+  padding: 0 20px; /* Espacement interne */
+}
+
+.responsiveMenu a {
+  color: var(--batho-noir);
+  text-align: center;
+  padding: 8px 12px; /* Padding réduit */
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide */
+}
+
+.itemMenu:hover {
+  background-color: var(--batho-noir);
+  color: var(--batho-bleu);
+}
+
+.responsiveMenu a.active {
+  background-color: var(--batho-bleu);
+  color: white;
+}
+
+/* Style de l'icône du menu */
+.responsiveMenu .icon {
+  display: none; /* Masqué par défaut sur les grands écrans */
+  font-size: 1.5em; /* Taille du caractère */
+  cursor: pointer; /* Curseur en forme de main */
+  color: var(--batho-noir); /* Couleur de l'icône */
+}
+
+/* Mode responsive */
+@media screen and (max-width: 600px) {
   .responsiveMenu {
-    overflow: hidden;
-    background-color: #999;
+    justify-content: space-between; 
+      flex-wrap: wrap; /* Permettre le retour à la ligne */
   }
 
-  .responsiveMenu {
-    font-family: "myTitleFont", Verdana, Geneva, Tahoma, sans-serif, sans-serif;
-    margin-right: 0px;
-  }
-
-  .responsiveMenu a {
-    float: left;
-    display: inline;
-    color: var(--batho-noir);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-  .itemMenu {
-    margin-right: 35px;
-  }
-
-  .itemMenu:hover {
-    background-color: var(--main-clear-color);
-    color: var(--batho-bleu);
-
-  }
-
-  .responsiveMenu a.active {
-    background-color: var(--blue-color);
-    color: white;
+  .responsiveMenu a:not(.icon) {
+      display: none; /* Masquer les éléments du menu par défaut */
+      width: 100%; /* Prendre toute la largeur */
+      text-align: left; /* Aligner le texte à gauche */
   }
 
   .responsiveMenu .icon {
-    display: none;
+      display: block; /* Afficher l'icône */
+      order: -1; /* Placer l'icône en premier (tout en haut si colonne à gauche sinon) */
   }
 
-  @media screen and (max-width: 600px) {
-    .responsiveMenu a {
-      display: none;
-    }
-
-    .responsiveMenu a.icon {
-      float: left;
-      display: block;
-    }
+  .responsiveMenu.responsive a:not(.icon) {
+      display: block; /* Afficher les éléments du menu */
   }
+}
 
-  @media screen and (max-width: 600px) {
-    .responsiveMenu.responsive {
-      position: relative;
-    }
-
-    .responsiveMenu.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: -10px;
-    }
-
-    .responsiveMenu.responsive a {
-      float: left;
-      display: block;
-      text-align: left;
-    }
-  }
 
 
   /*Texte information*/

@@ -1,8 +1,6 @@
 <header>
     <div class="mainTitleBlock">
         <h1><img class="logo" src="img/deco/logotype-blanc.png">
-            <span class="mainsubtitle"><?php echo $a_titleWebSite[0]?><?php echo " ".$a_titleWebSite[1]?><?php echo " ".$a_titleWebSite[2]?>
-            </span>
         </h1>
         <div class="menulangues">
         <?php //Liste déroulante des langues

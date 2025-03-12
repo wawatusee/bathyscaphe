@@ -8,10 +8,8 @@ h1{
     opacity: 0.8;
 }
 .mainTitleBlock{
-    background-image: url("../img/deco/800-200_4-1-adobe.gif");
-    background-repeat: no-repeat;
-    background-size:cover;
+    background-color: var(--batho-noir);
 }
-.mainsubtitle{
+/*.mainsubtitle{
     opacity: 0;
-}
+}*/
