@@ -1,33 +1,4 @@
-/*Grid for past and futur*/
-/* Configuration de base */
-/* Configuration de base */
-main {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  /* 3 colonnes : gauche, core, droite */
-  gap: 20px;
-}
 
-/* Configuration des sidebars */
-.past-sidebar {
-  grid-column: 1;
-  /* Colonne de gauche */
-}
-
-.future-sidebar {
-  grid-column: 3;
-  /* Colonne de droite */
-}
-
-/* Zone principale pour les événements cliqués */
-.core {
-  grid-column: 2;
-  /* Colonne centrale */
-  padding: 0 20px 20px 20px;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-}
- 
 /* Liste des événements */
 .list_events {
   list-style: none;

@@ -69,4 +69,44 @@ class EventsModel extends FileManager
         }
         return null;
     }
+    //Methode créée par Claude
+    public function sortEventsWithNextEvent()
+    {
+        $currentDate = date('Y-m-d'); // Changez le format ici
+        echo $currentDate;
+        $nextEvent = null;
+        $futureEvents = [];
+        $pastEvents = [];
+        
+        foreach ($this->fichiers as $event) {
+            if ($event['date'] >= $currentDate) { // Comparaison directe maintenant possible
+                // Si c'est le premier événement futur, il devient le nextEvent
+                if ($nextEvent === null || $event['date'] < $nextEvent['date']) {
+                    if ($nextEvent !== null) {
+                        $futureEvents[] = $nextEvent;
+                    }
+                    $nextEvent = $event;
+                } else {
+                    $futureEvents[] = $event;
+                }
+            } else {
+                $pastEvents[] = $event;
+            }
+        }
+        
+        // Trier les événements futurs et passés
+        usort($futureEvents, function($a, $b) {
+            return $a['date'] <=> $b['date']; // Du plus proche au plus lointain
+        });
+        
+        usort($pastEvents, function($a, $b) {
+            return $b['date'] <=> $a['date']; // Du plus récent au plus ancien
+        });
+        
+        return [
+            'nextEvent' => $nextEvent,
+            'futureEvents' => $futureEvents,
+            'pastEvents' => $pastEvents
+        ];
+    }
 }
