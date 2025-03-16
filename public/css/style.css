@@ -3,20 +3,27 @@
     margin: 0;
     padding: 0;
 }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 
 body {
     background-color: var(--main-clear-color);
+    
+    max-width: 100vw;
 }
 
 section {
-    max-width: 94vw;
-    margin: auto;
+    max-width:100vw;
+    padding: 1rem;
 }
 
 /*Communs disposition values*/
 :root {
     --standartspace: 0.9em;
     --content-padding: 5px;
+    box-sizing: border-box;
 }
 
 /*Communs Colors images*/

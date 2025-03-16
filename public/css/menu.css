@@ -45,6 +45,7 @@
   align-items: center; /* Centrer verticalement */
   width: 100%; /* Prendre toute la largeur */
   padding: 0 20px; /* Espacement interne */
+  box-sizing: border-box;
 }
 
 .responsiveMenu a {
