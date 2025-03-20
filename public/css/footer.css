@@ -1,7 +1,4 @@
 /*Footer*/
-footer .itemMenu a:hover{
-  color:var(--batho-bleu);
-}
 footer {
   color: var(--main-clear-color);
   background-color: var(--batho-noir);
@@ -47,6 +44,9 @@ footer>h2 {
   color: var(--batho-bleu);
 }
 
+footer .itemMenu a:hover{
+  color:var(--batho-bleu);
+}
 /*Particular communications link*/
 .maillink::before {
   content: url('/public/img/deco/icons8-mail-24.png');
@@ -122,7 +122,7 @@ footer>h2 {
 /**********************/
 /*Fin footer Logo*/
 .footer-logo {
-	width: 120px;
+	width: 180px;
 	display: block;
 	margin: auto;
 	padding: 45px;

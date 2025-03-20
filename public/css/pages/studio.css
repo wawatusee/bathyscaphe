@@ -1,0 +1,44 @@
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f4f4f4; /* Gris clair */
+    padding: 30px;
+    justify-content: center;
+}
+
+.tool-card {
+    display: flex;
+    width: calc(50% - 20px); /* Deux colonnes */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.tool-image {
+    width: 40%; /* Espace pour l'image */
+    padding: 10px;
+}
+
+.tool-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Garde les proportions originales */
+}
+
+.tool-details {
+    width: 60%;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .tool-card {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .tool-image, .tool-details {
+        width: 100%;
+    }
+}

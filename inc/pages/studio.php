@@ -6,45 +6,53 @@ $studioInfrastructureContentML=[
     "fr"=>"
     <h3>Infrasctructure</h3>
     <ul>
-        <li>Studio de musique</li>
-        <li>2 pièces</li>
-        <li>une régie de 12m2</li>
-        <li>et un espace d’enregistrement de 15m2</li>
-        <li>Batterie Pearl Export avec micros batterie</li>
-        <li>Piano Quart de Queue Bösendorfer</li>
-        <li>Synthétiseur</li>
-        <li>Micros</li>
-        <li>Préamplificateur</li>
-        <li>Carte son</li>
-        <li>logiciel DAW: Protools et Ableton Live11</li>
+        <li>Une régie de 12m2 et une salle d’enregistrement de 15m2</li>
+        <li>Quantum HD8 - carte audio </li>
+        <li>Adam A8H - enceintes de monitoring</li>
+        <li>Rode NT1 - microphone</li>
+        <li>Shure sm58 - microphone</li>
+        <li>M-audio 88es - midi keystation</li>
+        <li>Pearl export - batterie </li>
+        <li>Airline Jetsons 3P – guitare </li>
+        <li>Gretsch Electromatic G5420T - guitare</li>
+        <li>Yamaha JX30 - amplificateur des années 70</li>
+        <li>Yamaha Electone - Orgue</li>
+        <li>Glockenspiel</li>
+        <li>Possibilité d’enregistrer avec un piano Bösendorfer ¼ de queue de la fin du 19e siècle</li>
+        <li>Cubase et Ableton Live DAW</li>
     </ul>",
     "en"=>"<h3>Infrastructure</h3>
     <ul>
-        <li>Music studio</li>
-        <li>2 rooms</li>
-        <li>A control room of 12m2</li>
-        <li>and a recording space of 15m2</li>
-        <li>Pearl Export drum kit with drum microphones</li>
-        <li>Bösendorfer Grand Piano</li>
-        <li>Synthesizer</li>
-        <li>Microphones</li>
-        <li>Preamp</li>
-        <li>Sound card</li>
-        <li>DAW software: Protools and Ableton Live11</li>
+        <li>Control room of 12m2 and a recording space of 15m2</li>
+        <li>Quantum HD8 - audio card  </li>
+        <li>Adam A8H - monitoring speakers</li>
+        <li>Rode NT1 - microphone</li>
+        <li>Shure sm58 - microphone</li>
+        <li>M-audio 88es - midi keystation</li>
+        <li>Pearl export - drum kit  </li>
+        <li>Airline Jetsons 3P – guitar</li>
+        <li>Gretsch Electromatic G5420T - guitar</li>
+        <li>Yamaha JX30 -amplifier from the 70s</li>
+        <li>Yamaha Electone - Organ</li>
+        <li>Glockenspiel</li>
+        <li>Possibility to record on a Bösendorfer baby grand piano from late 19th century</li>
     </ul>",
     "nl"=>"<h3>Infrastructuur</h3>
     <ul>
-        <li>Muziekstudio</li>
-        <li>2 kamers</li>
-        <li>Een controlekamer van 12m2</li>
-        <li>en een opnameruimte van 15m2</li>
-        <li>Pearl Export drumstel met drummicrofoons</li>
-        <li>Bösendorfer vleugelpiano</li>
-        <li>Synthesizer</li>
-        <li>Microfoons</li>
-        <li>Voorversterker</li>
-        <li>Geluidskaart</li>
-        <li>DAW-software: Protools en Ableton Live11</li>
+        <li>Controlekamer van 12m² en een opname ruimte van 15m²</li>
+        <li>Quantum HD8 - audiokaart </li>
+        <li>Adam A8H - monitor luidsprekers</li>
+        <li>Rode NT1 - microfoon</li>
+        <li>Shure sm58 - microfoon</li>
+        <li>M-audio 88es - midi keystation</li>
+        <li>Pearl export - drumstel </li>
+        <li>Airline Jetsons 3P – gitaar </li>
+        <li>Gretsch Electromatic G5420T - gitaar</li>
+        <li>Yamaha JX30 -versterker uit de jaren '70</li>
+        <li>Yamaha Electone - orgel</li>
+        <li>Glockenspiel</li>
+        <li>Mogelijkheid om op te nemen op een Bösendorfer babyvleugel uit de late 19e </li>
+        <li>Cubase en Ableton Live DAW </li>
     </ul>"
 ];
 $studioPricingContentML=[
@@ -71,6 +79,40 @@ $studioPricingContentML=[
     <p>Gemakkelijke toegang vanuit internationale locaties. Parijs, Londen, Amsterdam, Berlijn niet ver weg. Zaventem Airport 20 minuten met de taxi, en Gare du Midi 15 minuten met metrolijn 6.</p>"
 ]
 ?>
+<!--From claude-->
+<section class="studio-tools">
+    <h2>Studio Equipment</h2>
+    <div class="tools-grid">
+        <div class="tool-card">
+            <div class="tool-image">
+                <img src="img/content/studio/hd8-audio-card.jpg" alt="Quantum HD8 Audio Card">
+            </div>
+            <div class="tool-details">
+                <h3>Quantum HD8</h3>
+                <p>Professional Audio Interface</p>
+            </div>
+        </div>
+        
+        <div class="tool-card">
+            <div class="tool-image">
+                <img src="img/content/studio/adam-a8h-speakers.jpg" alt="Adam A8H Monitoring Speakers">
+            </div>
+            <div class="tool-details">
+                <h3>Adam A8H</h3>
+                <p>High-Quality Monitoring Speakers</p>
+            </div>
+        </div>
+        
+        <!-- More tool cards... -->
+    </div>
+    
+    <div class="studio-space">
+        <h3>Studio Space</h3>
+        <p>Control Room: 12m² | Recording Space: 15m²</p>
+    </div>
+</section>
+<!--Fin from claude-->
+
 <section class="core">
     <h2>Studio</h2>
     <article class="productenumeration">
