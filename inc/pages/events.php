@@ -29,30 +29,7 @@ echo '<article class="past-events">' .
     $events_html .
     '</article> ';
 ?>
-<?php
-//Here EVENT
-/*require_once('../src/model/objet_model.php');
-if (isset($_GET["event"])) {
-    $eventHidden='';
-    $eventnumero = $_GET["event"];
-} else {
-    $eventnumero = $eventsDatas->getDefaultEventNumero();
-    $eventHidden='hidden';
-}
-//Chargement du json de l'event demandé
-$eventJson = $eventsDatas->getJsonFullName($eventnumero);
-$jsonfile = $repjsonevents . $eventJson;
-$eventDatas = (new ObjetModel($jsonfile))->get_objet();
-?>
-<?php
-//Vue de l'événement sélectionné
-require_once("../src/view/event_view.php");
-$eventView = new EventView($eventDatas);
-$eventViewHtml = $eventView->getEventView($lang);
-
-        //HERE CORE FOR FULL EVENT
-echo '<section class="core"'. $eventHidden.'>'.$eventViewHtml.'</section>';
-*/?>
+<!--Here EVENT-->
 <?php
 require_once('../src/model/objet_model.php');
 
@@ -78,5 +55,3 @@ $eventViewHtml = $eventView->getEventView($_GET['lang'] ?? 'fr');
 // Affichage HTML
 ?>
 <section class="core" <?= $isHidden ? 'hidden' : '' ?>><?= $eventViewHtml ?></section>
-
-<script src="js/events.js"></script>
