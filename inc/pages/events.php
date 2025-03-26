@@ -54,4 +54,4 @@ $eventViewHtml = $eventView->getEventView($_GET['lang'] ?? 'fr');
 
 // Affichage HTML
 ?>
-<section class="core" <?= $isHidden ? 'hidden' : '' ?>><?= $eventViewHtml ?></section>
+<section class="core event" <?= $isHidden ? 'hidden' : '' ?>><?= $eventViewHtml ?></section>

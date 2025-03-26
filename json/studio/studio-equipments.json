@@ -1,7 +1,7 @@
 {
     "studio_equipment": [
       {
-        "name": "Régie et Salle d'Enregistrement",
+        "name": "Studio",
         "description": {
           "fr": "Une régie de 12m2 et une salle d'enregistrement de 15m2",
           "en": "Control room of 12m2 and a recording space of 15m2",

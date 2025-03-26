@@ -21,13 +21,14 @@ footer>h2 {
 
 
 .footerNav {
-  max-width: 95%;
+  max-width: 92%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 15px;
   padding-top: 15px;
+  gap: 30px;
 }
 
 .navfooterbloc {
@@ -77,6 +78,13 @@ footer .itemMenu a:hover{
   top: 10px;
   left: -10px;
 }
+/* Styles spécifiques pour les écrans de moins de 600px de large (portables) */
+@media (max-width: 600px) {
+  .maillink::before,
+  .phonelink::before,
+  .situationlink::before {
+    content: none; /* Fait disparaître le contenu des pseudo-éléments ::before */
+  }
 
 /*Block  rsMenu*/
 .nav-rs {
