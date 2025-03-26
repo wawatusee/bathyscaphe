@@ -1,0 +1,130 @@
+{
+    "studio_equipment": [
+      {
+        "name": "Régie et Salle d'Enregistrement",
+        "description": {
+          "fr": "Une régie de 12m2 et une salle d'enregistrement de 15m2",
+          "en": "Control room of 12m2 and a recording space of 15m2",
+          "nl": "Controlekamer van 12m² en een opname ruimte van 15m²"
+        },
+        "image_ref": "studio.jpg"
+      },
+      {
+        "name": "Quantum HD8",
+        "description": {
+          "fr": "Carte audio",
+          "en": "Audio card",
+          "nl": "Audiokaart"
+        },
+        "image_ref": "default.jpg"
+      },
+      {
+        "name": "Adam A8H",
+        "description": {
+          "fr": "Enceintes de monitoring",
+          "en": "Monitoring speakers",
+          "nl": "Monitor luidsprekers"
+        },
+        "image_ref": "adam-a8h-speakers.jpg"
+      },
+      {
+        "name": "Rode NT1",
+        "description": {
+          "fr": "Microphone",
+          "en": "Microphone",
+          "nl": "Microfoon"
+        },
+        "image_ref": "rhode-nt1-micro.jpg"
+      },
+      {
+        "name": "Shure SM58",
+        "description": {
+          "fr": "Microphone",
+          "en": "Microphone",
+          "nl": "Microfoon"
+        },
+        "image_ref": "sm58-micro.jpg"
+      },
+      {
+        "name": "M-Audio 88es",
+        "description": {
+          "fr": "Midi keystation",
+          "en": "Midi keystation",
+          "nl": "Midi keystation"
+        },
+        "image_ref": "maudio-midi-88es-keystation.jpg"
+      },
+      {
+        "name": "Pearl Export",
+        "description": {
+          "fr": "Batterie",
+          "en": "Drum kit",
+          "nl": "Drumstel"
+        },
+        "image_ref": "pearl-drum-kit.jpg"
+      },
+      {
+        "name": "Airline Jetsons 3P",
+        "description": {
+          "fr": "Guitare",
+          "en": "Guitar",
+          "nl": "Gitaar"
+        },
+        "image_ref": "jetsons-guitar.jpg"
+      },
+      {
+        "name": "Gretsch Electromatic G5420T",
+        "description": {
+          "fr": "Guitare",
+          "en": "Guitar",
+          "nl": "Gitaar"
+        },
+        "image_ref": "gretsch-guitar.jpg"
+      },
+      {
+        "name": "Yamaha JX30",
+        "description": {
+          "fr": "Amplificateur des années 70",
+          "en": "Amplifier from the 70s",
+          "nl": "Versterker uit de jaren '70"
+        },
+        "image_ref": "yamaha-jx30-amplifier.jpg"
+      },
+      {
+        "name": "Yamaha Electone",
+        "description": {
+          "fr": "Orgue",
+          "en": "Organ",
+          "nl": "Orgel"
+        },
+        "image_ref": "yamaha-electone-organ.jpg"
+      },
+      {
+        "name": "Glockenspiel",
+        "description": {
+          "fr": "Glockenspiel",
+          "en": "Glockenspiel",
+          "nl": "Glockenspiel"
+        },
+        "image_ref": "glockenspiel.jpg"
+      },
+      {
+        "name": "Piano Bösendorfer",
+        "description": {
+          "fr": "Piano ¼ de queue de la fin du 19e siècle",
+          "en": "Baby grand piano from late 19th century",
+          "nl": "Babyvleugel uit de late 19e eeuw"
+        },
+        "image_ref": "default.jpg"
+      },
+      {
+        "name": "DAW",
+        "description": {
+          "fr": "Cubase et Ableton Live",
+          "en": "Cubase and Ableton Live",
+          "nl": "Cubase en Ableton Live"
+        },
+        "image_ref": "daw.jpg"
+      }
+    ]
+  }

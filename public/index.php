@@ -7,7 +7,6 @@ require_once "../src/utils.php"?>
     <?php require_once "../inc/head.php"?>
     <body>
         <?php
-        //var_dump($configDatas);
         if(!$singlePage);
         else   echo "singlePage = vrai";
         require_once "../inc/header.php"?>
