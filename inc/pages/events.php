@@ -54,4 +54,27 @@ $eventViewHtml = $eventView->getEventView($_GET['lang'] ?? 'fr');
 
 // Affichage HTML
 ?>
-<section class="core event" <?= $isHidden ? 'hidden' : '' ?>><?= $eventViewHtml ?></section>
+<section class="core" <?= $isHidden ? 'hidden' : '' ?>><button id="closeEvent">Fermer</button>
+<?= $eventViewHtml ?></section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const eventSection = document.querySelector(".core");
+    const closeButton = document.getElementById("closeEvent");
+
+    // Fonction pour ouvrir l'événement
+    function openEvent() {
+        eventSection.removeAttribute("hidden");
+    }
+
+    // Fonction pour fermer l'événement
+    function closeEvent() {
+        eventSection.setAttribute("hidden", "");
+    }
+
+    // Attacher l'événement au bouton "Fermer"
+    closeButton.addEventListener("click", closeEvent);
+
+    // Optionnel : Ajouter un déclencheur pour afficher l'événement
+    document.querySelector(".someButton").addEventListener("click", openEvent);
+});
+</script>

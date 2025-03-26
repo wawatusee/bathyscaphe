@@ -21,6 +21,7 @@ footer>h2 {
 
 
 .footerNav {
+  margin-left: var(--content-padding);
   max-width: 92%;
   display: flex;
   flex-direction: row;
@@ -84,7 +85,7 @@ footer .itemMenu a:hover{
   .phonelink::before,
   .situationlink::before {
     content: none; /* Fait disparaître le contenu des pseudo-éléments ::before */
-  }
+  }}
 
 /*Block  rsMenu*/
 .nav-rs {
