@@ -4,45 +4,35 @@ class StudioEquipmentView {
     private $lang;
     private $equipments;
 
-    public function __construct($jsonPath, $lang = 'fr') {
-        $this->lexiqueModel = new LexiqueModel($jsonPath);
+    public function __construct(LexiqueModel $lexiqueModel, $lang = 'fr',$repImg) {
+        $this->lexiqueModel = $lexiqueModel;
         $this->lang = $lang;
+        $this->repImg = $repImg;
         $this->equipments = $this->lexiqueModel->get_lexique()['studio_equipment'];
     }
 
     public function render() {
-        ?>
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Studio Equipment</title>
-            <link rel="stylesheet" href="/assets/css/style.css">
-        </head>
-        <body>
-            <section class="studio-tools">
-                <h2>Studio Equipment</h2>
-                <div class="tools-grid">
-                    <?php foreach($this->equipments as $equipment): >>
-                        <div class="tool-card">
-                            <div class="tool-image">
-                                <img src="/assets/images/studio/<?=$equipment['image_ref']?>" alt="<?=$equipment['name']?>">
-                            </div>
-                            <div class="tool-details">
-                                <h3><?=$equipment['name']?></h3>
-                                <p><?=$equipment['description'][$this->lang]?></p>
-                            </div>
-                        </div>
-                    <<; endforeach; ?>
-                </div>
-            </section>
-        </body>
-        </html>
-        <?php
-    }
+        $html = '<section class="studio-tools">';
+        $html .= '<h2>Studio Equipment</h2>';
+        $html .= '<div class="tools-grid">';
 
-    // Méthode optionnelle pour filtrer les équipements
-    public function filterEquipments($criteria = []) {
-        // Logique de filtrage si nécessaire
-        return $this->equipments;
+        foreach ($this->equipments as $equipment) {
+            $imagePath = $this->repImg . 'studio/' . $equipment['image_ref'];
+            $html .= <<<HTML
+            <div class="tool-card">
+                <div class="tool-image">
+                <img src="{$imagePath}" alt="{$equipment['name']}">                </div>
+                <div class="tool-details">
+                    <h3>{$equipment['name']}</h3>
+                    <p>{$equipment['description'][$this->lang]}</p>
+                </div>
+            </div>
+            HTML;
+        }
+
+        $html .= '</div>';
+        $html .= '</section>';
+
+        return $html;
     }
 }
