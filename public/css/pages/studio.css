@@ -37,7 +37,7 @@
 @media (max-width: 768px) {
     .tool-card {
         flex-direction: column;
-        width: 40%;
+        width: 100%;
     }
     
     .tool-image, .tool-details {
