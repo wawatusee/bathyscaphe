@@ -1,7 +1,8 @@
 .tools-grid {
+    max-width: 1400px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     background-color: #f4f4f4; /* Gris clair */
     padding: 30px;
     justify-content: center;
@@ -36,16 +37,22 @@
 @media (max-width: 768px) {
     .tool-card {
         flex-direction: column;
-        width: 100%;
+        width: 40%;
     }
     
     .tool-image, .tool-details {
         width: 100%;
     }
 }
-.simpleArticle{
+/*Texte */
+.simple-article{
     margin: auto auto 5%;
     padding: var(--content-padding);
     max-width: 800px;
     text-align: justify;
+}
+.simple-article p{
+
+    padding: var(--content-padding);
+
 }

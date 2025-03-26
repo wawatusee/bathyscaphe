@@ -32,9 +32,9 @@ $studioAccessContentML=[
                 "en" => "<h2>Access</h2>
                     <p>Easy access from international locations. Midway between Paris, London, Amsterdam and Berlin. Zaventem Airport 30 minutes by taxi, Midi international train station 15 minutes away on Metro line 6, Pannenhuis stop</p>",
                 "fr" => "<h2>Accès</h2>
-                    <p>Acces facile de l'internationale. Paris, Londres, Amsterdam, Berlin pas loin. Aeroport Zaventem 20 minutes en taxi, et Gare du midi 15 minutes en metro ligne 6.</p>",
+                    <p>Accès facile de l’international. A mi-chemin entre Paris, Londres, Amsterdam et Berlin. L’aéroport Zaventem est à 30 minutes par taxi, la gare du midi à 15 minutes avec la ligne 6 du Metro, arrêt Pannenhuis.</p>",
                 "nl" => "<h2>Toegang</h2>
-                    <p>Gemakkelijke toegang vanuit internationale locaties. Parijs, Londen, Amsterdam, Berlijn niet ver weg. Zaventem Airport 20 minuten met de taxi, en Gare du Midi 15 minuten met metrolijn 6.</p>"
+                    <p>Gemakkelijke toegang vanuit internationale locaties. Tussen Parijs, Londen, Amsterdam en Berlijn. Luchthaven Zaventem op 30 minuten met de taxi, station Midi internationaal 15 minuten met de metro lijn 6, halte Pannenhuis</p>"
                     ]
     ?>
 
@@ -43,10 +43,10 @@ $studioAccessContentML=[
     <article class="productenumeration">
         <?= $studioEquipmentView->render(); ?>
     </article>
-    <article class="simpleArticle">
+    <article class="simple-article">
         <?= $studioPricingContentML[$lang] ?>
     </article>
-    <article class="simpleArticle">
+    <article class="simple-article">
         <?=$studioAccessContentML[$lang]?>
     </article>
 </section>
