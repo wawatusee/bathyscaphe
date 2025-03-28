@@ -1,4 +1,3 @@
-
 /* Liste des événements */
 .list_events {
   list-style: none;
@@ -242,23 +241,43 @@ a.card_event {
 
 /*Fin activity*/
 /*Fenêtre modale*/
-.core {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100vh; 
-  background: rgba(0, 0, 0, 0.8); /* Fond sombre transparent */
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  z-index: 9999; /* S'assurer qu'il passe au-dessus du reste */
-  overflow-y: auto; /* Permet le scroll si nécessaire */
+
+
+.core>* {
+  max-height: 90vh;
+  /* Empêche le dépassement en hauteur */
+  overflow-y: auto;
+  /* Active le scroll si nécessaire */
+  width: 90%;
+  /* Ajuste la largeur */
+  background: white;
+  /* Assure un bon contraste */
   padding: 20px;
+  border-radius: 10px;
+}
+
+
+.core {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow-y: auto;
+  /* Ajoute un scroll sur la modale */
+  padding: 5vh 20px;
+  /* Réduit le padding vertical */
+
 }
 
 .core[hidden] {
-  display: none; /* Cacher quand l’attribut hidden est présent */
+  display: none;
+  /* Cacher quand l’attribut hidden est présent */
 }
 
 .core section {
@@ -275,12 +294,16 @@ a.card_event {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: red;
-  color: white;
+  background: var(--main-clear-color);
+  width: fit-content;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
   font-size: 16px;
+}
+#closeEvent:hover {
+  background-color: var(--batho-noir);
+  color: var(--batho-bleu);
 }
 
 
