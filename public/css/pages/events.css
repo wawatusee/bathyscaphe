@@ -184,7 +184,9 @@ a.card_event {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  font-size: 1.1em;
+  font-size: 1em;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .activity-language {
@@ -198,11 +200,14 @@ a.card_event {
 .activity-language::after {
   content: "|";
 }
-
+.activity-illustration{
+  display: flex;
+  justify-content: center;
+}
 .activity-illustration>img {
   margin-top: var(--standartspace);
   margin-bottom: var(--standartspace);
-  max-width: 96vw;
+  max-width: 96%;
   max-height: 340px;
 }
 
