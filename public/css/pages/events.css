@@ -56,6 +56,7 @@
   justify-content: space-between;
 }
 
+
 .image {
   flex-grow: 1;
   /* L'image prend l'espace disponible */
@@ -131,7 +132,6 @@ a.card_event {
   margin-bottom: var(--standartspace)
 }
 
-;
 
 .activity-types {
   padding-bottom: var(--content-padding);
