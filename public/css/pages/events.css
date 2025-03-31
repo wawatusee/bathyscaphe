@@ -21,86 +21,17 @@
   color: inherit;
 }
 
-.date {
+.card-event-date {
   text-transform: uppercase;
   color: var(--batho-bleu);
   font-weight: bold;
   padding: var(--content-padding);
 }
 
-.date,
+.card-event-date,
 .artist {
   font-size: 0.9rem;
-}
 
-/* Affichage responsive */
-@media (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr;
-    /* Une seule colonne en mobile */
-  }
-
-  /* Cacher les sidebars et afficher les boutons */
-  .past-sidebar,
-  .future-sidebar {
-    display: none;
-  }
-
-  .past-sidebar .btn-toggle,
-  .future-sidebar .btn-toggle {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    background: #f4f4f4;
-    cursor: pointer;
-  }
-
-  /* Boutons pour ouvrir les sidebars */
-  .past-sidebar.show,
-  .future-sidebar.show {
-    display: block;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 80%;
-    /* Largeur ajustable */
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-  }
-
-  .past-sidebar,
-  .future-sidebar {
-    display: none;
-    /* Masque les asides */
-  }
-
-  /* Afficher les boutons pour les appareils mobiles */
-  .time-button {
-    display: inline-flex;
-    margin: 10px;
-  }
-
-  /* Styles spécifiques à l'aside visible */
-  .past-sidebar.show,
-  .future-sidebar.show {
-    display: block;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 80%;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-  }
-}
-
-/*Fin Grid for past and futur*/
-
-.productenumeration {
-  ul {
-    list-style-type: circle;
-  }
 }
 
 /*Liste d'événements*/
@@ -113,21 +44,26 @@
   justify-content: center;
   gap: 1em;
 }
+
 /*Patch gpt*/
 .card_event {
-  width: 250px; /* Largeur fixe, ajuste selon ton besoin */
-  height: 250px; /* Hauteur fixe pour uniformiser */
+  width: 250px;
+  /* Largeur fixe, ajuste selon ton besoin */
+  height: 250px;
+  /* Hauteur fixe pour uniformiser */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .image {
-  flex-grow: 1; /* L'image prend l'espace disponible */
+  flex-grow: 1;
+  /* L'image prend l'espace disponible */
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Cache le débordement */
+  overflow: hidden;
+  /* Cache le débordement */
   max-height: 70%;
 }
 
@@ -135,6 +71,7 @@
   width: 100%;
   height: 100%;
 }
+
 /*Fin Patch gpt*/
 .card_event {
   a {
@@ -142,7 +79,7 @@
     color: white;
   }
 
-  
+
 }
 
 .card_event {
@@ -155,8 +92,9 @@
   background-color: var(--neutral-grey);
   color: var(--batho-noir);
 }
-.card_event:hover .date {
-  
+
+.card_event:hover .card-event-date {
+
   color: var(--batho-noir);
 
 }

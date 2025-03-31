@@ -50,7 +50,7 @@
         return <<<HTML
         <div class="next-event-card">
             <a href="?page=events&event=$numero&lang=$lang">
-                <div class="date">$date</div>
+                <div class="card-event-date">$date</div>
                 <div class="image">
                     <img src="$imagePath" alt="Next Event Image">
                 </div>
@@ -77,7 +77,7 @@
             <li>
                 <div class="card_event">
                     <a href="?page=events&event=$numero&lang=$lang">
-                        <div class="date">$numero $date</div>
+                        <div class="card-event-date">$numero $date</div>
                         <div class="image">
                             <img src="$imagePath" alt="Event Image">
                         </div>

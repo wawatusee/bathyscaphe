@@ -73,7 +73,7 @@ class EventsModel extends FileManager
     public function sortEventsWithNextEvent()
     {
         $currentDate = date('Y-m-d'); // Changez le format ici
-        echo $currentDate;
+        //echo $currentDate;
         $nextEvent = null;
         $futureEvents = [];
         $pastEvents = [];
