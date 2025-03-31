@@ -21,6 +21,13 @@
   color: inherit;
 }
 
+.date {
+  text-transform: uppercase;
+  color: var(--batho-bleu);
+  font-weight: bold;
+  padding: var(--content-padding);
+}
+
 .date,
 .artist {
   font-size: 0.9rem;
@@ -99,7 +106,6 @@
 /*Liste d'événements*/
 .list_events {
   margin: 1em;
-  ;
   list-style: none ! important;
   display: flex;
   flex-flow: row wrap;
@@ -107,25 +113,51 @@
   justify-content: center;
   gap: 1em;
 }
+/*Patch gpt*/
+.card_event {
+  width: 250px; /* Largeur fixe, ajuste selon ton besoin */
+  height: 250px; /* Hauteur fixe pour uniformiser */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.image {
+  flex-grow: 1; /* L'image prend l'espace disponible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Cache le débordement */
+  max-height: 70%;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+/*Fin Patch gpt*/
 .card_event {
   a {
     text-decoration: none;
     color: white;
   }
 
-  ;
+  
 }
 
 .card_event {
   padding: 0.5em;
-  background-color: var(--neutral-grey);
+  background-color: var(--batho-noir);
   border-radius: 5%;
 }
 
 .card_event:hover {
-
-  background-color: var(--batho-bleu);
+  background-color: var(--neutral-grey);
+  color: var(--batho-noir);
+}
+.card_event:hover .date {
+  
+  color: var(--batho-noir);
 
 }
 
@@ -135,7 +167,7 @@ a.card_event {
 
 /*Fin liste d'événements*/
 /*Activity*/
-.activity-types>.card-type,
+
 #btnPartager {
   background-color: var(--batho-jaune);
   color: white;
@@ -156,10 +188,34 @@ a.card_event {
   background-color: var(--batho-vert);
 }
 
+/*Types d'activités*/
+.activity-types {
+  margin-bottom: var(--standartspace)
+}
+
+;
+
 .activity-types {
   padding-bottom: var(--content-padding);
 }
 
+.card-type {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--batho-bleu);
+}
+
+.card-type:not(:first-child)::before {
+  content: " | ";
+}
+
+.card-type:not(:first-child)::before {
+  content: " | ";
+  margin-left: var(--content-padding);
+  margin-right: var(--content-padding);
+}
+
+/*Fin types d'activités*/
 .fullActivity {
   text-align: left;
 }
@@ -301,6 +357,7 @@ a.card_event {
   cursor: pointer;
   font-size: 16px;
 }
+
 #closeEvent:hover {
   background-color: var(--batho-noir);
   color: var(--batho-bleu);
