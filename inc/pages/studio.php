@@ -9,7 +9,7 @@ require "../src/model/objet_model.php";
 // Instanciation du modèle
 $repJsonEquipment = '../json/studio/studio-equipments.json';
 $StudioLexiqueModel = new LexiqueModel($repJsonEquipment);
-//var_dump($lexiqueModel);
+//var_dump($StudioLexiqueModel->get_lexique());
 $lang = $_GET['lang'] ?? 'fr';
 // Instanciation de la vue en lui passant le modèle
 $studioEquipmentView = new StudioEquipmentView($StudioLexiqueModel, $lang, $repImg);

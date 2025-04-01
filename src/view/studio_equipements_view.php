@@ -3,17 +3,20 @@ class StudioEquipmentView {
     private $lexiqueModel;
     private $lang;
     private $equipments;
+    private $title;
 
     public function __construct(LexiqueModel $lexiqueModel, $lang = 'fr',$repImg) {
         $this->lexiqueModel = $lexiqueModel;
         $this->lang = $lang;
         $this->repImg = $repImg;
         $this->equipments = $this->lexiqueModel->get_lexique()['studio_equipment'];
+        $this->title= $this->lexiqueModel->get_lexique()['title'];
+
     }
 
     public function render() {
         $html = '<section class="studio-tools">';
-        $html .= '<h2>Studio Equipment</h2>';
+        $html .= '<h2>'.$this->title[$this->lang].'</h2>';
         $html .= '<div class="tools-grid">';
 
         foreach ($this->equipments as $equipment) {
