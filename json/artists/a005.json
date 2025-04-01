@@ -1,0 +1,20 @@
+{
+    "artist": {
+        "id": "a005",
+        "name": "Melisa Velasco",
+        "art": {
+            "en": "ProgressiveTechno",
+            "fr": "ProgressiveTechno",
+            "nl": "ProgressiveTechno"
+        },
+        "description": {
+            "en": "Melisa VelascO is a Spanish DJ and producer living in Brussels. Her music is emotional sensitive and mixes Deep\/ProgressiveTechno and electronic sounds with ambient waves who invites you to a trip through dark but mostly light vibes.",
+            "fr": "",
+            "nl": "Melisa VelascO is een Spaanse DJ en producer woonachtig in Brussel. Haar muziek is emotioneel gevoelig en mixt Deep\/ProgressiveTechno en elektronische geluiden met ambient waves die je uitnodigt voor een trip door donkere maar vooral lichte vibes."
+        },
+        "liens": {
+            "name": "SoundCloud",
+            "link": "https:\/\/soundcloud.com\/melisa-martin-velasco"
+        }
+    }
+}

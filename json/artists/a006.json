@@ -1,0 +1,20 @@
+{
+    "artist": {
+        "id": "a006",
+        "name": "Big Horse",
+        "art": {
+            "en": "Rockn'roll",
+            "fr": "Rockn'roll",
+            "nl": "Rockn'roll"
+        },
+        "description": {
+            "en": "Wild 'n' Primitive Rock'n'roll One-man-band from Brussels",
+            "fr": "Rock'n'roll sauvage et primitif, groupe solo bruxellois",
+            "nl": "Wild 'n' Primitive Rock'n'roll Eenmansband uit Brussel"
+        },
+        "liens": {
+            "name": "Band Camp",
+            "link": "https:\/\/cluster-park.bandcamp.com\/album\/the-bighorse"
+        }
+    }
+}

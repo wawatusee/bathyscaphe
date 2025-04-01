@@ -21,7 +21,7 @@ $studioPricingContentML = [
         <p>Stage available for private concerts, for a first out of residency experience : up to 50 persons, with multi-camera video recording, studio-like sound recording,  in visually peculiar environment,  for future promotion</p>",
     "fr" => "<h2>Tarifs</h2>
         <p>Studio de musique, cuisine et chambre à coucher, toutes charges comprises : 200 euros par jour - 1000 euros par semaine</p>
-        <p>Supports proposés pour les enregistrement: vinyle et/ou cassette, conditions à voir ensemble en fonction des quantités</p>
+        <p>Supports proposés pour les enregistrements: vinyle et/ou cassette, conditions à voir ensemble en fonction des quantités</p>
         <p>Plateau d’artiste disponible pour concerts privés, pour une première expérience scénique du matériel post-résidence: jusque 50 personnes, avec enregistrement vidéo multi-caméra, et captation sonore qualité studio,  dans un environnement visuellement particulier, pour toute future promotion</p>",
     "nl" => "<h2>Prijzen</h2>
         <p>Verhuur van muziekstudio, alle kosten inbegrepen, keuken en slaapkamer voor overnachtingen: 200 euro per dag - 1000 euro per week</p>
@@ -32,7 +32,7 @@ $studioAccessContentML=[
                 "en" => "<h2>Access</h2>
                     <p>Easy access from international locations. Midway between Paris, London, Amsterdam and Berlin. Zaventem Airport 30 minutes by taxi, Midi international train station 15 minutes away on Metro line 6, Pannenhuis stop</p>",
                 "fr" => "<h2>Accès</h2>
-                    <p>Accès facile de l’international. A mi-chemin entre Paris, Londres, Amsterdam et Berlin. L’aéroport Zaventem est à 30 minutes par taxi, la gare du midi à 15 minutes avec la ligne 6 du Metro, arrêt Pannenhuis.</p>",
+                    <p>Accès facile de l’international. A mi-chemin entre Paris, Londres, Amsterdam et Berlin. L’aéroport Zaventem est à 30 minutes par taxi, la gare du midi à 15 minutes avec la ligne 6 du Metro, arrêt Pannenhuis</p>",
                 "nl" => "<h2>Toegang</h2>
                     <p>Gemakkelijke toegang vanuit internationale locaties. Tussen Parijs, Londen, Amsterdam en Berlijn. Luchthaven Zaventem op 30 minuten met de taxi, station Midi internationaal 15 minuten met de metro lijn 6, halte Pannenhuis</p>"
                     ]

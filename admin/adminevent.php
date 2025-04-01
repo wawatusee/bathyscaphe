@@ -32,7 +32,7 @@ $event20241204ContentML=[
 <?php
 //Vue de l'événement sélectionné
 require_once("../src/view/event_view.php");
-$eventView=new EventView($eventDatas);
+$eventView=new EventView($eventDatas,"fr");
 $eventViewHtml=$eventView->getEventView($lang);
 echo $eventViewHtml;
 ?>

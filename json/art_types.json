@@ -1,0 +1,16 @@
+{
+    "art-types": [
+        {
+            "id": 1,
+            "en": "music",
+            "fr": "musique",
+            "nl": "musiek"
+        },
+        {
+            "id": 2,
+            "en": "painting",
+            "fr": "peinture",
+            "nl": "schilderkunst"
+        }
+    ]
+}

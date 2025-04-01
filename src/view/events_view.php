@@ -10,11 +10,20 @@
     
     public function getEventsViewHtml($lang, $eventsSorted) {
         $html = '';
-
+        $title_nextevent_text_ml=[
+            "fr"=>"Prochain Événement",
+            "en"=>"Next event",
+            "nl"=>"Volgenden gebeurtenis"
+        ]; 
+        $title_pastevent_text_ml=[
+            "fr"=>"Événements passés",
+            "en"=>"Past event",
+            "nl"=>"Verleden gebeurtenissen"
+        ];
         // Prochain événement (mis en avant)
         if ($eventsSorted['nextEvent']) {
             $html .= '<section class="next-event">';
-            $html .= '<h3>Prochain Événement</h3>';
+            $html .= '<h3>'.$title_nextevent_text_ml[$lang].'</h3>';
             $html .= $this->renderSingleEvent($eventsSorted['nextEvent'], $lang);
             $html .= '</section>';
         }
@@ -30,7 +39,7 @@
         // Événements passés
         if (!empty($eventsSorted['pastEvents'])) {
             $html .= '<section class="past-events">';
-            $html .= '<h3>Événements Passés</h3>';
+            $html .= '<h3>'.$title_pastevent_text_ml[$lang].'</h3>';
             $html .= $this->renderEventsList($eventsSorted['pastEvents'], $lang);
             $html .= '</section>';
         }
