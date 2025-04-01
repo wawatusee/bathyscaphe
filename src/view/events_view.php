@@ -12,12 +12,12 @@
         $html = '';
         $title_nextevent_text_ml=[
             "fr"=>"Prochain Événement",
-            "en"=>"Next event",
+            "en"=>"Next events",
             "nl"=>"Volgenden gebeurtenis"
         ]; 
         $title_pastevent_text_ml=[
             "fr"=>"Événements passés",
-            "en"=>"Past event",
+            "en"=>"Past events",
             "nl"=>"Verleden gebeurtenissen"
         ];
         // Prochain événement (mis en avant)
