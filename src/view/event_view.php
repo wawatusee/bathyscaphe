@@ -1,9 +1,11 @@
 <?php class EventView
 {
     private $eventDatas;
-    public function __construct($eventModel)
+    private $activityTypes;
+    public function __construct($eventModel,$activityTypes)
     {
         $this->eventDatas = $eventModel->event;
+        $this->activityTypes = $activityTypes;
     }
     public function getEventView($lang)
     {
@@ -18,6 +20,7 @@
         $necessitedbook = $eventDatas->infospratiques->necessitedbook;
         $price = $eventDatas->infospratiques->price;
         $ticketlink = $this->getTicketButtonHtml($date);
+        $activityTypesHtml = $this->getActivityTypesHtml($eventDatas->activity_type_ids, $lang);
         $eventViewHtml = '';
         $eventViewHtml .= <<<EVENTVIEWHTML
 
@@ -31,10 +34,9 @@
                 <div class="activity-illustration">
                     <img src="/public/img/content/events/$illustration" data-field="illustration">
                 </div>
+
                 <div class="activity-types" data-field="types">
-                    <span class="card-type">exposition</span>
-                    <span class="card-type">Repas</span>
-                    <span class="card-type">concert</span>
+                    $activityTypesHtml
                 </div>
                 <article class="activity-description">
                     <div class="activity-texte">
@@ -85,6 +87,22 @@ EVENTVIEWHTML;
 
 
         return $eventViewHtml;
+    }
+    private function getActivityTypesHtml($activityTypeIds, $lang)
+    {
+        $activityTypesHtml = '';
+        if (!empty($activityTypeIds)) {
+            foreach ($activityTypeIds as $typeId) {
+                foreach ($this->activityTypes as $type) {
+                    // Assurez-vous d'accéder à une propriété de l'objet
+                    if ($type->id == $typeId) {
+                        $activityTypesHtml .= "<span class=\"card-type\">{$type->$lang}</span>";
+                        break;
+                    }
+                }
+            }
+        }
+        return $activityTypesHtml;
     }
     private function getTicketButtonHtml($date)
     {

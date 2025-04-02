@@ -7,6 +7,7 @@ require_once("../src/model/lexique_model.php");
 //Le dossier events est parsé pour en extraire les événements enregistré
 $repjsonevents = "../json/events/";
 $eventsDatas = new EventsModel($repjsonevents);
+
 $list_events = $eventsDatas->getFichiers();
 //Création et présentation de l'html généré à partir de la liste des événements
 $repImgEvents = $repImg . "events/";
@@ -41,7 +42,12 @@ if (isset($_GET['event']) && preg_match('/^n\d+$/i', $_GET['event'])) {
     $eventnumero = $eventsDatas->getDefaultEventNumero();
     $isHidden = true;
 }
+//Chargement du json Activty-types
 
+$jsonContent = file_get_contents('../json/activity-types.json');
+$activityTypesData = json_decode($jsonContent);
+$activityTypes = $activityTypesData->{'art-types'};
+var_dump($activityTypes);
 // Chargement du json de l'event demandé
 $eventJson = $eventsDatas->getJsonFullName($eventnumero);
 $jsonfile = $repjsonevents . $eventJson;
@@ -49,7 +55,7 @@ $eventDatas = (new ObjetModel($jsonfile))->get_objet();
 
 // Vue de l'événement sélectionné
 require_once("../src/view/event_view.php");
-$eventView = new EventView($eventDatas);
+$eventView = new EventView($eventDatas,$activityTypes);
 $eventViewHtml = $eventView->getEventView($_GET['lang'] ?? 'fr');
 
 // Affichage HTML
