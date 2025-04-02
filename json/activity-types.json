@@ -11,6 +11,24 @@
             "en": "painting",
             "fr": "peinture",
             "nl": "schilderkunst"
+        },
+        {
+            "id": 3,
+            "en": "cooking",
+            "fr": "cuisine",
+            "nl": "coeken"
+        },
+        {
+            "id": 4,
+            "en": "djSet",
+            "fr": "djSet",
+            "nl": "djSet"
+        },
+        {
+            "id": 5,
+            "en": "Rocknroll",
+            "fr": "Rocknroll",
+            "nl": "Rocknroll"
         }
     ]
 }

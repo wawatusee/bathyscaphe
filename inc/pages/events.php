@@ -47,7 +47,7 @@ if (isset($_GET['event']) && preg_match('/^n\d+$/i', $_GET['event'])) {
 $jsonContent = file_get_contents('../json/activity-types.json');
 $activityTypesData = json_decode($jsonContent);
 $activityTypes = $activityTypesData->{'art-types'};
-var_dump($activityTypes);
+
 // Chargement du json de l'event demandé
 $eventJson = $eventsDatas->getJsonFullName($eventnumero);
 $jsonfile = $repjsonevents . $eventJson;

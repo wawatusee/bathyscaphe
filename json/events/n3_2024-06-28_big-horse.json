@@ -11,6 +11,7 @@
         },
         "title":"Navigation #3-Big horse",
         "illustration":"n3.jpg",
+        "activity_type_ids":[5],
         "description_event":{
             "en":"Wild and primitive Rockn'roll One-man-band from Brussels, Belgium",
             "fr":"Rocker sauvage et primal de Bruxelles en Belgique",
