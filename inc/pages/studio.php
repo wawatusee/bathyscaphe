@@ -21,12 +21,12 @@ $studioPricingContentML = [
         <p>Stage available for private concerts, for a first out of residency experience : up to 50 persons, with multi-camera video recording, studio-like sound recording,  in visually peculiar environment,  for future promotion</p>",
     "fr" => "<h2>Tarifs</h2>
         <p>Studio de musique, cuisine et chambre à coucher, toutes charges comprises : 200 euros par jour - 1000 euros par semaine</p>
-        <p>Supports proposés pour les enregistrements: vinyle et/ou cassette, conditions à voir ensemble en fonction des quantités</p>
-        <p>Plateau d’artiste disponible pour concerts privés, pour une première expérience scénique du matériel post-résidence: jusque 50 personnes, avec enregistrement vidéo multi-caméra, et captation sonore qualité studio,  dans un environnement visuellement particulier, pour toute future promotion</p>",
+        <p>Supports proposés pour les enregistrements : vinyle et/ou cassette, conditions à voir ensemble en fonction des quantités</p>
+        <p>Plateau d’artiste disponible pour concerts privés, pour une première expérience scénique du matériel post-résidence : jusque 50 personnes, avec enregistrement vidéo multi-caméra, et captation sonore qualité studio,  dans un environnement visuellement particulier, pour toute future promotion</p>",
     "nl" => "<h2>Prijzen</h2>
-        <p>Verhuur van muziekstudio, alle kosten inbegrepen, keuken en slaapkamer voor overnachtingen: 200 euro per dag - 1000 euro per week</p>
-        <p>Beschikbare media voor opnames: vinyl en/of cassette, voorwaarden te bespreken afhankelijk van de hoeveelheden</p>
-        <p>Podium beschikbaar voor privéconcerten, voor een eerste ervaring buiten de residentie: tot 50 personen, met multi-camera video-opname, juiste geluidsopname, in een visueel bijzondere omgeving, voor toekomstige promotie</p>"
+        <p>Verhuur van muziekstudio, alle kosten inbegrepen, keuken en slaapkamer voor overnachtingen : 200 euro per dag - 1000 euro per week</p>
+        <p>Beschikbare media voor opnames : vinyl en/of cassette, voorwaarden te bespreken afhankelijk van de hoeveelheden</p>
+        <p>Podium beschikbaar voor privéconcerten, voor een eerste ervaring buiten de residentie : tot 50 personen, met multi-camera video-opname, juiste geluidsopname, in een visueel bijzondere omgeving, voor toekomstige promotie</p>"
     ];
 $studioAccessContentML=[
                 "en" => "<h2>Access</h2>

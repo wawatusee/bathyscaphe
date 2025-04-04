@@ -4,9 +4,11 @@
 
                 <nav class="navfooterbloc">
                     <h2>Contacts</h2>
+                    <address>
                     <a class="maillink" href="info@bathyscaphe.be">info@bathyscaphe.be</a>
                     <a class="phonelink" href="tel:+32485966694">+32(0)485 96 66 94</a>
-                    <address class="situationlink">rue Dieudonné Lefèvre, 215<br> 1020 Brussels - Belgium</address>
+                    <div class="situationlink">rue Dieudonné Lefèvre, 215<br> 1020 Brussels - Belgium</div>
+                    </address>
                 </nav>
                 <nav class="navfooterbloc">
                     <h2>Menu</h2>

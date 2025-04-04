@@ -51,6 +51,9 @@ footer .itemMenu a:hover{
   color:var(--batho-bleu);
 }
 /*Particular communications link*/
+address{
+  font-style: normal;
+}
 .maillink::before {
   content: url('/public/img/deco/icons8-mail-24.png');
   position: relative;
