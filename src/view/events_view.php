@@ -23,7 +23,7 @@
         // Prochain événement (mis en avant)
         if ($eventsSorted['nextEvent']) {
             $html .= '<section class="next-event">';
-            $html .= '<h3>'.$title_nextevent_text_ml[$lang].'</h3>';
+            $html .= '<h2>'.$title_nextevent_text_ml[$lang].'</h2>';
             $html .= $this->renderSingleEvent($eventsSorted['nextEvent'], $lang);
             $html .= '</section>';
         }
@@ -31,7 +31,7 @@
         // Événements futurs
         if (!empty($eventsSorted['futureEvents'])) {
             $html .= '<section class="future-events">';
-            $html .= '<h3>Événements à venir</h3>';
+            $html .= '<h2>Événements à venir</h2>';
             $html .= $this->renderEventsList($eventsSorted['futureEvents'], $lang);
             $html .= '</section>';
         }
@@ -39,7 +39,7 @@
         // Événements passés
         if (!empty($eventsSorted['pastEvents'])) {
             $html .= '<section class="past-events">';
-            $html .= '<h3>'.$title_pastevent_text_ml[$lang].'</h3>';
+            $html .= '<h2>'.$title_pastevent_text_ml[$lang].'</h2>';
             $html .= $this->renderEventsList($eventsSorted['pastEvents'], $lang);
             $html .= '</section>';
         }
