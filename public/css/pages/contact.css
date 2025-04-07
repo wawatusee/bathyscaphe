@@ -64,7 +64,8 @@ main {
 }
 
 .contacts-adress::before {
-  content: url('/public/img/deco/icons8-location-30.png');
+  content: url('/public/img/deco/icons8-map-black-32.png');
+  position: relative;
   top: 10px;
   left: -10px;
 }
