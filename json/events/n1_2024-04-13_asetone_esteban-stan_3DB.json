@@ -17,34 +17,7 @@
             "fr":"Tous à bord, pour cette première édition de Navigation. Musique, peintures et cuisine ouverte, pour une aventure autour de tous nos sens.<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>-Portes à 18h00<br>Vernissage / Exposition d'art par Asetone - 'Des nuages des visages' - (Huiles sur toile)<br>Repas avec quelques boissons inclus, traiteur par Frederica, pour tous les régimes<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>-Première partie à 19h30 avec Esteban Stan (Blues Electro Acoustique)<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>-Acte principal à 21h00 avec 3DB (Upbeat Bass Électronique)<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>-Set DJ à partir de 22h00 avec des amis<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>Bar disponible tout le temps, apportez du liquide<br>Jusqu'à tard<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>Billets en prévente : 18€ (lien sur cette page d'événement) et 20€ à la porte",
             "nl":"Alles aan boord, voor deze eerste editie van Navigatie. Muziek, schilderijen en open keuken, voor een avontuur rondom al onze zintuigen.<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>-Opening-act om 19:30 met Esteban Stan (Blues Electro Akoestisch)<br>≈≈≈≈≈≈≈≈<br>-Hoofdact om 21:00 met 3DB (Upbeat Bass Elektronisch)<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>-Dj-set vanaf 22:00 met vrienden<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>Bar de hele tijd beschikbaar, breng contant geld mee<br>Tot laat<br>≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈<br>Tickets in voorverkoop: 18€ (link op deze evenementpagina) en 20€ aan de deur"
         },
-        "artists":[
-            {
-            "name":"Asetone",
-            "art":{
-                "en":"Music",
-                "fr":"musique",
-                "nl":"musiek"
-            },
-            "illustration":"asetone.jpg",
-            "liens":
-            [
-                "http://www.asetone.fr/"
-            ]
-            },
-            {
-                "name":"Esteban Stan",
-                "art":{
-                    "en":"Music",
-                    "fr":"musique",
-                    "nl":"musiek"
-                },
-                "illustration":"esteba-stan.jpeg",
-                "liens":
-                [
-                    "https://soundcloud.com/estebanstan"
-                ]
-            }
-        ],
+        "artists":["a001","a002","a003"],
         "infospratiques":{
             "organisation":"bathyscaphe.be",
             "necessitedbook":false,

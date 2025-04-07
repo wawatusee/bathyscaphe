@@ -2,7 +2,7 @@
 {
     private $eventDatas;
     private $activityTypes;
-    public function __construct($eventModel,$activityTypes)
+    public function __construct($eventModel, $activityTypes)
     {
         $this->eventDatas = $eventModel->event;
         $this->activityTypes = $activityTypes;
@@ -21,6 +21,8 @@
         $price = $eventDatas->infospratiques->price;
         $ticketlink = $this->getTicketButtonHtml($date);
         $activityTypesHtml = $this->getActivityTypesHtml($eventDatas->activity_type_ids, $lang);
+        $artistsHtml = $this->getArtistsHtml($eventDatas->artists, $lang);
+
         $eventViewHtml = '';
         $eventViewHtml .= <<<EVENTVIEWHTML
 
@@ -44,6 +46,12 @@
                         $description
                         </p>
                     </div>
+                </article>
+                <article>
+                    <h3>Artistes</h3>
+                    <section>
+                        $artistsHtml
+                    </section>
                 </article>
                 <article>
                     <h3>Infos pratiques</h3>
@@ -103,6 +111,26 @@ EVENTVIEWHTML;
             }
         }
         return $activityTypesHtml;
+    }
+    private function getArtistsHtml($artistIds, $lang)
+    {
+        $artistsHtml = '';
+        foreach ($artistIds as $artistId) {
+            // Charger les données de l'artiste à partir du fichier JSON
+            $artistData = json_decode(file_get_contents("../json/artists/{$artistId}.json"), true);
+            $artistName = $artistData['artist']['name'];
+            $artistDescription = $artistData['artist']['description'][$lang];
+            $artistLink = $artistData['artist']['liens']['link'];
+
+            $artistsHtml .= <<<HTML
+            <div class="artist-details">
+                <h3>$artistName</h3>
+                <p>$artistDescription</p>
+                <a href="$artistLink" target="_blank">SoundCloud</a>
+            </div>
+            HTML;
+        }
+        return $artistsHtml;
     }
     private function getTicketButtonHtml($date)
     {

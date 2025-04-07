@@ -17,23 +17,7 @@
             "fr":"Rocker sauvage et primal de Bruxelles en Belgique",
             "nl":"Wilde en oeroude rocker uit Brussel in België"
         },
-        "artists":[
-            {
-            "name":"Big horse",
-            "art":{
-                "en":"Music",
-                "fr":"musique",
-                "nl":"musiek"
-            },
-            "illustration":"big-horse.jpeg",
-            "liens":
-            [
-                "https://linktr.ee/bighorsemusic",
-                "https://www.facebook.com/TheBigHorseMusic/"
-            ]
-
-        }
-        ],
+        "artists":["a006"],
         "infospratiques":{
             "organisation":"bathyscaphe.be",
             "necessitedbook":false,
