@@ -8,6 +8,7 @@ require_once("../src/model/lexique_model.php");
 $repjsonevents="../json/events/";
 $eventsDatas=new EventsModel($repjsonevents);
 $list_events=$eventsDatas->getFichiers();
+//$eventsSorted = $eventsDatas->sortEventsWithNextEvent();
 //Création et présentation de l'html généré à partir de la liste des événements
 $repImgEvents=$repImg."events/";
 $events_view = new EventsView($list_events, $repImgEvents,$lang);
@@ -32,6 +33,7 @@ $event20241204ContentML=[
 <?php
 //Vue de l'événement sélectionné
 require_once("../src/view/event_view.php");
+//$eventsSorted = $eventsDatas->sortEventsWithNextEvent();
 $eventView=new EventView($eventDatas,"fr");
 $eventViewHtml=$eventView->getEventView($lang);
 echo $eventViewHtml;

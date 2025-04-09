@@ -8,7 +8,7 @@ function generateForm(data, config, parent = document.getElementById("artist-for
         const fullPath = path ? `${path}.${key}` : key;
 
         // Récupérer la configuration imbriquée
-        const fieldConfig = getNestedConfig(config, fullPath) || {}; 
+        const fieldConfig = getNestedConfig(config, fullPath) || {};
         console.log("fieldConfig pour", fullPath, ":", fieldConfig); // Debug
 
         if (!fieldConfig || Object.keys(fieldConfig).length === 0) {
@@ -26,10 +26,35 @@ function generateForm(data, config, parent = document.getElementById("artist-for
             const fieldset = document.createElement("fieldset");
             fieldset.innerHTML = `<legend>${fieldConfig.label || key}</legend>`;
             value.forEach((item, index) => {
+                if (!Array.isArray(data[key])) data[key] = []; // sécurité
                 const arrayPath = `${fullPath}[${index}]`;
                 // Utilisez la structure spécifique pour les éléments du tableau
                 generateForm(item, fieldConfig.structure, fieldset, arrayPath);
             });
+            // Bouton d'ajout d'élément
+            const addButton = document.createElement("button");
+            addButton.type = "button";
+            addButton.textContent = "➕ Ajouter un lien";
+            addButton.style.marginTop = "10px";
+            addButton.onclick = () => {
+                // Ajout d'un nouvel objet de lien vide
+                data[key].push({ name: "", link: "" });
+            
+                // Recherche le champ spécifique à ajouter, sans créer de nouveau fieldset imbriqué
+                const fieldset = document.createElement("fieldset");
+                fieldset.innerHTML = `<legend>${fieldConfig.label || key}</legend>`;
+                
+                // Utilise generateForm pour ajouter le formulaire du nouveau lien au DOM
+                generateForm(data[key], fieldConfig.structure, fieldset, key);
+            
+                // Ajoute le nouveau fieldset au parent sans le dupliquer
+                parent.appendChild(fieldset);
+            };
+            
+            
+            
+            fieldset.appendChild(addButton);
+
             parent.appendChild(fieldset);
         } else {
             // Gestion des champs simples
@@ -51,7 +76,7 @@ function generateForm(data, config, parent = document.getElementById("artist-for
             if (fieldConfig.required) {
                 input.required = true;
             }
-            
+
             if (fieldConfig.readonly) { // Utilisez 'readonly' en minuscules
                 input.readOnly = true;
             }
@@ -204,50 +229,43 @@ function saveArtistData() {
 document.addEventListener("DOMContentLoaded", () => {
     const formContainer = document.getElementById("artist-form");
 
-   if (formContainer && typeof formConfig === 'object' && typeof artistData === 'object') {
+    if (formContainer && typeof formConfig === 'object' && typeof artistData === 'object') {
         generateForm(artistData, formConfig, formContainer);
         console.log("Config trouvée");
     } else {
         console.error("Conteneur du formulaire, configuration ou données non trouvés !");
     }
 });
-//DEBUG
-/*function getNestedConfig(config, path) {
-    if (!config || !path) return null;
 
-    const keys = path.replace(/$$(\d+)$$/g, '.$1').split('.'); // Gère les tableaux et objets
-
-    let currentConfig = config;
-
-    for (const key of keys) {
-        if (currentConfig[key]) {
-            currentConfig = currentConfig[key];
-        } else if (currentConfig && currentConfig.structure && currentConfig.structure[key]) {
-            currentConfig = currentConfig.structure[key];
-        } else {
-            return null; // Pas de correspondance
-        }
-    }
-
-    return currentConfig;
-}*/
 function getNestedConfig(config, path) {
     if (!config || !path) return null;
 
-    const keys = path.replace(/\[(\d+)\]/g, '.$1').split('.'); // Correction de la RegEx
+    // Remplacer les indices de tableau comme liens[0] par des points, ex: liens[0].name => liens.0.name
+    const keys = path.replace(/\[(\d+)\]/g, '.$1').split('.');
 
     let currentConfig = config;
+
+    // On itère sur les clés pour accéder à la configuration imbriquée
     for (const key of keys) {
-        if (currentConfig[key]) {
-            currentConfig = currentConfig[key];
+        // Si l'objet actuel est un tableau, on cherche la clé correspondant à l'indice
+        if (Array.isArray(currentConfig)) {
+            const index = parseInt(key);
+            currentConfig = currentConfig[index];  // On accède à l'élément du tableau à l'indice donné
+        } else if (currentConfig[key] !== undefined) {
+            currentConfig = currentConfig[key];  // On accède à la clé
         } else if (currentConfig.structure && currentConfig.structure[key]) {
-            currentConfig = currentConfig.structure[key];
+            currentConfig = currentConfig.structure[key];  // Si structure existe, on continue à l'intérieur
         } else {
-            return null;
+            return null;  // Si la clé n'est pas trouvée, on retourne null
         }
     }
+
     return currentConfig;
 }
+
+
+
+
 
 
 

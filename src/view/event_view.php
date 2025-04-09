@@ -116,22 +116,43 @@ EVENTVIEWHTML;
     {
         $artistsHtml = '';
         foreach ($artistIds as $artistId) {
-            // Charger les données de l'artiste à partir du fichier JSON
-            $artistData = json_decode(file_get_contents("../json/artists/{$artistId}.json"), true);
-            $artistName = $artistData['artist']['name'];
-            $artistDescription = $artistData['artist']['description'][$lang];
-            $artistLink = $artistData['artist']['liens']['link'];
-
-            $artistsHtml .= <<<HTML
-            <div class="artist-details">
-                <h3>$artistName</h3>
-                <p>$artistDescription</p>
-                <a href="$artistLink" target="_blank">SoundCloud</a>
-            </div>
-            HTML;
+            $filePath = "../json/artists/{$artistId}.json";
+            if (file_exists($filePath)) {
+                $artistData = json_decode(file_get_contents($filePath), true);
+                $artistName = htmlspecialchars($artistData['artist']['name']);
+                $artistDescription = htmlspecialchars($artistData['artist']['description'][$lang]);
+                $artistImagePath = "./img/content/artists/{$artistId}.jpg";
+    
+                // Générer les liens
+                $artistLinksHtml = '';
+                foreach ($artistData['artist']['liens'] as $link) {
+                    $linkName = htmlspecialchars($link['name']);
+                    $linkUrl = htmlspecialchars($link['link']);
+                    $artistLinksHtml .= "<a href=\"$linkUrl\" target=\"_blank\">$linkName</a> ";
+                }
+    
+                $artistsHtml .= <<<HTML
+                <div class="artist-card">
+                    <div class="artist-illustration">
+                        <img src="$artistImagePath" alt="$artistName" class="artist-image">
+                    </div>
+                    <div class="artist-details">
+                        <h3>$artistName</h3>
+                        <p>$artistDescription</p>
+                        <div class="artist-links">
+                            $artistLinksHtml
+                        </div>
+                    </div>
+                </div>
+                HTML;
+            } else {
+                $artistsHtml .= "<p>Les informations de l'artiste $artistId ne sont pas disponibles.</p>";
+            }
         }
         return $artistsHtml;
     }
+    
+
     private function getTicketButtonHtml($date)
     {
         $currentDate = new DateTime();

@@ -305,6 +305,48 @@ a.card_event {
   background-color: var(--batho-noir);
   color: var(--batho-bleu);
 }
+/*Présentation artistes*/
+.artist-card {
+  display: flex;
+  width: calc(50% - 20px); /* Deux colonnes */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  align-items: center;
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.artist-illustration {
+  width: 40%; /* Espace pour l'image */
+  padding: 10px;
+}
+
+.artist-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Garde les proportions originales */
+}
+
+.artist-details {
+  width: 60%;
+  padding: 20px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  .artist-card {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .artist-image, .artist-details {
+      width: 100%;
+      text-align: center;
+  }
+}
+
+/*Fin Présentation artistes*/
 
 
 /*Fin Fenêtre modale*/

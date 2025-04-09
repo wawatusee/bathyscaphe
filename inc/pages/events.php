@@ -12,14 +12,8 @@ $list_events = $eventsDatas->getFichiers();
 //Création et présentation de l'html généré à partir de la liste des événements
 $repImgEvents = $repImg . "events/";
 
-$event20241204ContentML = [
-    "en" => "texte anglais",
-    "fr" => "texte français",
-    "nl" => "texte néerlandais"
-];
 //Appel de méthode créée par Claude
 $eventsSorted = $eventsDatas->sortEventsWithNextEvent();
-//var_dump($eventsSorted);
 $events_view = new EventsView($list_events, $repImgEvents);
 $events_html = $events_view->getEventsViewHtml($lang, $eventsSorted);
 ?>
