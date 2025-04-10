@@ -4,6 +4,7 @@ class StudioEquipmentView {
     private $lang;
     private $equipments;
     private $title;
+    private $repImg;
 
     public function __construct(LexiqueModel $lexiqueModel, $lang = 'fr',$repImg) {
         $this->lexiqueModel = $lexiqueModel;
@@ -24,7 +25,8 @@ class StudioEquipmentView {
             $html .= <<<HTML
             <div class="tool-card">
                 <div class="tool-image">
-                <img src="{$imagePath}" alt="{$equipment['name']}">                </div>
+                     <img src="{$imagePath}" alt="{$equipment['name']}">  
+                </div>
                 <div class="tool-details">
                     <h3>{$equipment['name']}</h3>
                     <p>{$equipment['description'][$this->lang]}</p>

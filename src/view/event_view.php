@@ -126,9 +126,14 @@ EVENTVIEWHTML;
                 // Générer les liens
                 $artistLinksHtml = '';
                 foreach ($artistData['artist']['liens'] as $link) {
-                    $linkName = htmlspecialchars($link['name']);
-                    $linkUrl = htmlspecialchars($link['link']);
-                    $artistLinksHtml .= "<a href=\"$linkUrl\" target=\"_blank\">$linkName</a> ";
+                    if (is_array($link) && isset($link['name']) && isset($link['link'])) {
+                        $linkName = htmlspecialchars($link['name']);
+                        $linkUrl = htmlspecialchars($link['link']);
+                        $artistLinksHtml .= "<a href=\"$linkUrl\" target=\"_blank\">$linkName</a> ";
+                    } else {
+                        // Optionnel : journaliser les données corrompues
+                        error_log("Lien mal formé pour l'artiste ID $artistId : " . var_export($link, true));
+                    }
                 }
     
                 $artistsHtml .= <<<HTML
