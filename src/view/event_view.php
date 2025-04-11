@@ -22,18 +22,50 @@
         $ticketlink = $this->getTicketButtonHtml($date);
         $activityTypesHtml = $this->getActivityTypesHtml($eventDatas->activity_type_ids, $lang);
         $artistsHtml = $this->getArtistsHtml($eventDatas->artists, $lang);
-        $lexiqueEventPage=["practical-information"=>[
-            "en" => "Practical information",
-            "fr" => "Informations pratiques",
-            "nl" => "Praktische informatie"
-        ]];
-
+        $lexiqueEventPage = [
+            "practical-information" => [
+                "en" => "Practical information",
+                "fr" => "Informations pratiques",
+                "nl" => "Praktische informatie"
+            ],
+            "artists" => [
+                "en" => "Artists",
+                "fr" => "Artistes",
+                "nl" => "Artiesten"
+            ],
+            "organizer" => [
+                "en" => "Organizer",
+                "fr" => "Organisateur",
+                "nl" => "Organisator"
+            ],
+            "reservation-required" => [
+                "en" => "Reservation required",
+                "fr" => "Réservation obligatoire",
+                "nl" => "Reservatie verplicht"
+            ],
+            "price" => [
+                "en" => "Price",
+                "fr" => "Prix",
+                "nl" => "Prijs"
+            ],
+            "location" => [
+                "en" => "Location",
+                "fr" => "Lieu",
+                "nl" => "Locatie"
+            ],
+            "tickets" => [
+                "en" => "Tickets",
+                "fr" => "Billets",
+                "nl" => "Tickets"
+            ],
+        ];
+        
         $eventViewHtml = '';
         $eventViewHtml .= <<<EVENTVIEWHTML
-
+        
         <section id="activity">
             <article class="fullActivity">
-               <div>
+                <div>
                     <span class="infosdates" data-field="dates">$date</span>
                     <span class="infosHoraires" data-field="horaire">$horaire</span>
                 </div>
@@ -41,7 +73,7 @@
                 <div class="activity-illustration">
                     <img src="/public/img/content/events/$illustration" data-field="illustration">
                 </div>
-
+        
                 <div class="activity-types" data-field="types">
                     $activityTypesHtml
                 </div>
@@ -52,17 +84,19 @@
                         </p>
                     </div>
                 </article>
+        
                 <article>
-                    <h3>Artistes</h3>
+                    <h3>{$lexiqueEventPage['artists'][$lang]}</h3>
                     <section>
                         $artistsHtml
                     </section>
                 </article>
+        
                 <article>
-                    <h3>Infos pratiques</h3>
+                    <h3>{$lexiqueEventPage['practical-information'][$lang]}</h3>
                     <section class="infospratik">
                         <article class="infos-elements">
-                            <span data-field="organisateur">Organisateur : <a href="https://www.bathyscaphe.be/">Bathyscaphe.be</a></span>
+                            <span data-field="organisateur">{$lexiqueEventPage['organizer'][$lang]} : <a href="https://www.bathyscaphe.be/">Bathyscaphe.be</a></span>
                             <hr>
                             <div>
                                 <span class="infosdates" data-field="dates">$date<br></span>
@@ -70,8 +104,8 @@
                             </div>
                             <hr>
                             <div class="infosresa">
-                                Réservation obligatoire : <b><span data-field="booking">$necessitedbook</span></b><br>
-                                <span>Prix:<span data-field="price"></span> $price</span>
+                                {$lexiqueEventPage['reservation-required'][$lang]} : <b><span data-field="booking">$necessitedbook</span></b><br>
+                                <span>{$lexiqueEventPage['price'][$lang]}: <span data-field="price"></span> $price</span>
                             </div>
                             <hr>
                             <span class="infoslocation" data-field="location">Rue Dieudonné Lefèvre 215<br>Bruxelles<br>Belgique</span>
@@ -82,17 +116,21 @@
                         <script src="./js/mapbathy.js"></script>
                     </section>
                 </article>
+        
                 <br>
                 <hr>
-
+        
                 <article>
-                    <h3>Billets</h3>
+                    <h3>{$lexiqueEventPage['tickets'][$lang]}</h3>
                     <section> 
                         $ticketlink
                     </section>
                 </article>
-        </article>
-    </section>
+         </section>
+        
+        
+       
+   
 
                 
 
@@ -149,12 +187,13 @@ EVENTVIEWHTML;
                     <div class="artist-details">
                         <h3>$artistName</h3>
                         <p class="artist-bio collapsed">$artistDescription</p>
-                        <button class="read-more-btn">+</button>
+                        
                         <div class="artist-links">
                             $artistLinksHtml
                         </div>
                     </div>
                 </div>
+                <script src="./js/biocollapsed.js"></script>
                 HTML;
             } else {
                 $artistsHtml .= "<p>Les informations de l'artiste $artistId ne sont pas disponibles.</p>";

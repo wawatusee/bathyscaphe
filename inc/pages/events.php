@@ -79,3 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
+<?php
+/*
+ Action conditionnelle du bouton + pour le chapitre artiste, repliable si trop long 
+ */
+$page = $_GET['page'] ?? null;
+if ($page === 'events') :
+?>
+    <script src="../js/event.js" defer></script>
+<?php endif; ?>
