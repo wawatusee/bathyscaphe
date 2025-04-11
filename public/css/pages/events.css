@@ -224,6 +224,7 @@ a.card_event {
   flex-direction: column;
   gap: var(--standartspace);
   /* background-color: var(--first-color); */
+  overflow-wrap: break-word; /* ou word-wrap: break-word; */
   padding: 20px;
   min-width: 40%;
   flex-grow: 1;

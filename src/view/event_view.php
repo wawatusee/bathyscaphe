@@ -18,6 +18,7 @@
         $description = $eventDatas->description_event->$lang;
         $artist = [];
         $necessitedbook = $eventDatas->infospratiques->necessitedbook;
+        $organisation=$eventDatas->infospratiques->organisation;
         $price = $eventDatas->infospratiques->price;
         $ticketlink = $this->getTicketButtonHtml($date);
         $activityTypesHtml = $this->getActivityTypesHtml($eventDatas->activity_type_ids, $lang);
@@ -96,7 +97,7 @@
                     <h3>{$lexiqueEventPage['practical-information'][$lang]}</h3>
                     <section class="infospratik">
                         <article class="infos-elements">
-                            <span data-field="organisateur">{$lexiqueEventPage['organizer'][$lang]} : <a href="https://www.bathyscaphe.be/">Bathyscaphe.be</a></span>
+                            <span data-field="organisateur">{$lexiqueEventPage['organizer'][$lang]} :<br> <a href=$organisation>$organisation</a></span>
                             <hr>
                             <div>
                                 <span class="infosdates" data-field="dates">$date<br></span>
