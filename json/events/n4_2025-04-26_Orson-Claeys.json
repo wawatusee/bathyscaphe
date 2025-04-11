@@ -1,0 +1,41 @@
+{
+    "event": {
+        "id": 4,
+        "time": {
+            "date": "2025-04-26",
+            "horaire": {
+                "fr":"Porte ouverte à partir de 20h00 event à 20h",
+                "en":"Doors 20h event 21h",
+                "nl":"Doer 20h evenementie 21h"
+            }
+        },
+        "title": "Navigation #4-Orson Claeys",
+        "illustration": "n4.jpg",
+        "activity_type_ids": [
+            6
+        ],
+        "description_event": {
+            "fr": "<p>Nous sommes heureux de vous accueillir à cet événement en collaboration avec Musique d'Ascenseur.</p>Musique d'Ascenseur organise des concerts dans des lieux insolites autour de Bruxelles, mettant en valeur la scène locale.",
+            "en": "<p>We are happy to welcome you to this event in collaboration with Musique d'Ascenseur.</p>Musique d'Ascenseur organises concerts in original spaces around Brussels, promoting the local scene.",
+            "nl": "<p>We zijn blij u te mogen verwelkomen op dit evenement in samenwerking met Musique d'Ascenseur.</p>Musique d'Ascenseur organiseert concerten op originele locaties in en rond Brussel en zet zo de lokale scene in de kijker."
+        },
+        "artists": [
+            "a007"
+        ],
+        "infospratiques": {
+            "organisation": "https://www.instagram.com/musique.dascenseur/",
+            "necessitedbook": "no",
+            "price": "Pay What You Can (8€ - 10€ - 15€)at the door - cash preferred",
+            "situation": {
+                "street": "Rue Dieudonné Lefèvre",
+                "number": "215",
+                "postcode": "1020",
+                "city": "Bruxelles",
+                "country": "Belgique"
+            }
+        },
+        "ticket": {
+            "link": "https://www.billetweb.fr/shop.php?event=navigation-3"
+        }
+    }
+}

@@ -47,7 +47,7 @@
         return $html;
     }
 
-    private function renderSingleEvent($event, $lang) {
+    /*private function renderSingleEvent($event, $lang) {
         // Méthode pour rendre un événement unique (plus de détails)
         $numero = $event['numero'];
         $date = $event['date'];
@@ -67,7 +67,37 @@
             </a>
         </div>
         HTML;
+    }*/
+    private function renderSingleEvent($event, $lang) {
+        $numero = $event['numero'];
+        $date = $event['date'];
+        $artists = $event['artists'];
+        $imagePath = $this->repImg . $numero . '_sml.jpg';
+    
+        $artistList = '';
+        foreach ($artists as $artist) {
+            $artistList .= "<div class=\"artist\">" . htmlspecialchars($artist) . "</div>";
+        }
+    
+        return <<<HTML
+        <ul class="list_events">
+            <li>
+                <div class="card_event">
+                    <a href="?page=events&event=$numero&lang=$lang">
+                        <div class="card-event-date">$numero $date</div>
+                        <div class="image">
+                            <img src="$imagePath" alt="Event Image">
+                        </div>
+                        <div class="footer">
+                            $artistList
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        HTML;
     }
+    
 
     private function renderEventsList($events, $lang) {
         $html = '<ul class="list_events">';

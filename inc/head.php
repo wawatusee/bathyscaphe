@@ -5,7 +5,8 @@
     <meta name="keywords" content="">
     <meta property="og:title" content="Le Bathyscaphe.be">
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://www.bathyscaphe.be/public/index.php?page=<?= htmlspecialchars($_GET['page'] ?? 'home') ?>">
+    <meta property="og:url"
+        content="http://www.bathyscaphe.be/public/index.php?page=<?= htmlspecialchars($_GET['page'] ?? 'home') ?>">
     <meta property="og:image" content="http://www.bathyscaphe.be/public/img/deco/logotype-blanc.png">
     <meta property="og:image:width" content="1090">
     <meta property="og:image:height" content="177">
@@ -16,14 +17,19 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <!-- Inclusion conditionnelle de la feuille de style spécifique à chaque page -->
-    <?php 
-        if (isset($_GET['page'])) {
-            $page = htmlspecialchars($_GET['page']);
-            $cssFile = "css/pages/$page.css";
-            if (file_exists($cssFile)) {
-                echo '<link rel="stylesheet" href="' . $cssFile . '">';
-            }
+    <?php
+    $defaultPage = $pagesDuMenus[0];
+    if (isset($_GET['page'])) {
+        $page = htmlspecialchars($_GET['page']);
+        $cssFile = "css/pages/$page.css";
+        if (file_exists($cssFile)) {
+            echo '<link rel="stylesheet" href="' . $cssFile . '">';
         }
+    } else {
+        $defaultPage = $pagesDuMenus[0];
+        $cssFile = "css/pages/$defaultPage.css";
+    }
+    echo '<link rel="stylesheet" href="' . $cssFile . '">';
     ?>
     <script src="js/menu.js"></script>
     <link rel="shortcut icon" type="image/png" href="favicon.ico">

@@ -29,6 +29,12 @@
             "en": "Rocknroll",
             "fr": "Rocknroll",
             "nl": "Rocknroll"
+        },
+        {
+            "id": 6,
+            "en": "Jazz",
+            "fr": "Jazz",
+            "nl": "Jazz"
         }
     ]
 }

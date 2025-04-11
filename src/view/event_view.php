@@ -22,6 +22,11 @@
         $ticketlink = $this->getTicketButtonHtml($date);
         $activityTypesHtml = $this->getActivityTypesHtml($eventDatas->activity_type_ids, $lang);
         $artistsHtml = $this->getArtistsHtml($eventDatas->artists, $lang);
+        $lexiqueEventPage=["practical-information"=>[
+            "en" => "Practical information",
+            "fr" => "Informations pratiques",
+            "nl" => "Praktische informatie"
+        ]];
 
         $eventViewHtml = '';
         $eventViewHtml .= <<<EVENTVIEWHTML
@@ -32,7 +37,7 @@
                     <span class="infosdates" data-field="dates">$date</span>
                     <span class="infosHoraires" data-field="horaire">$horaire</span>
                 </div>
-                <h3 data-field="title">$title</h3>
+                <h2 data-field="title">$title</h2>
                 <div class="activity-illustration">
                     <img src="/public/img/content/events/$illustration" data-field="illustration">
                 </div>
@@ -65,7 +70,7 @@
                             </div>
                             <hr>
                             <div class="infosresa">
-                                Réservation obligatoire: <b><span data-field="booking">$necessitedbook</span></b><br>
+                                Réservation obligatoire : <b><span data-field="booking">$necessitedbook</span></b><br>
                                 <span>Prix:<span data-field="price"></span> $price</span>
                             </div>
                             <hr>
@@ -143,7 +148,8 @@ EVENTVIEWHTML;
                     </div>
                     <div class="artist-details">
                         <h3>$artistName</h3>
-                        <p>$artistDescription</p>
+                        <p class="artist-bio collapsed">$artistDescription</p>
+                        <button class="read-more-btn">+</button>
                         <div class="artist-links">
                             $artistLinksHtml
                         </div>

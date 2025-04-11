@@ -1,39 +1,38 @@
 {
-	"Main_menu":[
+	"Main_menu": [
+		{
+			"page": "events",
+			"titre": {
+				"fr": "Événements",
+				"en": "Events",
+				"nl": "Evenementen"
+			}
+		},
 		{
 			"page": "studio",
 			"titre": {
-			   "fr": "Studio",
-			   "en": "Studio",
-			   "nl": "Studio"
+				"fr": "Studio",
+				"en": "Studio",
+				"nl": "Studio"
 			}
-		 },
-		 {
-			"page": "events",
-			"titre": {
-			   "fr": "Événements",
-			   "en": "Events",
-			   "nl": "Evenementen"
-			}
-		 },
+		},
 		{
 			"page": "contact",
 			"titre": {
-			   "fr": "Contact",
-			   "en": "Contact",
-			   "nl": "Contact"
+				"fr": "Contact",
+				"en": "Contact",
+				"nl": "Contact"
 			}
-		 }
-
+		}
 	],
-	"RS_menu":[
+	"RS_menu": [
 		{
-			"page":"https://www.facebook.com/profile.php?id=61557513415935",
-			"titre":"facebook"
+			"page": "https://www.facebook.com/profile.php?id=61557513415935",
+			"titre": "facebook"
 		},
 		{
-			"page":"https://www.instagram.com/bathyscaphe.be/",
-			"titre":"instagram"
+			"page": "https://www.instagram.com/bathyscaphe.be/",
+			"titre": "instagram"
 		}
 	]
 }

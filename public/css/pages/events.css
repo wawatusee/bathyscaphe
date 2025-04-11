@@ -308,12 +308,12 @@ a.card_event {
 /*Présentation artistes*/
 .artist-card {
   display: flex;
-  width: calc(50% - 20px); /* Deux colonnes */
+  width: calc(100% - 10px); /* Deux colonnes */
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
   align-items: center;
-  max-width: 350px;
+  max-width: 90%;
   margin-bottom: 20px;
 }
 
@@ -332,7 +332,29 @@ a.card_event {
   width: 60%;
   padding: 20px;
 }
+/*Texte descriptif artiste*/
+.artist-bio.collapsed {
+  max-height: 4.5em; /* 3 lignes environ */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
 
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+/*Fin texte descriptif artiste*/
+/*Fin présentation artiste*/
 /* Responsive Design for Mobile */
 @media (max-width: 600px) {
   .artist-card {

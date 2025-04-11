@@ -3,14 +3,14 @@
         "id": "a001",
         "name": "Asetone",
         "art": {
-            "en": "Musik",
-            "fr": "Musique",
-            "nl": "Musieken"
+            "en": "Painting",
+            "fr": "Peinture",
+            "nl": "schilderijen"
         },
         "description": {
-            "en": "Asetone is a really good experience",
-            "fr": "Mais que c'est bien Asetone, vraiment du bon son",
-            "nl": "Asetone is goed hansome"
+            "en": "Simon aka Asetone, a French self-taught artist, born in Paris in 1986. He spent his childhood in the capital, then moved cities several times before finally settling in Brussels.",
+            "fr": "Simon aka Asetone, artiste autodidacte français, né à Paris en 1986. Passe son enfance dans la capitale, puis change de ville à plusieurs reprises pour finir par s’installer à Bruxelles.",
+            "nl": "Simon, ook wel bekend als Asetone, is een autodidactische Franse kunstenaar, geboren in Parijs in 1986. Hij bracht zijn jeugd door in de hoofdstad en verhuisde daarna meerdere keren naar andere steden voordat hij zich uiteindelijk in Brussel vestigde."
         },
         "liens": [
             {
