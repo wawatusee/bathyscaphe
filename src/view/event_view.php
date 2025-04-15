@@ -16,13 +16,15 @@
         $title = $eventDatas->title;
         $illustration = $eventDatas->illustration;
         $description = $eventDatas->description_event->$lang;
+
         $artist = [];
         $necessitedbook = $eventDatas->infospratiques->necessitedbook;
-        $organisation=$eventDatas->infospratiques->organisation;
+        $organisation = $eventDatas->infospratiques->organisation;
         $price = $eventDatas->infospratiques->price;
         $ticketlink = $this->getTicketButtonHtml($date);
         $activityTypesHtml = $this->getActivityTypesHtml($eventDatas->activity_type_ids, $lang);
         $artistsHtml = $this->getArtistsHtml($eventDatas->artists, $lang);
+
         $lexiqueEventPage = [
             "practical-information" => [
                 "en" => "Practical information",
@@ -58,9 +60,10 @@
                 "en" => "Tickets",
                 "fr" => "Billets",
                 "nl" => "Tickets"
-            ],
+            ]
+
         ];
-        
+
         $eventViewHtml = '';
         $eventViewHtml .= <<<EVENTVIEWHTML
         
@@ -158,6 +161,13 @@ EVENTVIEWHTML;
     }
     private function getArtistsHtml($artistIds, $lang)
     {
+        $lexiqueartist = [
+            "read-more" => [
+                "en" => "Read more",
+                "fr" => "Lire plus",
+                "nl" => "Leer meer"
+            ]
+        ];
         $artistsHtml = '';
         foreach ($artistIds as $artistId) {
             $filePath = "../json/artists/{$artistId}.json";
@@ -165,21 +175,22 @@ EVENTVIEWHTML;
                 $artistData = json_decode(file_get_contents($filePath), true);
                 $artistName = htmlspecialchars($artistData['artist']['name']);
                 $artistDescription = htmlspecialchars($artistData['artist']['description'][$lang]);
+
                 $artistImagePath = "./img/content/artists/{$artistId}.jpg";
-    
+
                 // Générer les liens
                 $artistLinksHtml = '';
                 foreach ($artistData['artist']['liens'] as $link) {
                     if (is_array($link) && isset($link['name']) && isset($link['link'])) {
                         $linkName = htmlspecialchars($link['name']);
                         $linkUrl = htmlspecialchars($link['link']);
-                        $artistLinksHtml .= "<a href=\"$linkUrl\" target=\"_blank\">$linkName</a> ";
+                        $artistLinksHtml .= "<a href=\"$linkUrl\" target=\"_blank\">$linkName</a><br> ";
                     } else {
                         // Optionnel : journaliser les données corrompues
                         error_log("Lien mal formé pour l'artiste ID $artistId : " . var_export($link, true));
                     }
                 }
-    
+
                 $artistsHtml .= <<<HTML
                 <div class="artist-card">
                     <div class="artist-illustration">
@@ -187,14 +198,15 @@ EVENTVIEWHTML;
                     </div>
                     <div class="artist-details">
                         <h3>$artistName</h3>
-                        <p class="artist-bio collapsed">$artistDescription</p>
+                        <p class="artist-bio" data-js-artist-bio data-max-lines="5">$artistDescription</p>
+                    <button class="see-more-btn" data-js-see-more>{$lexiqueartist['read-more'][$lang]}</button>
                         
                         <div class="artist-links">
                             $artistLinksHtml
                         </div>
                     </div>
                 </div>
-                <script src="./js/biocollapsed.js"></script>
+                
                 HTML;
             } else {
                 $artistsHtml .= "<p>Les informations de l'artiste $artistId ne sont pas disponibles.</p>";
@@ -202,7 +214,7 @@ EVENTVIEWHTML;
         }
         return $artistsHtml;
     }
-    
+
 
     private function getTicketButtonHtml($date)
     {

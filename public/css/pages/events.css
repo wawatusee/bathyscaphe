@@ -333,6 +333,28 @@ a.card_event {
   width: 60%;
   padding: 20px;
 }
+/*Paragraphe collapsed*/
+.artist-bio {
+  line-height: 1.5; /* Doit être défini explicitement */
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.artist-bio.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--max-lines, 5);
+  -webkit-box-orient: vertical;
+}
+
+.see-more-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  margin-top: 8px;
+}
+/*Paragraphe collapsed*/
 
 /*Fin présentation artiste*/
 /* Responsive Design for Mobile */

@@ -4,12 +4,12 @@
         "time": {
             "date": "2025-04-26",
             "horaire": {
-                "fr":"Porte ouverte à partir de 20h00 event à 21h",
-                "en":"Doors 20h event 21h",
-                "nl":"Doer 20h evenementie 21h"
+                "fr":"Porte ouverte à partir de 20h30 event à 21h",
+                "en":"Doors 20h30 event 21h",
+                "nl":"Doer 20h30 evenementie 21h"
             }
         },
-        "title": "Navigation #4-Orson Claeys",
+        "title": "Navigation #4 - Orson Claeys",
         "illustration": "n4.jpg",
         "activity_type_ids": [
             6
@@ -37,5 +37,6 @@
         "ticket": {
             "link": "https://www.billetweb.fr/shop.php?event=navigation-3"
         }
+        
     }
 }
