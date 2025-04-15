@@ -346,13 +346,26 @@ a.card_event {
   -webkit-box-orient: vertical;
 }
 
+
 .see-more-btn {
-  display: none;
+  display: block !important; /* Toujours visible */
   background: none;
   border: none;
-  color: blue;
   cursor: pointer;
+  padding: 0.5em;
   margin-top: 8px;
+  color: inherit;
+}
+
+.see-more-btn .icon-chevron {
+  display: block;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+/* Rotation de l'icône */
+.see-more-btn[aria-expanded="true"] .icon-chevron {
+  transform: rotate(180deg);
 }
 /*Paragraphe collapsed*/
 

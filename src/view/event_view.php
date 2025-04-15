@@ -199,8 +199,9 @@ EVENTVIEWHTML;
                     <div class="artist-details">
                         <h3>$artistName</h3>
                         <p class="artist-bio" data-js-artist-bio data-max-lines="5">$artistDescription</p>
-                    <button class="see-more-btn" data-js-see-more>{$lexiqueartist['read-more'][$lang]}</button>
-                        
+                        <button class="see-more-btn" data-js-see-more aria-label="Toggle content">
+                            <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" /></svg>
+                        </button>
                         <div class="artist-links">
                             $artistLinksHtml
                         </div>
