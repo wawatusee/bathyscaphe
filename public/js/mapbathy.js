@@ -17,5 +17,4 @@ const marqueur=L.icon({
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
-/*L.marker([activityLat, activityLon], {icon: marqueur}).addTo(objetCarte).bindPopup(activityTitle);*/
-          
+L.marker([activityLat, activityLon], {icon: marqueur}).addTo(objetCarte).bindPopup(activityTitle);
