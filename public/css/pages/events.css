@@ -348,6 +348,8 @@ a.card_event {
 
 
 .see-more-btn {
+  display: flex;
+  margin-left: auto;
   background: none;
   border: none;
   cursor: pointer;
