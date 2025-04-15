@@ -348,25 +348,24 @@ a.card_event {
 
 
 .see-more-btn {
-  display: block !important; /* Toujours visible */
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5em;
   margin-top: 8px;
   color: inherit;
+  position: relative;
 }
 
 .see-more-btn .icon-chevron {
-  display: block;
   transition: transform 0.3s ease;
   transform-origin: center;
 }
 
-/* Rotation de l'icône */
 .see-more-btn[aria-expanded="true"] .icon-chevron {
   transform: rotate(180deg);
 }
+
 /*Paragraphe collapsed*/
 
 /*Fin présentation artiste*/

@@ -53,6 +53,7 @@ function initEventView() {
         subtree: true,
         childList: true
     });
+    console.log(seeMoreBtn.textContent); 
 }
 
 // Lance au chargement + si le DOM est modifié dynamiquement

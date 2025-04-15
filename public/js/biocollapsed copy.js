@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             bioElement.classList.toggle('collapsed');
             seeMoreBtn.textContent = bioElement.classList.contains('collapsed') 
                 ? 'Voir plus' 
-                : 'Voir moins';
+                : 'Voir mouins';
         });
     });
 });

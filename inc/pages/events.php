@@ -12,7 +12,7 @@ $list_events = $eventsDatas->getFichiers();
 //Création et présentation de l'html généré à partir de la liste des événements
 $repImgEvents = $repImg . "events/";
 
-//Appel de méthode créée par Claude
+//Tri des events et intégration des données triées dans la vue
 $eventsSorted = $eventsDatas->sortEventsWithNextEvent();
 $events_view = new EventsView($list_events, $repImgEvents);
 $events_html = $events_view->getEventsViewHtml($lang, $eventsSorted);
@@ -59,89 +59,5 @@ $eventViewHtml = $eventView->getEventView($_GET['lang'] ?? 'fr');
     <?= $eventViewHtml ?>
 </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    // 1. Gestion de la fermeture de l'événement
-    const eventSection = document.querySelector(".core");
-    const closeButton = document.getElementById("closeEvent");
-
-    function closeEvent() {
-        eventSection.setAttribute("hidden", "");
-    }
-
-    closeButton.addEventListener("click", closeEvent);
-    eventSection.addEventListener("click", function (e) {
-        if (e.target === eventSection) closeEvent();
-    });
-
-    // 2. Gestion des bios d'artistes (version finale)
-    function initBioCollapse() {
-        document.querySelectorAll('[data-js-artist-bio]').forEach(bioElement => {
-            const maxLines = 5;
-            const seeMoreBtn = bioElement.nextElementSibling;
-            
-            // Réinitialisation pour calcul précis
-            bioElement.style.maxHeight = 'unset';
-            bioElement.style.webkitLineClamp = 'unset';
-            
-            // Calcul des dimensions
-            const lineHeight = parseFloat(getComputedStyle(bioElement).lineHeight);
-            const collapsedHeight = lineHeight * maxLines;
-            const isOverflowing = bioElement.scrollHeight > collapsedHeight;
-
-            // Debug
-            console.log({
-                element: bioElement,
-                lineHeight: lineHeight,
-                needsCollapse: isOverflowing,
-                currentHeight: bioElement.scrollHeight
-            });
-
-            if (isOverflowing) {
-                // Configuration initiale
-                bioElement.classList.add('collapsed');
-                bioElement.style.maxHeight = `${collapsedHeight}px`;
-                bioElement.style.webkitLineClamp = maxLines;
-                seeMoreBtn.style.display = 'block';
-                
-                // Gestion du clic
-                seeMoreBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    
-                    if (bioElement.classList.contains('collapsed')) {
-                        // Déplier
-                        bioElement.classList.remove('collapsed');
-                        bioElement.style.maxHeight = `${bioElement.scrollHeight}px`;
-                        setTimeout(() => {
-                            bioElement.style.maxHeight = 'none';
-                            bioElement.style.webkitLineClamp = 'unset';
-                        }, 300);
-                        seeMoreBtn.textContent = 'Voir moins';
-                    } else {
-                        // Replier
-                        bioElement.classList.add('collapsed');
-                        bioElement.style.maxHeight = `${bioElement.scrollHeight}px`;
-                        setTimeout(() => {
-                            bioElement.style.maxHeight = `${collapsedHeight}px`;
-                            bioElement.style.webkitLineClamp = maxLines;
-                        }, 10);
-                        seeMoreBtn.textContent = 'Voir plus';
-                    }
-                });
-            }
-        });
-    }
-
-    // Initialisation
-    initBioCollapse();
-    
-    // Surveillance des changements DOM
-    new MutationObserver(initBioCollapse).observe(document.body, {
-        subtree: true,
-        childList: true
-    });
-});
-</script>
-<!-- ... Pour replier les paragraphes trop long -->
-<!-- <script src="./js/biocollapsed.js"></script>-->
-<!-- Pas besoin de `defer` ici, car le script est chargé en dernier -->
+<script src="./js/eventview.js" defer></script>
+<!-- ... Pour fermer la fenêtre modale et replier les paragraphes trop long -->
