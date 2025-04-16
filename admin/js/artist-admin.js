@@ -81,10 +81,7 @@ function generateForm(data, config, parent = document.getElementById("artist-for
         }
     }
 }
-//Ajout 16-04
-function getConfigByPath(path, config) {
-    return path.split('.').reduce((acc, key) => acc && acc[key], config);
-}
+
 function createTextInput(path, value = "", readOnly = false) {
     const input = document.createElement("input");
     input.type = "text";
@@ -184,7 +181,7 @@ function getFormDataAsJson(form) {
     return jsonData;
 }
 
-function saveArtistData() {
+/*function saveArtistData() {
     console.log("Sauvegarde des données...");
 
     const form = document.getElementById("artist-form");
@@ -222,7 +219,54 @@ function saveArtistData() {
             console.error("Erreur lors de l'enregistrement :", error);
             alert("Erreur lors de la sauvegarde.");
         });
+}*/
+function saveArtistData() {
+    console.log("Sauvegarde des données...");
+
+    const form = document.getElementById("artist-form");
+    const inputs = form.querySelectorAll("input[data-path]");
+
+    let jsonData = {};
+
+    inputs.forEach(input => {
+        const path = input.getAttribute("data-path");
+        const value = input.value;
+        setJsonValue(jsonData, path, value);
+    });
+
+    // 🧹 Nettoyage des liens vides
+    if (Array.isArray(jsonData.liens)) {
+        jsonData.liens = jsonData.liens.filter(
+            lien => lien.name.trim() !== "" || lien.link.trim() !== ""
+        );
+    }
+
+    console.log("Données formatées :", jsonData);
+
+    fetch("artist-controller.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(jsonData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Réponse du serveur :", data);
+
+        if (data.success) {
+            alert("Données sauvegardées avec succès !");
+            isModified = false;
+            saveButton.textContent = "Save";
+            saveButton.style.backgroundColor = "";
+        } else {
+            alert("Erreur lors de la sauvegarde : " + data.message);
+        }
+    })
+    .catch(error => {
+        console.error("Erreur lors de l'enregistrement :", error);
+        alert("Erreur lors de la sauvegarde.");
+    });
 }
+
 document.addEventListener("DOMContentLoaded", () => {
     const formContainer = document.getElementById("artist-form");
 
@@ -234,35 +278,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-/*function getNestedConfig(config, path) {
-    if (!config || !path) return null;
-
-    const keys = path.replace(/\[(\d+)\]/g, '.$1').split('.');
-    let current = config;
-
-    for (const key of keys) {
-        if (current.structure && current.structure[key]) {
-            current = current.structure[key];
-        } else if (Array.isArray(current)) {
-            const index = parseInt(key, 10);
-            current = current[index];
-        } else if (current[key] !== undefined) {
-            current = current[key];
-        } else if (current.structure) {
-            // Essayons de continuer dans structure même si la clé est absente à ce niveau
-            current = current.structure;
-            if (current[key]) {
-                current = current[key];
-            } else {
-                return null;
-            }
-        } else {
-            return null;
-        }
-    }
-
-    return current;
-}*/
 function getNestedConfig(config, path) {
     const parts = path.replace(/\[(\d+)]/g, '.$1').split('.');
     let fieldConfig = config;
