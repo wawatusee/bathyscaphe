@@ -1,14 +1,14 @@
 {
     "artist": {
         "id": "a002",
-        "name": "Esteban Stan",
+        "name": "Esteban Sta",
         "art": {
             "en": "Music",
             "fr": "Musique",
             "nl": "Musiek"
         },
         "description": {
-            "en": "The artist is or dreams",
+            "en": "The artist is or is dreaming",
             "fr": "L'artiste garde ses r\u00eaves ou le fait croire.",
             "nl": "Dromen is real"
         },

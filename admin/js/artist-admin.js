@@ -1,20 +1,15 @@
 function generateForm(data, config, parent = document.getElementById("artist-form"), path = "") {
+    if (config.artist) config = config.artist; // recentre la config si c’est la config globale
     parent.innerHTML = "";
-
-    console.log("config :", config); // Debug
-
     for (const key in data) {
         const value = data[key];
         const fullPath = path ? `${path}.${key}` : key;
-
         // Récupérer la configuration imbriquée
-        const fieldConfig = getNestedConfig(config, fullPath) || {};
-        console.log("fieldConfig pour", fullPath, ":", fieldConfig); // Debug
-
-        if (!fieldConfig || Object.keys(fieldConfig).length === 0) {
+        const pathForConfig = fullPath.replace(/^artist\./, ""); // supprime "artist." s’il est présent
+        const fieldConfig = getNestedConfig(config, pathForConfig) || {};
+        /*if (!fieldConfig || Object.keys(fieldConfig).length === 0) {
             console.warn(`Aucune configuration trouvée pour la clé : ${fullPath}`);
-        }
-
+        }*/
         if (typeof value === "object" && !Array.isArray(value)) {
             // Gestion des objets imbriqués
             const fieldset = document.createElement("fieldset");
@@ -26,33 +21,33 @@ function generateForm(data, config, parent = document.getElementById("artist-for
             const fieldset = document.createElement("fieldset");
             fieldset.innerHTML = `<legend>${fieldConfig.label || key}</legend>`;
             value.forEach((item, index) => {
-                if (!Array.isArray(data[key])) data[key] = []; // sécurité
+                if (!Array.isArray(data[key])) data[key] = [];
+                const entryWrapper = document.createElement("fieldset");
                 const arrayPath = `${fullPath}[${index}]`;
-                // Utilisez la structure spécifique pour les éléments du tableau
-                generateForm(item, fieldConfig.structure, fieldset, arrayPath);
+                generateForm(item, fieldConfig.structure, entryWrapper, arrayPath);
+                fieldset.appendChild(entryWrapper);
             });
+
             // Bouton d'ajout d'élément
             const addButton = document.createElement("button");
             addButton.type = "button";
             addButton.textContent = "➕ Ajouter un lien";
             addButton.style.marginTop = "10px";
+
             addButton.onclick = () => {
-                // Ajout d'un nouvel objet de lien vide
-                data[key].push({ name: "", link: "" });
-            
-                // Recherche le champ spécifique à ajouter, sans créer de nouveau fieldset imbriqué
-                const fieldset = document.createElement("fieldset");
-                fieldset.innerHTML = `<legend>${fieldConfig.label || key}</legend>`;
-                
-                // Utilise generateForm pour ajouter le formulaire du nouveau lien au DOM
-                generateForm(data[key], fieldConfig.structure, fieldset, key);
-            
-                // Ajoute le nouveau fieldset au parent sans le dupliquer
-                parent.appendChild(fieldset);
+                const newIndex = data[key].length;
+                const newItem = { name: "", link: "" };
+                data[key].push(newItem);
+
+                const entryWrapper = document.createElement("fieldset");
+                const arrayPath = `${fullPath}[${newIndex}]`;
+
+                generateForm(newItem, fieldConfig.structure, entryWrapper, arrayPath);
+
+                fieldset.insertBefore(entryWrapper, addButton); // Ajoute juste avant le bouton
             };
-            
-            
-            
+
+
             fieldset.appendChild(addButton);
 
             parent.appendChild(fieldset);
@@ -86,8 +81,10 @@ function generateForm(data, config, parent = document.getElementById("artist-for
         }
     }
 }
-
-
+//Ajout 16-04
+function getConfigByPath(path, config) {
+    return path.split('.').reduce((acc, key) => acc && acc[key], config);
+}
 function createTextInput(path, value = "", readOnly = false) {
     const input = document.createElement("input");
     input.type = "text";
@@ -237,35 +234,60 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-function getNestedConfig(config, path) {
+/*function getNestedConfig(config, path) {
     if (!config || !path) return null;
 
-    // Remplacer les indices de tableau comme liens[0] par des points, ex: liens[0].name => liens.0.name
     const keys = path.replace(/\[(\d+)\]/g, '.$1').split('.');
+    let current = config;
 
-    let currentConfig = config;
-
-    // On itère sur les clés pour accéder à la configuration imbriquée
     for (const key of keys) {
-        // Si l'objet actuel est un tableau, on cherche la clé correspondant à l'indice
-        if (Array.isArray(currentConfig)) {
-            const index = parseInt(key);
-            currentConfig = currentConfig[index];  // On accède à l'élément du tableau à l'indice donné
-        } else if (currentConfig[key] !== undefined) {
-            currentConfig = currentConfig[key];  // On accède à la clé
-        } else if (currentConfig.structure && currentConfig.structure[key]) {
-            currentConfig = currentConfig.structure[key];  // Si structure existe, on continue à l'intérieur
+        if (current.structure && current.structure[key]) {
+            current = current.structure[key];
+        } else if (Array.isArray(current)) {
+            const index = parseInt(key, 10);
+            current = current[index];
+        } else if (current[key] !== undefined) {
+            current = current[key];
+        } else if (current.structure) {
+            // Essayons de continuer dans structure même si la clé est absente à ce niveau
+            current = current.structure;
+            if (current[key]) {
+                current = current[key];
+            } else {
+                return null;
+            }
         } else {
-            return null;  // Si la clé n'est pas trouvée, on retourne null
+            return null;
         }
     }
 
-    return currentConfig;
+    return current;
+}*/
+function getNestedConfig(config, path) {
+    const parts = path.replace(/\[(\d+)]/g, '.$1').split('.');
+    let fieldConfig = config;
+    let fullPath = '';
+
+    for (let i = 0; i < parts.length; i++) {
+        const part = parts[i];
+        fullPath += (i === 0 ? '' : '.') + part;
+
+        if (fieldConfig === undefined || fieldConfig === null) {
+            return undefined;
+        }
+
+        // Logique spéciale pour éviter les warnings sur les tableaux
+        if (Array.isArray(fieldConfig)) {
+            fieldConfig = fieldConfig[part];
+        } else if (typeof fieldConfig === 'object' && part in fieldConfig) {
+            fieldConfig = fieldConfig[part];
+        } else {
+            // Ne plus afficher de warning bruyant
+            // console.warn(`Aucune configuration trouvée pour la clé : ${fullPath}`);
+            return undefined;
+        }
+    }
+
+    return fieldConfig;
 }
-
-
-
-
-
-
 
