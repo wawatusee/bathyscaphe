@@ -1,4 +1,4 @@
-/* admin-artists.css */
+/* admin-liste-json.css */
 
 /* Styles pour la table */
 table {
@@ -15,6 +15,10 @@ th, td {
 th {
     background-color: #f4f4f4;
 }
+td {
+    vertical-align: middle;
+}
+
 
 /* Styles pour le bouton */
 .btn {
@@ -28,4 +32,17 @@ th {
 
 .btn:hover {
     background-color: #45a049;
+}
+@media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    td {
+        padding: 10px 0;
+    }
+
+    th {
+        display: none;
+    }
 }

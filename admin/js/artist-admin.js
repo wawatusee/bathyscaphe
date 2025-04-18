@@ -181,45 +181,6 @@ function getFormDataAsJson(form) {
     return jsonData;
 }
 
-/*function saveArtistData() {
-    console.log("Sauvegarde des données...");
-
-    const form = document.getElementById("artist-form");
-    const inputs = form.querySelectorAll("input[data-path]");
-
-    let jsonData = {};
-
-    inputs.forEach(input => {
-        const path = input.getAttribute("data-path");
-        const value = input.value;
-        setJsonValue(jsonData, path, value);
-    });
-
-    console.log("Données formatées :", jsonData);
-
-    fetch("artist-controller.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(jsonData)
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Réponse du serveur :", data);
-
-            if (data.success) {
-                alert("Données sauvegardées avec succès !");
-                isModified = false;
-                saveButton.textContent = "Save"; // Utiliser saveButton ici
-                saveButton.style.backgroundColor = "";
-            } else {
-                alert("Erreur lors de la sauvegarde : " + data.message);
-            }
-        })
-        .catch(error => {
-            console.error("Erreur lors de l'enregistrement :", error);
-            alert("Erreur lors de la sauvegarde.");
-        });
-}*/
 function saveArtistData() {
     console.log("Sauvegarde des données...");
 

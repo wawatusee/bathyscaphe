@@ -1,0 +1,24 @@
+{
+    "event": {
+      "id": "ev001",
+      "title": "Festival du Code",
+      "date": "2025-07-15",
+      "location": "Bruxelles",
+      "description": {
+        "fr": "Un festival pour les passionnés du développement.",
+        "en": "A festival for coding enthusiasts.",
+        "nl": "Een festival voor programmeerliefhebbers."
+      },
+      "links": [
+        {
+          "name": "Site officiel",
+          "url": "https://festivalducode.be"
+        },
+        {
+          "name": "Billetterie",
+          "url": "https://tickets.festivalducode.be"
+        }
+      ]
+    }
+  }
+  

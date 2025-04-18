@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion des artistes</title>
     <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="css/admin-artists.css">
+    <link rel="stylesheet" href="css/admin-liste-json.css">
 
 </head>
 <body>
