@@ -27,21 +27,35 @@ if (json_last_error() !== JSON_ERROR_NONE) {
     die("Erreur JSON : " . json_last_error_msg());
 }
 
-$formConfig = json_decode(file_get_contents("../json/event-config.json"), true);
+/*$formConfig = json_decode(file_get_contents("../json/event-config.json"), true);
 if (!file_exists($formConfig) || !is_readable($formConfig)) {
     die("Erreur : Fichier config introuvable !");
 }
+var_dump($formConfig);*/
+$jsonFilePath = "../json/event-config.json";
+$formConfig = json_decode(file_get_contents($jsonFilePath), true);
+
+if (!file_exists($jsonFilePath) || !is_readable($jsonFilePath)) {
+    die("Erreur : Fichier config introuvable ou illisible !");
+}
+
+if ($formConfig === null) {
+    die("Erreur : Impossible de décoder le fichier JSON !");
+}
+
 var_dump($formConfig);
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Admin - Événement</title>
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/admin-artist.css">
 </head>
+
 <body>
     <header>
         <h1>Gestion de l'Événement</h1>
@@ -53,9 +67,12 @@ var_dump($formConfig);
     </div>
 
     <script>
-        const formConfig = <?php echo json_encode($formConfig); ?>;
-        const eventData = <?php echo json_encode($eventData); ?>;
+        window.formConfig = <?= json_encode($formConfig) ?>;
+        window.eventData = <?= json_encode($eventData) ?>;
+        console.log("formConfig:", formConfig);
+        console.log("eventData:", eventData);
     </script>
     <script src="js/event-admin.js"></script>
 </body>
+
 </html>
