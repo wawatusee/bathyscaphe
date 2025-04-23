@@ -97,8 +97,6 @@ function generateEventForm(data, parent = document.getElementById("event-form"),
     }
 }
 
-
-
 function createTextInput(path, value = "") {
     const input = document.createElement("input");
     input.type = "text";
@@ -120,24 +118,50 @@ function createDateInput(path, value = "") {
 }
 
 function setJsonValue(obj, path, value) {
-    const keys = path.split(".");
+    console.log("Path:", path, "Value:", value); // Log pour chaque appel
+    const keys = path.split('.');
     let current = obj;
 
     for (let i = 0; i < keys.length - 1; i++) {
         let key = keys[i];
+        console.log("Current Key:", key); // Log pour chaque clé
         if (key.includes("[")) {
-            let [arrayKey, index] = key.match(/(.*?)\[(\d+)\]/).slice(1);
-            index = parseInt(index);
-            if (!current[arrayKey]) current[arrayKey] = [];
-            if (!current[arrayKey][index]) current[arrayKey][index] = {};
-            current = current[arrayKey][index];
+            let match = key.match(/(.*?)$$(\d+)$$/);
+            if (match) {
+                let [arrayKey, index] = match.slice(1);
+                index = parseInt(index);
+                if (!current[arrayKey]) current[arrayKey] = [];
+                if (!current[arrayKey][index]) current[arrayKey][index] = {};
+                current = current[arrayKey][index];
+            } else {
+                // Si key ne correspond pas au format attendu, traiter key comme une clé simple
+                if (!current[key]) current[key] = {};
+                current = current[key];
+            }
         } else {
             if (!current[key]) current[key] = {};
             current = current[key];
         }
+        console.log("Current Object:", current); // Log pour voir l'état de l'objet
     }
 
-    current[keys[keys.length - 1]] = value;
+    // Dernière clé
+    let lastKey = keys[keys.length - 1];
+    // Gestion des tableaux pour la dernière clé
+    if (lastKey.includes('[')) {
+        let match = lastKey.match(/(.*?)$$(\d+)$$/);
+        if (match) {
+            let [arrayKey, index] = match.slice(1);
+            index = parseInt(index);
+            if (!current[arrayKey]) current[arrayKey] = [];
+            current[arrayKey][index] = value;
+        } else {
+            current[lastKey] = value;
+        }
+    } else {
+        current[lastKey] = value;
+    }
+    console.log("Final Object:", obj); // Log final pour voir l'état complet de l'objet
 }
 
 function getNestedConfig(config, path) {
@@ -157,19 +181,22 @@ function getNestedConfig(config, path) {
 
     return fieldConfig;
 }
-
 function saveEventData() {
     const form = document.getElementById("event-form");
-    const inputs = form.querySelectorAll("input[data-path]");
-    let jsonData = {};
+    const inputs = form.querySelectorAll("input[data-path], input[type='checkbox']");
+    let jsonData = { event: {} }; // Initialiser correctement la structure
 
     inputs.forEach(input => {
         const path = input.getAttribute("data-path");
-        const value = input.value;
-        setJsonValue(jsonData, path, value);
+        let value = input.type === 'checkbox' ? input.checked : input.value;
+        
+        // Conversion des valeurs booléennes
+        if (value === 'true') value = true;
+        if (value === 'false') value = false;
+
+        setJsonValue(jsonData.event, path, value); // Utiliser jsonData.event ici
     });
 
-    // Nettoyage éventuel ici si nécessaire
     console.log("Données à envoyer :", jsonData);
 
     fetch("event-controller.php", {
@@ -182,8 +209,10 @@ function saveEventData() {
         if (data.success) {
             alert("Événement sauvegardé !");
             isModified = false;
-            saveButton.textContent = "Save";
-            saveButton.style.backgroundColor = "";
+            if (saveButton) {
+                saveButton.textContent = "Save";
+                saveButton.style.backgroundColor = "";
+            }
         } else {
             alert("Erreur : " + data.message);
         }
@@ -193,13 +222,12 @@ function saveEventData() {
         alert("Erreur réseau.");
     });
 }
-
 let isModified = false;
 let saveButton;
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("event-form");
-    const saveButton = document.getElementById("save-button");
+    saveButton = document.getElementById("save-button");
 
     console.log("form:", form);  // Vérification de l'élément form
 
@@ -207,7 +235,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Vérification de l'existence de l'élément parent
         if (form instanceof HTMLElement) {
             console.log("formConfigEvent dans generateEventForm:", formConfig.event);
-            generateEventForm(eventData.event, form, formConfig.event);
+            //generateEventForm(eventData.event, form, formConfig.event);
+            generateEventForm(eventData.event, form, "event");
 
             console.log("Formulaire événement généré.");
         } else {

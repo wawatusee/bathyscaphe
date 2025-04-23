@@ -1,0 +1,29 @@
+{
+    "event": {
+        "id": "5",
+        "time": {
+            "date": "2025-04-10",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Nouvel \u00c9v\u00e9nement",
+        "illustration": "",
+        "description_event": {
+            "fr": "",
+            "en": "",
+            "nl": ""
+        },
+        "infospratiques": {
+            "organisation": "",
+            "necessitedbook": false,
+            "price": "",
+            "situation": "[object Object]"
+        },
+        "ticket": {
+            "link": ""
+        }
+    }
+}

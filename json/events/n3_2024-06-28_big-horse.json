@@ -19,7 +19,7 @@
         },
         "artists":["a006"],
         "infospratiques":{
-            "organisation":"bathyscaphe.be",
+            "organisation":"https://www.bathyscaphe.be",
             "necessitedbook":false,
             "price":"8 Euros",
             "situation":{

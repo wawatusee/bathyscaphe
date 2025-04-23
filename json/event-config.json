@@ -1,64 +1,148 @@
 {
-    "event": {
-      "id": {
-        "type": "text",
-        "label": "ID de l'événement",
-        "readonly": true,
-        "order": 1
-      },
-      "title": {
-        "type": "text",
-        "label": "Titre de l'événement",
-        "required": true,
-        "order": 2
-      },
-      "date": {
-        "type": "date",
-        "label": "Date",
-        "required": true,
-        "order": 3
-      },
-      "location": {
-        "type": "text",
-        "label": "Lieu",
-        "order": 4
-      },
-      "description": {
-        "type": "object",
-        "label": "Description",
-        "structure": {
-          "fr": {
-            "type": "text",
-            "label": "Description en français"
-          },
-          "en": {
-            "type": "text",
-            "label": "Description in English"
-          },
-          "nl": {
-            "type": "text",
-            "label": "Beschrijving in het Nederlands"
-          }
+  "event": {
+    "id": {
+      "type": "text",
+      "label": "ID de l'événement",
+      "readonly": true,
+      "order": 1
+    },
+    "title": {
+      "type": "text",
+      "label": "Titre de l'événement",
+      "required": true,
+      "order": 2
+    },
+    "date": {
+      "type": "date",
+      "label": "Date",
+      "required": true,
+      "order": 3
+    },
+    "location": {
+      "type": "text",
+      "label": "Lieu",
+      "order": 4
+    },
+    "description_event": {
+      "type": "object",
+      "label": "Description",
+      "structure": {
+        "fr": {
+          "type": "text",
+          "label": "Description en français"
         },
-        "order": 5
-      },
-      "links": {
-        "type": "array",
-        "label": "Liens",
-        "structure": {
-          "name": {
-            "type": "text",
-            "label": "Nom du lien"
-          },
-          "url": {
-            "type": "text",
-            "label": "URL",
-            "validation": "url",
-            "errorMessage": "URL invalide"
-          }
+        "en": {
+          "type": "text",
+          "label": "Description in English"
         },
-        "order": 6
-      }
+        "nl": {
+          "type": "text",
+          "label": "Beschrijving in het Nederlands"
+        }
+      },
+      "order": 5
+    },
+    "illustration": {
+      "type": "text",
+      "label": "Illustration",
+      "order": 6
+    },
+    "activity_type_ids": {
+      "type": "array",
+      "label": "Types d'activités",
+      "structure": {
+        "id": {
+          "type": "text",
+          "label": "ID de l'activité"
+        }
+      },
+      "order": 7
+    },
+    "artists": {
+      "type": "array",
+      "label": "Artistes",
+      "structure": {
+        "name": {
+          "type": "text",
+          "label": "Nom de l'artiste"
+        }
+      },
+      "order": 8
+    },
+    "infospratiques": {
+      "type": "object",
+      "label": "Informations Pratiques",
+      "structure": {
+        "organisation": {
+          "type": "text",
+          "label": "Organisation"
+        },
+        "necessitedbook": {
+          "type": "checkbox",
+          "label": "Nécessite une réservation"
+        },
+        "price": {
+          "type": "text",
+          "label": "Prix"
+        },
+        "situation": {
+          "type": "object",
+          "label": "Adresse",
+          "structure": {
+            "street": {
+              "type": "text",
+              "label": "Rue"
+            },
+            "number": {
+              "type": "text",
+              "label": "Numéro"
+            },
+            "postcode": {
+              "type": "text",
+              "label": "Code Postal"
+            },
+            "city": {
+              "type": "text",
+              "label": "Ville"
+            },
+            "country": {
+              "type": "text",
+              "label": "Pays"
+            }
+          }
+        }
+      },
+      "order": 9
+    },
+    "ticket": {
+      "type": "object",
+      "label": "Billetterie",
+      "structure": {
+        "link": {
+          "type": "text",
+          "label": "Lien pour les billets",
+          "validation": "url",
+          "errorMessage": "URL invalide"
+        }
+      },
+      "order": 10
+    },
+    "links": {
+      "type": "array",
+      "label": "Liens",
+      "structure": {
+        "name": {
+          "type": "text",
+          "label": "Nom du lien"
+        },
+        "url": {
+          "type": "text",
+          "label": "URL",
+          "validation": "url",
+          "errorMessage": "URL invalide"
+        }
+      },
+      "order": 11
     }
   }
-  
+}

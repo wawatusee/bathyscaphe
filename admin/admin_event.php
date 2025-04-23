@@ -14,7 +14,7 @@ if (!$file) {
 }
 
 $eventFile = "../json/events/" . basename($file);
-var_dump($eventFile);
+//var_dump($eventFile);
 // Vérifie l'existence du fichier
 if (!file_exists($eventFile) || !is_readable($eventFile)) {
     die("Erreur : Fichier événement introuvable !");
@@ -22,7 +22,7 @@ if (!file_exists($eventFile) || !is_readable($eventFile)) {
 
 $jsonContent = file_get_contents($eventFile);
 $eventData = json_decode($jsonContent, true);
-var_dump($eventData);
+//var_dump($eventData);
 if (json_last_error() !== JSON_ERROR_NONE) {
     die("Erreur JSON : " . json_last_error_msg());
 }
@@ -31,7 +31,7 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 if (!file_exists($formConfig) || !is_readable($formConfig)) {
     die("Erreur : Fichier config introuvable !");
 }
-var_dump($formConfig);*/
+//var_dump($formConfig);*/
 $jsonFilePath = "../json/event-config.json";
 $formConfig = json_decode(file_get_contents($jsonFilePath), true);
 
@@ -43,7 +43,7 @@ if ($formConfig === null) {
     die("Erreur : Impossible de décoder le fichier JSON !");
 }
 
-var_dump($formConfig);
+//var_dump($formConfig);
 ?>
 
 <!DOCTYPE html>
