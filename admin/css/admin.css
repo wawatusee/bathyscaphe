@@ -43,3 +43,8 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
+input[type="checkbox"][data-path="event.infospratiques.necessitedbook"] {
+    display: block;
+    margin: 1em 0 0.5em 0;
+}

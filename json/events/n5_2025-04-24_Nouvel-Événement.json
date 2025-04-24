@@ -2,7 +2,7 @@
     "event": {
         "id": 5,
         "time": {
-            "date": "2025-04-18",
+            "date": "2025-04-24",
             "horaire": {
                 "fr": "",
                 "en": "",
@@ -10,7 +10,7 @@
             }
         },
         "title": "Nouvel Événement",
-        "illustration": "",
+        "illustration": "5jpg",
         "activity_type_ids": [],
         "description_event": {
             "fr": "",

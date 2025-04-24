@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Définir le chemin du fichier JSON (ajuster selon l'ID de l'artiste)
     $artistId = $artistData['id'];
-    $filePath = "../json/artists/{$artistId}.json";
+    $filePath = "../json/artists/{$artistId}_test.json";
 
     // Enregistrer les données dans le fichier JSON
     if (file_put_contents($filePath, json_encode(["artist" => $artistData], JSON_PRETTY_PRINT))) {

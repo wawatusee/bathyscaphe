@@ -152,10 +152,14 @@ function generateEventForm(data, parent = document.getElementById("event-form"),
                         case "text":
                             subInput = createTextInput(subFieldPath, subValue);
                             break;
-/*                         case "checkboxes":
-                            console.log("Event brut après :", data);
-                            subInput = createCheckboxGroup(subFieldConfig, subValue, subFieldPath);
-                            break; */
+                            case "checkbox":
+                                subInput = document.createElement("input");
+                                subInput.type = "checkbox";
+                                subInput.id = subFieldPath;
+                                subInput.name = subFieldPath;
+                                subInput.setAttribute("data-path", subFieldPath);
+                                subInput.checked = !!subValue;
+                                break;
                         default:
                             subInput = createTextInput(subFieldPath, subValue);
                     }
@@ -212,35 +216,6 @@ function generateEventForm(data, parent = document.getElementById("event-form"),
         }
     }
 }
-
-/*function createCheckboxGroup(config, selectedValues = [], path) {
-    const wrapper = document.createElement("div");
-    wrapper.classList.add("checkbox-group");
-    fetch(config.source)
-        .then(res => res.json())
-        .then(dataList => {
-            dataList.forEach(item => {
-                const checkbox = document.createElement("input");
-                checkbox.type = "checkbox";
-                checkbox.name = path;
-                checkbox.value = item[config.structure.id];
-                checkbox.checked = selectedValues.includes(item[config.structure.id]);
-                checkbox.setAttribute("data-path", path); // ✅ Ajout crucial
-
-                const label = document.createElement("label");
-                label.textContent = item[config.structure.label];
-                label.prepend(checkbox);
-
-                wrapper.appendChild(label);
-            });
-        })
-        .catch(err => {
-            console.error("Erreur de chargement (checkboxes):", err);
-            wrapper.innerHTML = "<p>Impossible de charger les données.</p>";
-        });
-
-    return wrapper;
-}*/
 
 function createCheckboxGroup(config, selectedValues = [], path) {
     const wrapper = document.createElement("div");

@@ -14,11 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Accéder aux données de l'événement
     $event = $eventData['event'];
-    error_log(print_r($event, true));
+    error_log(print_r($event['id'], true));
 
     // Définir le chemin du fichier JSON (ajuster selon l'ID de l'événement)
-    $eventId = $event["event"]["id"];
-    $filePath = "../json/events/n" . (string)$eventId . "_.json";
+    $eventId = $event["id"];
+    $filePath = "../json/events/n" . (string)$eventId . ".json";
 
     // Enregistrer les données dans le fichier JSON
     if (file_put_contents($filePath, json_encode($event, JSON_PRETTY_PRINT))) {
