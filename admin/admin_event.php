@@ -27,10 +27,6 @@ if (json_last_error() !== JSON_ERROR_NONE) {
     die("Erreur JSON : " . json_last_error_msg());
 }
 
-/*$formConfig = json_decode(file_get_contents("../json/event-config.json"), true);
-if (!file_exists($formConfig) || !is_readable($formConfig)) {
-    die("Erreur : Fichier config introuvable !");
-}
 //var_dump($formConfig);*/
 $jsonFilePath = "../json/event-config.json";
 $formConfig = json_decode(file_get_contents($jsonFilePath), true);

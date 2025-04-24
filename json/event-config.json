@@ -48,24 +48,21 @@
       "order": 6
     },
     "activity_type_ids": {
-      "type": "array",
+      "type": "checkboxes",
       "label": "Types d'activités",
+      "source": "../json/activity-types.json",
       "structure": {
-        "id": {
-          "type": "text",
-          "label": "ID de l'activité"
-        }
-      },
-      "order": 7
+        "id": "id",
+        "label": "fr"
+      }
     },
     "artists": {
-      "type": "array",
+      "type": "checkboxes",
       "label": "Artistes",
+      "source": "api/artists-list.php",
       "structure": {
-        "name": {
-          "type": "text",
-          "label": "Nom de l'artiste"
-        }
+        "id": "id",
+        "label": "name"
       },
       "order": 8
     },

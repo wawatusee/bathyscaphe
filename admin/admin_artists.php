@@ -18,10 +18,10 @@ $maxId = 0;
 
 foreach ($files as $file) {
     $filename = basename($file); // Récupère le nom du fichier (ex: "a001.json")
-    
+
     // Vérifier si le fichier correspond au format "a001.json"
     if (preg_match('/^a(\d{3})\.json$/', $filename, $matches)) {
-        $id = (int)$matches[1]; // Récupère l'ID (ex: 1 pour "a001.json")
+        $id = (int) $matches[1]; // Récupère l'ID (ex: 1 pour "a001.json")
 
         // Charger les données JSON pour récupérer le nom
         $jsonContent = file_get_contents($file);
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             "name" => "Nouvel Artiste",
             "art" => ["en" => "", "fr" => "", "nl" => ""],
             "description" => ["en" => "", "fr" => "", "nl" => ""],
-            "liens" => ["name"=> "","link"=> ""]
+            "liens" => ["name" => "", "link" => ""]
         ]
     ];
 
@@ -68,6 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,6 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="css/admin-liste-json.css">
 
 </head>
+
 <body>
     <h1>Liste des artistes</h1>
 
@@ -89,21 +91,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <th>ID</th>
                 <th>Nom</th>
                 <th>Fichier</th>
+                <th>Image</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($artists as $artist) : ?>
+            <?php foreach ($artists as $artist): ?>
                 <tr>
                     <td><?= htmlspecialchars("a" . str_pad($artist["id"], 3, "0", STR_PAD_LEFT)) ?></td>
                     <td><?= htmlspecialchars($artist["name"]) ?></td>
                     <td><?= htmlspecialchars($artist["file"]) ?></td>
+                    <td>
+                        <form action="upload_image.php" method="POST" style="display:inline;">
+                            <input type="hidden" name="artist_id" value="<?= htmlspecialchars($artist["id"]) ?>">
+                            <button type="submit" class="btn">Img</button>
+                        </form>
+                    </td>
                     <td>
                         <a href="admin_artist.php?file=<?= urlencode($artist["file"]); ?>">Modifier</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
+
     </table>
 </body>
+
 </html>
