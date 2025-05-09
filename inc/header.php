@@ -25,6 +25,7 @@
             </form>
         </div>
     </div>
+    <!--<div class="lien-live"><a href="https://stream.l45.be/#kievu_mid" target="_blank" rel="noopener noreferrer">LIVE</a></div>-->
     <div class="menu">
         <?php require_once "../inc/nav.php" ?>
     </div>

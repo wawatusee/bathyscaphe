@@ -83,3 +83,16 @@ h3 {
     padding: 6px;
     margin: 1em;
 }
+.lien-live a {
+    font-size: 1.5em;
+    font-family: "myTitleFont", Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    font-weight: bolder;
+    margin: var(--content-padding);
+    background:var(--batho-noir);
+    color: var(--batho-bleu);
+    border: 2px solid #000;
+  }
+  .lien-live a:hover {
+    background: var(--batho-bleu);
+    color: var(--main-clear-color);
+  }
