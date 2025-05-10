@@ -39,12 +39,14 @@ $studioAccessContentML=[
     ?>
 
 <section class="core">
+    
     <h2>Studio</h2>
-    <article class="productenumeration">
-        <?= $studioEquipmentView->render(); ?>
-    </article>
+    <img class="illu-studio" src="<?=$repImg?>studio/studio-reduit-animated.gif" alt="">
     <article class="simple-article">
         <?= $studioPricingContentML[$lang] ?>
+    </article>
+    <article class="productenumeration">
+        <?= $studioEquipmentView->render(); ?>
     </article>
     <article class="simple-article">
         <?=$studioAccessContentML[$lang]?>

@@ -1,0 +1,34 @@
+{
+    "event": {
+        "id": "2",
+        "time": {
+            "date": "2024-06-08",
+            "horaire": {
+                "fr": "Porte ouverte \u00e0 partir de 19h event \u00e0 20h",
+                "en": "Doors 19h event 20h",
+                "nl": "Doer 19h evenementie 20h"
+            }
+        },
+        "title": "Navigation #2 Melissa Velasco Echte Ra Collective",
+        "illustration": "n2.jpg",
+        "description_event": {
+            "fr": "Bienvenue \u00e0 bord pour la Navigation n\u00b02, \u00e9dition sp\u00e9ciale DJ night :<br>\u2248\u2248\u2248\u2248\u2248\u2248\u2248\u2248<br>- Ouverture des portes \u00e0 20:00<br>\u2248\u2248\u2248\u2248\u2248\u2248\u2248\u2248<br>- Collectif DJ Echte Ra, avec DJ Piscine et Thangi<br>Collectif de DJs bas\u00e9 \u00e0 Bruxelles.<br>Nous aimons proposer une s\u00e9lection de musique tr\u00e8s dansante qui cr\u00e9e une atmosph\u00e8re conviviale et positive sur la piste de danse.<br>Principalement de la house.",
+            "en": "All aboard, for Navigation #2, special DJ night edition:<br>\u2248\u2248\u2248\u2248\u2248\u2248\u2248\u2248<br>-Doors at 20:00<br>\u2248\u2248\u2248\u2248\u2248\u2248\u2248\u2248<br>-Echte Ra collective, with DJ Piscine and Thangi<br>Brussels based DJ collective.<br>We like to provide a selection of highly danceable music that creates a friendly and positive atmosphere on the dancefloor.<br>Mostly house.",
+            "nl": "Welkom aan boord voor Navigation #2, speciale DJ night editie : <br>\u2248\u2248\u2248\u2248\u2248\u2248\u2248\u2248<br>- Deuren open om 20:00 uur<br>\u2248\u2248\u2248\u2248\u2248\u2248\u2248\u2248<br>- Echte Ra collectief, met DJ Piscine en Thangi<br>DJ-collectief gevestigd in Brussel.<br>We bieden een selectie van zeer dansbare muziek die een vriendelijke en positieve sfeer cre\u00ebert op de dansvloer.<br>Voornamelijk house."
+        },
+        "infospratiques": {
+            "organisation": "https:\/\/bathyscaphe.be",
+            "price": "8 Euros",
+            "situation": "[object Object]",
+            "necessitedbook": []
+        },
+        "ticket": {
+            "link": "https:\/\/www.billetweb.fr\/shop.php?event=navigation-2"
+        },
+        "activity_type_ids": [],
+        "artists": [
+            "a004",
+            "a005"
+        ]
+    }
+}

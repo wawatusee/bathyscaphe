@@ -1,3 +1,8 @@
+.illu-studio{
+    display: block;
+    margin:auto;
+    max-width: 80%;
+}
 .tools-grid {
     max-width: 1400px;
     display: flex;

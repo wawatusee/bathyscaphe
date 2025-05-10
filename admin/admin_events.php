@@ -120,6 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <th>Titre</th>
                 <th>Date</th>
                 <th>Fichier</th>
+                <th>Image</th>  <!-- Nouvelle colonne -->
                 <th>Action</th>
             </tr>
         </thead>
@@ -130,6 +131,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <td><?= htmlspecialchars($event["title"]) ?></td>
                     <td><?= htmlspecialchars($event["date"]) ?></td>
                     <td><?= htmlspecialchars($event["file"]) ?></td>
+                    <td>
+                        <form action="upload_image.php" method="POST" style="display:inline;">
+                            <input type="hidden" name="event_id" value="<?= htmlspecialchars($event["id"]) ?>">
+                            <input type="hidden" name="event_file" value="<?= htmlspecialchars($event["file"]) ?>">
+                            <button type="submit" class="btn">Img</button>
+                        </form>
+                    </td>
                     <td>
                         <a href="admin_event.php?file=<?= urlencode($event["file"]); ?>">Modifier</a>
                     </td>
