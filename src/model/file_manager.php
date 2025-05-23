@@ -1,4 +1,12 @@
 <?php
+/**
+ * Classe abstraite pour la gestion et le listing de fichiers dans un répertoire
+ * 
+ * Fournit une base pour lister les fichiers d'un répertoire en permettant aux classes enfants
+ * de définir leurs propres règles de validation et de traitement des noms de fichiers.
+ * 
+ * @abstract
+ */
 abstract class FileManager
 {
     protected $repertoire;

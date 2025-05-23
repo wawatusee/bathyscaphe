@@ -107,6 +107,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="css/admin-liste-json.css">
 </head>
 <body>
+        <header>
+        <?php require_once "inc/admins_header.php"?>
+    </header>
+    <main>
     <h1>Liste des événements</h1>
 
     <form method="POST">
@@ -145,5 +149,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <?php endforeach; ?>
         </tbody>
     </table>
+    </main>
 </body>
 </html>

@@ -47,27 +47,6 @@
         return $html;
     }
 
-    /*private function renderSingleEvent($event, $lang) {
-        // Méthode pour rendre un événement unique (plus de détails)
-        $numero = $event['numero'];
-        $date = $event['date'];
-        $artists = $event['artists'];
-        $imagePath = $this->repImg . $numero . '_sml.jpg';
-
-        $artistList = implode(', ', $artists);
-
-        return <<<HTML
-        <div class="next-event-card">
-            <a href="?page=events&event=$numero&lang=$lang">
-                <div class="card-event-date">$date</div>
-                <div class="image">
-                    <img src="$imagePath" alt="Next Event Image">
-                </div>
-                <div class="artists">$artistList</div>
-            </a>
-        </div>
-        HTML;
-    }*/
     private function renderSingleEvent($event, $lang) {
         $numero = $event['numero'];
         $date = $event['date'];

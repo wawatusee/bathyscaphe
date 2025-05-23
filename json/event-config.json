@@ -45,6 +45,7 @@
     "illustration": {
       "type": "text",
       "label": "Illustration",
+      "readonly": true,
       "order": 6
     },
     "activity_type_ids": {

@@ -2,30 +2,36 @@
     "event": {
         "id": "5",
         "time": {
-            "date": "2025-04-24",
+            "date": "2025-06-20",
             "horaire": {
-                "fr": "",
-                "en": "",
-                "nl": ""
+                "fr": "Ouvertue des portes \u00e0 20heures",
+                "en": "Opening at 20h",
+                "nl": "Doeren at 20h"
             }
         },
-        "title": "Nouvel \u00c9v\u00e9nement",
+        "title": "audrey seule",
         "illustration": "5jpg",
         "description_event": {
-            "fr": "",
-            "en": "",
-            "nl": ""
+            "fr": "Du beau dessin",
+            "en": "Nice drawings",
+            "nl": "Tekenen MOEIEN"
         },
         "infospratiques": {
             "organisation": "",
             "price": "245",
             "situation": "[object Object]",
-            "necessitedbook": []
+            "necessitedbook": [
+                "on"
+            ]
         },
         "ticket": {
             "link": ""
         },
         "activity_type_ids": [],
-        "artists": []
+        "artists": [
+            "a001",
+            "a006",
+            "a007"
+        ]
     }
 }

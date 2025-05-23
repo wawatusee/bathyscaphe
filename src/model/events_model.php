@@ -1,5 +1,17 @@
 
 <?php
+/**
+ * Gestionnaire d'événements basé sur des fichiers JSON
+ * 
+ * Classe concrète qui étend FileManager pour gérer des événements stockés dans des fichiers JSON
+ * avec le format : [numero]_[date]_[artiste1]_[artiste2].json
+ * 
+ * Fournit des méthodes pour :
+ * - Lister et parser les événements
+ * - Trouver l'événement par défaut (prochain ou dernier)
+ * - Trier les événements passés/futurs
+ * - Retrouver un fichier par son numéro
+ */
 class EventsModel extends FileManager
 {
     private $default_event_numero;

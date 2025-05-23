@@ -79,42 +79,47 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body>
-    <h1>Liste des artistes</h1>
+    <header>
+        <?php require_once "inc/admins_header.php"?>
+    </header>
+    <main>
+        <h1>Liste des artistes</h1>
 
-    <form method="POST">
-        <button type="submit" class="btn">+ Ajouter un artiste</button>
-    </form>
+        <form method="POST">
+            <button type="submit" class="btn">+ Ajouter un artiste</button>
+        </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nom</th>
-                <th>Fichier</th>
-                <th>Image</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($artists as $artist): ?>
+        <table>
+            <thead>
                 <tr>
-                    <td><?= htmlspecialchars("a" . str_pad($artist["id"], 3, "0", STR_PAD_LEFT)) ?></td>
-                    <td><?= htmlspecialchars($artist["name"]) ?></td>
-                    <td><?= htmlspecialchars($artist["file"]) ?></td>
-                    <td>
-                        <form action="upload_image.php" method="POST" style="display:inline;">
-                            <input type="hidden" name="artist_id" value="<?= htmlspecialchars($artist["id"]) ?>">
-                            <button type="submit" class="btn">Img</button>
-                        </form>
-                    </td>
-                    <td>
-                        <a href="admin_artist.php?file=<?= urlencode($artist["file"]); ?>">Modifier</a>
-                    </td>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Fichier</th>
+                    <th>Image</th>
+                    <th>Action</th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
+            </thead>
+            <tbody>
+                <?php foreach ($artists as $artist): ?>
+                    <tr>
+                        <td><?= htmlspecialchars("a" . str_pad($artist["id"], 3, "0", STR_PAD_LEFT)) ?></td>
+                        <td><?= htmlspecialchars($artist["name"]) ?></td>
+                        <td><?= htmlspecialchars($artist["file"]) ?></td>
+                        <td>
+                            <form action="upload_image.php" method="POST" style="display:inline;">
+                                <input type="hidden" name="artist_id" value="<?= htmlspecialchars($artist["id"]) ?>">
+                                <button type="submit" class="btn">Img</button>
+                            </form>
+                        </td>
+                        <td>
+                            <a href="admin_artist.php?file=<?= urlencode($artist["file"]); ?>">Modifier</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
 
-    </table>
+        </table>
+    </main>
 </body>
 
 </html>
