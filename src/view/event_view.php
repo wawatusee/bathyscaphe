@@ -119,17 +119,8 @@
                         <script src="./js/share.js"></script>
                         <script src="./js/mapbathy.js"></script>
                     </section>
-                </article>
-        
-                <br>
-                <hr>
-        
-                <article>
-                    <h3>{$lexiqueEventPage['tickets'][$lang]}</h3>
-                    <section> 
-                        $ticketlink
-                    </section>
-                </article>
+                </article>     
+
          </section>
         
         
