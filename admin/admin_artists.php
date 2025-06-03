@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <body>
     <header>
-        <?php require_once "inc/admins_header.php"?>
+        <?php require_once "inc/admin_headers.php"?>
     </header>
     <main>
         <h1>Liste des artistes</h1>
