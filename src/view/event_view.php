@@ -108,7 +108,6 @@
                             </div>
                             <hr>
                             <div class="infosresa">
-                                {$lexiqueEventPage['reservation-required'][$lang]} : <b><span data-field="booking">$necessitedbook</span></b><br>
                                 <span>{$lexiqueEventPage['price'][$lang]}: <span data-field="price"></span> $price</span>
                             </div>
                             <hr>
@@ -122,16 +121,7 @@
                 </article>     
 
          </section>
-        
-        
-       
-   
-
-                
-
 EVENTVIEWHTML;
-
-
         return $eventViewHtml;
     }
     private function getActivityTypesHtml($activityTypeIds, $lang)

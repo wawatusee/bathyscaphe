@@ -5,19 +5,19 @@
       "label": "ID de l'événement",
       "readonly": true,
       "order": 1
+    },"date": {
+      "type": "date",
+      "label": "Date",
+      "required": true,
+      "order": 2
     },
     "title": {
       "type": "text",
       "label": "Titre de l'événement",
       "required": true,
-      "order": 2
-    },
-    "date": {
-      "type": "date",
-      "label": "Date",
-      "required": true,
       "order": 3
     },
+    
     "location": {
       "type": "text",
       "label": "Lieu",
@@ -55,7 +55,8 @@
       "structure": {
         "id": "id",
         "label": "fr"
-      }
+      },
+      "order": 7
     },
     "artists": {
       "type": "checkboxes",
@@ -82,65 +83,9 @@
         "price": {
           "type": "text",
           "label": "Prix"
-        },
-        "situation": {
-          "type": "object",
-          "label": "Adresse",
-          "structure": {
-            "street": {
-              "type": "text",
-              "label": "Rue"
-            },
-            "number": {
-              "type": "text",
-              "label": "Numéro"
-            },
-            "postcode": {
-              "type": "text",
-              "label": "Code Postal"
-            },
-            "city": {
-              "type": "text",
-              "label": "Ville"
-            },
-            "country": {
-              "type": "text",
-              "label": "Pays"
-            }
-          }
         }
       },
       "order": 9
-    },
-    "ticket": {
-      "type": "object",
-      "label": "Billetterie",
-      "structure": {
-        "link": {
-          "type": "text",
-          "label": "Lien pour les billets",
-          "validation": "url",
-          "errorMessage": "URL invalide"
-        }
-      },
-      "order": 10
-    },
-    "links": {
-      "type": "array",
-      "label": "Liens",
-      "structure": {
-        "name": {
-          "type": "text",
-          "label": "Nom du lien"
-        },
-        "url": {
-          "type": "text",
-          "label": "URL",
-          "validation": "url",
-          "errorMessage": "URL invalide"
-        }
-      },
-      "order": 11
     }
   }
 }
