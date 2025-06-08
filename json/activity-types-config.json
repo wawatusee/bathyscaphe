@@ -1,0 +1,29 @@
+{
+  "art-types": {
+    "type": "array",
+    "label": "Types d’art",
+    "structure": {
+      "id": {
+        "type": "number",
+        "label": "ID",
+        "readonly": true,
+        "description": "Identifiant unique (défini automatiquement, non modifiable)."
+      },
+      "en": {
+        "type": "text",
+        "label": "Nom (en anglais)",
+        "required": true
+      },
+      "fr": {
+        "type": "text",
+        "label": "Nom (en français)",
+        "required": true
+      },
+      "nl": {
+        "type": "text",
+        "label": "Nom (en néerlandais)",
+        "required": true
+      }
+    }
+  }
+}

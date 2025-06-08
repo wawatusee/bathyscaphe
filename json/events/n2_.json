@@ -18,13 +18,15 @@
         },
         "infospratiques": {
             "organisation": "bathyscaphe.be",
-            "price": "8 Euraux",
+            "price": "8 Eureaux",
             "necessitedbook": []
         },
         "ticket": {
             "link": "https:\/\/www.billetweb.fr\/shop.php?event=navigation-2"
         },
-        "activity_type_ids": [],
+        "activity_type_ids": [
+            "4"
+        ],
         "artists": [
             "a004",
             "a005"

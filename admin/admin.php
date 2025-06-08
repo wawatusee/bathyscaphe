@@ -11,19 +11,23 @@ include 'session_management.php';
     <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
-    <div class="admin-container">
-        <h1>Tableau de Bord Admin</h1>
-        <nav class="admin-nav">
-            <ul>
-                <li><a href="admin_artists.php">Gérer les Artistes</a></li>
-                <li><a href="admin_events.php">Gérer les Événements</a></li>
-                <!-- Ajoute d'autres liens d'administration ici -->
-            </ul>
-        </nav>
-        <div class="admin-content">
-            <!-- Contenu spécifique à l'administration -->
-            <p>Bienvenue sur le tableau de bord d'administration. Sélectionnez une section à gérer.</p>
+
+        <div class="admin-container">
+            <h1>Tableau de Bord Admin</h1>
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="admin_artists.php">Gérer les Artistes</a></li>
+                    <li><a href="admin_events.php">Gérer les Événements</a></li>
+                    <!-- Ajoute d'autres liens d'administration ici -->
+                    <li><a href="admin-activity-types.php">Gérer les Types d'activités</a></li>
+
+                </ul>
+            </nav>
+            <div class="admin-content">
+                <!-- Contenu spécifique à l'administration -->
+                <p>Bienvenue sur le tableau de bord d'administration. Sélectionnez une section à gérer.</p>
+            </div>
         </div>
-    </div>
+
 </body>
 </html>
