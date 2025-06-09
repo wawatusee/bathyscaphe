@@ -138,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         <td><?= htmlspecialchars($event["date"]) ?></td>
                         <td><?= htmlspecialchars($event["file"]) ?></td>
                         <td>
-                            <form action="upload_image.php" method="POST" style="display:inline;">
+                            <form action="upload_events_image.php" method="POST" style="display:inline;">
                                 <input type="hidden" name="event_id" value="<?= htmlspecialchars($event["id"]) ?>">
                                 <input type="hidden" name="event_file" value="<?= htmlspecialchars($event["file"]) ?>">
                                 <button type="submit" class="btn">Img</button>

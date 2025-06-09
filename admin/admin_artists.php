@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         <td><?= htmlspecialchars($artist["name"]) ?></td>
                         <td><?= htmlspecialchars($artist["file"]) ?></td>
                         <td>
-                            <form action="upload_image.php" method="POST" style="display:inline;">
+                            <form action="upload_artists_image.php" method="POST" style="display:inline;">
                                 <input type="hidden" name="artist_id" value="<?= htmlspecialchars($artist["id"]) ?>">
                                 <button type="submit" class="btn">Img</button>
                             </form>

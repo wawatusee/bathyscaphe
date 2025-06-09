@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $nextId = max($ids) + 1;
         }
         $data['art-types'][] = [
-            "id" => $nextId,
+            "id" => (string)$nextId,
             "en" => $en,
             "fr" => $fr,
             "nl" => $nl

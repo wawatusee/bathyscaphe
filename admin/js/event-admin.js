@@ -236,6 +236,9 @@ function getNestedConfig(config, path) {
     return fieldConfig;
 }
 
+
+
+
 function saveEventData() {
     const form = document.getElementById("event-form");
     const inputs = form.querySelectorAll("input[data-path]");

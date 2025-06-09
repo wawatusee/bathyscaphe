@@ -1,37 +1,37 @@
 {
     "art-types": [
         {
-            "id": 1,
+            "id": "1",
             "en": "music",
             "fr": "musique",
             "nl": "musiek"
         },
         {
-            "id": 2,
+            "id": "2",
             "en": "painting",
             "fr": "peinture",
             "nl": "schilderkunst"
         },
         {
-            "id": 3,
+            "id": "3",
             "en": "cooking",
             "fr": "cuisine",
             "nl": "coeken"
         },
         {
-            "id": 4,
+            "id": "4",
             "en": "djSet",
             "fr": "djSet",
             "nl": "djSet"
         },
         {
-            "id": 5,
+            "id": "5",
             "en": "Rocknroll",
             "fr": "Rocknroll",
             "nl": "Rocknroll"
         },
         {
-            "id": 6,
+            "id": "6",
             "en": "Jazz",
             "fr": "Jazz",
             "nl": "Jazz"

@@ -17,11 +17,21 @@
       "required": true,
       "order": 3
     },
-    
-    "location": {
+    "illustration": {
       "type": "text",
-      "label": "Lieu",
+      "label": "Illustration",
+      "readonly": true,
       "order": 4
+    },
+    "activity_type_ids": {
+      "type": "checkboxes",
+      "label": "Types d'activités",
+      "source": "../json/activity-types.json",
+      "structure": {
+        "id": "id",
+        "label": "fr"
+      },
+      "order": 5
     },
     "description_event": {
       "type": "object",
@@ -40,23 +50,7 @@
           "label": "Beschrijving in het Nederlands"
         }
       },
-      "order": 5
-    },
-    "illustration": {
-      "type": "text",
-      "label": "Illustration",
-      "readonly": true,
       "order": 6
-    },
-    "activity_type_ids": {
-      "type": "checkboxes",
-      "label": "Types d'activités",
-      "source": "../json/activity-types.json",
-      "structure": {
-        "id": "id",
-        "label": "fr"
-      },
-      "order": 7
     },
     "artists": {
       "type": "checkboxes",
@@ -66,7 +60,7 @@
         "id": "id",
         "label": "name"
       },
-      "order": 8
+      "order": 7
     },
     "infospratiques": {
       "type": "object",
@@ -76,16 +70,12 @@
           "type": "text",
           "label": "Organisation"
         },
-        "necessitedbook": {
-          "type": "checkbox",
-          "label": "Nécessite une réservation"
-        },
         "price": {
           "type": "text",
           "label": "Prix"
         }
       },
-      "order": 9
+      "order": 8
     }
   }
 }
