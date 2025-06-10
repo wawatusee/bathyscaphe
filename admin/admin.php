@@ -19,8 +19,7 @@ include 'session_management.php';
                     <li><a href="admin_artists.php">Gérer les Artistes</a></li>
                     <li><a href="admin_events.php">Gérer les Événements</a></li>
                     <!-- Ajoute d'autres liens d'administration ici -->
-                    <li><a href="admin-activity-types.php">Gérer les Types d'activités</a></li>
-
+                    <li><a href="admin_activity_types.php">Gérer les Types d'activités</a></li>
                 </ul>
             </nav>
             <div class="admin-content">
