@@ -89,7 +89,6 @@
         foreach ($events as $event) {
             $eventId = $event['event_id'] ?? 'Unknown';
             $eventName='n'.$eventId;
-            echo 'id seul :<br>'.$eventId;
             $date = $event['date'] ?? 'No date';
             $artists = $event['artists'] ?? [];
             //$imagePath = $this->repImg .'n'. $eventId . '_sml.jpg';

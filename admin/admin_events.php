@@ -46,12 +46,15 @@ $newIdPadded = str_pad($newId, 3, "0", STR_PAD_LEFT);
 
 // Création d'un nouvel événement
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $today = date("Y-m-d");
+    /*$today = date("Y-m-d");
     $defaultTitle = "Nouvel Événement";
 
     $sanitizedTitle = str_replace(" ", "-", $defaultTitle);
     $newFileName = "n{$newId}_{$today}_{$sanitizedTitle}.json";
+    $newEventFile = $directory . $newFileName;*/
+    $newFileName = "n{$newId}.json";
     $newEventFile = $directory . $newFileName;
+
 
     $newEventData = [
         "event" => [
