@@ -18,9 +18,9 @@ $maxId = 0;
 foreach ($files as $file) {
     $filename = basename($file);
 
-    if (preg_match('/^n(\d{1,3})_.*\.json$/', $filename, $matches)) {
+    /*if (preg_match('/^n(\d{1,3})_.*\.json$/', $filename, $matches)) {*/
+    if (preg_match('/^n(\d+)\.json$/', $filename, $matches)) {
         $id = (int) $matches[1];
-
         // Lire le JSON
         $jsonContent = file_get_contents($file);
         $eventData = json_decode($jsonContent, true);
@@ -75,19 +75,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             "artists" => [],
             "infospratiques" => [
                 "organisation" => "",
-                "necessitedbook" => false,
-                "price" => "",
-                "situation" => [
-                    "street" => "",
-                    "number" => "",
-                    "postcode" => "",
-                    "city" => "",
-                    "country" => ""
-                ]
+                "price" => ""
             ],
-            "ticket" => [
-                "link" => ""
-            ]
+
         ]
     ];
 
@@ -126,7 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <th>Titre</th>
                     <th>Date</th>
                     <th>Fichier</th>
-                    <th>Image</th> <!-- Nouvelle colonne -->
+                    <th>Image</th>
                     <th>Action</th>
                 </tr>
             </thead>

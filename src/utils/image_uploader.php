@@ -83,4 +83,51 @@
         imagedestroy($image);
         imagedestroy($newImage);
     }
+// Nouvelle méthode pour les événements - avec correction du nommage
+    public function uploadAndResizeEvent($file, $eventId) {
+        if (!isset($file) || $file['error'] != 0) {
+            throw new Exception("Invalid file upload: " . json_encode($file));
+        }
+
+        $fileInfo = getimagesize($file['tmp_name']);
+        if ($fileInfo === false) {
+            throw new Exception("Invalid image file");
+        }
+
+        $imageType = $fileInfo[2];
+        if (!in_array($imageType, [IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_GIF])) {
+            throw new Exception("Unsupported image format");
+        }
+
+        // Crée le répertoire de destination s'il n'existe pas
+        if (!is_dir($this->uploadDir)) {
+            if (!mkdir($this->uploadDir, 0777, true)) {
+                throw new Exception("Failed to create upload directory");
+            }
+        }
+        
+        // Fichiers sans padding des zéros
+        $targetFile = $this->uploadDir . 'n' . $eventId . '.jpg';
+        $targetThumbnail = $this->uploadDir . 'n' . $eventId . '_sml.jpg';
+
+        // Créer un fichier temporaire pour le traitement
+        $tempFile = tempnam(sys_get_temp_dir(), 'img');
+        if (move_uploaded_file($file['tmp_name'], $tempFile)) {
+            // Redimensionner l'image principale
+            $this->resizeToHeight($tempFile, $targetFile, 480);
+            
+            // Créer la miniature
+            $this->resizeToHeight($tempFile, $targetThumbnail, 200);
+            
+            // Supprimer le fichier temporaire
+            unlink($tempFile);
+            
+            return [
+                'main' => basename($targetFile),
+                'thumbnail' => basename($targetThumbnail)
+            ];
+        } else {
+            throw new Exception("Failed to move uploaded file to temp location");
+        }
+    }
 }

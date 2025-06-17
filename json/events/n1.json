@@ -5,8 +5,8 @@
             "date": "2024-04-13",
             "horaire": {
                 "fr": "Porte ouverte \u00e0 partir de 19h event \u00e0 20h",
-                "en": "Doors 19h00 event 20h00",
-                "nl": "Doer 19h00 evenementie 20h00"
+                "en": "Doors 19h event 20h",
+                "nl": "Doer 19h evenementie 20h"
             }
         },
         "title": "Navigation #1-Asetone-Esteban Stan-3DB",
@@ -19,9 +19,6 @@
         "infospratiques": {
             "organisation": "bathyscaphe.be",
             "price": "8 Euros"
-        },
-        "ticket": {
-            "link": ""
         },
         "activity_type_ids": [
             "1",

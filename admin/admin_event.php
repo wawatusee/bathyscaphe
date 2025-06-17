@@ -27,7 +27,7 @@ if (json_last_error() !== JSON_ERROR_NONE) {
     die("Erreur JSON : " . json_last_error_msg());
 }
 
-//var_dump($formConfig);*/
+
 $jsonFilePath = "../json/event-config.json";
 $formConfig = json_decode(file_get_contents($jsonFilePath), true);
 

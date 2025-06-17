@@ -1,0 +1,51 @@
+{
+    "vue-events": {
+        "last-updated": "2025-06-16"
+    },
+    "events": [
+        {
+            "event_id": "1",
+            "date": "2024-04-13",
+            "title": "Navigation #1-Asetone-Esteban Stan-3DB",
+            "artists": [
+                "Asetone",
+                "Esteban Stan",
+                "3DB"
+            ]
+        },
+        {
+            "event_id": "2",
+            "date": "2024-06-08",
+            "title": "Navigation #2 Melissa Velasco Echte Ra Collective",
+            "artists": [
+                "Echte Ra Collective",
+                "Melisa Velasco"
+            ]
+        },
+        {
+            "event_id": "3",
+            "date": "2024-06-28",
+            "title": "Navigation #3-Big horse",
+            "artists": [
+                "Big Horse"
+            ]
+        },
+        {
+            "event_id": "4",
+            "date": "2025-04-26",
+            "title": "Navigation #4 - Orson Claeys",
+            "artists": [
+                "Orson Claeys"
+            ]
+        }
+    ],
+    "artists": {
+        "a001": "Asetone",
+        "a002": "Esteban Stan",
+        "a003": "3DB",
+        "a004": "Echte Ra Collective",
+        "a005": "Melisa Velasco",
+        "a006": "Big Horse",
+        "a007": "Orson Claeys"
+    }
+}
