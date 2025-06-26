@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 ]
             ],
             "title" => "Nouvelévénement",
-            "illustration" => $newId . "jpg",
+            "illustration" => "n".$newId . ".jpg",
             "activity_type_ids" => [],
             "description_event" => [
                 "fr" => "",

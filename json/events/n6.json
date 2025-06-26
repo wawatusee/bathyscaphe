@@ -1,0 +1,26 @@
+{
+    "event": {
+        "id": 6,
+        "time": {
+            "date": "2025-06-26",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Nouvelévénement",
+        "illustration": "n6.jpg",
+        "activity_type_ids": [],
+        "description_event": {
+            "fr": "",
+            "en": "",
+            "nl": ""
+        },
+        "artists": [],
+        "infospratiques": {
+            "organisation": "",
+            "price": ""
+        }
+    }
+}
