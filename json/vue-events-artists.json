@@ -1,6 +1,6 @@
 {
     "vue-events": {
-        "last-updated": "2025-06-16"
+        "last-updated": "2025-06-26"
     },
     "events": [
         {
@@ -36,6 +36,14 @@
             "title": "Navigation #4 - Orson Claeys",
             "artists": [
                 "Orson Claeys"
+            ]
+        },
+        {
+            "event_id": "5",
+            "date": "2025-07-18",
+            "title": "Au un futur event",
+            "artists": [
+                "Esteban Stan"
             ]
         }
     ],

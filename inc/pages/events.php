@@ -43,6 +43,7 @@ $activityTypesData = json_decode($jsonContent);
 $activityTypes = $activityTypesData->{'art-types'};
 
 // Chargement du json de l'event demandé
+//$eventJson = $eventsDatas->getJsonFullName($eventnumero);
 $eventJson = $eventsDatas->getJsonFullName($eventnumero);
 $jsonfile = $repjsonevents . $eventJson;
 $eventDatas = (new ObjetModel($jsonfile))->get_objet();

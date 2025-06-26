@@ -1,0 +1,30 @@
+{
+    "event": {
+        "id": "5",
+        "time": {
+            "date": "2025-07-18",
+            "horaire": {
+                "fr": "carambar 15h",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Au un futur event",
+        "illustration": "5jpg",
+        "description_event": {
+            "fr": "Ca va \u00eatre bien",
+            "en": "",
+            "nl": ""
+        },
+        "infospratiques": {
+            "organisation": "",
+            "price": "120euros"
+        },
+        "activity_type_ids": [
+            "2"
+        ],
+        "artists": [
+            "a002"
+        ]
+    }
+}

@@ -46,7 +46,7 @@ $newIdPadded = str_pad($newId, 3, "0", STR_PAD_LEFT);
 
 // Création d'un nouvel événement
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    /*$today = date("Y-m-d");
+    $today = date("Y-m-d");/*
     $defaultTitle = "Nouvel Événement";
 
     $sanitizedTitle = str_replace(" ", "-", $defaultTitle);
@@ -60,14 +60,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         "event" => [
             "id" => $newId,
             "time" => [
-                "date" => $today,
+                "date" => date("Y-m-d"),
                 "horaire" => [
                     "fr" => "",
                     "en" => "",
                     "nl" => ""
                 ]
             ],
-            "title" => $defaultTitle,
+            "title" => "Nouvelévénement",
             "illustration" => $newId . "jpg",
             "activity_type_ids" => [],
             "description_event" => [

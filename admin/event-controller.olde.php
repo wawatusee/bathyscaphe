@@ -13,19 +13,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Accéder aux données de l'événement
-    $event = $eventData['event'];
-    error_log(print_r($event['id'], true));
+    $event = $eventData['event'] ?? null;
 
-    // Définir le chemin du fichier JSON (ajuster selon l'ID de l'événement)
-    $eventId = $event["id"];
-    $filePath = "../json/events/n" . (string)$eventId . ".json";
+    // Débogage : afficher les valeurs de $event
+    error_log(print_r($event, true)); // Écrit dans les journaux du serveur
 
-    // Enregistrer les données dans le fichier JSON
-    if (file_put_contents($filePath, json_encode($event, JSON_PRETTY_PRINT))) {
-        echo json_encode(["success" => true, "message" => "Événement sauvegardé !"]);
-    } else {
-        echo json_encode(["success" => false, "message" => "Erreur lors de l'enregistrement"]);
+    if ($event === null || !isset($event['id'])) {
+        echo json_encode(["success" => false, "message" => "Données de l'événement invalides ou ID manquant"]);
+        exit;
     }
-} else {
-    echo json_encode(["success" => false, "message" => "Méthode non autorisée"]);
 }

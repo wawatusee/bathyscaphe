@@ -1,28 +1,29 @@
 <footer>
 
-            <div class="footerNav">
+    <div class="footerNav">
 
-                <nav class="navfooterbloc">
-                    <h2>Contacts</h2>
-                    <address>
-                    <a class="maillink" href="info@bathyscaphe.be">info@bathyscaphe.be</a>
-                    <a class="phonelink" href="tel:+32485966694">+32(0)485 96 66 94</a>
-                    <div class="situationlink">rue Dieudonné Lefèvre, 215<br> 1020 Brussels - Belgium</div>
-                    </address>
-                </nav>
-                <nav class="navfooterbloc">
-                    <h2>Menu</h2>
-                    <?php echo $menuMain_view?>
-                </nav>
-            </div>
+        <nav class="navfooterbloc">
+            <h2>Contacts</h2>
+            <address>
+                <a class="maillink" href="mailto:info@bathyscaphe.be">info@bathyscaphe.be</a>
+
+                <a class="phonelink" href="tel:+32485966694">+32(0)485 96 66 94</a>
+                <div class="situationlink">rue Dieudonné Lefèvre, 215<br> 1020 Brussels - Belgium</div>
+            </address>
+        </nav>
+        <nav class="navfooterbloc">
+            <h2>Menu</h2>
+            <?php echo $menuMain_view ?>
+        </nav>
+    </div>
 
     <nav id="menuRS" class="nav-rs">
-        <?php 
-                    foreach($menuRS as $item){
-                        echo "<a href=".$item->page." title='".$item->titre."' target='_blank'><div class='rs ".$item->titre."'></div></a>";
-                    }
+        <?php
+        foreach ($menuRS as $item) {
+            echo "<a href=" . $item->page . " title='" . $item->titre . "' target='_blank'><div class='rs " . $item->titre . "'></div></a>";
+        }
         ?>
     </nav>
-    <img class="footer-logo" src="<?=$repImgDeco?>logo.svg" alt="">
+    <img class="footer-logo" src="<?= $repImgDeco ?>logo.svg" alt="">
 
 </footer>
