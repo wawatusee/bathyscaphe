@@ -51,7 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         "artist" => [
             "id" => $newId,
             "name" => "Nouvel Artiste",
-            "art" => ["en" => "", "fr" => "", "nl" => ""],
             "description" => ["en" => "", "fr" => "", "nl" => ""],
             "liens" => [
                 ["name" => "", "link" => ""]
