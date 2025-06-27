@@ -9,7 +9,7 @@
                 "nl": ""
             }
         },
-        "title": "Au un futur event",
+        "title": "Carambar",
         "illustration": "n5.jpg",
         "description_event": {
             "fr": "Ca va \u00eatre bien",
@@ -17,14 +17,15 @@
             "nl": ""
         },
         "infospratiques": {
-            "organisation": "",
+            "organisation": "https:\/\/www.bathyscaphe.be\/public\/",
             "price": "120euros"
         },
         "activity_type_ids": [
             "2"
         ],
         "artists": [
-            "a002"
+            "a002",
+            "a008"
         ]
     }
 }

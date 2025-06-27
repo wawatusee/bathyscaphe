@@ -1,0 +1,22 @@
+{
+    "artist": {
+        "id": "a008",
+        "name": "kievu",
+        "art": {
+            "en": "",
+            "fr": "",
+            "nl": ""
+        },
+        "description": {
+            "en": "Whaou, so beautiful",
+            "fr": "Tellement beau",
+            "nl": ""
+        },
+        "liens": [
+            {
+                "name": "raius",
+                "link": "http:\/\/rtbf.be"
+            }
+        ]
+    }
+}

@@ -53,7 +53,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             "name" => "Nouvel Artiste",
             "art" => ["en" => "", "fr" => "", "nl" => ""],
             "description" => ["en" => "", "fr" => "", "nl" => ""],
-            "liens" => ["name" => "", "link" => ""]
+            "liens" => [
+                ["name" => "", "link" => ""]
+            ]
         ]
     ];
 
@@ -80,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <body>
     <header>
-        <?php require_once "inc/admin_headers.php"?>
+        <?php require_once "inc/admin_headers.php" ?>
     </header>
     <main>
         <h1>Liste des artistes</h1>
