@@ -1,0 +1,17 @@
+{
+    "artist": {
+        "id": "a006",
+        "name": "Big Horse",
+        "description": {
+            "en": "Wild 'n' Primitive Rock'n'roll One-man-band from Brussels",
+            "fr": "Rock'n'roll sauvage et primitif, groupe solo bruxellois",
+            "nl": "Wild 'n' Primitive Rock'n'roll Eenmansband uit Brussel"
+        },
+        "liens": [
+            {
+                "name": "Youtube-Big Horse",
+                "link": "https:\/\/youtube.com\/channel\/UCl1wQnvvmWbFINpQPstLADA?feature=shared"
+            }
+        ]
+    }
+}

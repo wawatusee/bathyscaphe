@@ -1,0 +1,25 @@
+{
+    "artist": {
+        "id": "a012",
+        "name": "\u00f4phele\u00efa",
+        "description": {
+            "en": "\u00f4phele\u00efa (the remedy) is a new duo formed by La Zer (composition, text, multilayered vocals) and Leo Batuki (percussion, mbira, vocals, composition), carried by their eclectic musical loves such as Caroline Shaw, Aja Monet, Arthur Russell, Fran\u00e7is Bebey, Ann\u2019Oaro, and many others. In Bring Me To Life, the set they will perform for the first time at the Bathyscaphe, they trace a powerful call to Life, filled with raw, smooth, tender, and unexpected harmonies, words, and rhythms.",
+            "fr": "\u00f4phele\u00efa (le rem\u00e8de) est un nouveau duo form\u00e9 par La Zer (composition.texte.voix multilayers) et Leo Batuki (percussions.mbira.voix.composition) et port\u00e9 par leurs amours musicaux \u00e9clectiques tels que Caroline Shaw, Aja Monet, Arthur Russell, Fran\u00e7is Bebey, Ann\u2019Oaro et bien d\u2019autres. Dans Bring Me To Life, set qu\u2019iels joueront pour la premi\u00e8re fois au Bathyscaphe, iels tracent un puissant appel \u00e0 la Vie peupl\u00e9 d\u2019harmonies, mots et rythmes brut.e.s, suaves, tendres, inattendu.e.s.",
+            "nl": "\u00f4phele\u00efa (het geneesmiddel) is een nieuw duo gevormd door La Zer (compositie, tekst, meerlagige zang) en Leo Batuki (percussie, mbira, zang, compositie), gedragen door hun eclectische muzikale liefdes zoals Caroline Shaw, Aja Monet, Arthur Russell, Fran\u00e7is Bebey, Ann\u2019Oaro en vele anderen. In Bring Me To Life, de set die ze voor het eerst zullen spelen in het Bathyscaphe, schetsen ze een krachtig appel aan het Leven, gevuld met rauwe, zachte, tedere en onverwachte harmonie\u00ebn, woorden en ritmes."
+        },
+        "liens": [
+            {
+                "name": "Soundcloud",
+                "link": "https:\/\/on.soundcloud.com\/hbPpSrEZQGytSQBhm5"
+            },
+            {
+                "name": "Instragram La Zer",
+                "link": "https:\/\/www.instagram.com\/zizilazer?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
+            },
+            {
+                "name": "Instragram Leo Batuki ",
+                "link": "https:\/\/www.instagram.com\/leo_batuki?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            }
+        ]
+    }
+}

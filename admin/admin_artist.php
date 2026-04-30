@@ -9,7 +9,6 @@ if (!$file) {
 }
 
 $artistFile = "../json/artists/" . basename($file); // Sécurise le chemin
-
 // Vérifie l'existence du fichier
 if (!file_exists($artistFile) || !is_readable($artistFile)) {
     die("Erreur : Fichier artiste introuvable ou inaccessible !");

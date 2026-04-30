@@ -1,0 +1,64 @@
+{
+    "event": {
+      "id": {
+        "type": "text",
+        "label": "ID de l'événement",
+        "readonly": true,
+        "order": 1
+      },
+      "title": {
+        "type": "text",
+        "label": "Titre de l'événement",
+        "required": true,
+        "order": 2
+      },
+      "date": {
+        "type": "date",
+        "label": "Date",
+        "required": true,
+        "order": 3
+      },
+      "location": {
+        "type": "text",
+        "label": "Lieu",
+        "order": 4
+      },
+      "description": {
+        "type": "object",
+        "label": "Description",
+        "structure": {
+          "fr": {
+            "type": "text",
+            "label": "Description en français"
+          },
+          "en": {
+            "type": "text",
+            "label": "Description in English"
+          },
+          "nl": {
+            "type": "text",
+            "label": "Beschrijving in het Nederlands"
+          }
+        },
+        "order": 5
+      },
+      "links": {
+        "type": "array",
+        "label": "Liens",
+        "structure": {
+          "name": {
+            "type": "text",
+            "label": "Nom du lien"
+          },
+          "url": {
+            "type": "text",
+            "label": "URL",
+            "validation": "url",
+            "errorMessage": "URL invalide"
+          }
+        },
+        "order": 6
+      }
+    }
+  }
+  

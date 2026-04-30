@@ -1,0 +1,74 @@
+/*Reset all */
+* {
+  margin: 0;
+  padding: 0;
+}
+section {
+  /*max-width: 94vw;*/
+  margin: auto;
+}
+/*Communs disposition values*/
+:root {
+  --standartspace: 0.9em;
+  --content-padding: 5px;
+}
+/*Communs Colors images*/
+:root {
+  --main-dark-color: #18161b;
+  --main-clear-color: #e4e2e3;
+  --first-color: #c5c5c5;
+  --secondary-blue-color: #4c7a78;
+  --secondary-yellow: #c9c187;
+  --secondary-red: #970102;
+  --grey-clear-color: #a8a9ad;
+  --rs-bckgrnd-img: url("../img/deco/logo-rs_30px.png");
+}
+/*Fonts*/
+@font-face {
+    font-family: "myHomeFont";
+    src: url("./fonts/Runestars-Regular.ttf");
+  }
+@font-face {
+  font-family: "myFirstFont";
+  src: url("./fonts/Hind-Regular.ttf");
+}
+/*Use this font with this line => font-family: myFirstFont;*/
+@font-face {
+  font-family: "myTitleFont";
+  src: url("./fonts/Montserrat-Thin.ttf");
+  /*src: url("./fonts/Runestars-Regular.ttf");*/
+}
+/*Use this font with this line => font-family: myTitleFont;*/
+body {
+  font-family: "myFirstFont";
+}
+h2 {
+  color: var(--main-clear-color);
+  font-family: "myTitleFont";
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: lighter;
+}
+
+p {
+  margin: auto auto 5%;
+  padding: var(--content-padding);
+  max-width: 800px;
+  text-align: justify;
+}
+:root {
+  --standartspace: 0.9em;
+  --content-padding: 20px;
+}
+/*Special emilie, elle ne veut pas de titre*/
+.invisible-titre{
+  visibility: hidden;
+}

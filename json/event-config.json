@@ -1,0 +1,81 @@
+{
+  "event": {
+    "id": {
+      "type": "text",
+      "label": "ID de l'événement",
+      "readonly": true,
+      "order": 1
+    },"date": {
+      "type": "date",
+      "label": "Date",
+      "required": true,
+      "order": 2
+    },
+    "title": {
+      "type": "text",
+      "label": "Titre de l'événement",
+      "required": true,
+      "order": 3
+    },
+    "illustration": {
+      "type": "text",
+      "label": "Illustration",
+      "readonly": true,
+      "order": 4
+    },
+    "activity_type_ids": {
+      "type": "checkboxes",
+      "label": "Types d'activités",
+      "source": "../json/activity-types.json",
+      "structure": {
+        "id": "id",
+        "label": "fr"
+      },
+      "order": 5
+    },
+    "description_event": {
+      "type": "object",
+      "label": "Description",
+      "structure": {
+        "fr": {
+          "type": "text",
+          "label": "Description en français"
+        },
+        "en": {
+          "type": "text",
+          "label": "Description in English"
+        },
+        "nl": {
+          "type": "text",
+          "label": "Beschrijving in het Nederlands"
+        }
+      },
+      "order": 6
+    },
+    "artists": {
+      "type": "checkboxes",
+      "label": "Artistes",
+      "source": "api/artists-list.php",
+      "structure": {
+        "id": "id",
+        "label": "name"
+      },
+      "order": 7
+    },
+    "infospratiques": {
+      "type": "object",
+      "label": "Informations Pratiques",
+      "structure": {
+        "organisation": {
+          "type": "text",
+          "label": "Organisation"
+        },
+        "price": {
+          "type": "text",
+          "label": "Prix"
+        }
+      },
+      "order": 8
+    }
+  }
+}

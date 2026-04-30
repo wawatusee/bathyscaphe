@@ -2,20 +2,19 @@
     "artist": {
         "id": "a003",
         "name": "3DB",
-        "art": {
-            "en": "Music",
-            "fr": "Musique",
-            "nl": "Musiek"
-        },
         "description": {
-            "en": "The artist is or dreams",
-            "fr": "L'artiste garde ses r\u00eaves ou le fait croire.",
-            "nl": "Dromen is real"
+            "en": "Upbeat Bass Electronic",
+            "fr": "Basse \u00e9lectronique optimiste",
+            "nl": "Opzwepende elektronische bas"
         },
         "liens": [
             {
-                "name": "Soundcloud",
-                "link": "https:\/\/soundcloud.com\/estebanstan\/"
+                "name": "Spotify",
+                "link": "https:\/\/open.spotify.com\/track\/05ptFVz1VpJ8YpQe1RDZTo?si=42ab4b5da56147b7"
+            },
+            {
+                "name": "instagram",
+                "link": "https:\/\/www.instagram.com\/we_are_3db\/"
             }
         ]
     }

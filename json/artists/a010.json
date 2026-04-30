@@ -1,0 +1,17 @@
+{
+    "artist": {
+        "id": "a010",
+        "name": "Lenny Ranvier",
+        "description": {
+            "en": "Drummer and music arranger",
+            "fr": "Batteur et arrangeur musical",
+            "nl": "Drummer en arrangeur"
+        },
+        "liens": [
+            {
+                "name": "Contact",
+                "link": "tgustinbourg@gmail.com"
+            }
+        ]
+    }
+}

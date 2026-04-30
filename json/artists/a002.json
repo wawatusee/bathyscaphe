@@ -2,20 +2,23 @@
     "artist": {
         "id": "a002",
         "name": "Esteban Stan",
-        "art": {
-            "en": "Music",
-            "fr": "Musique",
-            "nl": "Musiek"
-        },
         "description": {
-            "en": "The artist is or dreams",
-            "fr": "L'artiste garde ses r\u00eaves ou le fait croire.",
-            "nl": "Dromen is real"
+            "en": "Dividing his life between the sea and the shore\u2014oceanographer in the depths, musician on land\u2014Esteban Stan draws inspiration from the hidden landscapes of the ocean floor. From these silent depths emerge a series of marine-inspired chants for voice and piano, musical impressions where the sea resonates in sound and poetry.",
+            "fr": "Sa vie oscille entre la mer et le rivage \u2014 oc\u00e9anographe dans les profondeurs, musicien sur la terre ferme. Esteban Stan puise son inspiration dans les paysages cach\u00e9s du fond de l\u2019oc\u00e9an. De ces profondeurs silencieuses naissent des chants envo\u00fbtants pour voix et piano, des impressions musicales o\u00f9 la mer r\u00e9sonne en sons et en po\u00e9sie.",
+            "nl": "Zijn leven balanceert tussen zee en kust \u2014 als oceanograaf verkent hij de diepten, als musicus klinkt hij op het land. Esteban Stan laat zich inspireren door de verborgen landschappen van de zeebodem. Uit deze stille diepten ontstaan betoverende gezangen voor stem en piano, muzikale impressies waarin de zee weerklinkt in klank en po\u00ebzie."
         },
         "liens": [
             {
-                "name": "soundcloud",
-                "link": "https:\/\/soundcloud.com/estebanstan\/"
+                "name": "Soundcloud",
+                "link": "https:\/\/soundcloud.com\/estebanstan\/"
+            },
+            {
+                "name": "Instagram ",
+                "link": "https:\/\/www.instagram.com\/stan.esteban\/"
+            },
+            {
+                "name": "Music videos",
+                "link": "https:\/\/vimeo.com\/estebanstan"
             }
         ]
     }

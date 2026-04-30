@@ -17,7 +17,7 @@ if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $langs)) {
     //echo "La variable langue est comprise dans le tableau";
 } else {
     // Si la variable 'lang' n'est pas définie ou n'est pas valide, définir une langue par défaut (par exemple, le français)
-    $lang = 'en';
+    $lang = 'fr';
     //echo "La variable langue n'est pas comprise dans le tableau";
 }
 //Fin de gestion de langue

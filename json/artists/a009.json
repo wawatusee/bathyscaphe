@@ -1,0 +1,21 @@
+{
+    "artist": {
+        "id": "a009",
+        "name": "Babsi",
+        "description": {
+            "en": "Originally from Nuremberg, BABSI has been making music in France for 3 years. It was on the streets, during freestyle cyphers, that she founded her group \u201cLa Cercleuse\u201d, with whom she has since performed on underground stages, in squats and at festivals. She balances herself between languages and genres, but it\u2019s on soulful lofi instrumentals that she most enjoys expressing\u00a0herself.",
+            "fr": "Originaire de Nuremberg, BABSI fait de la musique en France depuis 3 ans. C\u2019est dans la rue, lors de cyphers freestyle, qu\u2019elle a fond\u00e9 son groupe \u00ab La Cercleuse \u00bb, avec lequel elle se produit depuis sur les sc\u00e8nes underground, dans les squats et dans les festivals. Elle se balade entre les langues et les genres, mais c\u2019est sur des instrus lofi qui font du bien \u00e0 l\u2019\u00e2me qu\u2019elle aime le plus\u00a0s\u2018exprimer.",
+            "nl": "Oorspronkelijk afkomstig uit Neurenberg maakt BABSI al drie jaar muziek in Frankrijk. Het was op straat, tijdens freestyle-cyphers, dat ze haar groep \u201cLa Cercleuse\u201d oprichtte, met wie ze sindsdien optrad op undergroundpodia, in kraakpanden en op festivals. Ze balanceert tussen talen en genres, maar het zijn de soulvolle lofi-instrumentals waarop ze zich het liefst uitdrukt."
+        },
+        "liens": [
+            {
+                "name": "Youtube",
+                "link": "https:\/\/www.youtube.com\/watch?app=desktop&v=4tBY5S3g8C4&fbclid=PAQ0xDSwMULHZleHRuA2FlbQIxMAABp4fIAjMDMrBCEjVF1TPHkfzgOtHDVFHkY-C3btSHdtWW0q3pav_7sG4-d2ie_aem_TY3T4RMQEJ4t3p9sk9UDtQ"
+            },
+            {
+                "name": "Instagram",
+                "link": "https:\/\/www.instagram.com\/babsi_lacercleuse\/"
+            }
+        ]
+    }
+}

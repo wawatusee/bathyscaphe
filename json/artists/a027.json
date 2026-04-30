@@ -1,0 +1,21 @@
+{
+    "artist": {
+        "id": "a027",
+        "name": "GG Song",
+        "description": {
+            "en": "GG SONG is a versatile musician. First and foremost a fan of the great classics such as Beethoven, Bach, Mozart, and even Patrick S\u00e9bastien, GG is convinced he\u2019s a punk in the same vein. He played piano for 15 years, but it\u2019s ultimately with the saxophone that he wants to take to the stage. He travels across Europe with his solo act, introducing audiences to his world and making them laugh with his laid-back style.  Using his RC505 loop station, he moves between hip hop, trip hop, pop, \u201cpopopop,\u201d as well as techno and other unclassifiable styles. He performs his songs with self-deprecating humor, tackling taboo subjects such as sex, religion, addiction, love, and life\u2019s unexpected twists. A show designed to offer a good time, marked by honesty and genuine originality.",
+            "fr": "GG SONG est un musicien tout terrain. D\u2019abord un fan des grands classiques tel que Beethoven, Bach, Mozart, ou encore Patrick S\u00e9bastien, GG est persuad\u00e9 d\u2019\u00eatre un punk de la m\u00eame lign\u00e9. Il a jou\u00e9 le piano pendant 15 ans. Mais c\u2019est finalement avec le saxophone qu\u2019il a envie d\u2019aller sur sc\u00e8ne. Il sillonne l\u2019Europe avec sa formule en solo, afin de faire d\u00e9couvrir son univers, faire rire son public avec son style d\u00e9sinvolte. A l\u2019aide de sa Loopstation RC505, il navigue entre hip hop, trip hop, pop, popopop, ou encore techno et style inclassable. Il chante ses chansons avec de l\u2019autod\u00e9rision sur des sujets tabous comme le sexe, les religions, les addictions, l\u2019amour et les impr\u00e9vus de la vie. Un spectacle pour passer un bon moment avec honn\u00eatet\u00e9, et une originalit\u00e9 authentique. ",
+            "nl": "GG SONG is een veelzijdige muzikant. In de eerste plaats een liefhebber van de grote klassieken zoals Beethoven, Bach, Mozart, en zelfs Patrick S\u00e9bastien, is GG ervan overtuigd dat hij een punk in dezelfde lijn is. Hij speelde 15 jaar piano, maar uiteindelijk is het met de saxofoon dat hij het podium op wil.  Hij reist door heel Europa met zijn solo-act om zijn universum te laten ontdekken en zijn publiek aan het lachen te maken met zijn nonchalante stijl. Met behulp van zijn RC505-loopstation beweegt hij zich tussen hiphop, triphop, pop, \u201cpopopop\u201d, maar ook techno en andere onclassificeerbare stijlen.  Hij brengt zijn nummers met zelfspot en behandelt taboeonderwerpen zoals seks, religie, verslaving, liefde en de onverwachte wendingen van het leven. Een show om een fijne tijd te beleven, met eerlijkheid en authentieke originaliteit."
+        },
+        "liens": [
+            {
+                "name": "Youtube",
+                "link": "https:\/\/youtube.com\/@ggsong-m4v?si=_4ZbAEcqaLY7edp9"
+            },
+            {
+                "name": "Bandcamp",
+                "link": "https:\/\/ggsong.bandcamp.com\/album\/les-glands-de-ce-monde"
+            }
+        ]
+    }
+}

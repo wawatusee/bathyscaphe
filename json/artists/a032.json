@@ -1,0 +1,17 @@
+{
+    "artist": {
+        "id": "a032",
+        "name": "Marta Forsberg",
+        "description": {
+            "en": "Marta Forsberg is a Swedish-Polish music artist based in Berlin whose work explores language, memory, and archives, often blending human and synthetic voices; she has released music on labels like Warm Winters Ltd., Xkatedral, and thanatosis, frequently collaborates with performers and choreographers, co-founded Konstmusiksystrar with Lo Kristenson to promote gender equality in music, and studied electroacoustic composition in Stockholm and Warsaw.",
+            "fr": "Marta Forsberg est une artiste musicale su\u00e9do-polonaise bas\u00e9e \u00e0 Berlin dont le travail explore le langage, la m\u00e9moire et les archives, m\u00ealant souvent des voix humaines et synth\u00e9tiques ; elle a publi\u00e9 de la musique sur des labels tels que Warm Winters Ltd., Xkatedral et thanatosis, collabore fr\u00e9quemment avec des interpr\u00e8tes et des chor\u00e9graphes, a cofond\u00e9 Konstmusiksystrar avec Lo Kristenson pour promouvoir l\u2019\u00e9galit\u00e9 des genres dans la musique, et a \u00e9tudi\u00e9 la composition \u00e9lectroacoustique \u00e0 Stockholm et \u00e0 Varsovie.",
+            "nl": "Marta Forsberg is een Zweeds-Poolse muziekartieste gevestigd in Berlijn, wier werk taal, geheugen en archieven verkent en vaak menselijke en synthetische stemmen combineert; ze heeft muziek uitgebracht op labels zoals Warm Winters Ltd., Xkatedral en thanatosis, werkt regelmatig samen met performers en choreografen, richtte samen met Lo Kristenson Konstmusiksystrar op om gendergelijkheid in de muziek te bevorderen, en studeerde elektro-akoestische compositie in Stockholm en Warschau."
+        },
+        "liens": [
+            {
+                "name": "Bandcamp",
+                "link": " https:\/\/martaforsberg.bandcamp.com\/album\/archaeology-of-intimacy"
+            }
+        ]
+    }
+}

@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9; /* Fond légèrement gris pour plus de contraste */
+}
+
+#upload-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de carte */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-container {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="file"] {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Bleu pour le bouton */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Taille de la police */
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Couleur plus foncée au survol */
+}
+
+.btn-back {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6c757d; /* Gris pour le bouton de retour */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Supprime le soulignement du lien */
+    display: inline-block; /* Assure que le bouton est en ligne */
+    font-size: 16px; /* Taille de la police */
+}
+
+.btn-back:hover {
+    background-color: #5a6268; /* Couleur plus foncée au survol */
+}
+
+/* Styles pour les messages de succès */
+.success-message {
+    background-color: #d4edda; /* Vert clair */
+    color: #155724; /* Vert foncé */
+    border: 1px solid #c3e6cb; /* Bordure verte */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styles pour les messages d'erreur */
+.error-message {
+    background-color: #f8d7da; /* Rouge clair */
+    color: #721c24; /* Rouge foncé */
+    border: 1px solid #f5c6cb; /* Bordure rouge */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}

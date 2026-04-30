@@ -1,0 +1,45 @@
+{
+    "refs_events":{
+        "events":{
+            "fr":"Evénements",
+            "en":"Events",
+            "nl":"Evenementen"
+        },
+        "types": {
+            "fr": ["Musique", "Exposition", "Nourriture"],
+            "en": ["music", "Exhibition", "Food"],
+            "nl": ["Muziek", "Tentoonstelling", "Eten"]
+          },
+          "artists":{
+            "fr": ["Artistes"],
+            "en": ["Artists"],
+            "nl": ["Artiesten"]
+          },
+          
+        "infosPratiques":{
+            "fr":"Infos pratiques",
+            "en":"Practical info",
+            "nl":"Praktische info"
+            },
+        "price":{
+            "fr":"Prix",
+            "en":"Price",
+            "nl":"Prijs"
+        },
+        "organiser":{
+            "fr":"Organisateur : ",
+            "en":"Organiser : ",
+            "nl":"Organisator : "
+        },
+        "reservation":{
+            "fr":["Réservation obligatoire","oui","non"],
+            "en":["Reservation mandatory","Yes","No"],
+            "nl":["Reservatie verplicht","Ja","Nee"]
+        },
+        "tickets":{
+            "fr": ["Billets", "Billetterie"],
+            "en": ["Tickets", "BoxOffice"],
+            "nl": ["Kaartjes", "Ticketverkoop"]
+          }
+    }
+}

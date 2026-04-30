@@ -1,0 +1,26 @@
+{
+    "artist": {
+        "id": "a002",
+        "name": "Esteban Stan",
+        "art": {
+            "en": "Music",
+            "fr": "Musique",
+            "nl": "Musiek"
+        },
+        "description": {
+            "en": "Sailor chants and electroacoustic song writing",
+            "fr": "Chants de marins et chansons \u00e9lectroacoustiques",
+            "nl": "Sailor chants and electroacoustic song writing"
+        },
+        "liens": [
+            {
+                "name": "Soundcloud",
+                "link": "https:\/\/soundcloud.com\/estebanstan\/"
+            },
+            {
+                "name": "Instagram",
+                "link": "https:\/\/www.instagram.com\/stan.esteban\/"
+            }
+        ]
+    }
+}

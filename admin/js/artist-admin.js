@@ -1,20 +1,15 @@
 function generateForm(data, config, parent = document.getElementById("artist-form"), path = "") {
+    if (config.artist) config = config.artist; // recentre la config si c’est la config globale
     parent.innerHTML = "";
-
-    console.log("config :", config); // Debug
-
     for (const key in data) {
         const value = data[key];
         const fullPath = path ? `${path}.${key}` : key;
-
         // Récupérer la configuration imbriquée
-        const fieldConfig = getNestedConfig(config, fullPath) || {}; 
-        console.log("fieldConfig pour", fullPath, ":", fieldConfig); // Debug
-
-        if (!fieldConfig || Object.keys(fieldConfig).length === 0) {
+        const pathForConfig = fullPath.replace(/^artist\./, ""); // supprime "artist." s’il est présent
+        const fieldConfig = getNestedConfig(config, pathForConfig) || {};
+        /*if (!fieldConfig || Object.keys(fieldConfig).length === 0) {
             console.warn(`Aucune configuration trouvée pour la clé : ${fullPath}`);
-        }
-
+        }*/
         if (typeof value === "object" && !Array.isArray(value)) {
             // Gestion des objets imbriqués
             const fieldset = document.createElement("fieldset");
@@ -26,10 +21,35 @@ function generateForm(data, config, parent = document.getElementById("artist-for
             const fieldset = document.createElement("fieldset");
             fieldset.innerHTML = `<legend>${fieldConfig.label || key}</legend>`;
             value.forEach((item, index) => {
+                if (!Array.isArray(data[key])) data[key] = [];
+                const entryWrapper = document.createElement("fieldset");
                 const arrayPath = `${fullPath}[${index}]`;
-                // Utilisez la structure spécifique pour les éléments du tableau
-                generateForm(item, fieldConfig.structure, fieldset, arrayPath);
+                generateForm(item, fieldConfig.structure, entryWrapper, arrayPath);
+                fieldset.appendChild(entryWrapper);
             });
+
+            // Bouton d'ajout d'élément
+            const addButton = document.createElement("button");
+            addButton.type = "button";
+            addButton.textContent = "➕ Ajouter un lien";
+            addButton.style.marginTop = "10px";
+
+            addButton.onclick = () => {
+                const newIndex = data[key].length;
+                const newItem = { name: "", link: "" };
+                data[key].push(newItem);
+
+                const entryWrapper = document.createElement("fieldset");
+                const arrayPath = `${fullPath}[${newIndex}]`;
+
+                generateForm(newItem, fieldConfig.structure, entryWrapper, arrayPath);
+
+                fieldset.insertBefore(entryWrapper, addButton); // Ajoute juste avant le bouton
+            };
+
+
+            fieldset.appendChild(addButton);
+
             parent.appendChild(fieldset);
         } else {
             // Gestion des champs simples
@@ -51,7 +71,7 @@ function generateForm(data, config, parent = document.getElementById("artist-for
             if (fieldConfig.required) {
                 input.required = true;
             }
-            
+
             if (fieldConfig.readonly) { // Utilisez 'readonly' en minuscules
                 input.readOnly = true;
             }
@@ -61,7 +81,6 @@ function generateForm(data, config, parent = document.getElementById("artist-for
         }
     }
 }
-
 
 function createTextInput(path, value = "", readOnly = false) {
     const input = document.createElement("input");
@@ -176,6 +195,13 @@ function saveArtistData() {
         setJsonValue(jsonData, path, value);
     });
 
+    // 🧹 Nettoyage des liens vides
+    if (Array.isArray(jsonData.liens)) {
+        jsonData.liens = jsonData.liens.filter(
+            lien => lien.name.trim() !== "" || lien.link.trim() !== ""
+        );
+    }
+
     console.log("Données formatées :", jsonData);
 
     fetch("artist-controller.php", {
@@ -183,71 +209,61 @@ function saveArtistData() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(jsonData)
     })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Réponse du serveur :", data);
+    .then(response => response.json())
+    .then(data => {
+        console.log("Réponse du serveur :", data);
 
-            if (data.success) {
-                alert("Données sauvegardées avec succès !");
-                isModified = false;
-                saveButton.textContent = "Save"; // Utiliser saveButton ici
-                saveButton.style.backgroundColor = "";
-            } else {
-                alert("Erreur lors de la sauvegarde : " + data.message);
-            }
-        })
-        .catch(error => {
-            console.error("Erreur lors de l'enregistrement :", error);
-            alert("Erreur lors de la sauvegarde.");
-        });
+        if (data.success) {
+            alert("Données sauvegardées avec succès !");
+            isModified = false;
+            saveButton.textContent = "Save";
+            saveButton.style.backgroundColor = "";
+        } else {
+            alert("Erreur lors de la sauvegarde : " + data.message);
+        }
+    })
+    .catch(error => {
+        console.error("Erreur lors de l'enregistrement :", error);
+        alert("Erreur lors de la sauvegarde.");
+    });
 }
+
 document.addEventListener("DOMContentLoaded", () => {
     const formContainer = document.getElementById("artist-form");
 
-   if (formContainer && typeof formConfig === 'object' && typeof artistData === 'object') {
+    if (formContainer && typeof formConfig === 'object' && typeof artistData === 'object') {
         generateForm(artistData, formConfig, formContainer);
         console.log("Config trouvée");
     } else {
         console.error("Conteneur du formulaire, configuration ou données non trouvés !");
     }
 });
-//DEBUG
-/*function getNestedConfig(config, path) {
-    if (!config || !path) return null;
 
-    const keys = path.replace(/$$(\d+)$$/g, '.$1').split('.'); // Gère les tableaux et objets
-
-    let currentConfig = config;
-
-    for (const key of keys) {
-        if (currentConfig[key]) {
-            currentConfig = currentConfig[key];
-        } else if (currentConfig && currentConfig.structure && currentConfig.structure[key]) {
-            currentConfig = currentConfig.structure[key];
-        } else {
-            return null; // Pas de correspondance
-        }
-    }
-
-    return currentConfig;
-}*/
 function getNestedConfig(config, path) {
-    if (!config || !path) return null;
+    const parts = path.replace(/\[(\d+)]/g, '.$1').split('.');
+    let fieldConfig = config;
+    let fullPath = '';
 
-    const keys = path.replace(/\[(\d+)\]/g, '.$1').split('.'); // Correction de la RegEx
+    for (let i = 0; i < parts.length; i++) {
+        const part = parts[i];
+        fullPath += (i === 0 ? '' : '.') + part;
 
-    let currentConfig = config;
-    for (const key of keys) {
-        if (currentConfig[key]) {
-            currentConfig = currentConfig[key];
-        } else if (currentConfig.structure && currentConfig.structure[key]) {
-            currentConfig = currentConfig.structure[key];
+        if (fieldConfig === undefined || fieldConfig === null) {
+            return undefined;
+        }
+
+        // Logique spéciale pour éviter les warnings sur les tableaux
+        if (Array.isArray(fieldConfig)) {
+            fieldConfig = fieldConfig[part];
+        } else if (typeof fieldConfig === 'object' && part in fieldConfig) {
+            fieldConfig = fieldConfig[part];
         } else {
-            return null;
+            // Ne plus afficher de warning bruyant
+            // console.warn(`Aucune configuration trouvée pour la clé : ${fullPath}`);
+            return undefined;
         }
     }
-    return currentConfig;
+
+    return fieldConfig;
 }
-
-
 

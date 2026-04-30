@@ -1,0 +1,33 @@
+{
+    "artist": {
+        "id": "a013",
+        "name": "Antti L\u00e4hdesm\u00e4ki ",
+        "description": {
+            "en": "Antti L\u00e4hdesm\u00e4ki is a versatile pianist and composer known as a bandleader, big band composer and a sought-after band member for a variety of styles. His current projects include writing for UMO Helsinki Jazz Orchestra, the Brazilian-European trio Mar\u00e9 Alta which recently released its debut album and working on his next album \u201dI tried to tame the sea\u201d to be released 2026.",
+            "fr": "Antti L\u00e4hdesm\u00e4ki est un pianiste et compositeur polyvalent, connu comme chef de groupe, compositeur pour big band et musicien tr\u00e8s demand\u00e9 dans une grande vari\u00e9t\u00e9 de styles. Ses projets actuels comprennent l\u2019\u00e9criture pour l\u2019UMO Helsinki Jazz Orchestra, le trio br\u00e9silo-europ\u00e9en Mar\u00e9 Alta qui a r\u00e9cemment sorti son premier album, ainsi que le travail sur son prochain album \u201cI tried to tame the sea\u201d, dont la sortie est pr\u00e9vue pour 2026.",
+            "nl": "Antti L\u00e4hdesm\u00e4ki is een veelzijdige pianist en componist, bekend als bandleider, bigbandcomponist en een veelgevraagde bandlid in uiteenlopende stijlen. Zijn huidige projecten omvatten het schrijven voor de UMO Helsinki Jazz Orchestra, het Braziliaans-Europese trio Mar\u00e9 Alta, dat onlangs zijn debuutalbum heeft uitgebracht, en het werken aan zijn volgende album \u201cI tried to tame the sea\u201d, dat in 2026 zal worden uitgebracht."
+        },
+        "liens": [
+            {
+                "name": "We exist in everyone we love",
+                "link": "https:\/\/www.youtube.com\/watch?v=UrmBu6SGLec"
+            },
+            {
+                "name": "Website",
+                "link": "https:\/\/anttilahdesmaki.wixsite.com\/anttilahdesmaki"
+            },
+            {
+                "name": "Instagram",
+                "link": "https:\/\/www.instagram.com\/lahdesmakiantti?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            },
+            {
+                "name": "JazzMania review",
+                "link": "https:\/\/jazzmania.be\/antti-lahdesmaki-we-tend-to-help-each-other-out-here\/"
+            },
+            {
+                "name": "JazzViews review",
+                "link": "https:\/\/jazzviews.net\/antti-lahdesmaki-we-tend-to-help-each-other-out-here\/"
+            }
+        ]
+    }
+}

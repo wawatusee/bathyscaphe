@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>live</title>
+  <link rel="stylesheet" href="video-js.css">
+  <style type="text/css">
+img { border: 0px; }
+  </style>
+ </head>
+ <body>
+  <h1 id="title">DOMAIN_REPLACE</h1>
+  <video id="video" src='https://live.enkidu.fr/hls/kievu_src.m3u8' type="application/x-mpegurl" class="video-js" controls preload="auto" data-setup="{}"></video>
+  <div id="instructions" style="display:none;">
+   <p>
+     To create a new stream, pick a unique name for it, and set your broadcast
+     software to stream to <i>rtmp://DOMAIN_REPLACE/ingest/<b>name</b></i>.
+   </p>
+   <p>
+     You will then be able to watch the live stream at
+     <i>http://DOMAIN_REPLACE/#<b>name</b></i>.
+   </p>
+   <p>
+     You will find statistics about the live streams at
+     <i>http://DOMAIN_REPLACE/stats</i>.
+  </div>
+
+  <script src="jquery-slim.min.js"></script>
+  <script src="video.js"></script>
+<script>
+  $(function() {
+
+      var v = videojs('video');
+      v.src({type: 'application/x-mpegURL', src: 'https://live.enkidu.fr/hls/kievu_src.m3u8'});
+    
+  });
+    </script>
+ </body>
+</html>

@@ -1,0 +1,11 @@
+{
+	"singlepage":false,
+	"titleWebsite":["Bathyscaphe", " ",".be"],
+	"repImg":"img/content",
+	"repImgDeco":"img/deco",
+	"langs":[
+		{"fr":"Français"},
+		{"en":"Anglais"},
+		{"nl":"Néerlandais"}									
+	]
+}

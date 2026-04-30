@@ -1,0 +1,25 @@
+{
+    "artist": {
+        "id": "a016",
+        "name": "C\u00e9cile Broch\u00e9",
+        "description": {
+            "en": "Living between Europe and New York, C\u00e9cile Broch\u00e9 takes you on a journey where electric violin and voice multiply, forming a language that is at times pulsated, at times melodic. As a composer, she also writes for theatre and dance. She blends the sounds of everyday life with music performed live.",
+            "fr": "Partageant son temps entre l\u2019Europe et New York, C\u00e9cile Broch\u00e9 vous emm\u00e8ne dans un voyage o\u00f9 violon \u00e9lectrique et voix se d\u00e9multiplient; langage tant\u00f4t puls\u00e9, tant\u00f4t m\u00e9lodique. Comme compositrice, elle \u00e9crit aussi pour le th\u00e9\u00e2tre, la danse. Elle combine les sons de la vie quotidienne \u00e0 de la musique jou\u00e9e live.",
+            "nl": "C\u00e9cile Broch\u00e9 verdeelt haar tijd tussen Europa en New York en neemt je mee op een reis waar elektrische viool en zangstem samenkomen; een taal die soms pulserend, soms melodisch is.  Als componiste schrijft ze ook voor theater en dans. Ze combineert de geluiden van het dagelijks leven met livemuziek."
+        },
+        "liens": [
+            {
+                "name": "Website",
+                "link": "https:\/\/cecilebroche.com\/"
+            },
+            {
+                "name": "Discus-music review",
+                "link": "https:\/\/discus-music.org\/cp-catalogue\/156cd-cecile-broche-3dparis\/"
+            },
+            {
+                "name": "Bandcamp",
+                "link": "https:\/\/discusmusic.bandcamp.com\/album\/3d-paris-156cd-2023"
+            }
+        ]
+    }
+}

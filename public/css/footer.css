@@ -21,12 +21,15 @@ footer>h2 {
 
 
 .footerNav {
+  margin-left: var(--content-padding);
+  max-width: 92%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 15px;
   padding-top: 15px;
+  gap: 30px;
 }
 
 .navfooterbloc {
@@ -48,6 +51,9 @@ footer .itemMenu a:hover{
   color:var(--batho-bleu);
 }
 /*Particular communications link*/
+address{
+  font-style: normal;
+}
 .maillink::before {
   content: url('/public/img/deco/icons8-mail-24.png');
   position: relative;
@@ -76,6 +82,13 @@ footer .itemMenu a:hover{
   top: 10px;
   left: -10px;
 }
+/* Styles spécifiques pour les écrans de moins de 600px de large (portables) */
+@media (max-width: 600px) {
+  .maillink::before,
+  .phonelink::before,
+  .situationlink::before {
+    content: none; /* Fait disparaître le contenu des pseudo-éléments ::before */
+  }}
 
 /*Block  rsMenu*/
 .nav-rs {

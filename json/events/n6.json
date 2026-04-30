@@ -1,0 +1,32 @@
+{
+    "event": {
+        "id": "6",
+        "time": {
+            "date": "2025-12-05",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Navigation #6 - \u00f4phele\u00efa \/ Antti L\u00e4hdesm\u00e4ki",
+        "illustration": "n6.jpg",
+        "description_event": {
+            "fr": "Tous \u00e0 bord!   <\/p><p>Cette nouvelle \u00e9dition de Navigation vous invite \u00e0 explorer un paysage intimiste, fa\u00e7onn\u00e9 par des tonalit\u00e9s organiques et des r\u00e9sonances harmoniques : la voix et les percussions de \u00f4phele\u00efa tel des vagues po\u00e9tiques tout en cadences inattendues, suivies par le piano et la danse d\u2019Antti L\u00e4hdesm\u00e4ki o\u00f9 il parviendra \u00e0 tisser le son et le mouvement en un seul geste po\u00e9tique, dans ce qui sera sa performance de sortie de r\u00e9sidence.<\/p><p>La soir\u00e9e se conclura par un DJ set lounge soigneusement s\u00e9lectionn\u00e9, offrant une atmosph\u00e8re d\u00e9tendue propice aux rencontres et aux \u00e9changes avec les artistes et les autres convives. <\/p><p>19:00 - Ouverture des portes <\/p><p>20:30 - \u00f4phele\u00efa <\/p><p>21:30 - Antti L\u00e4hdesm\u00e4ki <\/p><p>22:30 - DJ set lounge & house music <\/p><p>open end <\/p><p>Attention: <\/p><p>- Les portes ferment au d\u00e9but du premier acte, \u00e0 20:30, puis r\u00e9ouvrent \u00e0 l\u2019entre-acte, entre 21:15 et 21:30. <\/p><p>- Pensez \u00e0 amenez du cash, pour les entr\u00e9es et le bar. <\/p><p>Entr\u00e9e: 10 euros - Pr\u00e9ventes avec Billetweb ci-dessous ",
+            "en": "All aboard!   <\/p><p>This new edition of Navigation invites you into an intimate landscape shaped by organic tones and harmonic resonances: the voice and percussion of \u00f4phele\u00efa, like unexpected waves of poetry in rhythm, followed by the piano and dance of Antti L\u00e4hdesm\u00e4ki, who will present his out-of-residency performance, weaving sound and movement into a single poetic gesture.   <\/p><p>The night will conclude with a carefully curated lounge-style DJ set, offering a relaxed atmosphere in which guests can meet and converse with the artists and one another.  <\/p><p>19:00 - Doors open  <\/p><p>20:30 - \u00f4phele\u00efa  <\/p><p>21:30 - Antti L\u00e4hdesm\u00e4ki  <\/p><p>22:30 - Lounge & house music DJ set  <\/p><p>open end <\/p><p>Attention:  <\/p><p>- The doors close at the start of the first act, at 20:30, and reopen during the intermission, between 21:15 and 21:30.  <\/p><p>- Please bring cash for entry and the bar.<\/p><p>Ticket: 10 euros - Presales with Billetweb below ",
+            "nl": "Alles aan boord! <\/p><p>Deze nieuwe editie van Navigation nodigt je uit in een intiem landschap, gevormd door organische klanken en harmonische resonanties: de stem en percussie van \u00f4phele\u00efa, als onverwachte golven van po\u00ebzie in ritme, gevolgd door de piano en dans van Antti L\u00e4hdesm\u00e4ki, die zijn buiten-residentie performance zal presenteren, waarin hij geluid en beweging verweeft tot \u00e9\u00e9n po\u00ebtisch gebaar.  <\/p><p>De avond wordt afgesloten met een zorgvuldig samengestelde lounge-DJ-set, die een ontspannen sfeer biedt waarin gasten met de artiesten en elkaar in gesprek kunnen gaan.  <\/p><p>19:00 - Deuren open <\/p><p>20:30 - \u00f4phele\u00efa <\/p><p>21:30 - Antti L\u00e4hdesm\u00e4ki <\/p><p>22:30 - Lounge & housemuziek DJ-set <\/p><p>Open einde <\/p><p>Let op:  <\/p><p>- De deuren sluiten aan het begin van het eerste bedrijf, om 20:30, en gaan weer open tijdens de pauze, tussen 21:15 en 21:30.  <\/p><p>- Vergeet niet contant geld mee te nemen voor de toegang en de bar. <\/p><p>Ticket: 10 euro - Voorverkoop via Billetweb hieronder"
+        },
+        "infospratiques": {
+            "organisation": "https:\/\/www.billetweb.fr\/navigation-6-opheleia-antti-lahdesmaki",
+            "price": "10 euros"
+        },
+        "activity_type_ids": [
+            "1",
+            "4"
+        ],
+        "artists": [
+            "a012",
+            "a013"
+        ]
+    }
+}

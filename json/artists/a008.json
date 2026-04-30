@@ -1,0 +1,21 @@
+{
+    "artist": {
+        "id": "a008",
+        "name": "WaterMetamorph",
+        "description": {
+            "en": "WaterMetamorph is an eclectic soul music project that blends rich, soulful vocals with diverse musical influences, creating a unique sound that flows effortlessly between genres. With deeply emotional storytelling written and performed by In\u00e8s Boughattas and vibrant rhythms, WaterMetamorph invites listeners on a transformative journey through sound and feeling. From soul and house to jazz, pop, and poetic lounge, the project crafts a distinct, evolving, and transformative soundscape. The first album, BODY, was released at the end of September 2024 \u2014 with much more to come.",
+            "fr": "WaterMetamorph est un projet musical de soul \u00e9clectique qui m\u00eale des voix chaleureuses et profondes \u00e0 des influences musicales vari\u00e9es, cr\u00e9ant un univers sonore unique qui s\u2019\u00e9coule avec fluidit\u00e9 entre les genres. Port\u00e9 par des histoires charg\u00e9es d\u2019\u00e9motion, \u00e9crites et interpr\u00e9t\u00e9es par In\u00e8s Boughattas, et des rythmes vibrants, WaterMetamorph invite ses auditeurs \u00e0 un voyage o\u00f9 son et ressenti se rencontrent. De la soul \u00e0 la house, en passant par le jazz, la pop et un lounge po\u00e9tique, ce projet fa\u00e7onne un paysage sonore distinct, \u00e9volutif et profond\u00e9ment transformateur. Le premier album, BODY, est sorti fin septembre 2024 \u2014 et bien d\u2019autres surprises sont \u00e0 venir.",
+            "nl": "WaterMetamorph is een eclectisch soulmuziekproject dat rijke, soulvolle vocalen combineert met diverse muzikale invloeden, en zo een uniek geluid cre\u00ebert dat moeiteloos tussen genres vloeit. Met diep emotionele verhalen, geschreven en uitgevoerd door In\u00e8s Boughattas, en levendige ritmes, nodigt WaterMetamorph luisteraars uit op een transformerende reis door klank en gevoel.  Van soul en house tot jazz, pop en po\u00ebtische lounge \u2014 het project weeft een onderscheidend, evoluerend en transformerend klanklandschap. Het eerste album, BODY, werd eind september 2024 uitgebracht \u2014 met nog veel meer in het vooruitzicht."
+        },
+        "liens": [
+            {
+                "name": "Soundcloud",
+                "link": "https:\/\/soundcloud.com\/watermetamorph\/sets"
+            },
+            {
+                "name": "Instagram",
+                "link": "https:\/\/www.instagram.com\/watermetamorph\/"
+            }
+        ]
+    }
+}

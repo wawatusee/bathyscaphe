@@ -1,0 +1,21 @@
+{
+    "artist": {
+        "id": "a025",
+        "name": "Matthieu C Vergez",
+        "description": {
+            "en": "Matthieu C Vergez concerts (musician, author, iconoclastic creative) oscillate variably between poetry, tempered noise and minimalism. In a resolutely improvised and experimental approach, using an electric guitar, cassette tapes or various objects, he creates an assembly of scenes, sober, lingering sounds. Sometimes, the voice appears, the recitative text acting as a sensitive link, a suspension in this ensemble of sharp movements - that tenuous, almost indescribable thread.",
+            "fr": "Les concerts de Matthieu C Vergez (musicien, auteur, cr\u00e9atif iconoclaste) oscillent variablement entre po\u00e9sie, noise temp\u00e9r\u00e9e et minimalisme. Dans une approche r\u00e9solument improvis\u00e9e et exp\u00e9rimentale, \u00e0 l\u2019aide d\u2019une guitare \u00e9lectrique, de cassettes \u00e0 bande ou d'objets divers, il suscite un assemblage de sc\u00e8nes, de sons sobres, r\u00e9manents. Parfois, la voix appara\u00eet, le texte r\u00e9citatif est comme un lien sensible, une suspension dans cet ensemble de mouvements tranch\u00e9s - ce fil t\u00e9nu, presque indicible.",
+            "nl": "De concerten van Matthieu C. Vergez (muzikant, auteur, iconoclastisch kunstenaar) schommelen tussen po\u00ebzie, getemperde noise en minimalisme. In een resoluut ge\u00efmproviseerde en experimentele benadering, met gebruik van een elektrische gitaar, cassettebandjes of diverse objecten, cre\u00ebert hij een aaneenschakeling van sc\u00e8nes en sobere, aanhoudende klanken.  Soms verschijnt de stem, waarbij de reciterende tekst fungeert als een gevoelig verbindend element, een moment van opschorting binnen dit geheel van scherpe bewegingen \u2014 die fragiele, bijna ongrijpbare draad."
+        },
+        "liens": [
+            {
+                "name": "Soundcloud",
+                "link": "https:\/\/soundcloud.com\/matthieucvergez"
+            },
+            {
+                "name": "Bandcamp",
+                "link": "https:\/\/matthieucvergez.bandcamp.com"
+            }
+        ]
+    }
+}

@@ -1,1 +1,1 @@
-<?php header('Location:/public/index.php?page=studio&lang=fr');
+<?php header('Location:/public/');

@@ -1,0 +1,21 @@
+{
+    "artist": {
+        "id": "a017",
+        "name": "AN\u00c1MESA",
+        "description": {
+            "en": "Halfway between a solemn moment and a liberating catharsis, AN\u00c1MESA delivers a contemporary funeral march where music becomes a rite of passage between death and life. Influenced by the sounds of Radiohead, Slift, Queens of the Stone Age, Tame Impala, and Pink Floyd, the project blends psychedelic melodies, powerful riffs, and cinematic textures to explore, each in their own way, the themes of grief, endings, and their metamorphosis. An introspective and explosive sonic journey for an audience seeking meaning, emotion, and beauty within melancholy.",
+            "fr": "\u00c0 mi-chemin entre un moment solennel et une catharsis lib\u00e9ratrice, AN\u00c1MESA propose une marche fun\u00e8bre contemporaine o\u00f9 la musique devient un rite de passage entre la mort et la vie. Influenc\u00e9 par les sonorit\u00e9s de Radiohead, Slift, Queens of the Stone Age, Tame Impala et Pink Floyd, le projet m\u00eale m\u00e9lodies psych\u00e9d\u00e9liques, riffs puissants et textures cin\u00e9matographiques pour explorer, chacun \u00e0 sa mani\u00e8re, les th\u00e8mes du deuil, des fins et de leur m\u00e9tamorphose. Un voyage sonore introspectif et explosif pour un public en qu\u00eate de sens, d\u2019\u00e9motion et de beaut\u00e9 au c\u0153ur de la m\u00e9lancolie.",
+            "nl": "Halverwege tussen een plechtig moment en een bevrijdende catharsis, brengt AN\u00c1MESA een eigentijdse rouwmars waarin muziek een overgangsrite wordt tussen leven en dood. Ge\u00efnspireerd door de klanken van Radiohead, Slift, Queens of the Stone Age, Tame Impala en Pink Floyd, mengt het project psychedelische melodie\u00ebn, krachtige riffs en cinematografische texturen om op hun eigen manier de thema\u2019s van rouw, afsluitingen en hun transformatie te verkennen. Een introspectieve en explosieve sonore reis voor een publiek dat op zoek is naar betekenis, emotie en schoonheid binnen melancholie."
+        },
+        "liens": [
+            {
+                "name": "Alive Session",
+                "link": "https:\/\/www.youtube.com\/watch?v=9GS1QGWpOjw&list=OLAK5uy_lqVFQE4enHqEroti82cVfK4Tpn37YrfOI"
+            },
+            {
+                "name": "Linktree",
+                "link": "https:\/\/linktr.ee\/anamesa_band"
+            }
+        ]
+    }
+}

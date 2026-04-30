@@ -15,28 +15,6 @@
             "errorMessage": "Le nom de l'artiste est obligatoire.",
             "order": 2
         },
-        "art": {
-            "type": "object",
-            "label": "Genre musical",
-            "structure": {
-                "en": {
-                    "type": "text",
-                    "label": "Art in English",
-                    "description": "Le genre musical en anglais."
-                },
-                "fr": {
-                    "type": "text",
-                    "label": "Art en Français",
-                    "description": "Le genre musical en français."
-                },
-                "nl": {
-                    "type": "text",
-                    "label": "Art in Dutch",
-                    "description": "Le genre musical en néerlandais."
-                }
-            },
-            "order": 3
-        },
         "description": {
             "type": "object",
             "label": "Description",
@@ -57,7 +35,7 @@
                     "description": "La description en néerlandais."
                 }
             },
-            "order": 4
+            "order": 3
         },
         "liens": {
             "type": "array",
@@ -76,7 +54,7 @@
                     "errorMessage": "L'URL doit être valide."
                 }
             },
-            "order": 5
+            "order": 4
         }
     }
 }

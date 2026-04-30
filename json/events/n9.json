@@ -1,0 +1,31 @@
+{
+    "event": {
+        "id": "9",
+        "time": {
+            "date": "2026-03-13",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Navigation #9 - Esteban Stan \/ Petite",
+        "illustration": "n9.jpg",
+        "description_event": {
+            "fr": "Tous \u00e0 bord ! <\/p><p>Cette nouvelle Navigation vous plonge dans le r\u00e9pertoire voix et piano, o\u00f9 la po\u00e9sie se transforme en musique et o\u00f9 la sc\u00e8ne de r\u00e9cital devient un univers de r\u00e9cits intimistes. Ce soir-l\u00e0, deux artistes aux multiples parcours, chacun riche de nombreuses exp\u00e9riences, partageront la sc\u00e8ne, tissant leurs odyss\u00e9es \u00e0 travers le chant et le piano. <\/p><p>19:00 \u2013 Doors <\/p><p>20:00 \u2013 Esteban Stan <\/p><p>21:00 \u2013 Petite <\/p><p>7 euros <\/p><p>- Billetterie plus bas, section \"organisateur\"  <\/p><p>Attention : <\/p><p>- Les portes ferment au d\u00e9but du premier acte, \u00e0 20:00, puis r\u00e9-ouvreront \u00e0 l'entre-actes entre 20:40 et 21:00. <\/p><p>- Pensez \u00e0 amenez du cash, pour les entr\u00e9es et le bar.  ",
+            "en": "All abord ! <\/p><p>This new Navigation invites you into the voice-and-piano repertoire, where poetry is transformed into music and the recital stage becomes a realm of quiet storytelling. <\/p><p>That evening, two seasoned artists, each shaped by their own journeys, will share the stage, weaving their personal legends into song and piano. <\/p><p>19:00 \u2013 Doors <\/p><p>20:00 \u2013 Esteban Stan <\/p><p>21:00 \u2013 Petite <\/p><p>7 euros <\/p><p>- Tickets below, in the \"organizer\" section <\/p><p>Please note: <\/p><p>- The doors close at the start of the first act, at 8:00 PM, and will reopen between acts, between 20:40 and 21:00. <\/p><p>- Remember to bring cash for admission and the bar. ",
+            "nl": "Alle aan boord! <\/p><p>Deze nieuwe Navigatie neemt je mee in het repertoire voor stem en piano, waar po\u00ebzie in muziek verandert en het recitalpodium een wereld van intieme verhalen wordt. Die avond delen twee artiesten met vele achtergronden, elk rijk aan talloze ervaringen, het podium en verweven ze hun persoonlijke legendes in zang en piano. <\/p><p>19:00 \u2013 Doors <\/p><p>20:00 \u2013 Esteban Stan <\/p><p>21:00 \u2013 Petite <\/p><p>7 euros <\/p><p>- Tickets zijn hieronder verkrijgbaar in het gedeelte \"organisator\" <\/p><p>Let op: <\/p><p>- De deuren sluiten aan het begin van het eerste deel, om 20:00 uur, en gaan weer open tussen 20:40 en 21:00. <\/p><p>- Vergeet niet contant geld mee te nemen voor de entree en de drankjes aan de bar."
+        },
+        "infospratiques": {
+            "organisation": "https:\/\/www.billetweb.fr\/navigation-9-esteban-stan-petite",
+            "price": "7 euros"
+        },
+        "activity_type_ids": [
+            "1"
+        ],
+        "artists": [
+            "a002",
+            "a020"
+        ]
+    }
+}

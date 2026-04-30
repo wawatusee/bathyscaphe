@@ -1,0 +1,48 @@
+/* admin-liste-json.css */
+
+/* Styles pour la table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+td {
+    vertical-align: middle;
+}
+
+
+/* Styles pour le bouton */
+.btn {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px; /* Ajout d'un léger arrondi pour le bouton */
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+@media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    td {
+        padding: 10px 0;
+    }
+
+    th {
+        display: none;
+    }
+}

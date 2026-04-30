@@ -1,0 +1,87 @@
+/*MENUS*/
+/**********************/
+
+/*mainMenu*/
+/**********************/
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.responsiveMenu {
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+}
+header {
+  color: var(--main-clear-color);
+}
+
+.responsiveMenu {
+  overflow: hidden;
+}
+.responsiveMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+  margin-top: 5px;
+}
+.responsiveMenu a {
+  padding: 10px 20px;
+  display: inline;
+  text-decoration: none;
+  background-color: var(--grey-clear-color);
+  color: var(--main-clear-color);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+.responsiveMenu a:hover {
+  color: var(--secondary-blue-color);
+  background-color: var(--main-dark-color);
+}
+
+.responsiveMenu a.active {
+  background-color: var(--secondary-blue-color);
+  color: var(--main-clear-color);
+}
+
+.responsiveMenu .icon {
+  display: none;
+  margin: 0 15px 0 15px;
+  height: fit-content;
+}
+
+@media screen and (max-width: 600px) {
+  .responsiveMenu a {
+    display: none;
+  }
+  .responsiveMenu a.icon {
+    /*float: left;*/
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .responsiveMenu.responsive {
+    position: relative;
+  }
+  /*.responsiveMenu.responsive .icon {
+    position: absolute;
+
+    top: -60px;
+  }*/
+  .responsiveMenu.responsive a {
+
+    display: block;
+    text-align: left;
+  }
+}
+
+/*Texte information*/
+.information {
+  padding: var(--content-padding);
+  background-color: var(--main-clear-color);
+}
+/*End mainMENUS*/
+/**********************/

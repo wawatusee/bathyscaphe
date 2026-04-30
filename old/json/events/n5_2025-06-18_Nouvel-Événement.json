@@ -1,0 +1,37 @@
+{
+    "event": {
+        "id": 5,
+        "time": {
+            "date": "2025-06-18",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Nouvel Événement",
+        "illustration": "",
+        "activity_type_ids": [],
+        "description_event": {
+            "fr": "",
+            "en": "",
+            "nl": ""
+        },
+        "artists": [],
+        "infospratiques": {
+            "organisation": "",
+            "necessitedbook": false,
+            "price": "",
+            "situation": {
+                "street": "",
+                "number": "",
+                "postcode": "",
+                "city": "",
+                "country": ""
+            }
+        },
+        "ticket": {
+            "link": ""
+        }
+    }
+}

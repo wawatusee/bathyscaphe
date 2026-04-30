@@ -1,0 +1,21 @@
+{
+    "artist": {
+        "id": "a022",
+        "name": "Perpetual Found",
+        "description": {
+            "en": "PERPETUAL FOUND (Kivanc and Bel) combines acoustic flute and electronic whispers. Voices emerge from source and feedback, a bodily performance of subtle play and soft intervention.",
+            "fr": "PERPETUAL FOUND (Kivan\u00e7 et Bel) combine la fl\u00fbte acoustique et des murmures \u00e9lectroniques. Des voix \u00e9mergent de la source et du feedback, dans une performance corporelle faite de jeu subtil et d\u2019interventions d\u00e9licates.",
+            "nl": "PERPETUAL FOUND (Kivan\u00e7 en Bel) combineert akoestische fluit met elektronische fluisteringen. Stemmen komen voort uit bron en feedback, in een lichamelijke performance van subtiel spel en zachte interventies."
+        },
+        "liens": [
+            {
+                "name": "Perpetual Bel ",
+                "link": "https:\/\/www.instagram.com\/perpetual.bel?igsh=OGpscmV0Y2Jwd2N1"
+            },
+            {
+                "name": "Kivanc ",
+                "link": "https:\/\/www.instagram.com\/mekivanc?igsh=MXY3azR3djV5b25haw=="
+            }
+        ]
+    }
+}

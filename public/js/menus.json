@@ -1,0 +1,48 @@
+{
+	"Main_menu":[
+		{
+			"page": "studio",
+			"titre": {
+			   "fr": "Studio",
+			   "en": "Studio",
+			   "nl": "Studio"
+			}
+		 },
+		 {
+			"page": "events",
+			"titre": {
+			   "fr": "Evénements",
+			   "en": "events",
+			   "nl": "evenementen"
+			}
+		 },
+		 
+		 {
+			"page": "videos",
+			"titre": {
+			   "fr": "Videos",
+			   "en": "Videos",
+			   "nl": "Videos"
+			}
+		 },
+		{
+			"page": "contact",
+			"titre": {
+			   "fr": "Contact",
+			   "en": "Contact",
+			   "nl": "Contact"
+			}
+		 }
+
+	],
+	"RS_menu":[
+		{
+			"page":"https://www.facebook.com/profile.php?id=61557513415935",
+			"titre":"facebook"
+		},
+		{
+			"page":"https://www.instagram.com/bathyscaphe.be/",
+			"titre":"instagram"
+		}
+	]
+}

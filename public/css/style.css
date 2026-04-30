@@ -1,85 +1,98 @@
-/*Reset all */
-* {
-    margin: 0;
-    padding: 0;
-}
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-
-body {
-    background-color: var(--main-clear-color);
-    
-    max-width: 100vw;
-}
-
-section {
-    max-width:100vw;
-    margin :auto;
-    padding: 1rem;
-}
-
-/*Communs disposition values*/
-:root {
-    --standartspace: 0.9em;
-    --content-padding: 5px;
-    box-sizing: border-box;
-}
-
-/*Communs Colors images*/
-:root {
-    --main-dark-color: #333;
-    --main-clear-color: #f5F5F5;
-    --neutral-grey: #808080;
-    /*Autres blancs possibles
-     #FAFAFA ou #EAEAEA*/
-    --first-color: #e65639;
-    --batho-bleu: #336699;
-    --batho-bleuclair: #6699cc;
-    --batho-noir: #000000;
-    --batho-gris: #999;
-    --batho-vertgris: #8ccaad;
-    --batho-vert: #99cc66;
-    --batho-jaune: #cccc33;
-    --rs-bckgrnd-img: url("../img/deco/logo-rs_30px.png");
-}
-
-/*Fonts*/
-@font-face {
-    font-family: 'myFirstFont';
-    src: url("./fonts/Roboto-Thin.ttf"),
-}
-
-/*Use this font with this line => font-family: myFirstFont;*/
-@font-face {
-    font-family: "myTitleFont";
-    src: url("./fonts/Roboto-Thin.ttf"),
-}
-
-/*Use this font with this line => font-family: myTitleFont;*/
-body {
-    font-family: 'myFirstFont';
-}
-
-h1 {
-    padding-top: 0.7em;
-}
-
-h2 {
-    color: var(--batho-bleu);
-    font-family: "myTitleFont";
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-
-h3 {
-    font-size: 1.2em;
-    font-family: "myTitleFont", Verdana, Geneva, Tahoma, sans-serif, sans-serif;
-    font-weight: 100;
-    max-width: fit-content;
-    padding: 6px;
-    margin: 1em;
-}
+/*Reset all */
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--main-clear-color);
+    
+    max-width: 100vw;
+}
+
+section {
+    max-width:100vw;
+    margin :auto;
+    padding: 1rem;
+}
+
+/*Communs disposition values*/
+:root {
+    --standartspace: 0.9em;
+    --content-padding: 5px;
+    box-sizing: border-box;
+}
+
+/*Communs Colors images*/
+:root {
+    --main-dark-color: #333;
+    --main-clear-color: #f5F5F5;
+    --neutral-grey: #808080;
+    /*Autres blancs possibles
+     #FAFAFA ou #EAEAEA*/
+    --first-color: #e65639;
+    --batho-bleu: #336699;
+    --batho-bleuclair: #6699cc;
+    --batho-noir: #000000;
+    --batho-gris: #999;
+    --batho-vertgris: #8ccaad;
+    --batho-vert: #99cc66;
+    --batho-jaune: #cccc33;
+    --rs-bckgrnd-img: url("../img/deco/logo-rs_30px.png");
+}
+
+/*Fonts*/
+@font-face {
+    font-family: 'myFirstFont';
+    src: url("./fonts/Roboto-Thin.ttf"),
+}
+
+/*Use this font with this line => font-family: myFirstFont;*/
+@font-face {
+    font-family: "myTitleFont";
+    src: url("./fonts/Roboto-Thin.ttf"),
+}
+
+/*Use this font with this line => font-family: myTitleFont;*/
+body {
+    font-family: 'myFirstFont';
+}
+
+h1 {
+    padding-top: 0.7em;
+}
+
+h2 {
+    color: var(--batho-bleu);
+    font-family: "myTitleFont";
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+
+h3 {
+    font-size: 1.2em;
+    font-family: "myTitleFont", Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    font-weight: 100;
+    max-width: fit-content;
+    padding: 6px;
+    margin: 1em;
+}
+.lien-live a {
+    font-size: 1.5em;
+    font-family: "myTitleFont", Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    font-weight: bolder;
+    margin: var(--content-padding);
+    background:var(--batho-noir);
+    color: var(--batho-bleu);
+    border: 2px solid #000;
+  }
+  .lien-live a:hover {
+    background: var(--batho-bleu);
+    color: var(--main-clear-color);
+  }

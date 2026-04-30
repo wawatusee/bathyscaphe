@@ -1,0 +1,22 @@
+{
+  "Main_menu": [
+    {
+      "page": "galeries",
+      "titre": {
+        "fr": "galeries"
+      }
+    },
+    {
+      "page": "contact",
+      "titre": {
+        "fr": "contacts"
+      }
+    }
+  ],
+  "RS_menu": [
+    {
+      "page": "https://www.instagram.com/keeva.lbr/",
+      "titre": "instagram"
+    }
+  ]
+}

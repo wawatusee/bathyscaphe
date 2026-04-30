@@ -1,0 +1,25 @@
+{
+    "artist": {
+        "id": "a028",
+        "name": "Roger F. & The Structure",
+        "description": {
+            "en": "Roger F. writes and performs politically engaged songs about individualism, the repercussions of budget issues within artist collectives, white men with guitars, the apocalypse, and capitalism in general. What was already paradoxical yesterday remains a reality today. The violinist and multi-instrumentalist Blanca Prieto embodies \u201cThe Structure\u201d in this music, which oscillates between dark humor and rebellion.",
+            "fr": "Roger F. \u00e9crit et interpr\u00e8te des chansons engag\u00e9es sur l\u2019individualisme, les r\u00e9percussions des questions budg\u00e9taires au sein des collectifs d\u2019artistes, les hommes blancs \u00e0 la guitare, l\u2019apocalypse et le capitalisme en g\u00e9n\u00e9ral. Ce qui \u00e9tait d\u00e9j\u00e0 paradoxal hier reste aujourd\u2019hui encore une r\u00e9alit\u00e9. La violoniste et multi-instrumentiste Blanca Prieto incarne \u00ab The Structure \u00bb dans cette musique oscillant entre humour noir et r\u00e9bellion.",
+            "nl": "Roger F. schrijft en vertolkt ge\u00ebngageerde liedjes over individualisme, de gevolgen van budgetkwesties binnen kunstenaarscollectieven, witte mannen met gitaren, de apocalyps en het kapitalisme in het algemeen. Wat gisteren al paradoxaal was, blijft vandaag nog steeds een realiteit. De violiste en multi-instrumentaliste Blanca Prieto belichaamt \u201cThe Structure\u201d in deze muziek, die schommelt tussen zwarte humor en rebellie."
+        },
+        "liens": [
+            {
+                "name": "Website",
+                "link": "https:\/\/www.roger-f.com\/structure.html"
+            },
+            {
+                "name": "Roger F. Insta",
+                "link": "https:\/\/www.instagram.com\/rogerfaehndrich?igsh=MXZ5aXAxdXl0ZHZwdA=="
+            },
+            {
+                "name": "Blanca Prieto Insta",
+                "link": "https:\/\/www.instagram.com\/blanca.prieto.acera?igsh=cG1hczI5bXRhdjdo"
+            }
+        ]
+    }
+}

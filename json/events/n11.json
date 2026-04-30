@@ -1,0 +1,31 @@
+{
+    "event": {
+        "id": "11",
+        "time": {
+            "date": "2026-04-18",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Navigation #11 - Matthieu C Vergez \/ Jason Van Gulick",
+        "illustration": "n11.jpg",
+        "description_event": {
+            "fr": "Tous \u00e0 bord !   <\/p><p>Cette nouvelle navigation vous convie \u00e0 deux concerts intimistes, o\u00f9 po\u00e9sie et architecture se m\u00ealeront \u00e0 l'habitacle, dans l\u2019espoir d\u2019y faire r\u00e9sonner les \u00e2mes qui l'incarnent.    <\/p><p>19:00 - Ouverture des portes <\/p><p>20:00 - Matthieu C Vergez <\/p><p>21:00 - Jason Van Gulick <\/p><p>7 euros - Billetterie plus bas, section \"organisateur\" <\/p><p>Attention : <\/p><p>- Les portes ferment au d\u00e9but du premier acte, \u00e0 20:00, puis r\u00e9-ouvriront \u00e0 l'entre-acte, de 20:40 \u00e0 21:00. <\/p><p>- Pensez \u00e0 amener du cash, pour les entr\u00e9es et le bar. ",
+            "en": "All aboard! <\/p><p>This new navigation invites you to two intimate concerts, where poetry and architecture will intertwine within the space, hoping to resonate with the souls that inhabit it. <\/p><p>7:00 PM - Doors open <\/p><p>8:00 PM - Matthieu C Vergez <\/p><p>9:00 PM - Jason Van Gulick <\/p><p>\u20ac7 - Tickets below, in the \"organizer\" section <\/p><p>Please note: <\/p><p>- Doors close at the beginning of the first act, at 8:00 PM, and will reopen during the intermission, from 8:40 PM to 9:00 PM. <\/p><p>- Remember to bring cash for entry and the bar.",
+            "nl": "Allemaal aan boord! <\/p><p>Deze nieuwe navigatie nodigt u uit voor twee intieme concerten, waar po\u00ebzie en architectuur samenkomen in de zaal, in de hoop de zielen van de bezoekers te raken. <\/p><p>19:00 uur - Deuren open <\/p><p>20:00 uur - Matthieu C Vergez <\/p><p>21:00 uur - Jason Van Gulick <\/p><p>\u20ac7 - Tickets hieronder, in het gedeelte \"organisator\" <\/p><p>Let op: <\/p><p>-De deuren sluiten aan het begin van het eerste deel, om 20:00 uur, en gaan weer open tijdens de pauze, van 20:40 tot 21:00 uur. <\/p><p>-Vergeet niet contant geld mee te nemen voor de entree en de bar."
+        },
+        "infospratiques": {
+            "organisation": "https:\/\/www.billetweb.fr\/navigation-11-matthieu-c-vergez-jason-van-gulick",
+            "price": "7 euros"
+        },
+        "activity_type_ids": [
+            "1"
+        ],
+        "artists": [
+            "a024",
+            "a025"
+        ]
+    }
+}
