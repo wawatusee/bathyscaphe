@@ -1,390 +1,390 @@
-/* Liste des événements */
-.list_events {
-  list-style: none;
-  padding: 0;
-}
-
-.card_event {
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 8px;
-  transition: transform 0.2s;
-}
-
-.card_event:hover {
-  transform: scale(1.02);
-}
-
-/* Effets de hover pour les liens */
-.card_event a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.card-event-date {
-  text-transform: uppercase;
-  color: var(--batho-bleu);
-  font-weight: bold;
-  padding: var(--content-padding);
-}
-
-.card-event-date,
-.artist {
-  font-size: 0.9rem;
-
-}
-
-/*Liste d'événements*/
-.list_events {
-  margin: 1em;
-  list-style: none ! important;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-}
-
-/*Patch gpt*/
-.card_event {
-  width: 250px;
-  /* Largeur fixe, ajuste selon ton besoin */
-  height: 250px;
-  /* Hauteur fixe pour uniformiser */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-.image {
-  flex-grow: 1;
-  /* L'image prend l'espace disponible */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  /* Cache le débordement */
-  max-height: 70%;
-}
-
-.image img {
-  width: 100%;
-  height: 100%;
-}
-
-/*Fin Patch gpt*/
-.card_event {
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-
-}
-
-.card_event {
-  padding: 0.5em;
-  background-color: var(--batho-noir);
-  border-radius: 5%;
-}
-
-.card_event:hover {
-  background-color: var(--neutral-grey);
-  color: var(--batho-noir);
-}
-
-.card_event:hover .card-event-date {
-
-  color: var(--batho-noir);
-
-}
-
-a.card_event {
-  text-decoration: none;
-}
-
-/*Fin liste d'événements*/
-/*Activity*/
-
-#btnPartager {
-  background-color: var(--batho-jaune);
-  color: white;
-  padding: var(--content-padding);
-}
-
-#btnPartager>img {
-  height: 2em;
-}
-
-#btnPartager {
-  display: inline;
-  margin-left: var(--standartspace);
-  border: none;
-}
-
-#btnPartager:hover {
-  background-color: var(--batho-vert);
-}
-
-/*Types d'activités*/
-.activity-types {
-  margin-bottom: var(--standartspace)
-}
-
-
-.activity-types {
-  padding-bottom: var(--content-padding);
-}
-
-.card-type {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: var(--batho-bleu);
-}
-
-.card-type:not(:first-child)::before {
-  content: " | ";
-}
-
-.card-type:not(:first-child)::before {
-  content: " | ";
-  margin-left: var(--content-padding);
-  margin-right: var(--content-padding);
-}
-
-/*Fin types d'activités*/
-.fullActivity {
-  text-align: left;
-}
-
-.cardId {
-  margin-bottom: 20px;
-}
-
-.fullActivity>h2 {
-  text-align: left;
-  font-size: 2.5em;
-}
-
-.activity-description {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: var(--standartspace);
-}
-
-.activity-texte {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--standartspace);
-}
-
-.activity-texte>p {
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  font-size: 1em;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-.activity-language {
-  font-weight: bold;
-}
-
-.activity-language::before {
-  content: "|";
-}
-
-.activity-language::after {
-  content: "|";
-}
-.activity-illustration{
-  display: flex;
-  justify-content: center;
-}
-.activity-illustration>img {
-  margin-top: var(--standartspace);
-  margin-bottom: var(--standartspace);
-  max-width: 96%;
-  max-height: 340px;
-}
-
-.infospratik {
-  color: black;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: var(--standartspace);
-}
-
-.infos-elements {
-  display: flex;
-  flex-direction: column;
-  gap: var(--standartspace);
-  /* background-color: var(--first-color); */
-  overflow-wrap: break-word; /* ou word-wrap: break-word; */
-  padding: 20px;
-  min-width: 40%;
-  flex-grow: 1;
-}
-
-
-.infos-map-activity {
-  color: black;
-  border: solid 0.2px;
-  min-width: 40%;
-  flex-grow: 1;
-  min-height: 350px;
-}
-
-/*Fin activity*/
-/*Fenêtre modale*/
-
-
-.core>* {
-  max-height: 90vh;
-  /* Empêche le dépassement en hauteur */
-  overflow-y: auto;
-  /* Active le scroll si nécessaire */
-  width: 90%;
-  /* Ajuste la largeur */
-  background: white;
-  /* Assure un bon contraste */
-  padding: 20px;
-  border-radius: 10px;
-}
-
-
-.core {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  overflow-y: auto;
-  /* Ajoute un scroll sur la modale */
-  padding: 5vh 20px;
-  /* Réduit le padding vertical */
-
-}
-
-.core[hidden] {
-  display: none;
-  /* Cacher quand l’attribut hidden est présent */
-}
-
-.core section {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  width: 90%;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
-#closeEvent {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: var(--main-clear-color);
-  width: fit-content;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#closeEvent:hover {
-  background-color: var(--batho-noir);
-  color: var(--batho-bleu);
-}
-/*Présentation artistes*/
-.artist-card {
-  display: flex;
-  width: calc(100% - 10px); /* Deux colonnes */
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden;
-  align-items: center;
-  max-width: 90%;
-  margin-bottom: 20px;
-}
-
-.artist-illustration {
-  width: 40%; /* Espace pour l'image */
-  padding: 10px;
-}
-
-.artist-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain; /* Garde les proportions originales */
-}
-
-.artist-details {
-  width: 60%;
-  padding: 20px;
-}
-/*Paragraphe collapsed*/
-.artist-bio {
-  line-height: 1.5; /* Doit être défini explicitement */
-  transition: max-height 0.3s ease;
-  overflow: hidden;
-}
-
-.artist-bio.collapsed {
-  display: -webkit-box;
-  -webkit-line-clamp: var(--max-lines, 5);
-  -webkit-box-orient: vertical;
-}
-
-
-.see-more-btn {
-  display: flex;
-  margin-left: auto;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5em;
-  margin-top: 8px;
-  color: inherit;
-  position: relative;
-}
-
-.see-more-btn .icon-chevron {
-  transition: transform 0.3s ease;
-  transform-origin: center;
-}
-
-.see-more-btn[aria-expanded="true"] .icon-chevron {
-  transform: rotate(180deg);
-}
-
-/*Paragraphe collapsed*/
-
-/*Fin présentation artiste*/
-/* Responsive Design for Mobile */
-@media (max-width: 600px) {
-  .artist-card {
-      flex-direction: column;
-      width: 100%;
-  }
-
-  .artist-image, .artist-details {
-      width: 100%;
-      text-align: center;
-  }
-}
-
-/*Fin Présentation artistes*/
-
-
+/* Liste des événements */
+.list_events {
+  list-style: none;
+  padding: 0;
+}
+
+.card_event {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.card_event:hover {
+  transform: scale(1.02);
+}
+
+/* Effets de hover pour les liens */
+.card_event a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-event-date {
+  text-transform: uppercase;
+  color: var(--batho-bleu);
+  font-weight: bold;
+  padding: var(--content-padding);
+}
+
+.card-event-date,
+.artist {
+  font-size: 0.9rem;
+
+}
+
+/*Liste d'événements*/
+.list_events {
+  margin: 1em;
+  list-style: none ! important;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+/*Patch gpt*/
+.card_event {
+  width: 250px;
+  /* Largeur fixe, ajuste selon ton besoin */
+  height: 250px;
+  /* Hauteur fixe pour uniformiser */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.image {
+  flex-grow: 1;
+  /* L'image prend l'espace disponible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* Cache le débordement */
+  max-height: 70%;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+/*Fin Patch gpt*/
+.card_event {
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+
+}
+
+.card_event {
+  padding: 0.5em;
+  background-color: var(--batho-noir);
+  border-radius: 5%;
+}
+
+.card_event:hover {
+  background-color: var(--neutral-grey);
+  color: var(--batho-noir);
+}
+
+.card_event:hover .card-event-date {
+
+  color: var(--batho-noir);
+
+}
+
+a.card_event {
+  text-decoration: none;
+}
+
+/*Fin liste d'événements*/
+/*Activity*/
+
+#btnPartager {
+  background-color: var(--batho-jaune);
+  color: white;
+  padding: var(--content-padding);
+}
+
+#btnPartager>img {
+  height: 2em;
+}
+
+#btnPartager {
+  display: inline;
+  margin-left: var(--standartspace);
+  border: none;
+}
+
+#btnPartager:hover {
+  background-color: var(--batho-vert);
+}
+
+/*Types d'activités*/
+.activity-types {
+  margin-bottom: var(--standartspace)
+}
+
+
+.activity-types {
+  padding-bottom: var(--content-padding);
+}
+
+.card-type {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--batho-bleu);
+}
+
+.card-type:not(:first-child)::before {
+  content: " | ";
+}
+
+.card-type:not(:first-child)::before {
+  content: " | ";
+  margin-left: var(--content-padding);
+  margin-right: var(--content-padding);
+}
+
+/*Fin types d'activités*/
+.fullActivity {
+  text-align: left;
+}
+
+.cardId {
+  margin-bottom: 20px;
+}
+
+.fullActivity>h2 {
+  text-align: left;
+  font-size: 2.5em;
+}
+
+.activity-description {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--standartspace);
+}
+
+.activity-texte {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--standartspace);
+}
+
+.activity-texte>p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 1em;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.activity-language {
+  font-weight: bold;
+}
+
+.activity-language::before {
+  content: "|";
+}
+
+.activity-language::after {
+  content: "|";
+}
+.activity-illustration{
+  display: flex;
+  justify-content: center;
+}
+.activity-illustration>img {
+  margin-top: var(--standartspace);
+  margin-bottom: var(--standartspace);
+  max-width: 96%;
+  max-height: 340px;
+}
+
+.infospratik {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--standartspace);
+}
+
+.infos-elements {
+  display: flex;
+  flex-direction: column;
+  gap: var(--standartspace);
+  /* background-color: var(--first-color); */
+  overflow-wrap: break-word; /* ou word-wrap: break-word; */
+  padding: 20px;
+  min-width: 40%;
+  flex-grow: 1;
+}
+
+
+.infos-map-activity {
+  color: black;
+  border: solid 0.2px;
+  min-width: 40%;
+  flex-grow: 1;
+  min-height: 350px;
+}
+
+/*Fin activity*/
+/*Fenêtre modale*/
+
+
+.core>* {
+  max-height: 90vh;
+  /* Empêche le dépassement en hauteur */
+  overflow-y: auto;
+  /* Active le scroll si nécessaire */
+  width: 90%;
+  /* Ajuste la largeur */
+  background: white;
+  /* Assure un bon contraste */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.core {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow-y: auto;
+  /* Ajoute un scroll sur la modale */
+  padding: 5vh 20px;
+  /* Réduit le padding vertical */
+
+}
+
+.core[hidden] {
+  display: none;
+  /* Cacher quand l’attribut hidden est présent */
+}
+
+.core section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+#closeEvent {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--main-clear-color);
+  width: fit-content;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#closeEvent:hover {
+  background-color: var(--batho-noir);
+  color: var(--batho-bleu);
+}
+/*Présentation artistes*/
+.artist-card {
+  display: flex;
+  width: calc(100% - 10px); /* Deux colonnes */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  align-items: center;
+  max-width: 90%;
+  margin-bottom: 20px;
+}
+
+.artist-illustration {
+  width: 40%; /* Espace pour l'image */
+  padding: 10px;
+}
+
+.artist-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Garde les proportions originales */
+}
+
+.artist-details {
+  width: 60%;
+  padding: 20px;
+}
+/*Paragraphe collapsed*/
+.artist-bio {
+  line-height: 1.5; /* Doit être défini explicitement */
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.artist-bio.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--max-lines, 5);
+  -webkit-box-orient: vertical;
+}
+
+
+.see-more-btn {
+  display: flex;
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  margin-top: 8px;
+  color: inherit;
+  position: relative;
+}
+
+.see-more-btn .icon-chevron {
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.see-more-btn[aria-expanded="true"] .icon-chevron {
+  transform: rotate(180deg);
+}
+
+/*Paragraphe collapsed*/
+
+/*Fin présentation artiste*/
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  .artist-card {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .artist-image, .artist-details {
+      width: 100%;
+      text-align: center;
+  }
+}
+
+/*Fin Présentation artistes*/
+
+
 /*Fin Fenêtre modale*/

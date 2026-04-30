@@ -3,7 +3,7 @@
 	"titleWebsite":["Bathyscaphe", " ",".be"],
 	"repImg":"img/content",
 	"repImgDeco":"img/deco",
-	"repJson":"../json/events/",
+	"reJson":"../json/events/",
 	"langs":[
 		{"fr":"Français"},
 		{"en":"Anglais"},

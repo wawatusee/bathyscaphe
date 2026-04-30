@@ -1,72 +1,72 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-#form-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.field-container {
-    margin-bottom: 20px;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="file"],
-select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-/* Styles spécifiques pour les champs en lecture seule */
-input[type="text"][readonly] {
-    background-color: #f0f0f0; /* Couleur de fond plus claire */
-    color: #666; /* Couleur de texte plus grise */
-    border-color: #aaa; /* Bordure plus foncée */
-    cursor: not-allowed; /* Curseur indiquant que le champ n'est pas modifiable */
-}
-
-fieldset {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-legend {
-    font-weight: bold;
-}
-.nav-admin-artist{
-    display: flex;
-    flex-direction: column;
-}
-/* Ajout du style pour le bouton de retour */
-.btn-back {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF; /* Bleu pour le bouton */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none; /* Supprime le soulignement du lien */
-    display: inline-block; /* Assure que le bouton est en ligne */
-    font-size: 16px; /* Taille de la police */
-}
-
-.btn-back:hover {
-    background-color: #0056b3; /* Couleur plus foncée au survol */
-}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-container {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Styles spécifiques pour les champs en lecture seule */
+input[type="text"][readonly] {
+    background-color: #f0f0f0; /* Couleur de fond plus claire */
+    color: #666; /* Couleur de texte plus grise */
+    border-color: #aaa; /* Bordure plus foncée */
+    cursor: not-allowed; /* Curseur indiquant que le champ n'est pas modifiable */
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+}
+.nav-admin-artist{
+    display: flex;
+    flex-direction: column;
+}
+/* Ajout du style pour le bouton de retour */
+.btn-back {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Bleu pour le bouton */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Supprime le soulignement du lien */
+    display: inline-block; /* Assure que le bouton est en ligne */
+    font-size: 16px; /* Taille de la police */
+}
+
+.btn-back:hover {
+    background-color: #0056b3; /* Couleur plus foncée au survol */
+}

@@ -8,6 +8,7 @@
     $pagesArray = PAGE_ARRAY;
     //On définit le premier nom de page comme page par défaut du site
     $defaultPage=$pagesDuMenus[0];
+
     if (isset($_GET["page"])) {
     $page = $_GET["page"];
     $titre=$page;

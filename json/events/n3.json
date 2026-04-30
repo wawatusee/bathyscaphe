@@ -9,7 +9,7 @@
                 "nl": "Doer 19h concert 20h"
             }
         },
-        "title": "Navigation #3-Big horse",
+        "title": "Navigation #3 - Big horse",
         "illustration": "n3.jpg",
         "description_event": {
             "fr": "Rocker sauvage et primal de Bruxelles en Belgique",
@@ -23,7 +23,9 @@
         "ticket": {
             "link": "https:\/\/www.billetweb.fr\/shop.php?event=navigation-3"
         },
-        "activity_type_ids": [],
+        "activity_type_ids": [
+            "5"
+        ],
         "artists": [
             "a006"
         ]

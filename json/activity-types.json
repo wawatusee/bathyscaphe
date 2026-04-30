@@ -35,6 +35,18 @@
             "en": "Jazz",
             "fr": "Jazz",
             "nl": "Jazz"
+        },
+        {
+            "id": "7",
+            "en": "jazz",
+            "fr": "jazz",
+            "nl": "jazz"
+        },
+        {
+            "id": "8",
+            "en": "dance",
+            "fr": "danse",
+            "nl": "dans"
         }
     ]
 }

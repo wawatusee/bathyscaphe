@@ -1,0 +1,30 @@
+{
+    "event": {
+        "id": "13",
+        "time": {
+            "date": "2026-04-24",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Navigation #13 - Ivan Tirtiaux & Pierre Slinckx",
+        "illustration": "n13.jpg",
+        "description_event": {
+            "fr": "19:00 - Ouverture des portes <\/p><p>20:00 - Ivan Tirtiaux & Pierre Slinckx <\/p><p>Prix : 10 euros - Billetterie plus bas, section \"organisateur\" <\/p><p>Attention : <\/p><p>- Les portes ferment au d\u00e9but du concert, \u00e0 20:00<\/p><p>- Pensez \u00e0 amener du cash, pour les entr\u00e9es et le bar",
+            "en": "19:00 - Doors open <\/p><p>20:00 - Ivan Tirtiaux & Pierre Slinckx <\/p><p>Price: \u20ac10 - Tickets below, in the \"organizer\" section <\/p><p>Please note: <\/p><p>- Doors close at the beginning of the concert, at 20:00 <\/p><p>- Remember to bring cash for entry and the bar",
+            "nl": "19:00 uur - Deuren open <\/p><p>20:00 uur -  Ivan Tirtiaux & Pierre >Price: \u20ac10 - Tickets hieronder, in het gedeelte \"organisator\" <\/p><p>Let op: <\/p><p>-De deuren sluiten aan het begin van het deel, om 20:00 uur<\/p><p>-Vergeet niet contant geld mee te nemen voor de entree en de bar"
+        },
+        "infospratiques": {
+            "organisation": "https:\/\/www.billetweb.fr\/navigation-13-ivan-tirtiaux-pierre-slinckx",
+            "price": "10 euros"
+        },
+        "activity_type_ids": [
+            "1"
+        ],
+        "artists": [
+            "a026"
+        ]
+    }
+}

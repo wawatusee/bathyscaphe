@@ -1,0 +1,37 @@
+{
+    "artist": {
+        "id": "a014",
+        "name": "Refurinn Kitsune",
+        "description": {
+            "en": "Refurinn Kitsune, the solo project of Cha! (LEM, Scraboutcha, Casquette dans la Quiche), is an improbable isthmus between two waters: to portside, the melancholic minimalism of a fantasized vocal pop; to starboard, the DIY electro tinkering of a sound enthusiast. At once intimate and playful, evanescent yet grounded\u2014through its echoes and rough edges\u2014Refurinn Kitsune is a fragile game of love and chance, containing a perfectly measured dose of madness. (Photo credits - Cecilia Ripesi)",
+            "fr": "Refurinn Kitsune, projet solo de Cha! (LEM, Scraboutcha, Casquette dans la Quiche) est un isthme improbable entre deux eaux : \u00e0 b\u00e2bord, le minimalisme m\u00e9lancolique d'une pop vocale fantasm\u00e9e ; \u00e0 tribord l'\u00e9lectro-bricolage d'une passionn\u00e9e du son. \u00c0 la fois intime et ludique, \u00e9vanescent et terrien - par ses \u00e9chos, ses accrocs - Refurinn Kitsune est un fragile jeu d'amour et de hasard, contenant un parfait dosage de folie. (Photo credits - Cecilia Ripesi)",
+            "nl": "Refurinn Kitsune, het soloproject van Cha! (LEM, Scraboutcha, Casquette dans la Quiche), is een onwaarschijnlijke landengte tussen twee wateren: aan bakboord het melancholische minimalisme van een gefantaseerde vocale pop; aan stuurboord de doe-het-zelf-elektronica van een geluidspassionele maker. Tegelijk intiem en speels, vluchtig en aards\u2014door zijn echo\u2019s en rafelranden\u2014is Refurinn Kitsune een fragiel spel van liefde en toeval, met een perfect gedoseerde hoeveelheid waanzin. (Photo credits - Cecilia Ripesi)"
+        },
+        "liens": [
+            {
+                "name": "Video 1",
+                "link": "https:\/\/youtu.be\/91vhwNZzyZY"
+            },
+            {
+                "name": "Video 2",
+                "link": "https:\/\/youtu.be\/ufFahaqVbgM"
+            },
+            {
+                "name": "Bandcamp",
+                "link": "https:\/\/zamzamrec.bandcamp.com\/album\/spacelight-shines-through-us"
+            },
+            {
+                "name": "Soundcloud",
+                "link": "https:\/\/soundcloud.com\/refurinn-kitsune"
+            },
+            {
+                "name": "Facebook",
+                "link": "https:\/\/www.facebook.com\/refurinnkitsune"
+            },
+            {
+                "name": "Instagram",
+                "link": "https:\/\/www.instagram.com\/refurinnkitsune\/"
+            }
+        ]
+    }
+}

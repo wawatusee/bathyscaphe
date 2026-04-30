@@ -2,15 +2,10 @@
     "artist": {
         "id": "a005",
         "name": "Melisa Velasco",
-        "art": {
-            "en": "ProgressiveTechno",
-            "fr": "ProgressiveTechno",
-            "nl": "ProgressiveTechno"
-        },
         "description": {
-            "en": "Melisa VelascO is a Spanish DJ and producer living in Brussels. Her music is emotional sensitive and mixes Deep\/ProgressiveTechno and electronic sounds with ambient waves who invites you to a trip through dark but mostly light vibes.",
-            "fr": "Melisa VelascO est une DJ et productrice espagnole installée à Bruxelles. Sa musique, riche en émotions, mêle deep/techno progressive et sons électroniques à des sonorités ambiantes, vous invitant à un voyage dans des ambiances sombres, mais surtout lumineuses.",
-            "nl": "Melisa VelascO is een Spaanse DJ en producer woonachtig in Brussel. Haar muziek is emotioneel gevoelig en mixt Deep\/ProgressiveTechno en elektronische geluiden met ambient waves die je uitnodigt voor een trip door donkere maar vooral lichte vibes."
+            "en": "Melisa Velasco is a Spanish DJ and producer living in Brussels. Her music is emotional sensitive and mixes Deep\/ProgressiveTechno and electronic sounds with ambient waves who invites you to a trip through dark but mostly light vibes.",
+            "fr": "Melisa Velasco est une DJ et productrice espagnole install\u00e9e \u00e0 Bruxelles. Sa musique, riche en \u00e9motions, m\u00eale deep\/techno progressive et sons \u00e9lectroniques \u00e0 des sonorit\u00e9s ambiantes, vous invitant \u00e0 un voyage dans des ambiances sombres, mais surtout lumineuses.",
+            "nl": "Melisa Velasco is een Spaanse DJ en producer woonachtig in Brussel. Haar muziek is emotioneel gevoelig en mixt Deep\/ProgressiveTechno en elektronische geluiden met ambient waves die je uitnodigt voor een trip door donkere maar vooral lichte vibes."
         },
         "liens": [
             {

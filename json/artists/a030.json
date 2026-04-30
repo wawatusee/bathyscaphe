@@ -1,0 +1,21 @@
+{
+    "artist": {
+        "id": "a030",
+        "name": "Disposici\u00f3n Asoleada",
+        "description": {
+            "en": "David Jarr\u00edn Zabala (Ecuador) is a composer, improviser, curator, and radio broadcaster based in Brussels. He performs solo under the moniker Disposici\u00f3n Asoleada, encompassing various fields of sound experience, such as lo-fi field recordings, fictional landscapes produced with gongs, bells, and electronics, and raga-oriented transfigurations for stringed instruments.",
+            "fr": "David Jarr\u00edn Zabala (\u00c9quateur) est un compositeur, improvisateur, curateur et animateur radio bas\u00e9 \u00e0 Bruxelles. Il se produit en solo sous le nom de Disposici\u00f3n Asoleada, explorant divers domaines de l\u2019exp\u00e9rience sonore, tels que des enregistrements de terrain lo-fi, des paysages fictifs produits avec des gongs, des cloches et de l\u2019\u00e9lectronique, ainsi que des transfigurations orient\u00e9es raga pour instruments \u00e0 cordes.",
+            "nl": "David Jarr\u00edn Zabala (Ecuador) is een componist, improvisator, curator en radio-uitzender gevestigd in Brussel. Hij treedt solo op onder de naam Disposici\u00f3n Asoleada en verkent verschillende gebieden van geluidservaring, zoals lo-fi veldopnamen, fictieve landschappen gecre\u00eberd met gongs, bellen en elektronica, en raga-geori\u00ebnteerde transfiguraties voor snaarinstrumenten."
+        },
+        "liens": [
+            {
+                "name": "Soundcloud",
+                "link": "https:\/\/soundcloud.com\/disposicion-asoleada"
+            },
+            {
+                "name": "Bandcamp",
+                "link": "https:\/\/disposicionasoleada.bandcamp.com\/"
+            }
+        ]
+    }
+}

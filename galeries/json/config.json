@@ -1,0 +1,11 @@
+{
+    "config":{
+        "singlePage":0,
+        "langs":[
+            {
+                "fr" : "Français"
+                }
+            ],
+            "titleWebSite":["Bathyscaphe",".com","galeries"]
+    }
+}

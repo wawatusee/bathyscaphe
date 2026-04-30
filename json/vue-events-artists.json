@@ -1,12 +1,12 @@
 {
     "vue-events": {
-        "last-updated": "2025-06-26"
+        "last-updated": "2026-04-13"
     },
     "events": [
         {
             "event_id": "1",
             "date": "2024-04-13",
-            "title": "Navigation #1-Asetone-Esteban Stan-3DB",
+            "title": "Navigation #1 - Asetone \/ Esteban Stan \/ 3DB",
             "artists": [
                 "Asetone",
                 "Esteban Stan",
@@ -14,9 +14,64 @@
             ]
         },
         {
+            "event_id": "10",
+            "date": "2026-03-14",
+            "title": "Navigation #10 - Jere PS \/ Perpetual Found \/ Cabbage Ego Death",
+            "artists": [
+                "Jere PS",
+                "Perpetual Found",
+                "Cabbage Ego Death"
+            ]
+        },
+        {
+            "event_id": "11",
+            "date": "2026-04-18",
+            "title": "Navigation #11 - Matthieu C Vergez \/ Jason Van Gulick",
+            "artists": [
+                "Jason Van Gulick",
+                "Matthieu C Vergez"
+            ]
+        },
+        {
+            "event_id": "12",
+            "date": "2026-04-23",
+            "title": "Navigation #12 - GG Song \/ Open Jam Session",
+            "artists": [
+                "GG Song"
+            ]
+        },
+        {
+            "event_id": "13",
+            "date": "2026-04-24",
+            "title": "Navigation #13 - Ivan Tirtiaux & Pierre Slinckx",
+            "artists": [
+                "Ivan Tirtiaux & Pierre Slinckx"
+            ]
+        },
+        {
+            "event_id": "14",
+            "date": "2026-04-25",
+            "title": "Navigation #14 - Roger F. & The Structure \/ Ines Marita \/ Disposici\u00f3n Asoleada",
+            "artists": [
+                "Roger F. & The Structure",
+                "Ines Marita",
+                "Disposici\u00f3n Asoleada"
+            ]
+        },
+        {
+            "event_id": "15",
+            "date": "2026-05-08",
+            "title": "Navigation #15 - Dialect \/ Marta Forsberg \/ Zaumne",
+            "artists": [
+                "Dialect",
+                "Marta Forsberg",
+                "Zaumne"
+            ]
+        },
+        {
             "event_id": "2",
-            "date": "2024-06-08",
-            "title": "Navigation #2 Melissa Velasco Echte Ra Collective",
+            "date": "2024-06-26",
+            "title": "Navigation #2 - Echte Ra Collective \/ Melisa Velasco ",
             "artists": [
                 "Echte Ra Collective",
                 "Melisa Velasco"
@@ -25,7 +80,7 @@
         {
             "event_id": "3",
             "date": "2024-06-28",
-            "title": "Navigation #3-Big horse",
+            "title": "Navigation #3 - Big horse",
             "artists": [
                 "Big Horse"
             ]
@@ -40,10 +95,51 @@
         },
         {
             "event_id": "5",
-            "date": "2025-07-18",
-            "title": "Au un futur event",
+            "date": "2025-08-24",
+            "title": "Navigation #5 - Disrupted showcase",
             "artists": [
-                "Esteban Stan"
+                "Esteban Stan",
+                "WaterMetamorph",
+                "Babsi",
+                "Lenny Ranvier"
+            ]
+        },
+        {
+            "event_id": "6",
+            "date": "2025-12-05",
+            "title": "Navigation #6 - \u00f4phele\u00efa \/ Antti L\u00e4hdesm\u00e4ki",
+            "artists": [
+                "\u00f4phele\u00efa",
+                "Antti L\u00e4hdesm\u00e4ki "
+            ]
+        },
+        {
+            "event_id": "7",
+            "date": "2026-01-18",
+            "title": "Navigation #7 - Alice dans les tunnels \/ C\u00e9cile Broch\u00e9 \/ Refurinn Kitsune",
+            "artists": [
+                "Refurinn Kitsune",
+                "Alice dans les tunnels",
+                "C\u00e9cile Broch\u00e9"
+            ]
+        },
+        {
+            "event_id": "8",
+            "date": "2026-03-07",
+            "title": "Navigation #8 - Maple Paper \/ Anamesa \/ Dj JuJu",
+            "artists": [
+                "AN\u00c1MESA",
+                "Maple Paper",
+                "Dj JuJu"
+            ]
+        },
+        {
+            "event_id": "9",
+            "date": "2026-03-13",
+            "title": "Navigation #9 - Esteban Stan \/ Petite",
+            "artists": [
+                "Esteban Stan",
+                "Petite"
             ]
         }
     ],
@@ -54,6 +150,32 @@
         "a004": "Echte Ra Collective",
         "a005": "Melisa Velasco",
         "a006": "Big Horse",
-        "a007": "Orson Claeys"
+        "a007": "Orson Claeys",
+        "a008": "WaterMetamorph",
+        "a009": "Babsi",
+        "a010": "Lenny Ranvier",
+        "a011": "Nouvel Artiste",
+        "a012": "\u00f4phele\u00efa",
+        "a013": "Antti L\u00e4hdesm\u00e4ki ",
+        "a014": "Refurinn Kitsune",
+        "a015": "Alice dans les tunnels",
+        "a016": "C\u00e9cile Broch\u00e9",
+        "a017": "AN\u00c1MESA",
+        "a018": "Maple Paper",
+        "a019": "Dj JuJu",
+        "a020": "Petite",
+        "a021": "Jere PS",
+        "a022": "Perpetual Found",
+        "a023": "Cabbage Ego Death",
+        "a024": "Jason Van Gulick",
+        "a025": "Matthieu C Vergez",
+        "a026": "Ivan Tirtiaux & Pierre Slinckx",
+        "a027": "GG Song",
+        "a028": "Roger F. & The Structure",
+        "a029": "Ines Marita",
+        "a030": "Disposici\u00f3n Asoleada",
+        "a031": "Dialect",
+        "a032": "Marta Forsberg",
+        "a033": "Zaumne"
     }
 }

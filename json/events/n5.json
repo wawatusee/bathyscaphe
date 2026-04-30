@@ -2,30 +2,33 @@
     "event": {
         "id": "5",
         "time": {
-            "date": "2025-07-18",
+            "date": "2025-08-24",
             "horaire": {
-                "fr": "carambar 15h",
-                "en": "",
-                "nl": ""
+                "fr": "Navigation #5 - Disrupted showcase",
+                "en": "Navigation #5 - Disrupted showcase",
+                "nl": "Navigation #5 - Disrupted showcase"
             }
         },
-        "title": "Carambar",
+        "title": "Navigation #5 - Disrupted showcase",
         "illustration": "n5.jpg",
         "description_event": {
-            "fr": "Ca va \u00eatre bien",
-            "en": "",
-            "nl": ""
+            "fr": "Ce dimanche, au Bathyscaphe, vous \u00eates chaleureusement invit\u00e9s \u00e0 une rencontre exp\u00e9rimentale dans un lieu artistique sous-marin : les influences musicales et les sons exp\u00e9rimentaux prendront une toute nouvelle r\u00e9sonance, sous la forme d\u2019un showcase \u00e0 l\u2019issue d\u2019une r\u00e9sidence d\u2019artistes venus de Toulouse et de Bruxelles.  Venez avec votre instrument, votre envie de danser et votre curiosit\u00e9 de d\u00e9couvrir de nouvelles musiques, ce dimanche 24 ao\u00fbt \u00e0 partir de 17h.  Rue Dieudonn\u00e9 Lef\u00e8vre 215, Bruxelles Tram ligne 6, arr\u00eat Pannenhuis, \u00e0 5 minutes  ",
+            "en": "This Sunday, at the Bathyscaphe, you are warmly welcomed to an experimental gathering in an artistic submarine venue: musical influences and experimental sounds will take on a whole new resonance, in the form of a showcase following a residency by different artists from Toulouse and Brussels.  Come with your instrument, your desire to dance, and your wish to discover new music on Sunday, August 24th from 5 PM.  Rue Dieudonn\u00e9 Lef\u00e8vre 215, Brussels Tram line 6, Pannenhuis stop, 5 minutes away  ",
+            "nl": "Aanstaande zondag in het Bathyscaphe ben je van harte welkom op een experimentele bijeenkomst in een artistieke onderwaterlocatie: muzikale invloeden en experimentele klanken krijgen een geheel nieuwe weerklank, in de vorm van een showcase na afloop van een residentie met verschillende artiesten uit Toulouse en Brussel.  Kom met je instrument, je zin om te dansen, en je nieuwsgierigheid om nieuwe muziek te ontdekken, op zondag 24 augustus vanaf 17u.  Rue Dieudonn\u00e9 Lef\u00e8vre 215, Brussel Tramlijn 6, halte Pannenhuis, op 5 minuten wandelen  "
         },
         "infospratiques": {
-            "organisation": "https:\/\/www.bathyscaphe.be\/public\/",
-            "price": "120euros"
+            "organisation": "Bathyscaphe",
+            "price": "Free"
         },
         "activity_type_ids": [
-            "2"
+            "1",
+            "4"
         ],
         "artists": [
             "a002",
-            "a008"
+            "a008",
+            "a009",
+            "a010"
         ]
     }
 }

@@ -2,11 +2,6 @@
     "artist": {
         "id": "a007",
         "name": "Orson Claeys",
-        "art": {
-            "en": "Jazz",
-            "fr": "Jazz",
-            "nl": "Jazz"
-        },
         "description": {
             "en": "Orson Claeys is a Belgian jazz pianist and composer redefining the contemporary jazz landscape with his fresh, boundary-pushing sound. Since 2023, he has been making waves with a style that seamlessly blends jazz with influences from the Middle East, hip-hop\u2019s raw energy, and the lyrical depth of modern jazz.",
             "fr": "Orson Claeys est un pianiste et compositeur de jazz belge qui red\u00e9finit le paysage du jazz contemporain avec un son novateur et audacieux. Depuis 2023, il se distingue par un style qui fusionne harmonieusement le jazz avec des influences du Moyen-Orient, l\u2019\u00e9nergie brute du hip-hop et la profondeur lyrique du jazz moderne.",
@@ -18,12 +13,12 @@
                 "link": "https:\/\/open.spotify.com\/artist\/6STER3uvIa0CEBNDGWxfDu?si=lsb0YZE5T1u9OxeMHNhdDw"
             },
             {
-                "name": "Sdban",
-                "link": "https:\/\/www.sdbanrecords.com\/node\/408"
+                "name": "Youtube ",
+                "link": "https:\/\/www.youtube.com\/@orsonclaeys"
             },
             {
-                "name": "Youtube",
-                "link": "https:\/\/www.youtube.com\/@orsonclaeys"
+                "name": "Sdban ",
+                "link": "https:\/\/www.sdbanrecords.com\/node\/408"
             }
         ]
     }

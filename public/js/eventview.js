@@ -49,13 +49,11 @@ function initEventView() {
 
     // Initialisation
     initBioCollapse();
-    // Dans le initBioCollapse
-    seeMoreBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const wasCollapsed = bioElement.classList.toggle('collapsed');
-        seeMoreBtn.setAttribute('aria-expanded', !wasCollapsed);
+    new MutationObserver(initBioCollapse).observe(document.body, {
+        subtree: true,
+        childList: true
     });
-
+    console.log(seeMoreBtn.textContent); 
 }
 
 // Lance au chargement + si le DOM est modifié dynamiquement

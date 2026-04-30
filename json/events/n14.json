@@ -1,0 +1,32 @@
+{
+    "event": {
+        "id": "14",
+        "time": {
+            "date": "2026-04-25",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Navigation #14 - Roger F. & The Structure \/ Ines Marita \/ Disposici\u00f3n Asoleada",
+        "illustration": "n14.jpg",
+        "description_event": {
+            "fr": "Ceci n\u2019est pas une soir\u00e9e de reprises de Nirvana. Mais c\u2019est une soir\u00e9e qui r\u00e9unira trois projets, deux o\u00f9 la musique se cr\u00e9e principalement \u00e0 travers les paroles et la po\u00e9sie, et un qui nous offre ce petit quelque chose entre les mots : un peu d\u2019air pour respirer. <\/p><p>18:00 - Ouverture des portes <\/p><p>19:00 - Roger F. & The Structure <\/p><p>20:00 - Ines Marita <\/p><p>21:00 - Disposici\u00f3n Asoleada <\/p><p>22:00 - Dj Set des amis jusque tard <\/p><p>7 euros - Billetterie plus bas, section \"organisateur\" <\/p><p>Attention : <\/p><p>- Les portes fermeront au d\u00e9but des actes, et r\u00e9-ouvriront aux entre-actes <\/p><p>- Pensez \u00e0 amener du cash, pour les entr\u00e9es et le bar.",
+            "en": "This is not a Nirvana cover night. But it\u2019s an evening that will bring together three acts, two where music is strongly created through lyrics and poetry, and one that gives us that little something in between the words: some air to breath. <\/p><p>18:00 - Doors open <\/p><p>19:00 - Roger F. & The Structure <\/p><p>20:00 - Ines Marita <\/p><p>21:00 - Disposici\u00f3n Asoleada <\/p><p>22:00 - Dj Set with friends till late <\/p><p>\u20ac7 - Tickets below, in the \"organizer\" section <\/p><p>Please note: <\/p><p>- Doors will close at the beginning of the acts, and will reopen during the intermissions <\/p><p>- Remember to bring cash for entry and the bar.",
+            "nl": "Dit is geen Nirvana-coveravond. Maar het is een avond die twee acts samenbrengt die hun muziek sterk cre\u00ebren via teksten en po\u00ebzie, en \u00e9\u00e9n die ons datgene geeft wat zich tussen de woorden bevindt: wat ademruimte. <\/p><p>18:00 uur - Deuren open <\/p><p>19:00 uur - Roger F. & The Structure <\/p><p>20:00 uur - Ines Marita <\/p><p>21:00 uur - Disposici\u00f3n Asoleada <\/p><p>22:00 uur - Dj-Set met vrienden tot laat <\/p><p>\u20ac7 - Tickets hieronder, in het gedeelte \"organisator\" <\/p><p>Let op: <\/p><p>-De deuren sluiten aan het begin van het deelen, en gaan weer open tijdens de pauzes <\/p><p>-Vergeet niet contant geld mee te nemen voor de entree en de bar."
+        },
+        "infospratiques": {
+            "organisation": "https:\/\/www.billetweb.fr\/navigation-14-roger-f-blanca-prieto-as-the-structure-ines-marita-disposicion-asoleada",
+            "price": "7 \u20ac "
+        },
+        "activity_type_ids": [
+            "1"
+        ],
+        "artists": [
+            "a028",
+            "a029",
+            "a030"
+        ]
+    }
+}

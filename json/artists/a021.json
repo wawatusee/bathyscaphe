@@ -1,0 +1,21 @@
+{
+    "artist": {
+        "id": "a021",
+        "name": "Jere PS",
+        "description": {
+            "en": "Jere PS uses his guitar to create landscapes, images, tales, where we can fly along together. Loops, impro, distortion, are all present in this electric transition.",
+            "fr": "Jere PS utilise sa guitare pour cr\u00e9er des paysages, des images, des r\u00e9cits, o\u00f9 nous pouvons voyager ensemble. Boucles, improvisation et distorsion sont toutes pr\u00e9sentes dans cette transition \u00e9lectrique.",
+            "nl": "Jere PS gebruikt zijn gitaar om landschappen, beelden en verhalen te cre\u00ebren, waarin we samen kunnen meevliegen. Loops, improvisatie en vervorming zijn allemaal aanwezig in deze elektrische overgang."
+        },
+        "liens": [
+            {
+                "name": "Youtube",
+                "link": "https:\/\/music.youtube.com\/watch?v=30iMaZqCYr0"
+            },
+            {
+                "name": "Insta",
+                "link": "https:\/\/www.instagram.com\/hola.jere.ps?igsh=Y2QwcnowcTdnejZn"
+            }
+        ]
+    }
+}

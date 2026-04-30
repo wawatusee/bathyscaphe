@@ -1,0 +1,32 @@
+{
+    "event": {
+        "id": "7",
+        "time": {
+            "date": "2026-01-18",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Navigation #7 - Alice dans les tunnels \/ C\u00e9cile Broch\u00e9 \/ Refurinn Kitsune",
+        "illustration": "n7.jpg",
+        "description_event": {
+            "fr": "Tous \u00e0 bord !   <\/p><p>Cette nouvelle \u00e9dition vous invite \u00e0 explorer l\u2019univers de ce collectif de trois artistes, musiciennes depuis toujours, amoureuses du son, et rassembl\u00e9e pour nous proposer une soir\u00e9e musicale \u00e9clectique et cosmique.  <\/p><p>17:00 \u2013 Ouverture des portes <\/p><p>18:00 \u2013 Alice dans les tunnels <\/p><p>19:00 \u2013 C\u00e9cile Broch\u00e9 <\/p><p>20:00 \u2013 Refurinn Kitsune  <\/p><p>10 euros - Billetterie plus bas, section \"organisateur\" <\/p><p>Attention : <\/p><p>- Les portes ferment au d\u00e9but du premier acte, \u00e0 18 :00, puis r\u00e9ouvreront aux entre-actes. <\/p><p>- Pensez \u00e0 amenez du cash, pour les entr\u00e9es et le bar. ",
+            "en": "All aboard ! <\/p><p>This new edition invites you to explore the universe of this collective of three artists, lifelong musicians, lovers of sound, and brought together to offer us an eclectic and cosmic musical evening. <\/p><p>7:00 \u2013 Doors <\/p><p>18:00 \u2013 Alice dans les tunnels <\/p><p>19:00 \u2013 C\u00e9cile Broch\u00e9 <\/p><p>20:00 \u2013 Refurinn Kitsune <\/p><p>10 euros - Tickets below, in the \"organizer\" section <\/p><p>Please note: - The doors close at the start of the first act, at 18:00, and will reopen between acts. <\/p><p>- Remember to bring cash for admission and the bar.",
+            "nl": "Allemaal aan boord ! <\/p><p>Deze nieuwe editie nodigt u uit om het universum te verkennen van dit collectief van drie artiesten, levenslange muzikanten, liefhebbers van geluid, die samen een eclectische en kosmische muzikale avond willen beleven. <\/p><p>17:00 \u2013 Deuren <\/p><p>18:00 \u2013 Alice dans les tunnels <\/p><p>19:00 \u2013 C\u00e9cile Broch\u00e9 <\/p><p>20:00 \u2013 Refurinn Kitsune <\/p><p>10 euro - Tickets zijn hieronder verkrijgbaar in het gedeelte \"organisator\" <\/p><p>Let op: <\/p><p>- De deuren sluiten aan het begin van het eerste deel, om 18:00 uur, en gaan weer open tussen de delen. <\/p><p>- Vergeet niet contant geld mee te nemen voor de entree en de drankjes aan de bar."
+        },
+        "infospratiques": {
+            "organisation": "https:\/\/www.billetweb.fr\/navigation-7-alice-dans-les-tunnels-cecile-broche-refurinn-kitsune",
+            "price": "10 euros"
+        },
+        "activity_type_ids": [
+            "1"
+        ],
+        "artists": [
+            "a014",
+            "a015",
+            "a016"
+        ]
+    }
+}

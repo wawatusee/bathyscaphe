@@ -1,0 +1,32 @@
+{
+    "event": {
+        "id": "10",
+        "time": {
+            "date": "2026-03-14",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Navigation #10 - Jere PS \/ Perpetual Found \/ Cabbage Ego Death",
+        "illustration": "n10.jpg",
+        "description_event": {
+            "fr": "Les artistes de l'Hectolitre investissent le Bathyscaphe pour cette \u00e9dition sp\u00e9ciale de Navigation.",
+            "en": "Hectolitre artists take over Bathyscaphe for this Navigation special edition.",
+            "nl": "De artiesten van Hectolitre nemen het Bathyscaphe over voor deze Navigation-editie."
+        },
+        "infospratiques": {
+            "organisation": "Hectolitre",
+            "price": "7-10 euros"
+        },
+        "activity_type_ids": [
+            "1"
+        ],
+        "artists": [
+            "a021",
+            "a022",
+            "a023"
+        ]
+    }
+}

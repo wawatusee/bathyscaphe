@@ -1,0 +1,32 @@
+{
+    "event": {
+        "id": "15",
+        "time": {
+            "date": "2026-05-08",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Navigation #15 - Dialect \/ Marta Forsberg \/ Zaumne",
+        "illustration": "n15.jpg",
+        "description_event": {
+            "fr": "Music on a Whim pr\u00e9sente le Warm Winters Showcase au Bathyscaphe \/ avec DIALECT, MARTA FORSBERG et ZAUMNE.<\/p><p>Billetterie plus bas, section \"organisateur\". <\/p><p>Artwork by the fantastic Marie Maite.",
+            "en": "Music on a Whim presents Warm Winters Showcase at Bathyscaphe \/w DIALECT, MARTA FORSBERG & ZAUMNE. <\/p><p>Tickets below, in the \"organizer\" section. <\/p><p>Artwork by the fantastic Marie Maite.",
+            "nl": "Music on a Whim presenteert de Warm Winters Showcase in Bathyscaphe \/ met DIALECT, MARTA FORSBERG & ZAUMNE. <\/p><p>Tickets hieronder, in het gedeelte \"organisator\".<\/p><p>Artwork by the fantastic Marie Maite."
+        },
+        "infospratiques": {
+            "organisation": "https:\/\/www.eventbrite.be\/e\/moaw-presents-warm-winters-showcase-at-bathyscaphe-tickets-1986162004020",
+            "price": "\u20ac12 pre-sales - \u20ac15 OTD"
+        },
+        "activity_type_ids": [
+            "1"
+        ],
+        "artists": [
+            "a031",
+            "a032",
+            "a033"
+        ]
+    }
+}

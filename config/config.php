@@ -42,7 +42,6 @@ $pagesDuMenus=array();
  foreach($menus->getMenu("Main_menu") as $page){
      array_push($pagesDuMenus,$page->page) ;
  }
-
 define('PAGE_ARRAY',$pagesDuMenus);
 //Fin des menus du sites
 // Détermination de la page à charger

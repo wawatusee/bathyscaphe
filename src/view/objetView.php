@@ -182,7 +182,7 @@ EVENT;
         $activityView.=
 <<<ACTIVITY
         '<article class="fullActivity">
-            <h2 data-field="title">$eventDatas->title<button id="btnPartager" title="copy link and share"><img src=$repDeco.icons/share.png></button></h2>
+            <h2 data-field="title">$eventDatas->title<button id="btnPartager" title="copy link and share"><img src=${repDeco}icons/share.png></button></h2>
             <span class=cardId data-field="id">$cardId</span>
             <div class="activity-types" data-field="types">$lesTypes</div>
             <article class="activity-description">

@@ -1,0 +1,21 @@
+{
+    "artist": {
+        "id": "a015",
+        "name": "Alice dans les tunnels",
+        "description": {
+            "en": "Alice dans les tunnels dives into sonic matter, into the tunnels of consciousness. Sound becomes tactile. Melody, improvisation, and sonic experimentation give rise to visions, emotions, and poetry. A solo performance for flute, violin, voice, and effects.",
+            "fr": "Alice dans les tunnels, plonge dans la mati\u00e8re sonore, dans les tunnels de la conscience. Le son se palpe. M\u00e9lodie, improvisation et exp\u00e9rience sonore cr\u00e9ent visions, \u00e9motions et po\u00e9sie. Solo fl\u00fbte, violon, voix et effets",
+            "nl": "Alice dans les tunnels duikt in de sonische materie, in de tunnels van het bewustzijn. Geluid wordt tastbaar. Melodie, improvisatie en klankexperiment scheppen visioenen, emoties en po\u00ebzie. Solo voor fluit, viool, stem en effecten."
+        },
+        "liens": [
+            {
+                "name": "Soundcloud",
+                "link": "www.soundcloud.com\/alice_dans_les_tunnels"
+            },
+            {
+                "name": "Web page",
+                "link": "https:\/\/linstantchi.wordpress.com\/"
+            }
+        ]
+    }
+}

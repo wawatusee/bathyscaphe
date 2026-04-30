@@ -1,0 +1,26 @@
+{
+    "artist": {
+        "id": "a003",
+        "name": "3DB",
+        "art": {
+            "en": "Music",
+            "fr": "Musique",
+            "nl": "Musiek"
+        },
+        "description": {
+            "en": "Upbeat Bass Electronic",
+            "fr": "Basse \u00e9lectronique optimiste",
+            "nl": "Opzwepende elektronische bas"
+        },
+        "liens": [
+            {
+                "name": "Spotify",
+                "link": "https:\/\/open.spotify.com\/track\/05ptFVz1VpJ8YpQe1RDZTo?si=42ab4b5da56147b7"
+            },
+            {
+                "name": "Instagram",
+                "link": "https:\/\/www.instagram.com\/we_are_3db\/"
+            }
+        ]
+    }
+}

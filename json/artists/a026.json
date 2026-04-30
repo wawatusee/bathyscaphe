@@ -1,0 +1,17 @@
+{
+    "artist": {
+        "id": "a026",
+        "name": "Ivan Tirtiaux & Pierre Slinckx",
+        "description": {
+            "en": " Ivan Tirtiaux has, for over twenty years, distinguished himself as a singular voice in French songwriting. A singer, songwriter, guitarist, and sound artisan, he crafts evocative sonic landscapes where folk, blues, jazz, fado, and tropical influences converge, all in service of poetic and timeless expression.  His encounter with electro composer Pierre Slinckx, first unveiled at the Nuits Botanique in 2022 in an octet format featuring a string quartet, takes on new momentum in 2025.  A new creation for the Ars Musica festival further extends this collaboration in a duo form, giving rise to a contemporary sound world that blends poetic folk, guitar, and refined electronic textures.",
+            "fr": "Ivan Tirtiaux s'affirme depuis plus de vingt ans comme une voix singuli\u00e8re de la chanson francophone. Auteur-compositeur-interpr\u00e8te, guitariste et artisan du son, il tisse des paysages sonores o\u00f9 se croisent folk, blues, jazz, fado et tropicalisme, au service d'une \u00e9criture po\u00e9tique et hors du temps. La rencontre entre le compositeur \u00e9lectro Pierre Slinckx, r\u00e9v\u00e9l\u00e9e aux Nuits Botanique en 2022 dans une formule en octet avec quatuor \u00e0 cordes, trouve un nouveau souffle en 2025. Une cr\u00e9ation au festival Ars Musica prolonge cette collaboration en version duo, donnant naissance \u00e0 un univers contemporain m\u00ealant po\u00e9sie folk, guitare et textures \u00e9lectroniques.",
+            "nl": "Ivan Tirtiaux profileert zich al meer dan twintig jaar als een unieke stem binnen het Franstalige chanson. Als singer-songwriter, gitarist en klankambachtsman weeft hij sonore landschappen waarin folk, blues, jazz, fado en tropicalisme samenkomen, in dienst van een po\u00ebtische en tijdloze schrijfstijl.  De ontmoeting met elektrocomponist Pierre Slinckx, voor het eerst gepresenteerd tijdens de Nuits Botanique in 2022 in een octetbezetting met strijkkwartet, krijgt in 2025 een nieuw elan. Een creatie op het Ars Musica-festival zet deze samenwerking voort in duoformaat en geeft vorm aan een hedendaags universum waarin folkpo\u00ebzie, gitaar en elektronische texturen samenkomen."
+        },
+        "liens": [
+            {
+                "name": "Link tree",
+                "link": "https:\/\/linktr.ee\/ivantirtiaux"
+            }
+        ]
+    }
+}

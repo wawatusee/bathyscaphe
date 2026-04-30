@@ -1,0 +1,30 @@
+{
+    "event": {
+        "id": "12",
+        "time": {
+            "date": "2026-04-23",
+            "horaire": {
+                "fr": "",
+                "en": "",
+                "nl": ""
+            }
+        },
+        "title": "Navigation #12 - GG Song \/ Open Jam Session",
+        "illustration": "n12.jpg",
+        "description_event": {
+            "fr": "Bathyscaphe est heureux de pr\u00e9senter GG Song, un ancien artiste Bruxellois qui s\u2019en est all\u00e9 s'installer dans le sud de la France \u00e0 la recherche du soleil, et qui sera de retour pour proposer un set plein d\u2019\u00e9nergie, d'histoires et de m\u00e9lodies. <\/p><p>Restez avec nous et rejoignez-le pour une jam session ouverte juste apr\u00e8s le concert! <\/p><p>19:00 - Ouverture des portes <\/p><p>20:00 - GG Song <\/p><p>21:00 - Jam session <\/p><p>Attention : <\/p><p>- Les portes ferment au d\u00e9but du concert, \u00e0 20:00<\/p><p>- Pensez \u00e0 amener du cash, pour les entr\u00e9es et le bar",
+            "en": "Bathyscaphe is happy to present GG Song, a former Brussel artist, who moved to the south of France to look for more sunshine, and who will be back to present a set full of energy, stories, and melodies. <\/p><p>Stick around and join him for an open jam session afterwards ! <\/p><p>19:00 - Doors open <\/p><p>20:00 - GG Song <\/p><p>21:00 - Jam session<\/p><p>Please note: <\/p><p>- Doors close at the beginning of the concert, at 20:00<\/p><p>- Remember to bring cash for entry and the bar",
+            "nl": "Bathyscaphe is blij om GG Song voor te stellen, een voormalige Brusselse artiest die naar het zuiden van Frankrijk is verhuisd op zoek naar meer zon, en die terugkomt om een set vol energie, verhalen, en melodie\u00ebn te brengen. <\/p><p>Blijf nog even hangen en doe daarna mee aan een open jamsessie! <\/p><p>19:00 uur - Deuren open <\/p><p>20:00 uur - GG Song <\/p><p>21:00 - Jam session <\/p><p>Let op: <\/p><p>-De deuren sluiten aan het begin van het deel, om 20:00 uur<\/p><p>-Vergeet niet contant geld mee te nemen voor de entree en de bar"
+        },
+        "infospratiques": {
+            "organisation": "Bathyscaphe",
+            "price": "Hat"
+        },
+        "activity_type_ids": [
+            "1"
+        ],
+        "artists": [
+            "a027"
+        ]
+    }
+}

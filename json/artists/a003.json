@@ -2,11 +2,6 @@
     "artist": {
         "id": "a003",
         "name": "3DB",
-        "art": {
-            "en": "Music",
-            "fr": "Musique",
-            "nl": "Musiek"
-        },
         "description": {
             "en": "Upbeat Bass Electronic",
             "fr": "Basse \u00e9lectronique optimiste",

@@ -1,0 +1,82 @@
+{
+    "artist": {
+        "id": {
+            "type": "text",
+            "label": "ID de l'artiste",
+            "readonly": true,
+            "description": "L'identifiant unique de l'artiste.",
+            "order": 1
+        },
+        "name": {
+            "type": "text",
+            "label": "Nom de l'artiste",
+            "required": true,
+            "description": "Le nom complet de l'artiste.",
+            "errorMessage": "Le nom de l'artiste est obligatoire.",
+            "order": 2
+        },
+        "art": {
+            "type": "object",
+            "label": "Genre musical",
+            "structure": {
+                "en": {
+                    "type": "text",
+                    "label": "Art in English",
+                    "description": "Le genre musical en anglais."
+                },
+                "fr": {
+                    "type": "text",
+                    "label": "Art en Français",
+                    "description": "Le genre musical en français."
+                },
+                "nl": {
+                    "type": "text",
+                    "label": "Art in Dutch",
+                    "description": "Le genre musical en néerlandais."
+                }
+            },
+            "order": 3
+        },
+        "description": {
+            "type": "object",
+            "label": "Description",
+            "structure": {
+                "en": {
+                    "type": "text",
+                    "label": "Description in English",
+                    "description": "La description en anglais."
+                },
+                "fr": {
+                    "type": "text",
+                    "label": "Description en Français",
+                    "description": "La description en français."
+                },
+                "nl": {
+                    "type": "text",
+                    "label": "Description in Dutch",
+                    "description": "La description en néerlandais."
+                }
+            },
+            "order": 4
+        },
+        "liens": {
+            "type": "array",
+            "label": "Liens",
+            "structure": {
+                "name": {
+                    "type": "text",
+                    "label": "Nom du lien",
+                    "description": "Le nom du lien (ex: Site web, Réseau social)."
+                },
+                "link": {
+                    "type": "text",
+                    "label": "URL",
+                    "validation": "url",
+                    "description": "L'URL du lien.",
+                    "errorMessage": "L'URL doit être valide."
+                }
+            },
+            "order": 5
+        }
+    }
+}
